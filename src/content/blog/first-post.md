@@ -1,7 +1,7 @@
 ---
-title: 'El origen del nombre Daridius'
+title: 'Origen del nombre Daridius'
 description: 'Sobre el nombre'
-pubDate: 'Dec 19 2025'
+pubDate: 'Dec 18 2025'
 heroImage: '../../assets/blog-placeholder-1.jpg'
 ---
 
