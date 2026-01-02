@@ -1,52 +1,76 @@
 ---
 import "../styles/global.css";
-import Counter from "../components/Counter.jsx";
+import heroImg from "../assets/hero-bg.png";
+import BentoCard from "../components/BentoCard.astro";
+
+const sections = [
+	{
+		title: "Proyectos",
+		description: "Proyectos y experimentos en curso.",
+		color: "blue" as const,
+	},
+	{
+		title: "Reviews",
+		description: "Análisis de tecnología y cultura.",
+		color: "green" as const,
+	},
+	{
+		title: "Ideas",
+		description: "Reflexiones y opiniones personales.",
+		color: "red" as const,
+	},
+	{
+		title: "Sobre Mí",
+		description: "Quién soy y qué hago en la red.",
+		color: "black" as const,
+	},
+];
 ---
 
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro + React + Tailwind + DaisyUI</title>
+		<title>daridius</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
-	<body class="bg-base-200 min-h-screen">
-		<div
-			class="hero min-h-screen bg-gradient-to-br from-primary/10 to-secondary/10"
+	<body class="min-h-screen bg-black text-white antialiased">
+		<!-- Simple Navbar -->
+		<nav
+			class="navbar bg-black/80 backdrop-blur-md border-b border-white/5 px-8 flex justify-between items-center z-50"
 		>
-			<div class="hero-content text-center">
-				<div class="max-w-md">
-					<h1
-						class="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary"
-					>
-						Hello there
-					</h1>
-					<p class="py-6 text-lg text-base-content/80">
-						Your Astro project is ready with <span
-							class="font-semibold text-primary">React</span
-						>,
-						<span class="font-semibold text-secondary"
-							>Tailwind CSS v4</span
-						> and
-						<span class="font-semibold text-accent">DaisyUI v5</span
-						>.
-					</p>
+			<a href="/" class="text-xl font-black tracking-tighter capitalize">
+				daridius
+			</a>
+		</nav>
 
-					<div class="mb-8 flex justify-center">
-						<Counter client:load />
-					</div>
+		<!-- Hero Fullscreen with Content -->
+		<div
+			class="hero min-h-[calc(100vh-64px)] relative"
+			style={`background-image: url(${heroImg.src}); background-position: center; background-size: cover;`}
+		>
+			<div class="hero-overlay bg-black/60"></div>
 
-					<div class="flex gap-4 justify-center">
-						<button
-							class="btn btn-primary shadow-lg hover:scale-105 transition-transform"
-							>Get Started</button
-						>
-						<button
-							class="btn btn-outline btn-secondary hover:scale-105 transition-transform"
-							>Documentation</button
-						>
-					</div>
+			<div class="hero-content w-full max-w-6xl z-10 px-6">
+				<div
+					class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full"
+				>
+					{
+						sections.map((section) => (
+							<BentoCard
+								title={section.title}
+								description={section.description}
+								color={section.color}
+							/>
+						))
+					}
 				</div>
 			</div>
 		</div>
