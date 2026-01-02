@@ -1,5 +1,6 @@
 ---
-
+import "../styles/global.css";
+import Counter from "../components/Counter.jsx";
 ---
 
 <html lang="en">
@@ -8,9 +9,46 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Astro + React + Tailwind + DaisyUI</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="bg-base-200 min-h-screen">
+		<div
+			class="hero min-h-screen bg-gradient-to-br from-primary/10 to-secondary/10"
+		>
+			<div class="hero-content text-center">
+				<div class="max-w-md">
+					<h1
+						class="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary"
+					>
+						Hello there
+					</h1>
+					<p class="py-6 text-lg text-base-content/80">
+						Your Astro project is ready with <span
+							class="font-semibold text-primary">React</span
+						>,
+						<span class="font-semibold text-secondary"
+							>Tailwind CSS v4</span
+						> and
+						<span class="font-semibold text-accent">DaisyUI v5</span
+						>.
+					</p>
+
+					<div class="mb-8 flex justify-center">
+						<Counter client:load />
+					</div>
+
+					<div class="flex gap-4 justify-center">
+						<button
+							class="btn btn-primary shadow-lg hover:scale-105 transition-transform"
+							>Get Started</button
+						>
+						<button
+							class="btn btn-outline btn-secondary hover:scale-105 transition-transform"
+							>Documentation</button
+						>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
