@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import "../styles/global.css";
-import heroImg from "../assets/hero-bg.png";
+import heroImg from "../assets/bg.png";
 import BentoCard from "../components/BentoCard.astro";
 import PostCard from "../components/PostCard.astro";
 
@@ -55,6 +55,14 @@ const posts = (await getCollection("blog")).sort(
 			<a href="/" class="text-xl font-black tracking-tighter capitalize">
 				daridius
 			</a>
+			<div class="flex gap-4">
+				<a
+					href="/blog"
+					class="text-sm font-bold uppercase tracking-widest text-white/50 hover:text-white transition-colors"
+				>
+					Blog
+				</a>
+			</div>
 		</nav>
 
 		<!-- Hero Area (Fixed Background) -->
@@ -91,7 +99,7 @@ const posts = (await getCollection("blog")).sort(
 			<!-- Blog Posts Grid -->
 			<section>
 				<h2
-					class="text-3xl font-black text-white mb-10 tracking-tighter italic"
+					class="text-3xl font-black text-white mb-10 tracking-tighter"
 				>
 					Últimas Publicaciones
 				</h2>
