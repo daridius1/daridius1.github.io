@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "deploy": "astro build && touch dist/.nojekyll && gh-pages -d dist",
     "astro": "astro"
   },
   "dependencies": {
@@ -21,5 +22,8 @@
     "react-dom": "^19.2.3",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
