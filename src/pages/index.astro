@@ -1,7 +1,9 @@
 ---
+import { getCollection } from "astro:content";
 import "../styles/global.css";
 import heroImg from "../assets/hero-bg.png";
 import BentoCard from "../components/BentoCard.astro";
+import PostCard from "../components/PostCard.astro";
 
 const sections = [
 	{
@@ -25,6 +27,10 @@ const sections = [
 		color: "black" as const,
 	},
 ];
+
+const posts = (await getCollection("blog")).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
 ---
 
 <html lang="es">
@@ -41,24 +47,32 @@ const sections = [
 			rel="stylesheet"
 		/>
 	</head>
-	<body class="min-h-screen bg-black text-white antialiased">
+	<body class="min-h-screen bg-transparent text-white antialiased">
 		<!-- Simple Navbar -->
 		<nav
-			class="navbar bg-black/80 backdrop-blur-md border-b border-white/5 px-8 flex justify-between items-center z-50"
+			class="navbar bg-black/80 backdrop-blur-md border-b border-white/5 px-8 flex justify-between items-center z-50 sticky top-0"
 		>
 			<a href="/" class="text-xl font-black tracking-tighter capitalize">
 				daridius
 			</a>
 		</nav>
 
-		<!-- Hero Fullscreen with Content -->
-		<div
-			class="hero min-h-[calc(100vh-64px)] relative"
-			style={`background-image: url(${heroImg.src}); background-position: center; background-size: cover;`}
-		>
-			<div class="hero-overlay bg-black/60"></div>
+		<!-- Hero Area (Fixed Background) -->
+		<div class="fixed inset-0 z-[-1]">
+			<div
+				class="absolute inset-0 bg-cover bg-center"
+				style={`background-image: url(${heroImg.src});`}
+			>
+			</div>
+			<div class="absolute inset-0 bg-black/40"></div>
+		</div>
 
-			<div class="hero-content w-full max-w-6xl z-10 px-6">
+		<!-- Main Content Wrapper -->
+		<main
+			class="relative z-10 w-full max-w-6xl mx-auto px-6 py-8 space-y-12"
+		>
+			<!-- Categories Grid -->
+			<section>
 				<div
 					class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full"
 				>
@@ -72,7 +86,37 @@ const sections = [
 						))
 					}
 				</div>
-			</div>
-		</div>
+			</section>
+
+			<!-- Blog Posts Grid -->
+			<section>
+				<h2
+					class="text-3xl font-black text-white mb-10 tracking-tighter italic"
+				>
+					Últimas Publicaciones
+				</h2>
+				<div
+					class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+				>
+					{
+						posts.map((post) => (
+							<PostCard
+								title={post.data.title}
+								description={post.data.description}
+								date={post.data.pubDate.toLocaleDateString(
+									"es-ES",
+									{
+										year: "numeric",
+										month: "long",
+										day: "numeric",
+									},
+								)}
+								slug={post.slug}
+							/>
+						))
+					}
+				</div>
+			</section>
+		</main>
 	</body>
 </html>
