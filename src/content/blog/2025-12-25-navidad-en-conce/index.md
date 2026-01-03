@@ -27,7 +27,7 @@ Entre sus mejores regalos, diría que estuvo:
 
 No me deja de dar vuelta la idea de que este formato de regalos (el de todos regalan a todos) es simplemente una fiesta de la cachurería. Y aunque ampliamente denostado, el amigo secreto sigue siendo una gran, gran idea para dejar de alimentar el festival del estrés en el que tanto regaladores como regalados se queman la cabeza más de lo necesario.
 
-Ahora que lo pienso, el amigo secreto se va a mi lista de grandes ideas filosóficamente cercanas al daridiuismo.
+Ahora que lo pienso, el amigo secreto se va a mi lista de grandes ideas filosóficamente cercanas al salismo.
 
 ## La comida y el espíritu navideño
 
