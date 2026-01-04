@@ -54,7 +54,7 @@ export default function BlogFilter({ posts, allTags }) {
                         <div className="card-body p-6">
                             <div className="flex justify-between items-center mb-3">
                                 <span className="text-[10px] font-bold uppercase tracking-widest text-white/40">
-                                    {new Date(post.data.pubDate).toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' })}
+                                    {new Date(post.data.pubDate).toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' })}
                                 </span>
                             </div>
 
