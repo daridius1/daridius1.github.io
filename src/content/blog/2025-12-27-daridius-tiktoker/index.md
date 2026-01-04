@@ -2,7 +2,7 @@
 title: 'Daridius Tiktoker'
 description: 'Wrapped terminado, nueva vida de tiktoker'
 pubDate: '2025-12-27'
-tags: ["WhatsApp Wrapped", "Proyectos"]
+tags: ["Proyectos", "WhatsApp Wrapped"]
 ---
 
 Finalmente, terminé el cochino **Wrapsapp**.

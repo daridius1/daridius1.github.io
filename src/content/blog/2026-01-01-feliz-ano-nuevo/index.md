@@ -1,8 +1,8 @@
 ---
 title: 'Feliz año nuevo'
 description: 'Metas de este año'
-pubDate: '2026-01-02'
-tags: ["reflexiones", "metas", "2026", "salismo"]
+pubDate: '2026-01-01'
+tags: ["Sobre mí"]
 ---
 
 Algo que me preocupó de finales del año pasado es que demasiadas de las weas que empecé no las terminé, siendo que incluso a varias les puse harto esfuerzo y aun así las dejé botadas. Si quiero llegar a conquistar el mundo algún día, esto debe terminar.

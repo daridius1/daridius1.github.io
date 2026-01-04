@@ -2,7 +2,7 @@
 title: 'Esperanto'
 description: 'El salismo hecho idioma'
 pubDate: '2025-12-30'
-tags: ["favoritos", "salismo", "idiomas"]
+tags: ["Proyectos", "Esperanto", "Sobre mí", "Salismo"]
 ---
 
 Una de las máximas del **salismo** es el deber de darse cuenta cuando los asuntos culturales estorban en nuestro camino al progreso como sociedad. Aunque fundamentalmente es una crítica mayormente dirigida a cosas un poco más peligrosas (como, no sé, el lujo o el apego exagerado a la cultura), cosas como los **verbos irregulares** o los **lenguajes no fonéticos** sí son errores de arrastre que pueden llegar a hacer mucho daño a nuestra sociedad, o al menos más del que nos damos cuenta.

@@ -2,7 +2,7 @@
 title: 'TERMINADO, GIT PUSH'
 description: 'Primera versión del WhatsApp Wrapped en producción'
 pubDate: '2025-12-26'
-tags: []
+tags: ["Proyectos", "WhatsApp Wrapped"]
 ---
 
 Luego de pasarlo como el pico, trabajar arduamente estos últimos días y acostarme a las 5 el día de ayer, finalmente salió la primera versión del **WhatsApp Wrapped**. Me hace muy feliz haber llegado a algo funcional y en producción, y que, aunque simple, está hecho de una forma bastante ingeniosa y toma el peso a la importancia de trabajar con datos sensibles de la gente y de desarrollar software transparente.

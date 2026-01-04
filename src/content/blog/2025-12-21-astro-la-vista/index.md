@@ -2,7 +2,7 @@
 title: 'Astro la vista, baby'
 description: 'No eres tu soy yo'
 pubDate: '2025-12-21'
-tags: []
+tags: ["Proyectos", "WhatsApp Wrapped"]
 ---
 
 Empecé el desarrollo de la aplicación y, después de mucho webear con Astro, caí en cuenta de algo importante: **no era la herramienta adecuada para este problema**. Y como estaba en el momento perfecto para echarme para atrás, eso fue exactamente lo que hice.

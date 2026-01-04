@@ -2,7 +2,7 @@
 title: 'Macha y el bloque depresivo'
 description: 'Review del concierto del 20 de diciembre'
 pubDate: '2025-12-23'
-tags: []
+tags: ["Reviews", "Música"]
 ---
 
 Hoy programé todo el día en la aplicación. Mañana reportaré cómo fue ese proceso, pero hoy quiero hablar del concierto del Macha del 20 de diciembre en el Estadio Nacional.

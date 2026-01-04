@@ -2,7 +2,7 @@
 title: 'Empresa indie'
 description: 'Dos días luchando con la vil mierda de WhatsApp'
 pubDate: '2025-12-24'
-tags: []
+tags: ["Proyectos", "WhatsApp Wrapped"]
 ---
 
 Resulta que la función de exportar un chat de WhatsApp es peor de lo que esperaba. De hecho, es una vil mierda.

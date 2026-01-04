@@ -2,7 +2,7 @@
 title: 'Bot de confesiones'
 description: 'Automatizar las confesiones de Instagram'
 pubDate: '2025-12-28'
-tags: ["proyectos", "beauchef", "meta-api"]
+tags: ["Proyectos", "Bot Confesiones"]
 ---
 
 Luego de ser etiquetado en el chat de las páginas de memes de Beauchef, en el que a modo de broma se planteaba la posibilidad de hacer un bot de confesiones, pensé... **¿y si lo hago?**

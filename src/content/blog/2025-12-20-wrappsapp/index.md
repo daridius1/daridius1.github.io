@@ -2,7 +2,7 @@
 title: 'Wrappsapp'
 description: 'El Spotify Wrapped pero de WhatsApp'
 pubDate: '2025-12-20'
-tags: []
+tags: ["Proyectos", "WhatsApp Wrapped"]
 ---
 
 Ha llegado el momento: tengo una idea y hoy la comparto con ustedes, mi amado público. Podríamos decir que esta es, oficialmente, la primera "gran idea" de este blog.

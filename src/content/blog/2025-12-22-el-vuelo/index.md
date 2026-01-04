@@ -2,7 +2,7 @@
 title: 'El vuelo'
 description: 'Primera vez que me importa volar'
 pubDate: '2025-12-22'
-tags: []
+tags: ["Sobre mí"]
 ---
 
 Hoy viajo en avión. Estuve toda la mañana pensando en el tema de la página. La compartí en mi grupo de primos y recibí feedback de algunos fallos, que nunca viene mal. Creo que el parser está como el pico porque WhatsApp es una mierda y exporta las cosas como quiere. Por suerte encontré una librería de JS que se llama **whatsapp-chat-parser**, o algo de ese estilo. Tengo fe en que hará bien la pega.

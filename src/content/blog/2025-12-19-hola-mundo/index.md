@@ -2,7 +2,7 @@
 title: '¡Hola mundo!'
 description: 'Primer deploy de la página'
 pubDate: '2025-12-19'
-tags: []
+tags: ["Proyectos", "Blog"]
 ---
 
 Hoy es el segundo día de vida de esta página y, para ser honestos, no hay mucho que contar más allá de que pasé toda la mañana rascándome las bolas mientras configuraba el GitHub Pages. Llevamos dos días y cero opiniones a la vista; pero aunque tengo varias ideas dando vueltas, prefiero guardarlas para cuando el bloqueo creativo sea real. Al final, subir una web a internet sigue siendo un hito que merece ser registrado, aunque no sea lo más emocionante del mundo.

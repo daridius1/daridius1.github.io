@@ -2,7 +2,7 @@
 title: 'beauchefconfesionesbot'
 description: 'Así fue bautizada la página de confesiones'
 pubDate: '2025-12-31'
-tags: ["proyectos", "bot", "beauchef", "automatización"]
+tags: ["Proyectos", "Bot Confesiones"]
 ---
 
 Bueno, al final lo hice. ¿Qué tan difícil fue? Poco. La idea estaba bastante clara desde hace más de un año y, con la ayuda del clanker, fue bastante sencillo de completar. Diría que la mayor paja fue sacar la respectiva API key para cada plataforma.
