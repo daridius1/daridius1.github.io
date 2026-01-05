@@ -7,6 +7,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
+const pathname = Astro.url.pathname;
 ---
 
 <html lang="es">
@@ -37,7 +38,11 @@ const { title } = Astro.props;
             <div class="flex gap-4">
                 <a
                     href="/blog"
-                    class="text-sm font-bold uppercase tracking-widest text-white/50 hover:text-white transition-colors"
+                    class={`text-sm font-bold uppercase tracking-widest transition-all pb-1 ${
+                        pathname.startsWith("/blog")
+                            ? "text-white border-b-2 border-white"
+                            : "text-white/50 hover:text-white"
+                    }`}
                 >
                     Blog
                 </a>
