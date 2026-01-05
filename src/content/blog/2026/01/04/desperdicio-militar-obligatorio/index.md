@@ -1,8 +1,8 @@
 ---
 title: "Desperdicio Militar Obligatorio"
-description: "Una reflexión sobre el testimonio de un conscripto durante el golpe de estado, y la complejidad de trazar la línea entre víctimas y victimarios."
+description: "El primer Libro del Año"
 pubDate: "2026-01-04"
-tags: []
+tags: ["Sobre mí", "Reviews", "Libros", "Opinión"]
 ---
 
 ## El primer libro del año
