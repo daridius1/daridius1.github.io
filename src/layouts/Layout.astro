@@ -1,0 +1,62 @@
+---
+import "../styles/global.css";
+import heroImg from "../assets/bg.png";
+
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body class="min-h-screen bg-transparent text-white antialiased">
+        <!-- Simple Navbar -->
+        <nav
+            class="navbar bg-black/80 backdrop-blur-md border-b border-white/5 px-8 flex justify-between items-center z-50 sticky top-0"
+        >
+            <a
+                href="/"
+                class="text-xl font-black tracking-tighter capitalize hover:text-white/80 transition-colors"
+            >
+                daridius
+            </a>
+            <div class="flex gap-4">
+                <a
+                    href="/blog"
+                    class="text-sm font-bold uppercase tracking-widest text-white/50 hover:text-white transition-colors"
+                >
+                    Blog
+                </a>
+            </div>
+        </nav>
+
+        <!-- Hero Area (Fixed Background) -->
+        <div class="fixed inset-0 z-[-1]">
+            <div
+                class="absolute inset-0 bg-cover bg-center"
+                style={`background-image: url(${heroImg.src});`}
+            >
+            </div>
+            <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+
+        <!-- Main Content Wrapper -->
+        <main class="relative z-10 w-full max-w-6xl mx-auto px-6 py-8">
+            <slot />
+        </main>
+    </body>
+</html>

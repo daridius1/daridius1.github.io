@@ -1,7 +1,7 @@
 import { useState, useMemo, useEffect } from 'react';
 import PostCard from './PostCard';
 
-const POSTS_PER_PAGE = 12;
+const POSTS_PER_PAGE = 6;
 
 export default function BlogFilter({ posts, allTags }) {
     const [selectedTags, setSelectedTags] = useState([]);
@@ -105,8 +105,8 @@ export default function BlogFilter({ posts, allTags }) {
                                 key={i + 1}
                                 onClick={() => setCurrentPage(i + 1)}
                                 className={`w-8 h-8 rounded-full text-xs font-bold transition-all ${currentPage === i + 1
-                                        ? 'bg-white text-black'
-                                        : 'text-white/40 hover:bg-white/10 hover:text-white'
+                                    ? 'bg-white text-black'
+                                    : 'text-white/40 hover:bg-white/10 hover:text-white'
                                     }`}
                             >
                                 {i + 1}
