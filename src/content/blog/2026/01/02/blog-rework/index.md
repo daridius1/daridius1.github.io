@@ -1,5 +1,5 @@
 ---
-title: "Blog Rework"
+title: "Blog rework"
 description: "Actualización del blog para mejorar diseño y estructura"
 pubDate: "2026-01-02"
 tags: ["Proyectos", "Blog"]

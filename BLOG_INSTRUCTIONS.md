@@ -10,6 +10,7 @@ El objetivo es transformar el contenido de `borrador.md` en un post final dentro
 2. **Preservar el Mensaje:** No omitas información ni agregues ideas que no estén en el borrador. La "voz" y las ideas deben ser las del usuario.
 3. **Optimización de Redacción:** Puedes reescribir una idea para que fluya mejor, pero nunca cambies el significado original.
 4. **Validación de Fecha:** Antes de crear el archivo, **debes preguntar siempre qué fecha (`pubDate`) asignar al blog**, a menos que el usuario ya la haya especificado explícitamente. Esto es crucial por la posibilidad de publicaciones retroactivas.
+5. **Inferencia de Título y Descripción:** Generalmente la primera línea del borrador es el título. Si justo debajo hay una línea corta (como un subtítulo o frase breve), debes inferir si esa es la `description` deseada por el usuario antes de generar una propia.
 
 ---
 
