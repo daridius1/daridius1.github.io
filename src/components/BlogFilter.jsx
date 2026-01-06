@@ -37,7 +37,6 @@ export default function BlogFilter({ posts, allTags }) {
             {/* Controls Container */}
             <div className="flex flex-col gap-6 bg-black/40 backdrop-blur-xl p-6 rounded-2xl border border-white/10">
                 <div className="space-y-2">
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-white/30 mb-2">Filtrar por etiquetas</p>
                     <div className="flex flex-wrap gap-2">
                         {allTags.map(tag => (
                             <button

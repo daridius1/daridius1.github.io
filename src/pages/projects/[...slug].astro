@@ -36,17 +36,19 @@ const { Content } = await project.render();
                 </h1>
 
                 <div
-                    class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-[10px] font-bold uppercase tracking-[0.2em] text-white/30"
+                    class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-white/5 w-full text-[10px] font-bold uppercase tracking-[0.2em]"
                 >
-                    <div class="flex flex-col gap-1">
+                    <div class="flex flex-col gap-1 items-center text-center">
                         <span class="text-white/10">Rol</span>
                         <span class="text-white/60">{project.data.role}</span>
                     </div>
-                    <div class="flex flex-col gap-1">
+
+                    <div class="flex flex-col gap-1 items-center text-center">
                         <span class="text-white/10">Estado</span>
                         <span class="text-white/60">{project.data.status}</span>
                     </div>
-                    <div class="flex flex-col gap-1">
+
+                    <div class="flex flex-col gap-1 items-center text-center">
                         <span class="text-white/10">Dimensión</span>
                         <span class="text-white/60"
                             >{project.data.dimension}</span
