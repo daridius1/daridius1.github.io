@@ -1,0 +1,29 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import ProjectCard from "../../components/ProjectCard";
+
+const projects = await getCollection("projects");
+---
+
+<Layout title="Proyectos | daridius">
+    <div class="py-12 space-y-12">
+        <header>
+            <h1 class="text-4xl font-black text-white tracking-tighter mb-4">
+                Proyectos
+            </h1>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {
+                projects.map((project) => (
+                    <ProjectCard
+                        title={project.data.title}
+                        description={project.data.description}
+                        slug={project.slug}
+                    />
+                ))
+            }
+        </div>
+    </div>
+</Layout>
