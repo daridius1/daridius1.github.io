@@ -2,7 +2,7 @@
 title: "Tetris"
 description: "Probablemente el segundo juego que más he jugado, después del LoL"
 pubDate: "2026-01-06"
-tags: []
+tags: ["Reviews", "Juegos"]
 ---
 
 Durante la pandemia, en la facultad en la que estudio (FCFM), se tomó una iniciativa para paliar la falta de presencialidad que consistía en tener un equivalente a la facultad en una página tipo "Habbo", donde se recrearon los edificios de Beauchef 850 y 851. En este mapa había minijuegos que podías jugar con amigos, y uno de ellos era el Tetris.
