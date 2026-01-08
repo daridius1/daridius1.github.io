@@ -8,18 +8,22 @@ const sections = [
 	{
 		title: "Proyectos",
 		description: "Proyectos y experimentos en curso.",
+		href: "/projects",
 	},
 	{
 		title: "Reviews",
 		description: "Análisis de tecnología y cultura.",
+		href: "/blog?tag=Reviews",
 	},
 	{
 		title: "Ideas",
 		description: "Reflexiones y opiniones personales.",
+		href: "/blog?tag=Ideas",
 	},
 	{
-		title: "Sobre Mí",
+		title: "Sobre mí",
 		description: "Quién soy y qué hago en la red.",
+		href: "/blog?tag=Sobre+mí",
 	},
 ];
 
@@ -40,6 +44,7 @@ const posts = (await getCollection("blog")).sort(
 						<BentoCard
 							title={section.title}
 							description={section.description}
+							href={section.href}
 						/>
 					))
 				}

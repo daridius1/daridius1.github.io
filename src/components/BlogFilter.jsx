@@ -14,6 +14,14 @@ export default function BlogFilter({ posts, allTags }) {
         setCurrentPage(1);
     };
 
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const tagFromUrl = params.get('tag');
+        if (tagFromUrl && allTags.includes(tagFromUrl)) {
+            setSelectedTags([tagFromUrl]);
+        }
+    }, [allTags]);
+
     const filteredPosts = useMemo(() => {
         return posts.filter(post => {
             const matchesTags = selectedTags.length === 0 || selectedTags.every(tag => post.data.tags.includes(tag));
