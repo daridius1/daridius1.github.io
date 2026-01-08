@@ -2,7 +2,7 @@
 title: "La ropa superior"
 description: "Vista con la lupa del salismo"
 pubDate: "2026-01-07"
-tags: ["Sobre mí", "Salismo"]
+tags: ["Ideas", "Salismo"]
 ---
 
 La polera, el polerón y el cortavientos (impermeable) forman una base del espacio vectorial de la ropa superior, en el sentido de que con ellos se pueden generar (por combinación y superposición) prácticamente todas las prendas que se usan arriba.

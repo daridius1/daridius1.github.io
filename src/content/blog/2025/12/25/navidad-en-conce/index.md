@@ -2,7 +2,7 @@
 title: 'Navidad en Conce'
 description: 'El viejito pascuero se portó bien (WhatsApp no tanto)'
 pubDate: '2025-12-25'
-tags: ["Sobre mí", "Salismo"]
+tags: ["Sobre mí", "Ideas", "Salismo"]
 ---
 
 Jojojo, con el viejito pascuero jugando al cágate de calor, conmemoramos que hace 2025 años salvó la tierra de los aliens y le metió un hat trick a Colo Colo. ¡Feliz navidad!

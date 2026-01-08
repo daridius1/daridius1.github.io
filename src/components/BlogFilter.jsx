@@ -37,24 +37,54 @@ export default function BlogFilter({ posts, allTags }) {
             {/* Controls Container */}
             <div className="flex flex-col gap-6 bg-black/40 backdrop-blur-xl p-6 rounded-2xl border border-white/10">
                 <div className="space-y-2">
-                    <div className="flex flex-wrap gap-2">
-                        {allTags.map(tag => (
-                            <button
-                                key={tag}
-                                onClick={() => toggleTag(tag)}
-                                className={`btn btn-sm border transition-all rounded-full ${selectedTags.includes(tag)
-                                    ? 'btn-primary border-primary text-white shadow-[0_0_15px_rgba(37,99,235,0.3)]'
-                                    : 'btn-ghost border-white/10 text-white/50 hover:bg-white/10 hover:text-white hover:border-white/30'
-                                    }`}
-                            >
-                                {tag}
-                                {selectedTags.includes(tag) && (
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                                    </svg>
-                                )}
-                            </button>
-                        ))}
+                    <div className="flex flex-col gap-4">
+                        {/* Main Tags */}
+                        {allTags.some(tag => ['Proyectos', 'Sobre mí', 'Reviews', 'Ideas'].includes(tag)) && (
+                            <div className="flex flex-wrap gap-2 pb-4 border-b border-white/10">
+                                {allTags
+                                    .filter(tag => ['Proyectos', 'Sobre mí', 'Reviews', 'Ideas'].includes(tag))
+                                    .map(tag => (
+                                        <button
+                                            key={tag}
+                                            onClick={() => toggleTag(tag)}
+                                            className={`btn btn-sm border transition-all rounded-full ${selectedTags.includes(tag)
+                                                ? 'btn-primary border-primary text-white shadow-[0_0_15px_rgba(37,99,235,0.3)]'
+                                                : 'btn-ghost border-white/10 text-white/50 hover:bg-white/10 hover:text-white hover:border-white/30'
+                                                }`}
+                                        >
+                                            {tag}
+                                            {selectedTags.includes(tag) && (
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                                </svg>
+                                            )}
+                                        </button>
+                                    ))}
+                            </div>
+                        )}
+
+                        {/* Other Tags */}
+                        <div className="flex flex-wrap gap-2">
+                            {allTags
+                                .filter(tag => !['Proyectos', 'Sobre mí', 'Reviews', 'Ideas'].includes(tag))
+                                .map(tag => (
+                                    <button
+                                        key={tag}
+                                        onClick={() => toggleTag(tag)}
+                                        className={`btn btn-sm border transition-all rounded-full ${selectedTags.includes(tag)
+                                            ? 'btn-primary border-primary text-white shadow-[0_0_15px_rgba(37,99,235,0.3)]'
+                                            : 'btn-ghost border-white/10 text-white/50 hover:bg-white/10 hover:text-white hover:border-white/30'
+                                            }`}
+                                    >
+                                        {tag}
+                                        {selectedTags.includes(tag) && (
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                            </svg>
+                                        )}
+                                    </button>
+                                ))}
+                        </div>
                     </div>
                 </div>
             </div>

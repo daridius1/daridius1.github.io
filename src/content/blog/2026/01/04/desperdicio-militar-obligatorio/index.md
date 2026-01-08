@@ -2,7 +2,7 @@
 title: "Desperdicio Militar Obligatorio"
 description: "El primer Libro del Año"
 pubDate: "2026-01-04"
-tags: ["Sobre mí", "Reviews", "Libros", "Opinión"]
+tags: ["Reviews", "Libros", "Ideas", "Opinión"]
 ---
 
 ## El primer libro del año
