@@ -1,5 +1,5 @@
 ---
-title: 'TERMINADO, GIT PUSH'
+title: 'git push'
 description: 'Primera versión del WhatsApp Wrapped en producción'
 pubDate: '2025-12-26'
 tags: ["Proyectos", "WhatsApp Wrapped"]
