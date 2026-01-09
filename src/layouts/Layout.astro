@@ -25,39 +25,103 @@ const pathname = Astro.url.pathname;
         />
     </head>
     <body class="min-h-screen bg-transparent text-white antialiased">
-        <!-- Simple Navbar -->
-        <nav
-            class="navbar bg-black/80 backdrop-blur-md border-b border-white/5 px-8 flex justify-between items-center z-50 sticky top-0"
+        <!-- Navbar Todoterreno (DaisyUI) -->
+        <div
+            class="navbar bg-black/80 backdrop-blur-md border-b border-white/5 px-4 md:px-8 sticky top-0 z-[100]"
         >
-            <a
-                href="/"
-                class="text-xl font-black tracking-tighter capitalize hover:text-white/80 transition-colors"
-            >
-                daridius
-            </a>
-            <div class="flex gap-6">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <label
+                        tabindex="0"
+                        class="btn btn-ghost md:hidden p-2 text-white/50 hover:text-white"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-6 w-6"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16"></path>
+                        </svg>
+                    </label>
+                    <ul
+                        tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-6 shadow-2xl bg-black/95 backdrop-blur-2xl rounded-2xl w-[calc(100vw-2rem)] border border-white/10 space-y-4"
+                    >
+                        <li>
+                            <a
+                                href="/blog"
+                                class={`text-xl font-black uppercase tracking-widest ${pathname.startsWith("/blog") ? "text-white" : "text-white/50"}`}
+                            >
+                                Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/projects"
+                                class={`text-xl font-black uppercase tracking-widest ${pathname.startsWith("/projects") ? "text-white" : "text-white/50"}`}
+                            >
+                                Proyectos
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/cv"
+                                class={`text-xl font-black uppercase tracking-widest ${pathname.startsWith("/cv") ? "text-white" : "text-white/50"}`}
+                            >
+                                Curriculum
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <a
-                    href="/projects"
-                    class={`text-sm font-bold uppercase tracking-widest transition-all pb-1 ${
-                        pathname.startsWith("/projects")
-                            ? "text-white border-b-2 border-white"
-                            : "text-white/50 hover:text-white"
-                    }`}
+                    href="/"
+                    class="text-xl font-black tracking-tighter capitalize ml-2 md:ml-0 hover:text-white/80 transition-colors"
                 >
-                    Proyectos
-                </a>
-                <a
-                    href="/blog"
-                    class={`text-sm font-bold uppercase tracking-widest transition-all pb-1 ${
-                        pathname.startsWith("/blog")
-                            ? "text-white border-b-2 border-white"
-                            : "text-white/50 hover:text-white"
-                    }`}
-                >
-                    Blog
+                    daridius
                 </a>
             </div>
-        </nav>
+
+            <div class="navbar-end hidden md:flex">
+                <div class="nav-links flex gap-8">
+                    <a
+                        href="/blog"
+                        class={`text-sm font-bold uppercase tracking-widest transition-all pb-1 ${
+                            pathname.startsWith("/blog")
+                                ? "text-white border-b-2 border-white"
+                                : "text-white/50 hover:text-white"
+                        }`}
+                    >
+                        Blog
+                    </a>
+                    <a
+                        href="/projects"
+                        class={`text-sm font-bold uppercase tracking-widest transition-all pb-1 ${
+                            pathname.startsWith("/projects")
+                                ? "text-white border-b-2 border-white"
+                                : "text-white/50 hover:text-white"
+                        }`}
+                    >
+                        Proyectos
+                    </a>
+                    <a
+                        href="/cv"
+                        class={`text-sm font-bold uppercase tracking-widest transition-all pb-1 ${
+                            pathname.startsWith("/cv")
+                                ? "text-white border-b-2 border-white"
+                                : "text-white/50 hover:text-white"
+                        }`}
+                    >
+                        Curriculum
+                    </a>
+                </div>
+            </div>
+        </div>
 
         <!-- Hero Area (Fixed Background) -->
         <div class="fixed inset-0 z-[-1]">
@@ -73,5 +137,14 @@ const pathname = Astro.url.pathname;
         <main class="relative z-10 w-full max-w-6xl mx-auto px-6 py-8">
             <slot />
         </main>
+
+        <script>
+            // Cerrar menú al hacer click en un link (específico para móviles)
+            document.querySelectorAll(".dropdown ul a").forEach((link) => {
+                link.addEventListener("click", () => {
+                    (document.activeElement as HTMLElement)?.blur();
+                });
+            });
+        </script>
     </body>
 </html>
