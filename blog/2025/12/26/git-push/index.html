@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.16.6"><title>git push | daridius</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CtpyawsW.css"></head> <body class="min-h-screen bg-transparent text-white antialiased"> <!-- Navbar Todoterreno (DaisyUI) --> <div class="navbar bg-black/80 backdrop-blur-md border-b border-white/5 px-4 md:px-8 sticky top-0 z-50"> <div class="navbar-start"> <div class="dropdown"> <label tabindex="0" class="btn btn-ghost md:hidden p-2 text-white/50 hover:text-white"> <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path> </svg> </label> <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-10 p-6 shadow-2xl bg-black/95 backdrop-blur-2xl rounded-2xl w-[calc(100vw-2rem)] border border-white/10 space-y-4"> <li> <a href="/blog" class="text-xl font-black uppercase tracking-widest text-white">
+Blog
+</a> </li> <li> <a href="/projects" class="text-xl font-black uppercase tracking-widest text-white/50">
+Proyectos
+</a> </li> <li> <a href="/cv" class="text-xl font-black uppercase tracking-widest text-white/50">
+Curriculum
+</a> </li> </ul> </div> <a href="/" class="text-xl font-black tracking-tighter capitalize ml-2 md:ml-0 hover:text-white/80 transition-colors">
+daridius
+</a> </div> <div class="navbar-end hidden md:flex"> <div class="nav-links flex gap-8"> <a href="/blog" class="text-sm font-bold uppercase tracking-widest transition-all pb-1 text-white border-b-2 border-white">
+Blog
+</a> <a href="/projects" class="text-sm font-bold uppercase tracking-widest transition-all pb-1 text-white/50 hover:text-white">
+Proyectos
+</a> <a href="/cv" class="text-sm font-bold uppercase tracking-widest transition-all pb-1 text-white/50 hover:text-white">
+Curriculum
+</a> </div> </div> </div> <!-- Hero Area (Fixed Background) --> <div class="fixed inset-0 z-[-1]"> <div class="absolute inset-0 bg-cover bg-center" style="background-image: url(/_astro/bg.DorscvAr.png);"></div> <div class="absolute inset-0 bg-black/40"></div> </div> <!-- Main Content Wrapper --> <main class="relative z-10 w-full max-w-6xl mx-auto px-6 py-8">  <div class="max-w-4xl mx-auto py-12"> <!-- Contenedor del Artículo con efecto Cristal --> <article class="bg-black/40 backdrop-blur-xl border border-white/10 rounded-2xl p-8 md:p-12 shadow-2xl"> <!-- Header del Post --> <header class="mb-12 text-center border-b border-white/10 pb-10"> <div class="flex justify-center gap-2 mb-6 flex-wrap"> <span class="badge badge-primary badge-outline text-[10px] font-bold uppercase tracking-widest px-3 py-3"> Proyectos </span><span class="badge badge-primary badge-outline text-[10px] font-bold uppercase tracking-widest px-3 py-3"> WhatsApp Wrapped </span> </div> <h1 class="text-4xl md:text-5xl font-black tracking-tighter mb-6 leading-tight text-transparent bg-clip-text bg-linear-to-r from-white via-white to-white/50"> git push </h1> <p class="text-white/40 text-sm font-medium uppercase tracking-widest"> 26 de diciembre de 2025 </p> </header> <!-- Contenido (Prose mejorado para contraste) --> <div class="prose prose-invert prose-lg max-w-none
+                prose-headings:font-black prose-headings:tracking-tight prose-headings:text-white
+                prose-p:text-gray-300 prose-p:leading-relaxed
+                prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline
+                prose-blockquote:border-l-blue-500 prose-blockquote:bg-white/5 prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:rounded-r
+                prose-strong:text-white prose-strong:font-bold
+                prose-li:text-gray-300
+                prose-code:text-cyan-400 prose-code:bg-black/50 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none
+                prose-pre:bg-[#0d1117] prose-pre:border prose-pre:border-white/10 prose-pre:shadow-lg"> <p>Luego de pasarlo como el pico, trabajar arduamente estos últimos días y acostarme a las 5 el día de ayer, finalmente salió la primera versión del <strong>WhatsApp Wrapped</strong>. Me hace muy feliz haber llegado a algo funcional y en producción, y que, aunque simple, está hecho de una forma bastante ingeniosa y toma el peso a la importancia de trabajar con datos sensibles de la gente y de desarrollar software transparente.</p>
+<h2 id="quedan-errores">¿Quedan errores?</h2>
+<p>Varios, probablemente. Exportando el chat de uno de mis grupos de amigos apareció como el mensaje más enviado un “esperando por este mensaje” o algo por el estilo XD.</p>
+<h2 id="sobre-cómo-quedó-al-final">Sobre cómo quedó al final</h2>
+<p>El flujo de la info del chat es:</p>
+<h3 id="en-local">En local</h3>
+<ol>
+<li>Se sube el chat exportado</li>
+<li>Se parsea</li>
+<li>Se sacan las estadísticas</li>
+<li>Se pide una pequeña corrección de los nombres que aparecieron en la estadística (tipo: si tienes agregado a un amigo como “Juan Médico”, puedes corregirlo, ya que el export utiliza el nombre con el que lo tienes agregado)</li>
+<li>Comprime el wrapped</li>
+<li>Lo encripta</li>
+<li>Sube el archivo encriptado a un worker KV de Cloudflare (esta es la única información que sale del cliente mientras se procesa el wrapped. Está encriptada y, además, se borra automáticamente después de 7 días, por lo que debería ser totalmente seguro. De todas formas, el cálculo total de las estadísticas tampoco es algo tan sensible, y si alguien anda compartiendo el link con esos datos, no es mucho menos privado que estar compartiendo pantallazos o chats lisa y llanamente)</li>
+<li>Crea el link con las dos llaves (la del KV de Cloudflare y la de la encriptación), ambas claves necesarias para ver el wrapped, y la de encriptación solo creada en local</li>
+</ol>
+<p>Y ya, para ver el wrapped, si abres el link con ambas llaves, las utiliza para traerse el wrapped, desencriptarlo y mostrar de manera bonita las estadísticas.</p>
+<h2 id="privacidad-y-transparencia">Privacidad y transparencia</h2>
+<p>Como pueden ver, es 100% privado por el lado del cliente, y el código es open source y corre en una GitHub Pages, por lo que soy inocente de cualquier acusación de robo de datos o weas así. Aunque en esta sociedad yo creo que a nadie le importa.</p>
+<h2 id="lo-que-viene">Lo que viene</h2>
+<p>Bueno, eso. En verdad solo me queda esperar a ver las reacciones de mis amigos y cachar si la idea prendió o no. Reportaré cómo le va a lo largo de lo que queda de año.</p> </div> </article> <!-- Footer Post --> <div class="mt-12 text-center"> <a href="/" class="btn btn-ghost gap-2 text-white/50 hover:text-white">
+← Volver al inicio
+</a> </div> </div>  </main> <script type="module">document.querySelectorAll(".dropdown ul a").forEach(e=>{e.addEventListener("click",()=>{document.activeElement?.blur()})});</script> </body> </html>
