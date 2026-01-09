@@ -3,7 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import StackGame from "../../components/StackGame.jsx";
 ---
 
-<Layout title="Matter.js Game | Daridius">
+<Layout title="Experimento de la Taza | Daridius">
     <div class="space-y-8">
         <header
             class="flex flex-col md:flex-row md:items-end justify-between gap-6"
@@ -31,32 +31,13 @@ import StackGame from "../../components/StackGame.jsx";
                 <h1
                     class="text-4xl font-black text-white tracking-tighter sm:text-6xl"
                 >
-                    Matter.js Game
+                    Experimento de la Taza
                 </h1>
-            </div>
-            <div
-                class="badge badge-outline border-white/20 text-white/50 px-4 py-3 font-bold uppercase tracking-widest text-[10px]"
-            >
-                En Desarrollo
             </div>
         </header>
 
         <div class="w-full flex justify-center">
             <StackGame client:only="react" />
         </div>
-
-        <section class="max-w-3xl space-y-6 mx-auto">
-            <h3 class="text-xl font-bold text-white tracking-tight">
-                La Teoría del Caos en la Alacena
-            </h3>
-            <p class="text-white/60 leading-relaxed font-medium">
-                Este simulador interactivo demuestra geométricamente por qué las
-                tazas tradicionales son el enemigo del orden. Mientras que el <strong
-                    >vaso térmico</strong
-                > (cónico y liso) tiende al orden natural gracias a la gravedad, la
-                <strong>taza</strong> introduce una asimetría estructural (la oreja)
-                que impide el empaquetado eficiente.
-            </p>
-        </section>
     </div>
 </Layout>

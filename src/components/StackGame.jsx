@@ -5,19 +5,49 @@ import 'poly-decomp';
 export default function StackGame() {
     const sceneRef = useRef(null);
     const engineRef = useRef(null);
-    const [mode, setMode] = useState('vasos'); // 'vasos' or 'tazas'
-    const [count, setCount] = useState(0);
-
-    const CANVAS_WIDTH = 800;
-    const CANVAS_HEIGHT = 600;
-    const WALL_THICKNESS = 60;
-    const ZONE_WIDTH = 340; // Wider
-    const ZONE_HEIGHT = 360; // Taller
+    const [dimensions, setDimensions] = useState(null);
 
     const [leftZoneCount, setLeftZoneCount] = useState(0);
     const [rightZoneCount, setRightZoneCount] = useState(0);
 
+    // Initialize dimensions on mount
     useEffect(() => {
+        const updateDimensions = () => {
+            const availableWidth = typeof window !== 'undefined' ? window.innerWidth : 800;
+            const baseWidth = 800;
+            // More aggressive margin use for mobile
+            const width = Math.min(availableWidth - 16, baseWidth);
+            const scale = width / baseWidth;
+
+            // Make it more square-ish on mobile, but keep enough height for stacking
+            // On desktop (800px width), height is 600 (0.75 ratio)
+            // On mobile (350px width), let's try to keep it compact, maybe 1:1.2 or similar
+            const height = Math.min(600, width * 1.3);
+
+            // Make walls thinner on mobile to maximize play area
+            const wallThickness = Math.max(20, 60 * scale);
+
+            setDimensions({
+                width,
+                height,
+                wallThickness,
+                scale, // Store scale to resize objects
+                zoneWidth: width * 0.45, // Proportional zones
+                zoneHeight: scale > 0.8 ? height * 0.65 : height * 0.4 // Taller zones on desktop
+            });
+        };
+
+        updateDimensions();
+        // Add resize listener just in case
+        window.addEventListener('resize', updateDimensions);
+        return () => window.removeEventListener('resize', updateDimensions);
+    }, []);
+
+    useEffect(() => {
+        if (!dimensions) return;
+
+        const { width: CANVAS_WIDTH, height: CANVAS_HEIGHT, wallThickness: WALL_THICKNESS, zoneWidth: ZONE_WIDTH, zoneHeight: ZONE_HEIGHT } = dimensions;
+
         // Module aliases
         const Engine = Matter.Engine,
             Render = Matter.Render,
@@ -46,7 +76,7 @@ export default function StackGame() {
         });
 
         // Walls (Container)
-        const ground = Bodies.rectangle(CANVAS_WIDTH / 2, CANVAS_HEIGHT - 30, CANVAS_WIDTH, WALL_THICKNESS, {
+        const ground = Bodies.rectangle(CANVAS_WIDTH / 2, CANVAS_HEIGHT - WALL_THICKNESS / 2, CANVAS_WIDTH, WALL_THICKNESS, {
             isStatic: true,
             render: { fillStyle: '#1a1a1a', opacity: 1 }
         });
@@ -89,7 +119,7 @@ export default function StackGame() {
             // Ground
             context.fillRect(0, CANVAS_HEIGHT - WALL_THICKNESS, CANVAS_WIDTH, WALL_THICKNESS);
             // Left
-            context.fillRect(0, 0, WALL_THICKNESS / 2, CANVAS_HEIGHT); // Half width because center is 0
+            context.fillRect(0, 0, WALL_THICKNESS / 2, CANVAS_HEIGHT);
             // Right
             context.fillRect(CANVAS_WIDTH - WALL_THICKNESS / 2, 0, WALL_THICKNESS / 2, CANVAS_HEIGHT);
         });
@@ -108,8 +138,6 @@ export default function StackGame() {
 
                     const { min, max } = body.bounds;
 
-                    // Left Zone (0 to ZONE_WIDTH) - Only 'taza'
-                    // Check full containment: min and max x inside width, min y inside height range
                     const inLeft = min.x >= 0 && max.x <= ZONE_WIDTH &&
                         min.y >= (CANVAS_HEIGHT - ZONE_HEIGHT);
 
@@ -117,7 +145,6 @@ export default function StackGame() {
                         lCount++;
                     }
 
-                    // Right Zone (CANVAS_WIDTH - ZONE_WIDTH to CANVAS_WIDTH) - Only 'vaso'
                     const inRight = min.x >= (CANVAS_WIDTH - ZONE_WIDTH) && max.x <= CANVAS_WIDTH &&
                         min.y >= (CANVAS_HEIGHT - ZONE_HEIGHT);
 
@@ -139,29 +166,29 @@ export default function StackGame() {
             Engine.clear(engine);
             Events.off(engine);
         };
-    }, []);
+    }, [dimensions]);
 
-    const createCup = (x, y) => {
+    const createCup = (x, y, scale = 1) => {
         const Bodies = Matter.Bodies;
         const Body = Matter.Body;
 
-        // Vaso térmico: Even Wider + High Taper
-        const thickness = 6;
-        const width = 90;   // Even Wider
-        const height = 80;
-        const taper = 35;   // Taper to keep the bottom reasonable
+        // scaled dimensions
+        const thickness = 6 * scale;
+        const width = 90 * scale;
+        const height = 80 * scale;
+        const taper = 35 * scale;
 
         const leftWall = Bodies.rectangle(x - width / 2 + taper / 2, y, thickness, height, {
-            angle: -0.25, // More open angle
+            angle: -0.25,
             render: { fillStyle: '#3b82f6' }
         });
 
         const rightWall = Bodies.rectangle(x + width / 2 - taper / 2, y, thickness, height, {
-            angle: 0.25, // More open angle
+            angle: 0.25,
             render: { fillStyle: '#3b82f6' }
         });
 
-        const bottom = Bodies.rectangle(x, y + height / 2 - 5, width - taper - 10, thickness, {
+        const bottom = Bodies.rectangle(x, y + height / 2 - 5 * scale, width - taper - 10 * scale, thickness, {
             render: { fillStyle: '#3b82f6' }
         });
 
@@ -170,23 +197,21 @@ export default function StackGame() {
             friction: 0.5,
             restitution: 0.05,
             density: 0.01,
-            inertia: Infinity, // PREVENTS ROTATION
+            inertia: Infinity,
             label: 'vaso'
         });
 
         return cup;
     };
 
-    const createMug = (x, y) => {
+    const createMug = (x, y, scale = 1) => {
         const Bodies = Matter.Bodies;
         const Body = Matter.Body;
 
-        // Taza: Hollow Cylinder (Parallel walls) + Loop Handle
-        const thickness = 6;
-        const width = 60;
-        const height = 70;
+        const thickness = 6 * scale;
+        const width = 60 * scale;
+        const height = 70 * scale;
 
-        // Walls (Vertical, parallel)
         const leftWall = Bodies.rectangle(x - width / 2, y, thickness, height, {
             render: { fillStyle: '#a855f7' }
         });
@@ -195,21 +220,18 @@ export default function StackGame() {
             render: { fillStyle: '#a855f7' }
         });
 
-        const bottom = Bodies.rectangle(x, y + height / 2 - 5, width, thickness, {
+        const bottom = Bodies.rectangle(x, y + height / 2 - 5 * scale, width, thickness, {
             render: { fillStyle: '#a855f7' }
         });
 
-        // Handle (C-shape attached to right wall)
-        // Top strut
-        const handleTop = Bodies.rectangle(x + width / 2 + 12, y - 15, 20, thickness, {
+        // Handle
+        const handleTop = Bodies.rectangle(x + width / 2 + 12 * scale, y - 15 * scale, 20 * scale, thickness, {
             render: { fillStyle: '#9333ea' }
         });
-        // Bottom strut
-        const handleBottom = Bodies.rectangle(x + width / 2 + 12, y + 15, 20, thickness, {
+        const handleBottom = Bodies.rectangle(x + width / 2 + 12 * scale, y + 15 * scale, 20 * scale, thickness, {
             render: { fillStyle: '#9333ea' }
         });
-        // Outer vertical part
-        const handleOuter = Bodies.rectangle(x + width / 2 + 20, y, thickness, 40, {
+        const handleOuter = Bodies.rectangle(x + width / 2 + 20 * scale, y, thickness, 40 * scale, {
             render: { fillStyle: '#9333ea' }
         });
 
@@ -218,7 +240,7 @@ export default function StackGame() {
             restitution: 0.05,
             friction: 0.8,
             density: 0.01,
-            inertia: Infinity, // PREVENTS ROTATION
+            inertia: Infinity,
             label: 'taza'
         });
 
@@ -226,33 +248,34 @@ export default function StackGame() {
     };
 
     const spawnObject = (type) => {
-        if (!engineRef.current) return;
+        if (!engineRef.current || !dimensions) return;
 
-        const x = CANVAS_WIDTH / 2;
+        const x = dimensions.width / 2;
         const y = 80;
 
         let body;
         if (type === 'vaso') {
-            body = createCup(x, y);
+            body = createCup(x, y, dimensions.scale * 1.2); // Slightly boost scale for better visibility if needed, or keep 1.0
         } else {
-            body = createMug(x, y);
+            body = createMug(x, y, dimensions.scale * 1.2);
         }
 
         Matter.Composite.add(engineRef.current.world, body);
-        setCount(c => c + 1);
     };
 
     const clearWorld = () => {
         if (!engineRef.current) return;
         const world = engineRef.current.world;
         const bodies = Matter.Composite.allBodies(world);
-        // Remove only dynamic bodies (keep walls)
         const toRemove = bodies.filter(b => !b.isStatic);
         Matter.Composite.remove(world, toRemove);
-        setCount(0);
         setLeftZoneCount(0);
         setRightZoneCount(0);
     };
+
+    if (!dimensions) {
+        return <div className="text-white/50">Cargando juego...</div>;
+    }
 
     return (
         <div className="flex flex-col items-center gap-6 w-full">
@@ -261,23 +284,23 @@ export default function StackGame() {
                 <div className="absolute inset-0 z-0 flex justify-between items-end pointer-events-none">
                     {/* Left Zone Group */}
                     <div className="flex flex-col items-center">
-                        <div className="mb-4 text-white font-black uppercase text-2xl tracking-tighter transform -translate-y-2">
+                        <div className="mb-4 text-white font-black uppercase text-xl sm:text-2xl tracking-tighter transform -translate-y-2">
                             {leftZoneCount} Tazas
                         </div>
                         <div
                             className="bg-purple-500/10 border-r border-t border-purple-500/20"
-                            style={{ width: ZONE_WIDTH, height: ZONE_HEIGHT }}
+                            style={{ width: dimensions.zoneWidth, height: dimensions.zoneHeight }}
                         />
                     </div>
 
                     {/* Right Zone Group */}
                     <div className="flex flex-col items-center">
-                        <div className="mb-4 text-white font-black uppercase text-2xl tracking-tighter transform -translate-y-2">
+                        <div className="mb-4 text-white font-black uppercase text-xl sm:text-2xl tracking-tighter transform -translate-y-2">
                             {rightZoneCount} Vasos
                         </div>
                         <div
                             className="bg-blue-500/10 border-l border-t border-blue-500/20"
-                            style={{ width: ZONE_WIDTH, height: ZONE_HEIGHT }}
+                            style={{ width: dimensions.zoneWidth, height: dimensions.zoneHeight }}
                         />
                     </div>
                 </div>
@@ -289,18 +312,26 @@ export default function StackGame() {
                 />
 
                 {/* Top Controls Overlay */}
-                <div className="absolute top-6 left-0 right-0 z-30 flex justify-center gap-4">
+                <div className="absolute top-6 left-0 right-0 z-30 flex flex-col items-center gap-3">
+                    <div className="flex justify-center gap-4">
+                        <button
+                            onClick={() => spawnObject('taza')}
+                            className="bg-purple-600 hover:bg-purple-500 text-white font-bold py-2 px-6 sm:py-3 sm:px-8 rounded-full shadow-lg shadow-purple-500/30 transition-all transform hover:scale-105 active:scale-95 flex items-center gap-2 text-sm sm:text-base"
+                        >
+                            <span className="text-xl">+</span> Taza
+                        </button>
+                        <button
+                            onClick={() => spawnObject('vaso')}
+                            className="bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-6 sm:py-3 sm:px-8 rounded-full shadow-lg shadow-blue-500/30 transition-all transform hover:scale-105 active:scale-95 flex items-center gap-2 text-sm sm:text-base"
+                        >
+                            <span className="text-xl">+</span> Vaso
+                        </button>
+                    </div>
                     <button
-                        onClick={() => spawnObject('taza')}
-                        className="bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 px-8 rounded-full shadow-lg shadow-purple-500/30 transition-all transform hover:scale-105 active:scale-95 flex items-center gap-2"
+                        onClick={clearWorld}
+                        className="bg-white/10 hover:bg-white/20 text-white/80 text-xs font-bold uppercase tracking-widest py-2 px-4 rounded-lg backdrop-blur-md transition-all"
                     >
-                        <span className="text-xl">+</span> Taza
-                    </button>
-                    <button
-                        onClick={() => spawnObject('vaso')}
-                        className="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-full shadow-lg shadow-blue-500/30 transition-all transform hover:scale-105 active:scale-95 flex items-center gap-2"
-                    >
-                        <span className="text-xl">+</span> Vaso
+                        Reiniciar
                     </button>
                 </div>
 
@@ -310,19 +341,7 @@ export default function StackGame() {
                     </span>
                 </div>
             </div>
-
-            <div className="flex justify-center">
-                <button
-                    onClick={clearWorld}
-                    className="text-white/30 hover:text-white text-sm font-bold uppercase tracking-widest transition-colors"
-                >
-                    Limpiar Todo
-                </button>
-            </div>
-
-            <p className="text-white/50 text-sm max-w-lg text-center">
-                Mira la diferencia: los vasos se apilan perfectamente mientras las tazas colapsan en el caos.
-            </p>
         </div>
     );
 }
+

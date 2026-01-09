@@ -31,7 +31,7 @@ export default function AppCard({ title, description, href }) {
                         href={href}
                         className="btn btn-sm btn-ghost gap-2 text-xs font-bold uppercase tracking-tighter text-white/40 group-hover:text-white transition-colors"
                     >
-                        Ejecutar App
+                        Jugar
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-4 w-4 transition-transform group-hover:translate-x-1"
