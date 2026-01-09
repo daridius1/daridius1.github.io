@@ -71,6 +71,14 @@ const pathname = Astro.url.pathname;
                         </li>
                         <li>
                             <a
+                                href="/aplicaciones"
+                                class={`text-xl font-black uppercase tracking-widest ${pathname.startsWith("/aplicaciones") ? "text-white" : "text-white/50"}`}
+                            >
+                                Aplicaciones
+                            </a>
+                        </li>
+                        <li>
+                            <a
                                 href="/cv"
                                 class={`text-xl font-black uppercase tracking-widest ${pathname.startsWith("/cv") ? "text-white" : "text-white/50"}`}
                             >
@@ -108,6 +116,16 @@ const pathname = Astro.url.pathname;
                         }`}
                     >
                         Proyectos
+                    </a>
+                    <a
+                        href="/aplicaciones"
+                        class={`text-sm font-bold uppercase tracking-widest transition-all pb-1 ${
+                            pathname.startsWith("/aplicaciones")
+                                ? "text-white border-b-2 border-white"
+                                : "text-white/50 hover:text-white"
+                        }`}
+                    >
+                        Aplicaciones
                     </a>
                     <a
                         href="/cv"

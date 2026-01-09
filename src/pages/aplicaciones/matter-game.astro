@@ -1,0 +1,112 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Matter.js Game | Daridius">
+    <div class="space-y-8">
+        <header
+            class="flex flex-col md:flex-row md:items-end justify-between gap-6"
+        >
+            <div class="space-y-4">
+                <a
+                    href="/aplicaciones"
+                    class="text-xs font-bold uppercase tracking-widest text-white/30 hover:text-white transition-colors flex items-center gap-2 group"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4 transition-transform group-hover:-translate-x-1"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2.5"
+                            d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    Volver a aplicaciones
+                </a>
+                <h1
+                    class="text-4xl font-black text-white tracking-tighter sm:text-6xl"
+                >
+                    Matter.js Game
+                </h1>
+            </div>
+            <div
+                class="badge badge-outline border-white/20 text-white/50 px-4 py-3 font-bold uppercase tracking-widest text-[10px]"
+            >
+                En Desarrollo
+            </div>
+        </header>
+
+        <div
+            class="aspect-video w-full bg-white/5 border border-white/10 rounded-3xl overflow-hidden flex flex-col items-center justify-center relative group backdrop-blur-sm"
+        >
+            <div
+                class="absolute inset-0 bg-linear-to-br from-purple-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+            </div>
+
+            <div
+                class="relative z-10 flex flex-col items-center text-center p-8 max-w-md"
+            >
+                <div
+                    class="w-20 h-20 rounded-2xl bg-white/5 flex items-center justify-center mb-6 animate-pulse"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-10 w-10 text-white/20"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+                        ></path>
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <h2 class="text-2xl font-black text-white mb-2 tracking-tight">
+                    Próximamente
+                </h2>
+                <p class="text-white/40 font-medium">
+                    Aquí habrá un juego interactivo creado con <span
+                        class="text-white/60">Matter.js</span
+                    >. Estamos preparando las físicas...
+                </p>
+            </div>
+
+            <!-- Decorative background elements -->
+            <div
+                class="absolute top-1/4 left-1/4 w-32 h-32 bg-purple-500/20 blur-[100px] rounded-full animate-pulse"
+            >
+            </div>
+            <div
+                class="absolute bottom-1/4 right-1/4 w-32 h-32 bg-blue-500/20 blur-[100px] rounded-full animate-pulse"
+                style="animation-delay: 1s"
+            >
+            </div>
+        </div>
+
+        <section class="max-w-3xl space-y-6">
+            <h3 class="text-xl font-bold text-white tracking-tight">
+                Sobre este experimento
+            </h3>
+            <p class="text-white/60 leading-relaxed font-medium">
+                Este proyecto explorará la integración de motores de física en
+                tiempo real dentro del navegador. El objetivo es crear un
+                entorno donde los usuarios puedan interactuar con objetos que
+                sigan leyes físicas realistas, utilizando Matter.js por su
+                ligereza y versatilidad.
+            </p>
+        </section>
+    </div>
+</Layout>
