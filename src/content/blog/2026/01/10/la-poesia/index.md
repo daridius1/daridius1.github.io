@@ -2,7 +2,7 @@
 title: "La poesía"
 description: "A dónde vamos a parar (8)"
 pubDate: "2026-01-10"
-tags: []
+tags: ["Sobre mí", "Poesía", "WhatsApp Wrapped"]
 ---
 
 Ayer fui al cumpleaños de un gran amigo. De hecho, dos grandes amigos estaban de cumpleaños, pero fui al del que veo menos, además de que me invitó primero.
