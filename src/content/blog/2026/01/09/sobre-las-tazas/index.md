@@ -5,7 +5,7 @@ pubDate: "2026-01-09"
 tags: ["Ideas", "Salismo"]
 ---
 
-Algún día desarrollaré más la idea, pero el *salismo* trata principalmente de tener la capacidad de, con un ojo principalmente técnico, evaluar el costo de las cosas en su totalidad, sin dejarnos llevar (o dejarnos llevar lo menos posible) por nuestras lógicas e impulsos cortoplacistas.
+Algún día desarrollaré más la idea, pero uno de los conceptos mas importantes del *salismo* trata principalmente de tener la capacidad de, con una mirada lo más práctica posible, evaluar el costo de las cosas en su totalidad, sin dejarnos llevar (o dejarnos llevar lo menos posible) por nuestras lógicas e impulsos cortoplacistas.
 
 Y aunque no siempre es así, sucede que la mayoría de las veces que evaluamos incorrectamente algo es por su costo de mantenimiento. No necesariamente mantenimiento monetario, sino el costo de lavar las cosas, tener un lugar donde guardarlas, el caos que puede aportar un error al elegir dónde guardarlas, etc.
 
