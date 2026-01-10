@@ -1,6 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import StackGame from "../../components/StackGame.jsx";
+import StackGameComponent from "../../components/StackGame.jsx";
 ---
 
 <Layout title="Experimento de la Taza | Daridius">
@@ -33,11 +33,19 @@ import StackGame from "../../components/StackGame.jsx";
                 >
                     Experimento de la Taza
                 </h1>
+                <p class="text-white/60 max-w-2xl text-lg">
+                    Para entender cuál es el sentido de este juego, te
+                    recomiendo leer <a
+                        href="/blog/2026/01/09/sobre-las-tazas"
+                        class="text-white underline decoration-white/30 hover:decoration-white transition-all"
+                        >este artículo</a
+                    >.
+                </p>
             </div>
         </header>
 
         <div class="w-full flex justify-center">
-            <StackGame client:only="react" />
+            <StackGameComponent client:only="react" />
         </div>
     </div>
 </Layout>
