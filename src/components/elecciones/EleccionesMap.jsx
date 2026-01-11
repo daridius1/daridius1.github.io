@@ -47,7 +47,7 @@ const MapSVG = React.memo(({ svgContent, regionColors, onRegionHover, onRegionLe
     return (
         <div
             ref={containerRef}
-            className="w-full h-full flex justify-center items-center scale-[1.05]"
+            className="w-full h-full flex justify-center items-center scale-[0.98] map-container"
             dangerouslySetInnerHTML={{ __html: svgContent || '...' }}
         />
     );
@@ -111,7 +111,7 @@ export default function EleccionesMap({ mapSrc, results }) {
     }, [hoveredRegionId, results]);
 
     return (
-        <div className="flex-1 relative bg-white flex items-center justify-center p-4 overflow-hidden"
+        <div className="flex-1 relative bg-white flex items-center justify-center p-8 overflow-hidden"
             onMouseMove={e => setTooltipPos({ x: e.clientX, y: e.clientY })}>
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
 
@@ -160,7 +160,7 @@ export default function EleccionesMap({ mapSrc, results }) {
             )}
 
             <style>{`
-                svg { height: 100%; width: 100%; max-height: 98vh; object-fit: contain; }
+                .map-container svg { height: 100%; width: 100%; max-height: 94vh; object-fit: contain; }
                 .map-chile { stroke: #fff; stroke-width: 0.4px; transition: fill 0.4s ease; cursor: pointer; }
                 .map-chile:hover { stroke: #000; stroke-width: 1px; brightness: 0.98; z-index: 10; }
             `}</style>
