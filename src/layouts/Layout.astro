@@ -85,6 +85,14 @@ const pathname = Astro.url.pathname;
                                 Curriculum
                             </a>
                         </li>
+                        <li>
+                            <a
+                                href="/registros"
+                                class={`text-xl font-black uppercase tracking-widest ${pathname.startsWith("/registros") ? "text-white" : "text-white/50"}`}
+                            >
+                                Registros
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <a
@@ -136,6 +144,16 @@ const pathname = Astro.url.pathname;
                         }`}
                     >
                         Curriculum
+                    </a>
+                    <a
+                        href="/registros"
+                        class={`text-sm font-bold uppercase tracking-widest transition-all pb-1 ${
+                            pathname.startsWith("/registros")
+                                ? "text-white border-b-2 border-white"
+                                : "text-white/50 hover:text-white"
+                        }`}
+                    >
+                        Registros
                     </a>
                 </div>
             </div>

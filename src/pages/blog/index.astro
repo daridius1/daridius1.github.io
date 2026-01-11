@@ -13,7 +13,12 @@ const allTags = [...new Set(posts.flatMap((post) => post.data.tags))].sort();
 ---
 
 <Layout title="Blog Archivo | Daridius">
-    <div class="py-12">
+    <div class="pt-6 pb-12 space-y-8">
+        <header>
+            <h1 class="text-4xl font-black text-white tracking-tighter mb-4">
+                Blog
+            </h1>
+        </header>
         <!-- React Component para filtrado dinámico -->
         <BlogFilter client:load posts={posts} allTags={allTags} />
     </div>
