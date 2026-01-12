@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef, useMemo } from 'react';
-import { REGION_MAPPING } from '../../data/elecciones.js';
+import { REGION_MAPPING } from '../../data/elecciones/index.js';
 
 const interpolateColor = (color1, color2, factor) => {
     const f = Math.max(0, Math.min(1, factor));
@@ -60,7 +60,7 @@ export default function EleccionesMap({ mapSrc, results }) {
     const [hoveredRegionId, setHoveredRegionId] = useState(null);
 
     const svgIdToDataId = useMemo(() =>
-        Object.entries(REGION_MAPPING).reduce((acc, [k, v]) => { acc[v] = k; return acc; }, {}), []);
+        Object.entries(REGION_MAPPING).reduce((acc, [k, v]) => { acc[v.id] = k; return acc; }, {}), []);
 
     useEffect(() => {
         if (mapSrc) fetch(mapSrc).then(res => res.text()).then(text => {
@@ -77,10 +77,12 @@ export default function EleccionesMap({ mapSrc, results }) {
 
         Object.entries(results).forEach(([id, { redVotes, blueVotes, total }]) => {
             const teamTotal = redVotes + blueVotes;
-            if (teamTotal === 0) { colors[REGION_MAPPING[id]] = NEUTRAL_COLOR; return; }
+            const svgId = REGION_MAPPING[id]?.id;
+            if (!svgId) return;
+            if (teamTotal === 0) { colors[svgId] = NEUTRAL_COLOR; return; }
             const diff = Math.abs(redVotes - blueVotes);
             const strength = Math.min((diff / teamTotal) / THRESHOLD, 1.0);
-            colors[REGION_MAPPING[id]] = redVotes > blueVotes ? interpolateColor(NEUTRAL_COLOR, RED_COLOR, strength) :
+            colors[svgId] = redVotes > blueVotes ? interpolateColor(NEUTRAL_COLOR, RED_COLOR, strength) :
                 blueVotes > redVotes ? interpolateColor(NEUTRAL_COLOR, BLUE_COLOR, strength) : NEUTRAL_COLOR;
         });
         return colors;
@@ -100,6 +102,7 @@ export default function EleccionesMap({ mapSrc, results }) {
         if (hoveredRegionId && results[hoveredRegionId]) {
             const { redVotes, blueVotes, total } = results[hoveredRegionId];
             setTooltipContent({
+                name: REGION_MAPPING[hoveredRegionId]?.name || "Desconocida",
                 redP: total ? ((redVotes / total) * 100).toFixed(1) : "0.0",
                 blueP: total ? ((blueVotes / total) * 100).toFixed(1) : "0.0",
                 redVotes,
@@ -125,11 +128,10 @@ export default function EleccionesMap({ mapSrc, results }) {
             {/* Premium Tooltip */}
             {tooltipContent && (
                 <div style={{ top: tooltipPos.y + 20, left: tooltipPos.x + 20, opacity: hoveredRegionId ? 1 : 0 }} className="fixed z-50 bg-white/90 backdrop-blur-md shadow-2xl rounded-xl p-4 border border-base-200 pointer-events-none flex flex-col gap-3 w-56 transition-all duration-200 animate-in fade-in zoom-in-95">
-                    <div className="flex justify-between items-center border-b border-gray-100 pb-2">
-                        <span className="text-[10px] font-black uppercase text-gray-400">Detalle Regional</span>
-                        <span className={`px-2 py-0.5 rounded text-[9px] font-bold uppercase ${tooltipContent.winner === 'Rojo' ? 'bg-red-100 text-red-600' : tooltipContent.winner === 'Azul' ? 'bg-blue-100 text-blue-600' : 'bg-gray-100 text-gray-500'}`}>
-                            Ventaja {tooltipContent.winner}
-                        </span>
+                    <div className="flex flex-col border-b border-gray-100 pb-2">
+                        <h3 className="text-xs font-black text-gray-800 leading-tight">
+                            {tooltipContent.name}
+                        </h3>
                     </div>
 
                     <div className="space-y-2">

@@ -1,22 +1,39 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import { eleccionesData } from '../../data/elecciones.js';
+import { eleccionesData } from '../../data/elecciones/index.js';
 import EleccionesMenu from './EleccionesMenu';
 import EleccionesMap from './EleccionesMap';
+import EleccionesStats from './components/EleccionesStats';
 
 export default function EleccionesApp({ mapSrc }) {
     const [selectedElectionId, setSelectedElectionId] = useState(eleccionesData[0].id);
     const [candidateTeams, setCandidateTeams] = useState({});
+    const [groupingMode, setGroupingMode] = useState('partido'); // 'pacto' or 'partido'
 
     const currentElection = useMemo(() =>
         eleccionesData.find(e => e.id === selectedElectionId) || eleccionesData[0],
         [selectedElectionId]);
 
-    // Initialize Teams
+    // Available items for the list based on grouping mode
+    const menuItems = useMemo(() => {
+        if (!currentElection) return [];
+        if (!currentElection.pactoMapping) return currentElection.candidates;
+
+        if (groupingMode === 'pacto') {
+            return [...new Set(Object.values(currentElection.pactoMapping))];
+        }
+        return Object.keys(currentElection.pactoMapping);
+    }, [currentElection, groupingMode]);
+
+    // Initialize Teams or preserve them
     useEffect(() => {
-        const initialTeams = {};
-        currentElection.candidates.forEach(c => initialTeams[c] = 'neutral');
-        setCandidateTeams(initialTeams);
-    }, [currentElection]);
+        setCandidateTeams(prev => {
+            const next = { ...prev };
+            menuItems.forEach(item => {
+                if (!(item in next)) next[item] = 'neutral';
+            });
+            return next;
+        });
+    }, [menuItems]);
 
     const moveCandidate = (candidate, team) => {
         setCandidateTeams(prev => ({ ...prev, [candidate]: team }));
@@ -41,8 +58,21 @@ export default function EleccionesApp({ mapSrc }) {
             let bV = 0;
             const tV = Object.values(votes).reduce((sum, v) => sum + v, 0);
 
-            Object.entries(votes).forEach(([candidate, count]) => {
-                const team = candidateTeams[candidate];
+            Object.entries(votes).forEach(([entity, count]) => {
+                let team = 'neutral';
+                if (currentElection.pactoMapping) {
+                    // Voting by Partido or Pacto
+                    if (groupingMode === 'pacto') {
+                        const pacto = currentElection.pactoMapping[entity];
+                        team = candidateTeams[pacto];
+                    } else {
+                        team = candidateTeams[entity];
+                    }
+                } else {
+                    // Classic mode
+                    team = candidateTeams[entity];
+                }
+
                 if (team === 'red') rV += count;
                 if (team === 'blue') bV += count;
             });
@@ -60,7 +90,7 @@ export default function EleccionesApp({ mapSrc }) {
         });
 
         return { aggregatedResults: results, nationalSummary: summary };
-    }, [currentElection, candidateTeams]);
+    }, [currentElection, candidateTeams, groupingMode]);
 
     return (
         <div className="flex w-full h-screen bg-base-200 overflow-hidden font-sans">
@@ -68,15 +98,19 @@ export default function EleccionesApp({ mapSrc }) {
                 elections={eleccionesData}
                 selectedElectionId={selectedElectionId}
                 onSelectElection={setSelectedElectionId}
-                currentCandidates={currentElection.candidates}
+                groupingMode={groupingMode}
+                onSelectGrouping={setGroupingMode}
+                currentCandidates={menuItems}
                 candidateTeams={candidateTeams}
                 onMoveCandidate={moveCandidate}
-                summary={nationalSummary}
             />
-            <EleccionesMap
-                mapSrc={mapSrc}
-                results={aggregatedResults}
-            />
+            <div className="flex-1 relative flex overflow-hidden">
+                <EleccionesMap
+                    mapSrc={mapSrc}
+                    results={aggregatedResults}
+                />
+                <EleccionesStats summary={nationalSummary} />
+            </div>
         </div>
     );
 }
