@@ -95,7 +95,7 @@ export default function EleccionesApp({ mapSrc }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <div className="flex w-full h-screen bg-base-200 overflow-hidden font-sans relative">
+        <div className="flex w-full h-dvh bg-base-200 overflow-hidden font-sans relative">
             <EleccionesMenu
                 elections={eleccionesData}
                 selectedElectionId={selectedElectionId}
@@ -108,8 +108,8 @@ export default function EleccionesApp({ mapSrc }) {
                 isOpen={isMenuOpen}
                 setIsOpen={setIsMenuOpen}
             />
-            <div className="flex-1 flex flex-row items-center justify-center p-4 bg-white relative overflow-hidden">
-                <div className="flex flex-row items-center justify-center gap-4 md:gap-12 max-h-full w-full max-w-6xl">
+            <div className="flex-1 flex flex-row items-center justify-center p-2 md:p-4 bg-white relative overflow-hidden">
+                <div className="flex flex-row items-center justify-center gap-2 md:gap-12 max-h-full w-full max-w-6xl">
                     <EleccionesMap
                         mapSrc={mapSrc}
                         results={aggregatedResults}

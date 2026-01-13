@@ -103,7 +103,7 @@ export default function EleccionesStats({ summary }) {
     ];
 
     return (
-        <div className="flex flex-col gap-2 md:gap-4 pointer-events-auto z-30 shrink-0 py-4 max-h-full overflow-y-auto scrollbar-hide">
+        <div className="flex flex-col gap-1 md:gap-4 pointer-events-auto z-30 shrink-0 py-4 max-h-full overflow-y-auto scrollbar-hide">
             <PieChart
                 title="Bipolaridad (R vs A)"
                 data={teamTotalVotes > 0 ? chart1Data : [{ value: 1, color: '#f1f5f9' }]}
