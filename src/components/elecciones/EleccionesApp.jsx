@@ -7,7 +7,7 @@ import EleccionesStats from './components/EleccionesStats';
 export default function EleccionesApp({ mapSrc }) {
     const [selectedElectionId, setSelectedElectionId] = useState(eleccionesData[0].id);
     const [candidateTeams, setCandidateTeams] = useState({});
-    const [groupingMode, setGroupingMode] = useState('partido'); // 'pacto' or 'partido'
+    const [groupingMode, setGroupingMode] = useState('pacto'); // 'pacto' or 'partido'
 
     const currentElection = useMemo(() =>
         eleccionesData.find(e => e.id === selectedElectionId) || eleccionesData[0],
