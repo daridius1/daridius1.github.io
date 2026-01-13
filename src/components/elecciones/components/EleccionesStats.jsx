@@ -1,18 +1,18 @@
 import React from 'react';
 
-const PieChart = ({ data, title, size = 80, centerText, centerColor = "#374151" }) => {
+const PieChart = ({ data, title, centerText, centerColor = "#374151" }) => {
     const total = data.reduce((acc, current) => acc + current.value, 0);
     const radius = 15.91549430918954; // Magic radius for a 100-unit perimeter
 
     let cumulativeValue = 0;
 
     return (
-        <div className="flex flex-col items-center gap-3 p-4 bg-white/60 backdrop-blur-md rounded-2xl border border-white/20 shadow-xl group transition-all min-w-[160px]">
-            <h4 className="text-[10px] font-black text-gray-400 uppercase tracking-widest text-center leading-none px-1">
+        <div className="flex flex-col items-center gap-1.5 md:gap-3 p-2 md:p-4 bg-white/60 backdrop-blur-md rounded-xl border border-white/20 shadow-lg group transition-all w-full min-w-[120px] md:min-w-[170px]">
+            <h4 className="text-[8px] md:text-[10px] font-black text-gray-400 uppercase tracking-widest text-center leading-none px-1">
                 {title}
             </h4>
-            <div className="relative" style={{ width: size, height: size }}>
-                <svg viewBox="0 0 42 42" className="transform -rotate-90 drop-shadow-md w-full h-full">
+            <div className="relative w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24">
+                <svg viewBox="0 0 42 42" className="transform -rotate-90 drop-shadow-sm w-full h-full">
                     <circle cx="21" cy="21" r={radius} fill="transparent" stroke="#f1f5f9" strokeWidth="10"></circle>
                     {data.map((slice, index) => {
                         if (total === 0) return null;
@@ -39,21 +39,21 @@ const PieChart = ({ data, title, size = 80, centerText, centerColor = "#374151" 
                 </svg>
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                     <div className="w-[72%] h-[72%] bg-white/95 rounded-full shadow-sm border border-white/50 backdrop-blur-sm flex items-center justify-center">
-                        <span className="text-[10px] font-black tabular-nums" style={{ color: centerColor }}>
+                        <span className="text-[8px] md:text-[11px] font-black tabular-nums" style={{ color: centerColor }}>
                             {centerText}
                         </span>
                     </div>
                 </div>
             </div>
-            <div className="grid grid-cols-1 gap-2 w-full mt-2">
+            <div className="grid grid-cols-1 gap-1 md:gap-2 w-full mt-1">
                 {data.map((s, i) => (
-                    <div key={i} className="flex items-center justify-between gap-4 px-1">
-                        <div className="flex items-center gap-2 overflow-hidden">
-                            <div className="w-2 h-2 rounded-full shrink-0 shadow-sm" style={{ backgroundColor: s.color }} />
-                            <span className="text-[9px] font-extrabold text-slate-700 truncate">{s.label}</span>
+                    <div key={i} className="flex items-center justify-between gap-2 px-1">
+                        <div className="flex items-center gap-1 md:gap-2 overflow-hidden">
+                            <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full shrink-0" style={{ backgroundColor: s.color }} />
+                            <span className="text-[7px] md:text-[9px] font-extrabold text-slate-700 truncate">{s.label}</span>
                         </div>
-                        <span className="text-[9px] font-black text-slate-600 tabular-nums whitespace-nowrap">
-                            {Math.round(s.value).toLocaleString()} <span className="text-slate-400 font-bold text-[8px] ml-1">{total > 0 ? ((s.value / total) * 100).toFixed(1) : 0}%</span>
+                        <span className="text-[7px] md:text-[9px] font-black text-slate-600 tabular-nums whitespace-nowrap">
+                            {total > 0 ? ((s.value / total) * 100).toFixed(0) : 0}%
                         </span>
                     </div>
                 ))}
@@ -103,7 +103,7 @@ export default function EleccionesStats({ summary }) {
     ];
 
     return (
-        <div className="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col gap-4 pointer-events-auto z-30">
+        <div className="flex flex-col gap-2 md:gap-4 pointer-events-auto z-30 shrink-0 py-4 max-h-full overflow-y-auto scrollbar-hide">
             <PieChart
                 title="Bipolaridad (R vs A)"
                 data={teamTotalVotes > 0 ? chart1Data : [{ value: 1, color: '#f1f5f9' }]}

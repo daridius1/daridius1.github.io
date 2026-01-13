@@ -30,16 +30,22 @@ const MapSVG = React.memo(({ svgContent, regionColors, onRegionHover, onRegionLe
         const paths = containerRef.current.querySelectorAll('path');
         const handleEnter = (e) => onRegionHover(e.target.id);
         const handleLeave = () => onRegionLeave();
+        const handleClick = (e) => {
+            e.stopPropagation();
+            onRegionHover(e.target.id);
+        };
 
         paths.forEach(p => {
             p.addEventListener('mouseenter', handleEnter);
             p.addEventListener('mouseleave', handleLeave);
+            p.addEventListener('click', handleClick);
         });
 
         return () => {
             paths.forEach(p => {
                 p.removeEventListener('mouseenter', handleEnter);
                 p.removeEventListener('mouseleave', handleLeave);
+                p.removeEventListener('click', handleClick);
             });
         };
     }, [svgContent, regionColors, onRegionHover, onRegionLeave]);
@@ -54,10 +60,18 @@ const MapSVG = React.memo(({ svgContent, regionColors, onRegionHover, onRegionLe
 });
 
 export default function EleccionesMap({ mapSrc, results }) {
+    const [isMobile, setIsMobile] = useState(false);
     const [svgContent, setSvgContent] = useState(null);
     const [tooltipContent, setTooltipContent] = useState(null);
     const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
     const [hoveredRegionId, setHoveredRegionId] = useState(null);
+
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 1024);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
 
     const svgIdToDataId = useMemo(() =>
         Object.entries(REGION_MAPPING).reduce((acc, [k, v]) => { acc[v.id] = k; return acc; }, {}), []);
@@ -94,9 +108,11 @@ export default function EleccionesMap({ mapSrc, results }) {
     }, [svgIdToDataId]);
 
     const handleRegionLeave = React.useCallback(() => {
-        setHoveredRegionId(null);
-        setTooltipContent(null);
-    }, []);
+        if (!isMobile) {
+            setHoveredRegionId(null);
+            setTooltipContent(null);
+        }
+    }, [isMobile]);
 
     useEffect(() => {
         if (hoveredRegionId && results[hoveredRegionId]) {
@@ -114,8 +130,9 @@ export default function EleccionesMap({ mapSrc, results }) {
     }, [hoveredRegionId, results]);
 
     return (
-        <div className="flex-1 relative bg-white flex items-center justify-center p-8 overflow-hidden"
-            onMouseMove={e => setTooltipPos({ x: e.clientX, y: e.clientY })}>
+        <div className="relative flex items-center justify-center overflow-hidden h-full grow min-w-0"
+            onMouseMove={e => !isMobile && setTooltipPos({ x: e.clientX, y: e.clientY })}
+            onClick={() => isMobile && setHoveredRegionId(null)}>
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
 
             <MapSVG
@@ -126,28 +143,41 @@ export default function EleccionesMap({ mapSrc, results }) {
             />
 
             {/* Premium Tooltip */}
-            {tooltipContent && (
-                <div style={{ top: tooltipPos.y + 20, left: tooltipPos.x + 20, opacity: hoveredRegionId ? 1 : 0 }} className="fixed z-50 bg-white/90 backdrop-blur-md shadow-2xl rounded-xl p-4 border border-base-200 pointer-events-none flex flex-col gap-3 w-56 transition-all duration-200 animate-in fade-in zoom-in-95">
-                    <div className="flex flex-col border-b border-gray-100 pb-2">
-                        <h3 className="text-xs font-black text-gray-800 leading-tight">
+            {tooltipContent && hoveredRegionId && (
+                <div
+                    style={isMobile ? {
+                        top: '1rem',
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        width: 'calc(100% - 2rem)',
+                        maxWidth: '320px'
+                    } : {
+                        top: tooltipPos.y + 20,
+                        left: tooltipPos.x + 20
+                    }}
+                    className="fixed z-50 bg-white/95 backdrop-blur-md shadow-2xl rounded-xl p-3 md:p-4 border border-base-200 pointer-events-none flex flex-col gap-2 md:gap-3 transition-all duration-200 animate-in fade-in zoom-in-95"
+                    onClick={(e) => e.stopPropagation()}
+                >
+                    <div className="flex justify-between items-center border-b border-gray-100 pb-1.5">
+                        <h3 className="text-[11px] md:text-xs font-black text-gray-800 leading-tight">
                             {tooltipContent.name}
                         </h3>
                     </div>
 
-                    <div className="space-y-2">
-                        <div className="flex flex-col gap-1">
-                            <div className="flex justify-between text-[11px] font-bold">
-                                <span className="text-red-600 text-[10px]">Equipo Rojo ({tooltipContent.redP}%)</span>
-                                <span className="text-gray-500 font-medium text-[10px]">{tooltipContent.redVotes.toLocaleString()}</span>
+                    <div className="space-y-1.5 md:space-y-2">
+                        <div className="flex flex-col gap-0.5 md:gap-1">
+                            <div className="flex justify-between text-[10px] md:text-[11px] font-bold">
+                                <span className="text-red-600">Rojo ({tooltipContent.redP}%)</span>
+                                <span className="text-gray-500 font-medium">{tooltipContent.redVotes.toLocaleString()}</span>
                             </div>
                             <div className="h-1.5 w-full bg-gray-100 rounded-full overflow-hidden">
                                 <div className="h-full bg-red-500 transition-all duration-500" style={{ width: `${tooltipContent.redP}%` }}></div>
                             </div>
                         </div>
-                        <div className="flex flex-col gap-1">
-                            <div className="flex justify-between text-[11px] font-bold">
-                                <span className="text-blue-600 text-[10px]">Equipo Azul ({tooltipContent.blueP}%)</span>
-                                <span className="text-gray-500 font-medium text-[10px]">{tooltipContent.blueVotes.toLocaleString()}</span>
+                        <div className="flex flex-col gap-0.5 md:gap-1">
+                            <div className="flex justify-between text-[10px] md:text-[11px] font-bold">
+                                <span className="text-blue-600">Azul ({tooltipContent.blueP}%)</span>
+                                <span className="text-gray-500 font-medium">{tooltipContent.blueVotes.toLocaleString()}</span>
                             </div>
                             <div className="h-1.5 w-full bg-gray-100 rounded-full overflow-hidden">
                                 <div className="h-full bg-blue-500 transition-all duration-500" style={{ width: `${tooltipContent.blueP}%` }}></div>
@@ -155,8 +185,8 @@ export default function EleccionesMap({ mapSrc, results }) {
                         </div>
                     </div>
 
-                    <div className="text-[9px] text-gray-400 font-medium text-center">
-                        Votos escrutados: <span className="text-gray-600">{tooltipContent.total.toLocaleString()}</span>
+                    <div className="text-[8px] md:text-[9px] text-gray-400 font-medium text-center">
+                        Total: <span className="text-gray-600 font-bold">{tooltipContent.total.toLocaleString()} v.</span>
                     </div>
                 </div>
             )}

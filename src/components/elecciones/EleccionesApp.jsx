@@ -92,8 +92,10 @@ export default function EleccionesApp({ mapSrc }) {
         return { aggregatedResults: results, nationalSummary: summary };
     }, [currentElection, candidateTeams, groupingMode]);
 
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     return (
-        <div className="flex w-full h-screen bg-base-200 overflow-hidden font-sans">
+        <div className="flex w-full h-screen bg-base-200 overflow-hidden font-sans relative">
             <EleccionesMenu
                 elections={eleccionesData}
                 selectedElectionId={selectedElectionId}
@@ -103,13 +105,17 @@ export default function EleccionesApp({ mapSrc }) {
                 currentCandidates={menuItems}
                 candidateTeams={candidateTeams}
                 onMoveCandidate={moveCandidate}
+                isOpen={isMenuOpen}
+                setIsOpen={setIsMenuOpen}
             />
-            <div className="flex-1 relative flex overflow-hidden">
-                <EleccionesMap
-                    mapSrc={mapSrc}
-                    results={aggregatedResults}
-                />
-                <EleccionesStats summary={nationalSummary} />
+            <div className="flex-1 flex flex-row items-center justify-center p-4 bg-white relative overflow-hidden">
+                <div className="flex flex-row items-center justify-center gap-4 md:gap-12 max-h-full w-full max-w-6xl">
+                    <EleccionesMap
+                        mapSrc={mapSrc}
+                        results={aggregatedResults}
+                    />
+                    <EleccionesStats summary={nationalSummary} />
+                </div>
             </div>
         </div>
     );
