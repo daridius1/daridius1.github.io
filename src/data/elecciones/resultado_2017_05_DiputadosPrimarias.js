@@ -1,0 +1,26 @@
+/**
+ * Resultado Primarias Diputados Mayo 2017
+ * Datos agregados por región y partido desde votación por comuna
+ */
+export const diputadosPrimarias201705 = {
+    id: "diputados-primarias-2017-05",
+    name: "Primarias Diputados Mayo 2017",
+    // Mapeo de cada partido a su pacto correspondiente
+    pactoMapping: {
+        "PARTIDO ECOLOGISTA VERDE ": "FRENTE AMPLIO",
+        "PARTIDO HUMANISTA": "FRENTE AMPLIO",
+        "PODER": "FRENTE AMPLIO",
+        "REVOLUCION DEMOCRATICA": "FRENTE AMPLIO",
+        "VOTOS EN BLANCO": "VOTOS EN BLANCO",
+        "VOTOS NULOS": "VOTOS NULOS"
+    },
+    // Votos desglosados por región
+    votesByRegion: {
+        "1": { "PARTIDO ECOLOGISTA VERDE ": 0, "PARTIDO HUMANISTA": 0, "PODER": 7463, "REVOLUCION DEMOCRATICA": 0, "VOTOS EN BLANCO": 3518, "VOTOS NULOS": 3936 },
+        "3": { "PARTIDO ECOLOGISTA VERDE ": 0, "PARTIDO HUMANISTA": 0, "PODER": 9427, "REVOLUCION DEMOCRATICA": 0, "VOTOS EN BLANCO": 3557, "VOTOS NULOS": 4365 },
+        "4": { "PARTIDO ECOLOGISTA VERDE ": 0, "PARTIDO HUMANISTA": 0, "PODER": 0, "REVOLUCION DEMOCRATICA": 25923, "VOTOS EN BLANCO": 10210, "VOTOS NULOS": 12295 },
+        "8": { "PARTIDO ECOLOGISTA VERDE ": 46664, "PARTIDO HUMANISTA": 0, "PODER": 0, "REVOLUCION DEMOCRATICA": 0, "VOTOS EN BLANCO": 17080, "VOTOS NULOS": 21273 },
+        "10": { "PARTIDO ECOLOGISTA VERDE ": 0, "PARTIDO HUMANISTA": 0, "PODER": 13538, "REVOLUCION DEMOCRATICA": 0, "VOTOS EN BLANCO": 7248, "VOTOS NULOS": 6979 },
+        "13": { "PARTIDO ECOLOGISTA VERDE ": 0, "PARTIDO HUMANISTA": 23391, "PODER": 0, "REVOLUCION DEMOCRATICA": 76389, "VOTOS EN BLANCO": 48762, "VOTOS NULOS": 76318 }
+    }
+};

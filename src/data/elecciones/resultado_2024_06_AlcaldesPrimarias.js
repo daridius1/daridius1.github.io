@@ -2,8 +2,8 @@
  * Resultado Primarias Alcaldes Junio 2024
  * Datos agregados por región y partido desde votación por comuna
  */
-export const primariasAlcaldes202406 = {
-    id: "primarias-alcaldes-2024-06",
+export const alcaldesPrimarias202406 = {
+    id: "alcaldes-primarias-2024-06",
     name: "Primarias Alcaldes Junio 2024",
     // Mapeo de cada partido a su pacto correspondiente
     pactoMapping: {

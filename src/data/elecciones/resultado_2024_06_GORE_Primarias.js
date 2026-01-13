@@ -2,8 +2,8 @@
  * Resultado Primarias Gobernadores Regionales Junio 2024
  * Datos agregados por región y partido desde votación por comuna
  */
-export const primariasGore202406 = {
-    id: "primarias-gore-2024-06",
+export const gOREPrimarias202406 = {
+    id: "g-o-r-e-primarias-2024-06",
     name: "Primarias Gobernadores Regionales Junio 2024",
     // Mapeo de cada partido a su pacto correspondiente
     pactoMapping: {

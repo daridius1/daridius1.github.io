@@ -3,7 +3,7 @@
  * Datos agregados por región y partido desde votación por comuna
  */
 export const gobernadoresRegionales2V202411 = {
-    id: "gobernadores-regionales-2v-2024-11",
+    id: "gobernadores-regionales-2-v-2024-11",
     name: "Gobernadores Regionales 2da Vuelta Noviembre 2024",
     // Mapeo de cada partido a su pacto correspondiente
     pactoMapping: {

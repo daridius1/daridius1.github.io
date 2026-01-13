@@ -1,4 +1,6 @@
-export const consejosConstituyentesPueblosIndigenas202305 = {
+export const cCPI202305 = {
+  id: "ccpi-2023-05",
+  name: "Consejos Constituyentes Pueblos Indígenas Mayo 2023",
   candidates: {
     "ALIHUEN ANTILEO NAVARRETE": "MAPUCHE",
     "JULIO NELSON MARILEO CALFUQUEO": "MAPUCHE",

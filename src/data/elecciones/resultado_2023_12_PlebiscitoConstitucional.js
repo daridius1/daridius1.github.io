@@ -1,4 +1,6 @@
 export const plebiscitoConstitucional202312 = {
+  id: "plebiscito-constitucional-2023-12",
+  name: "Plebiscito Constitucional Diciembre 2023",
   options: [
     "A FAVOR",
     "EN CONTRA",

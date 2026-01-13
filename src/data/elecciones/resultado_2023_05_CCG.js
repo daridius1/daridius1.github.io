@@ -2,8 +2,8 @@
  * Resultado Consejo Constitucional Mayo 2023
  * Datos agregados por región y partido desde votación por comuna
  */
-export const consejoConstitucional202305 = {
-    id: "consejo-constitucional-2023-05",
+export const cCG202305 = {
+    id: "c-c-g-2023-05",
     name: "Consejo Constitucional Mayo 2023",
     // Mapeo de cada partido a su pacto correspondiente
     pactoMapping: {
