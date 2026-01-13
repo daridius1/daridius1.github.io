@@ -2,7 +2,7 @@
 title: "Procesamiento de datos: Clanker Masterclass"
 description: "La forma correcta de usar IA para la recolección de datos electorales"
 pubDate: "2026-01-12"
-tags: []
+tags: ["Proyectos", "Calculadora de Elecciones"]
 ---
 
 Con la calculadora de elecciones prácticamente creada, lo que se estaba volviendo más tedioso (y por mucho) era la recolección de datos. Sin embargo, a medida que fui repitiendo el proceso de extraer los datos desde la página del Servel —desde la descarga en adelante— noté que el patrón era casi exactamente el mismo.
