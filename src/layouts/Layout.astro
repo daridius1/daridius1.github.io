@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import { Picture } from "astro:assets";
 import heroImg from "../assets/bg.jpg";
 
 interface Props {
@@ -161,11 +162,16 @@ const pathname = Astro.url.pathname;
 
         <!-- Hero Area (Fixed Background) -->
         <div class="fixed inset-0 z-[-1]">
-            <div
-                class="absolute inset-0 bg-cover bg-center"
-                style={`background-image: url(${heroImg.src});`}
-            >
-            </div>
+            <Picture
+                src={heroImg}
+                alt=""
+                formats={["avif", "webp"]}
+                quality={60}
+                widths={[1920]}
+                sizes="100vw"
+                loading="eager"
+                class="absolute inset-0 w-full h-full object-cover"
+            />
             <div class="absolute inset-0 bg-black/40"></div>
         </div>
 
