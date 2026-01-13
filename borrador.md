@@ -1,15 +1,16 @@
-Calculadora de elecciones
+Procesamiento de datos clanker masterclass
 
-descripcion:mi nuevo proyecto para dar el salto a la fama
+descripcion:la forma correcta de usar ia
+fecha 12 de enero
 
-cada vez que se esta viendo en las noticias algo como "los votos de la derecha mas los de este otro weon suman mas que los votos de estos dos otros pelmazos, etc etc y por ende..." pienso, bueno, hacer aritmetica electoral es algo tan inutil como divertido, al menos en mi humilde opinion.
+con la calculadora de elecciones practimante creada, lo que se estaba haciendo mas tedioso (y por harto) estaba siendo la recoleccion de datos, pero a medida que fui repitiendo el proceso de extraer los datos de la pagina del servel, desde la descarga en adelante note que el patron era casi exactamente el mismo
 
-pero como es divertido, y parte de las cosas que me fascinan desde que tengo memoria, es ver mapas, me he propuesto a hacer un mapa interactivo, que permite ver el comportamiento electoral en las divisiones territoriales de mi lindo pais
+decidi crear un archivo con las instrucciones (expresadas en verdad, de forma bien humana) del paso a paso de la recoleccion de datos, y que excepciones podia haber y con que tenia que tener cuidado, y la verdad es que ha ido volando. Como para cada eleccion a la ia le di la instruccion de escribir el codigo con el que recolectar datos en vez de recolectar los datos ella misma (para lo que es bastante mala) tengo igual su buena confianza en que lo va a hacer bien, voy a verificar estos datos? claramente no jajaja, si me pagaran tal vez pero a esta altura ya no se ni pa que lo hago
 
-## Donde hacer la division
+## sobre las elecciones mas antiguas
 
-al inicio me motive con hacerlo a nivel comunas, pero me di cuenta que ya con solo regiones es la media paja (y hace un poco la pega), y que ademas, hago estas cosas gratis asi que con un mvp me deberia conformar por salud mental.
+cache que de ciertas elecciones al pasado (no recuerdo cuales pero como minimo las de inicios de los 2000) como que utilizan la pagina legacy del servel, lo que me da un poco de paja considerando que para el formato mas moderno esta lista la wea pero parece que el dato regional esta carepalo ahi, por lo que no habria que hacer algo muy complejo para extraer la info.
 
-## cosas que creo me quitaran un poco el sueño
+## dejarlo donde
 
-me gustaria que el mapa ofrezca muchas facilidades para ver de forma muy simple la division electral a lo largo de los años, y la creacion de la region de Ñuble es lo que mas me ha hecho mirar el techo pensando en como lidiar con ella. bueno, no es que sea algo demasiado dificil de soilucionar, pero al menos para mi, va a ser una paja
+la verdad es que he repatiado la pega de la memoria haciendo puras weas que, aunque considero productivas, no deberian ser mi enfoque principal, pero bueno, he trabajado bien este tiempo asi que mi conciencia esta limpia

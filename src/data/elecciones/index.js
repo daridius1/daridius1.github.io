@@ -1,9 +1,27 @@
-import { primarias2025 } from './2025-primarias';
-import { senadores2025 } from './2025-senadores';
+import { primariasPresidencial202506 } from './resultado_primarias_2025_06';
+import { primariasAlcaldes202406 } from './resultado_alcaldes_2024_06';
+import { primariasGore202406 } from './resultado_gore_2024_06';
+import { alcaldes202410 } from './resultado_alcaldes_2024_10';
+import { concejales202410 } from './resultado_concejales_2024_10';
+import { consejerosRegionales202410 } from './resultado_consejeros_regionales_2024_10';
+import { gobernadoresRegionales202410 } from './resultado_gobernadores_2024_10';
+import { gobernadoresRegionales2V202411 } from './resultado_gobernadores_2v_2024_11';
+import { consejoConstitucional202305 } from './resultado_ccg_2023_05';
+import { consejosConstituyentesPueblosIndigenas202305 } from './resultado_ccpi_2023_05';
+import { plebiscitoConstitucional202312 } from './resultado_plebiscito_2023_12';
 
 export const eleccionesData = [
-    primarias2025,
-    senadores2025
+    primariasPresidencial202506,
+    primariasAlcaldes202406,
+    primariasGore202406,
+    gobernadoresRegionales202410,
+    gobernadoresRegionales2V202411,
+    alcaldes202410,
+    consejerosRegionales202410,
+    concejales202410,
+    plebiscitoConstitucional202312,
+    consejoConstitucional202305,
+    consejosConstituyentesPueblosIndigenas202305
 ];
 
 export const REGION_MAPPING = {
