@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import { eleccionesData } from '../../data/elecciones/index.js';
+import { eleccionesData, REGION_MAPPING } from '../../data/elecciones/index.js';
 import EleccionesMenu from './EleccionesMenu';
 import EleccionesMap from './EleccionesMap';
 import EleccionesStats from './components/EleccionesStats';
 
-export default function EleccionesApp({ mapSrc }) {
+export default function EleccionesApp({ mapSrc, bgSrc }) {
     const [selectedElectionId, setSelectedElectionId] = useState(eleccionesData[0].id);
     const [candidateTeams, setCandidateTeams] = useState({});
     const [groupingMode, setGroupingMode] = useState('pacto'); // 'pacto' or 'partido'
@@ -48,12 +48,21 @@ export default function EleccionesApp({ mapSrc }) {
             totalVotes: 0,
             redRegions: 0,
             blueRegions: 0,
-            neutralRegions: 0
+            neutralRegions: 0,
+            missingRegions: 0
         };
 
         if (!currentElection) return { aggregatedResults: results, nationalSummary: summary };
 
-        Object.entries(currentElection.votesByRegion).forEach(([regionId, votes]) => {
+        // We iterate over all possible regions (1-16) to detect missing ones correctly
+        Object.keys(REGION_MAPPING).forEach((regionId) => {
+            const votes = currentElection.votesByRegion[regionId];
+
+            if (!votes) {
+                summary.missingRegions++;
+                return;
+            }
+
             let rV = 0;
             let bV = 0;
             const tV = Object.values(votes).reduce((sum, v) => sum + v, 0);
@@ -77,7 +86,7 @@ export default function EleccionesApp({ mapSrc }) {
                 if (team === 'blue') bV += count;
             });
 
-            results[regionId] = { redVotes: rV, blueVotes: bV, total: tV };
+            results[String(regionId)] = { redVotes: rV, blueVotes: bV, total: tV };
 
             // Global stats
             summary.redVotes += rV;
@@ -96,6 +105,18 @@ export default function EleccionesApp({ mapSrc }) {
 
     return (
         <div className="flex w-full h-dvh bg-base-200 overflow-hidden font-sans relative">
+            {/* Background Image with Blur */}
+            {bgSrc && (
+                <div className="absolute inset-0 z-0">
+                    <img
+                        src={bgSrc}
+                        alt="Background"
+                        className="w-full h-full object-cover blur-[2px] scale-105"
+                    />
+                    <div className="absolute inset-0 bg-white/60 backdrop-blur-[1px]"></div>
+                </div>
+            )}
+
             <EleccionesMenu
                 elections={eleccionesData}
                 selectedElectionId={selectedElectionId}
@@ -108,7 +129,7 @@ export default function EleccionesApp({ mapSrc }) {
                 isOpen={isMenuOpen}
                 setIsOpen={setIsMenuOpen}
             />
-            <div className="flex-1 flex flex-row items-center justify-center p-2 md:p-4 bg-white relative overflow-hidden">
+            <div className="flex-1 flex flex-row items-center justify-center p-2 md:p-4 relative overflow-hidden z-10">
                 <div className="flex flex-row items-center justify-center gap-2 md:gap-12 max-h-full w-full max-w-6xl">
                     <EleccionesMap
                         mapSrc={mapSrc}

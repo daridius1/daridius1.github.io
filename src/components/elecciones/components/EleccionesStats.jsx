@@ -46,7 +46,7 @@ const PieChart = ({ data, title, centerText, centerColor = "#374151" }) => {
                 </div>
             </div>
             <div className="grid grid-cols-1 gap-1 md:gap-2 w-full mt-1">
-                {data.map((s, i) => (
+                {data.filter(s => s.value > 0).map((s, i) => (
                     <div key={i} className="flex items-center justify-between gap-2 px-1">
                         <div className="flex items-center gap-1 md:gap-2 overflow-hidden">
                             <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full shrink-0" style={{ backgroundColor: s.color }} />
@@ -78,12 +78,7 @@ export default function EleccionesStats({ summary }) {
         : "0.0";
     const color2 = summary.redVotes > summary.blueVotes ? '#dc2626' : (summary.blueVotes > summary.redVotes ? '#2563eb' : '#64748b');
 
-    // Logic for Chart 3: Regions
-    const totalReg = summary.redRegions + summary.blueRegions + summary.neutralRegions;
-    const margin3 = totalReg > 0
-        ? (Math.abs(summary.redRegions - summary.blueRegions) / totalReg * 100).toFixed(1)
-        : "0.0";
-    const color3 = summary.redRegions > summary.blueRegions ? '#dc2626' : (summary.blueRegions > summary.redRegions ? '#2563eb' : '#94a3b8');
+    // Logic for Chart 3: Regions logic follows below after chart3Data definition
 
     const chart1Data = [
         { label: 'Rojo', value: summary.redVotes, color: '#dc2626' },
@@ -93,14 +88,21 @@ export default function EleccionesStats({ summary }) {
     const chart2Data = [
         { label: 'Rojo', value: summary.redVotes, color: '#dc2626' },
         { label: 'Azul', value: summary.blueVotes, color: '#2563eb' },
-        { label: 'Gris', value: neutralVotes, color: '#94a3b8' }
+        { label: 'Otras / Indep.', value: neutralVotes, color: '#94a3b8' }
     ];
 
     const chart3Data = [
         { label: 'Rojo', value: summary.redRegions, color: '#dc2626' },
         { label: 'Azul', value: summary.blueRegions, color: '#2563eb' },
-        { label: 'Gris', value: summary.neutralRegions, color: '#94a3b8' }
+        { label: 'Neutral / Empate', value: summary.neutralRegions, color: '#94a3b8' },
+        { label: 'Sin datos', value: summary.missingRegions, color: '#000000' }
     ];
+
+    const totalReg = summary.redRegions + summary.blueRegions + summary.neutralRegions + summary.missingRegions;
+    const margin3 = totalReg > 0
+        ? (Math.abs(summary.redRegions - summary.blueRegions) / totalReg * 100).toFixed(1)
+        : "0.0";
+    const color3 = summary.redRegions > summary.blueRegions ? '#dc2626' : (summary.blueRegions > summary.redRegions ? '#2563eb' : '#94a3b8');
 
     return (
         <div className="flex flex-col gap-1 md:gap-4 pointer-events-auto z-30 shrink-0 py-4 max-h-full overflow-y-auto scrollbar-hide">

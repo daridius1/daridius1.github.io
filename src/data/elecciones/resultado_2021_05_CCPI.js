@@ -1,7 +1,7 @@
 export const cCPI202105 = {
   id: "ccpi-2021-05",
   name: "Consejos Constituyentes Pueblos Indígenas Mayo 2021",
-  pueblos: [
+  candidates: [
     "AIMARA",
     "CHANGO",
     "COLLA",

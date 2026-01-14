@@ -1,7 +1,7 @@
 export const plebiscitoConstitucionPolitica202010 = {
   id: "plebiscito-constitucion-politica-2020-10",
   name: "Plebiscito Constitución Política Octubre 2020",
-  options: [
+  candidates: [
     "APRUEBO",
     "RECHAZO",
     "VOTOS EN BLANCO",

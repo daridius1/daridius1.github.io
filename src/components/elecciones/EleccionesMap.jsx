@@ -84,20 +84,35 @@ export default function EleccionesMap({ mapSrc, results }) {
 
     const regionColors = useMemo(() => {
         const colors = {};
-        const NEUTRAL_COLOR = "#f3f4f6";
+        const EMPTY_COLOR = "#000000"; // Black for non-voted regions
+        const BASE_COLOR = "#f3f4f6";  // Light grey as base for interpolation
         const RED_COLOR = "#dc2626";
         const BLUE_COLOR = "#2563eb";
         const THRESHOLD = 0.30;
 
-        Object.entries(results).forEach(([id, { redVotes, blueVotes, total }]) => {
-            const teamTotal = redVotes + blueVotes;
-            const svgId = REGION_MAPPING[id]?.id;
-            if (!svgId) return;
-            if (teamTotal === 0) { colors[svgId] = NEUTRAL_COLOR; return; }
-            const diff = Math.abs(redVotes - blueVotes);
+        Object.entries(REGION_MAPPING).forEach(([id, config]) => {
+            const svgId = config.id;
+            const res = results[id];
+
+            // If data is completely missing for this region in the election file, use black
+            if (!res) {
+                colors[svgId] = EMPTY_COLOR;
+                return;
+            }
+
+            const teamTotal = res.redVotes + res.blueVotes;
+
+            // If the region exists in the file but has no team votes or is tied, use base grey
+            if (teamTotal === 0 || res.redVotes === res.blueVotes) {
+                colors[svgId] = BASE_COLOR;
+                return;
+            }
+
+            const diff = Math.abs(res.redVotes - res.blueVotes);
             const strength = Math.min((diff / teamTotal) / THRESHOLD, 1.0);
-            colors[svgId] = redVotes > blueVotes ? interpolateColor(NEUTRAL_COLOR, RED_COLOR, strength) :
-                blueVotes > redVotes ? interpolateColor(NEUTRAL_COLOR, BLUE_COLOR, strength) : NEUTRAL_COLOR;
+            colors[svgId] = res.redVotes > res.blueVotes
+                ? interpolateColor(BASE_COLOR, RED_COLOR, strength)
+                : interpolateColor(BASE_COLOR, BLUE_COLOR, strength);
         });
         return colors;
     }, [results]);

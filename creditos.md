@@ -8,6 +8,14 @@ Licencia: Creative Commons Attribution-ShareAlike 2.0 (CC BY-SA 2.0)
 Licencia completa: https://creativecommons.org/licenses/by-sa/2.0/
 src/assets/bg.jpg
 
+**Miscanti Lagoon - San Pedro de Atacama, Chile**  
+Autor: Trodel  
+Fuente: Flickr  
+URL: https://www.flickr.com/photos/31290768@N06/3839965615  
+Licencia: Creative Commons Attribution-ShareAlike 2.0 (CC BY-SA 2.0)  
+Licencia completa: https://creativecommons.org/licenses/by-sa/2.0/
+src/assets/calc_bg.jpg
+
 **Mapa de Chile**  
 
 Mapa de Chile en SVG 
