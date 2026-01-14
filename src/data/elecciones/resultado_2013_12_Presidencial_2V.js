@@ -97,8 +97,6 @@ export const presidencial2V201312 = {
       "MICHELLE BACHELET": 32984,
       "VOTOS EN BLANCO": 306,
       "VOTOS NULOS": 862
-    },
-    "16": {
     }
   }
 };

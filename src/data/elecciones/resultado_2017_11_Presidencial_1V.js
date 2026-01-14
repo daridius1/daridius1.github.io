@@ -193,8 +193,6 @@ export const presidencial1V201711 = {
       "SEBASTIAN PIÑERA": 21597,
       "VOTOS EN BLANCO": 346,
       "VOTOS NULOS": 693
-    },
-    "16": {
     }
   }
 };

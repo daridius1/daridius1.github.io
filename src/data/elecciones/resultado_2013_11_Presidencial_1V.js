@@ -209,8 +209,6 @@ export const presidencial1V201311 = {
       "TOMAS JOCELYN-HOLT": 89,
       "VOTOS EN BLANCO": 371,
       "VOTOS NULOS": 700
-    },
-    "16": {
     }
   }
 };
