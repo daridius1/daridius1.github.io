@@ -3,7 +3,7 @@ title: "Blog Personal"
 description: "Un espacio donde dejar mi huella"
 tags: ["Programación", "Personal"]
 projectTag: "Blog"
-role: "Proyecto Personal"
+role: "Proyecto Individual"
 status: "En curso"
 dimension: "Pequeña"
 ---

@@ -5,11 +5,20 @@ import React from 'react';
  * @param {string} props.title
  * @param {string} props.description
  * @param {string} props.slug
+ * @param {string[]} [props.tags]
  */
-export default function ProjectCard({ title, description, slug }) {
+export default function ProjectCard({ title, description, slug, tags = [] }) {
     return (
         <div className="card bg-white/5 border border-white/10 shadow-2xl backdrop-blur-xl transition-all hover:scale-[1.02] group overflow-hidden flex flex-col h-full">
             <div className="card-body p-6 flex flex-col h-full">
+                <div className="flex flex-wrap gap-1.5 mb-3">
+                    {tags.map((tag) => (
+                        <span key={tag} className="px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-[8px] font-bold uppercase tracking-widest text-white/40">
+                            {tag}
+                        </span>
+                    ))}
+                </div>
+
                 <h3 className="card-title text-xl font-black tracking-tighter text-white">
                     {title}
                 </h3>

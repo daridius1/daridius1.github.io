@@ -3,7 +3,7 @@ title: "Aprender Esperanto"
 description: "Nova lingvo"
 tags: ["Personal"]
 projectTag: "Esperanto"
-role: "Proyecto Personal"
+role: "Proyecto Individual"
 status: "Empezando"
 dimension: "Pequeña"
 ---

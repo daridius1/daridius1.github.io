@@ -1,7 +1,7 @@
 ---
 title: "Elecciones problemáticas del Servel"
 description: "El sysadmin del Servel debe ser un comercial"
-pubDate: "2026-01-14"
+pubDate: "2026-01-13"
 tags: ["Proyectos", "Calculadora de Elecciones"]
 ---
 

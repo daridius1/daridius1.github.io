@@ -21,6 +21,7 @@ const projects = await getCollection("projects");
                         title={project.data.title}
                         description={project.data.description}
                         slug={project.slug}
+                        tags={project.data.tags}
                     />
                 ))
             }
