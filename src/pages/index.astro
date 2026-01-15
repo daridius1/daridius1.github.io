@@ -73,6 +73,7 @@ const posts = (await getCollection("blog")).sort(
 							)}
 							slug={post.slug}
 							tags={post.data.tags}
+							client:load
 						/>
 					))
 				}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useMemo } from 'react';
+import { useEffect, useState, useRef, useMemo, memo, useCallback } from 'react';
 import { REGION_MAPPING } from '../../data/elecciones/index.js';
 
 const interpolateColor = (color1, color2, factor) => {
@@ -15,7 +15,7 @@ const interpolateColor = (color1, color2, factor) => {
     return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 };
 
-const MapSVG = React.memo(({ svgContent, regionColors, onRegionHover, onRegionLeave }) => {
+const MapSVG = memo(({ svgContent, regionColors, onRegionHover, onRegionLeave }) => {
     const containerRef = useRef(null);
 
     useEffect(() => {
@@ -117,12 +117,12 @@ export default function EleccionesMap({ mapSrc, results }) {
         return colors;
     }, [results]);
 
-    const handleRegionHover = React.useCallback((id) => {
+    const handleRegionHover = useCallback((id) => {
         const dataId = svgIdToDataId[id];
         if (dataId) setHoveredRegionId(dataId);
     }, [svgIdToDataId]);
 
-    const handleRegionLeave = React.useCallback(() => {
+    const handleRegionLeave = useCallback(() => {
         if (!isMobile) {
             setHoveredRegionId(null);
             setTooltipContent(null);

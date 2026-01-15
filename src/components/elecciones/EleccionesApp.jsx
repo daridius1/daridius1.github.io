@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { eleccionesData, REGION_MAPPING } from '../../data/elecciones/index.js';
 import EleccionesMenu from './EleccionesMenu';
 import EleccionesMap from './EleccionesMap';

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const PieChart = ({ data, title, centerText, centerColor = "#374151" }) => {
     const total = data.reduce((acc, current) => acc + current.value, 0);
     const radius = 15.91549430918954; // Magic radius for a 100-unit perimeter

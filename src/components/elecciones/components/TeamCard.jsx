@@ -1,5 +1,3 @@
-import React from 'react';
-
 const TeamCard = ({ title, candidates, actionButtons, bgClass }) => (
     <div className={`card shadow-lg border-none ${bgClass} mb-4 transition-all duration-300 overflow-hidden`}>
         <div className="card-body p-4">
