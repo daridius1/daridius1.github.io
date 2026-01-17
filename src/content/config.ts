@@ -8,6 +8,11 @@ const blog = defineCollection({
         // Removed 'category' field. 
         // Future filtering will rely on checking if the 'tags' array contains specific keywords (e.g. 'proyectos').
         tags: z.array(z.string()).default([]),
+        music: z.object({
+            title: z.string(),
+            author: z.string(),
+            verse: z.string().optional(),
+        }).optional(),
     }),
 });
 

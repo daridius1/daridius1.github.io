@@ -1,0 +1,119 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+type Cancion = {
+    title: string;
+    artist: string;
+    blogUrl: string;
+    blogTitle: string;
+    date: string;
+    verse?: string; // Add optional verse
+};
+
+const canciones: Cancion[] = [
+    {
+        title: "Un siglo sin ti",
+        artist: "Chayanne",
+        blogUrl: "/blog/2026/01/15/vuelve-la-tne-a-mi-vida",
+        blogTitle: "Vuelve la TNE a mi vida",
+        date: "2026-01-15",
+        verse: "Y ahora que no estás aquí, me doy cuenta cuánta falta me haces",
+    },
+    // {
+    //     title: "Nombre de la Canción",
+    //     artist: "Artista",
+    //     blogUrl: "/blog/2026/01/16/encuentro-en-la-micro",
+    //     blogTitle: "Anécdota en la 518",
+    //     date: "2026-01-16",
+    // },
+];
+
+// Sort by date, newest first
+const sortedCanciones = [...canciones].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+);
+---
+
+<Layout title="Chacotero Sentimental | Daridius">
+    <div class="space-y-8">
+        <header
+            class="flex flex-col md:flex-row md:items-end justify-between gap-6"
+        >
+            <div class="space-y-4">
+                <a
+                    href="/registros"
+                    class="text-xs font-bold uppercase tracking-widest text-white/30 hover:text-white transition-colors flex items-center gap-2 group"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4 transition-transform group-hover:-translate-x-1"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2.5"
+                            d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    Volver a registros
+                </a>
+                <h1
+                    class="text-4xl font-black text-white tracking-tighter sm:text-6xl"
+                >
+                    Chacotero Sentimental
+                </h1>
+                <p class="text-white/60 max-w-2xl text-lg">
+                    Canciones dedicadas en el blog
+                </p>
+            </div>
+        </header>
+
+        {
+            sortedCanciones.length === 0 ? (
+                <div class="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm text-center">
+                    <p class="text-white/40 text-lg">
+                        Aún no hay canciones registradas.
+                    </p>
+                </div>
+            ) : (
+                <div class="space-y-4">
+                    {sortedCanciones.map((cancion) => (
+                        <div class="bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-sm flex flex-col sm:flex-row sm:items-center justify-between group hover:bg-white/10 transition-colors gap-4">
+                            <div class="space-y-2 flex-1">
+                                <h3 class="text-2xl font-black text-white leading-tight">
+                                    {cancion.title}
+                                </h3>
+                                <p class="text-white/60 text-sm">
+                                    {cancion.artist}
+                                </p>
+                                {cancion.blogTitle && (
+                                    <p class="text-white/40 text-xs">
+                                        Artículo:{" "}
+                                        <span class="text-white/60">
+                                            {cancion.blogTitle}
+                                        </span>
+                                    </p>
+                                )}
+                                {cancion.verse && (
+                                    <p class="text-white/60 text-xs italic mt-2 border-l-2 border-white/20 pl-2">
+                                        "{cancion.verse}"
+                                    </p>
+                                )}
+                            </div>
+                            {cancion.blogUrl && (
+                                <a
+                                    href={cancion.blogUrl}
+                                    class="px-4 py-2 rounded-full border border-white/20 text-xs font-bold uppercase tracking-widest text-white/60 hover:text-black hover:bg-white hover:border-transparent transition-all"
+                                >
+                                    Ver blog
+                                </a>
+                            )}
+                        </div>
+                    ))}
+                </div>
+            )
+        }
+    </div>
+</Layout>

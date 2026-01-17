@@ -3,6 +3,10 @@ title: "Vuelve la TNE a mi vida"
 description: "No se aprecia lo que se tiene hasta que se pierde"
 pubDate: "2026-01-15"
 tags: ["Sobre mí", "Anécdotas"]
+music:
+  title: "Un siglo sin ti"
+  author: "Chayanne"
+  verse: "Y ahora que no estás aquí, me doy cuenta cuánta falta me haces"
 ---
 
 Luego de haber sido cogoteado en agosto del año pasado, perdí dos documentos que no pensé que iba a extrañar tanto: la TUI y la TNE.
@@ -31,6 +35,6 @@ Al momento de llegar a la sucursal de la TNE, ocurrieron estas tres desgracias:
 
 Increíblemente, todos estos contratiempos y el proceso en general fue súper rápido, por lo que no me cagó el día. Pero lo del corte de luz igual fue brígido; es de esas cosas que te terminan volviendo loco y cagando todo el día cuando te pillan en un mal momento.
 
-## Te vamos a poner un tema
+## Te vamos a ponerte un tema
 
 Se me ocurrió que ciertos posts podrían ameritar un tema; onda, a lo Rumpy. Voy a dejar los temas dedicados en registros, y puede que agregue retroactivamente algunos temas porque el blog culiao es mío.
