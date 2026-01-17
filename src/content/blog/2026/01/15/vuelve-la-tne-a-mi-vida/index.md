@@ -2,7 +2,7 @@
 title: "Vuelve la TNE a mi vida"
 description: "No se aprecia lo que se tiene hasta que se pierde"
 pubDate: "2026-01-15"
-tags: ["Sobre mí"]
+tags: ["Sobre mí", "Anécdotas"]
 ---
 
 Luego de haber sido cogoteado en agosto del año pasado, perdí dos documentos que no pensé que iba a extrañar tanto: la TUI y la TNE.

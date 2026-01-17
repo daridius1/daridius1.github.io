@@ -23,7 +23,7 @@ Joder, qué gran respuesta, eso es poesía.
 
 Y como este es mi blog y hago lo que quiero con él, he aquí el poema, para el que mi única preparación fue intentar ser lo más honesto con lo que siente mi corazón y servirme agua de manzanilla.
 
-### Poema al WhatsApp Wrapped
+### Oda al WhatsApp Wrapped
 
 Oh, WhatsApp Wrapped  
 lo que me hiciste sentir  
