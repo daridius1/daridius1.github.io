@@ -1,8 +1,0 @@
-[6:49 PM, 1/16/2026] Sls: Sobre el transporte publico
-[6:49 PM, 1/16/2026] Sls: Y la asignacion de recursos
-[6:51 PM, 1/16/2026] Sls: De 10 cosas que pienso, 9 son sobre la optimizacion, y de esas 9, 8 son sobre cosas que encuentro que estan muy mal optimizadas en nuestra sociedad
-[6:53 PM, 1/16/2026] Sls: "la gente quiere esto" "la gente quiere esto otro" es facil asumir que la frontera de lo que las personas quieren esta en la frontera de aquello que conocen, pero la verdad es que las aspiraciones de las personas se relacionan demasiado con aquello que asocian con bienestar, y es sumamente dificil de explicar pq, una sociedad no centrada en el auto seria mucho mejor para todos, en demasiados sentidos, y que factores juegan para que se haga poco y nada al respecto.
-[6:55 PM, 1/16/2026] Sls: Algo que considero perjudica mucho casi que a nuestra especie es la poca capacidad de diagnosticar un problema (casi que en el termino mas general de la palabra) y de hacerse las preguntas correctas
-[6:56 PM, 1/16/2026] Sls: Soy una persona y constantemente me enfrento al desafio de "quiero ir de aca hasta aca" ¿Como resuelvo este problema?
-[6:58 PM, 1/16/2026] Sls: Cuando muchos se enfrentan a este dilema, y, de forma natural y obvia (no lo niego) analizan las posibilidades para esto, solo se plantean localmente como conseguir esto (tipo, caminando opcion incomoda, en transporte publico punto medio, o en auto  lo mas comodo) nunca se plantenab como podrianos hacer esto de la mejor forma como sociedad
-[7:16 PM, 1/16/2026] Sls: Y al argumento que debo admitiri que me genera un poco de molestia, en exceso pro culturalista, y que suelo responder con mas paciencia de la que me nace del corazon

@@ -3,9 +3,15 @@ import Layout from "../../layouts/Layout.astro";
 
 const books = [
     {
+        title: "El Estado y la Revolución",
+        author: "Vladimir Lenin",
+        finishedDate: "16 de enero, 2026",
+        reviewUrl: "/blog/2026/01/19/el-estado-y-la-revolucion",
+    },
+    {
         title: "Desperdicio Militar Obligatorio",
-        date: "2026", // Assuming current year or unknown, I'll leave it simple or ask? I'll just put the title for now.
-        author: "?", // Unknown author for now, maybe user's own?
+        author: "Guillermo Reyes Rammsy",
+        finishedDate: "4 de enero, 2026",
         reviewUrl: "/blog/2026/01/04/desperdicio-militar-obligatorio",
     },
 ];
@@ -57,8 +63,11 @@ const books = [
                             <h3 class="text-xl font-bold text-white leading-tight">
                                 {book.title}
                             </h3>
-                            {/* Optional author if known later */}
-                            {/* <p class="text-white/40 text-sm">{book.author}</p> */}
+                            <p class="text-white/40 text-sm">
+                                {book.finishedDate}
+                                <span class="mx-2 text-white/10">•</span>
+                                <span class="text-white/60">{book.author}</span>
+                            </p>
                         </div>
                         {book.reviewUrl && (
                             <a
