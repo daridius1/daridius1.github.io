@@ -1,37 +1,8 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import { getSortedCanciones } from "../../data/canciones";
 
-type Cancion = {
-    title: string;
-    artist: string;
-    blogUrl: string;
-    blogTitle: string;
-    date: string;
-    verse?: string; // Add optional verse
-};
-
-const canciones: Cancion[] = [
-    {
-        title: "Un siglo sin ti",
-        artist: "Chayanne",
-        blogUrl: "/blog/2026/01/15/vuelve-la-tne-a-mi-vida",
-        blogTitle: "Vuelve la TNE a mi vida",
-        date: "2026-01-15",
-        verse: "Y ahora que no estás aquí, me doy cuenta cuánta falta me haces",
-    },
-    // {
-    //     title: "Nombre de la Canción",
-    //     artist: "Artista",
-    //     blogUrl: "/blog/2026/01/16/encuentro-en-la-micro",
-    //     blogTitle: "Anécdota en la 518",
-    //     date: "2026-01-16",
-    // },
-];
-
-// Sort by date, newest first
-const sortedCanciones = [...canciones].sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
-);
+const sortedCanciones = getSortedCanciones();
 ---
 
 <Layout title="Chacotero Sentimental | Daridius">
