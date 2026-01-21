@@ -2,10 +2,10 @@
 title: "El Sensata"
 description: "La mejor forma de shupars"
 pubDate: "2026-01-21"
-tags: []
+tags: ["Ideas", "Salismo"]
 ---
 
-En la empresa donde hice mi segunda práctica, uno de mis jefes (que era todo un crack, lamentablemente perdimos el contacto) estaba completamente obsesionado con el ejercicio y con la alimentación. Entre algunas de sus enseñanzas, me compartió su secreto para chupar sin engordar, que vendría a ser vodka conagua mineral con gas.
+En la empresa donde hice mi segunda práctica, uno de mis jefes (que era todo un crack, lamentablemente perdimos el contacto) estaba completamente obsesionado con el ejercicio y con la alimentación. Entre algunas de sus enseñanzas, me compartió su secreto para chupar sin engordar, que vendría a ser vodka con agua mineral con gas.
 
 Lo que otras personas considerarían un trago sumamente rasca a mí me pareció (como mínimo la idea, lo terminé probando bastante después) una genialidad. Aunque dentro de todo lo bueno que tiene la idea, lo que más me gustó fue lo barato que era el trago.
 
