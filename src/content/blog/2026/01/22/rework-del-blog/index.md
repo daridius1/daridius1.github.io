@@ -2,7 +2,7 @@
 title: "Rework del blog"
 description: "He escuchado la voz del pueblo"
 pubDate: "2026-01-22"
-tags: []
+tags: ["Proyectos", "Blog", "Lotocracia"]
 ---
 
 Aunque me gusta ser fiel a mis ideas, y el diseño de la página como estaba anteriormente me gustaba lo suficiente, recibí feedback negativo de su diseño de los que son probablemente los 2 seguidores (o sea, más de la mitad xD) más fieles del blog, por lo que decidí hacerle un rework al diseño de la página.
