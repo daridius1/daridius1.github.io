@@ -5,7 +5,7 @@ tags: ["Programación", "Pública"]
 projectTag: "Calculadora de Elecciones"
 role: "Proyecto Individual"
 status: "Terminado"
-dimension: "Pequeña"
+dimension: "Pequeño"
 ---
 
 Este proyecto nace de una fijación personal con el apartado técnico de la página de resultados electorales del Servel. Desde que me percaté de que esta hecha de forma horrible, he coqueteado con la idea desarrollar herramientas que permitan mejorar la experiencia del análisis de resultados electorales.

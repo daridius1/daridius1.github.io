@@ -1,0 +1,321 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+    const projects = await getCollection("projects");
+    return projects.map((entry) => ({
+        params: { slug: entry.slug },
+        props: { entry },
+    }));
+}
+
+interface Props {
+    entry: CollectionEntry<"projects">;
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+// Fetch related blog posts
+const allPosts = await getCollection("blog");
+const relatedPosts = allPosts
+    .filter((post) => post.data.tags?.includes(entry.data.projectTag))
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const formatDate = (date?: Date) => {
+    if (!date) return "";
+    return date.toLocaleDateString("es-ES", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+    });
+};
+---
+
+<Layout title={`${entry.data.title} | Proyectos`}>
+    <article class="project-detail">
+        <header class="project-header">
+            <div class="project-meta-top">
+                <span class="project-dimension">{entry.data.dimension}</span>
+                {
+                    entry.data.pubDate && (
+                        <time datetime={entry.data.pubDate.toISOString()}>
+                            {formatDate(entry.data.pubDate)}
+                        </time>
+                    )
+                }
+            </div>
+            <h1>{entry.data.title}</h1>
+            <p class="description">{entry.data.description}</p>
+
+            <div class="project-info-grid">
+                <div class="info-item">
+                    <span class="info-label">Rol</span>
+                    <span class="info-value">{entry.data.role}</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Estado</span>
+                    <span class="info-value">{entry.data.status}</span>
+                </div>
+                {
+                    entry.data.link && (
+                        <div class="info-item">
+                            <span class="info-label">Link</span>
+                            <a
+                                href={entry.data.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="info-value link"
+                            >
+                                Ver proyecto
+                                <svg
+                                    width="12"
+                                    height="12"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M7 7h10v10M7 17 17 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    )
+                }
+            </div>
+        </header>
+
+        <div class="content">
+            <Content />
+        </div>
+
+        {
+            relatedPosts.length > 0 && (
+                <footer class="related-content">
+                    <h2 class="section-title">Bitácora relacionada</h2>
+                    <div class="related-posts">
+                        {relatedPosts.map((post) => (
+                            <a
+                                href={`/blog/${post.slug}`}
+                                class="related-post-card"
+                            >
+                                <span class="post-date">
+                                    {formatDate(post.data.pubDate)}
+                                </span>
+                                <h3 class="post-title">{post.data.title}</h3>
+                            </a>
+                        ))}
+                    </div>
+                </footer>
+            )
+        }
+
+        <nav class="project-nav">
+            <a href="/proyectos" class="back-btn">
+                <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><path d="m15 18-6-6 6-6"></path></svg
+                >
+                Volver a proyectos
+            </a>
+        </nav>
+    </article>
+</Layout>
+
+<style is:global>
+    .project-detail {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 6rem 0;
+    }
+
+    .project-header {
+        margin-bottom: 5rem;
+    }
+
+    .project-meta-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        font-size: 0.9rem;
+        opacity: 0.5;
+    }
+
+    .project-dimension {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 0.2rem 0.6rem;
+        border-radius: 4px;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        font-size: 0.75rem;
+    }
+
+    .project-header h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        color: #fff;
+        letter-spacing: -0.03em;
+    }
+
+    .description {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        opacity: 0.7;
+        margin-bottom: 3rem;
+        font-weight: 400;
+    }
+
+    .project-info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 2rem;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+    }
+
+    .info-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .info-label {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        opacity: 0.4;
+    }
+
+    .info-value {
+        font-size: 1rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .info-value.link {
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        transition: opacity 0.2s ease;
+    }
+
+    .info-value.link:hover {
+        opacity: 0.7;
+    }
+
+    .content {
+        line-height: 1.8;
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.85);
+        margin-bottom: 8rem;
+    }
+
+    .content h2 {
+        font-size: 2.25rem;
+        margin-top: 4rem;
+        margin-bottom: 1.5rem;
+        color: #fff;
+    }
+
+    .related-content {
+        margin-top: 8rem;
+        padding-top: 4rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        color: #fff;
+    }
+
+    .related-posts {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .related-post-card {
+        padding: 1.5rem 2rem;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.03);
+        border-radius: 16px;
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+    .related-post-card:hover {
+        background: rgba(255, 255, 255, 0.04);
+        border-color: rgba(255, 255, 255, 0.1);
+        transform: translateX(10px);
+    }
+
+    .related-post-card .post-title {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .related-post-card .post-date {
+        font-size: 0.9rem;
+        opacity: 0.4;
+    }
+
+    .project-nav {
+        margin-top: 6rem;
+    }
+
+    .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.5);
+        font-weight: 500;
+        transition: all 0.2s ease;
+    }
+
+    .back-btn:hover {
+        color: #fff;
+        transform: translateX(-5px);
+    }
+
+    @media (max-width: 768px) {
+        .project-header h1 {
+            font-size: 3rem;
+        }
+
+        .description {
+            font-size: 1.25rem;
+        }
+
+        .related-post-card {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+    }
+</style>

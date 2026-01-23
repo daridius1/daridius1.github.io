@@ -5,7 +5,7 @@ tags: ["Programación", "Personal"]
 projectTag: "Blog"
 role: "Proyecto Individual"
 status: "En curso"
-dimension: "Pequeña"
+dimension: "Pequeño"
 ---
 
 Este proyecto trata de la creación de un blog personal para dejar registro de mis aventuras y pensamientos, sin un objetivo en particular, al menos hasta la fecha.

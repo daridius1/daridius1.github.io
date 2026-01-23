@@ -1,0 +1,225 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+
+const projects = (await getCollection("projects")).sort(
+    (a, b) =>
+        (b.data.pubDate?.valueOf() || 0) - (a.data.pubDate?.valueOf() || 0),
+);
+
+const formatDate = (date?: Date) => {
+    if (!date) return "";
+    return date.toLocaleDateString("es-ES", {
+        year: "numeric",
+        month: "short",
+    });
+};
+---
+
+<Layout title="Proyectos | daridius">
+    <section class="projects-container">
+        <header class="projects-header">
+            <h1>Proyectos</h1>
+            <p>
+                Una selección de mis trabajos, experimentos y obsesiones
+                técnicas.
+            </p>
+        </header>
+
+        <div class="projects-grid">
+            {
+                projects.map((project) => (
+                    <a href={`/proyectos/${project.slug}`} class="project-card">
+                        <div class="project-tags">
+                            {project.data.tags.slice(0, 3).map((tag) => (
+                                <span class="project-tag">{tag}</span>
+                            ))}
+                        </div>
+
+                        <div class="project-main">
+                            <h2 class="project-title">{project.data.title}</h2>
+                            <p class="project-description">
+                                {project.data.description}
+                            </p>
+                        </div>
+
+                        <div class="project-footer">
+                            <span class="project-dimension">
+                                {project.data.dimension}
+                            </span>
+                            <span class="project-status">
+                                {project.data.status}
+                            </span>
+                        </div>
+                    </a>
+                ))
+            }
+        </div>
+    </section>
+</Layout>
+
+<style>
+    .projects-container {
+        padding: 6rem 0;
+    }
+
+    .projects-header {
+        margin-bottom: 5rem;
+        max-width: 600px;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        letter-spacing: -0.02em;
+        background: linear-gradient(to bottom, #ffffff, #888888);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    p {
+        font-size: 1.25rem;
+        opacity: 0.5;
+        line-height: 1.6;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 2.5rem;
+    }
+
+    .project-card {
+        text-decoration: none;
+        color: inherit;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 24px;
+        padding: 2.5rem;
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .project-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.1),
+            transparent
+        );
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    .project-card:hover {
+        background: rgba(255, 255, 255, 0.04);
+        border-color: rgba(255, 255, 255, 0.1);
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.5);
+    }
+
+    .project-card:hover::before {
+        opacity: 1;
+    }
+
+    .project-tags {
+        display: flex;
+        gap: 0.6rem;
+        align-items: center;
+    }
+
+    .project-tag {
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.2);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+    }
+
+    .project-tag:not(:last-child)::after {
+        content: "•";
+        font-size: 0.7rem;
+        font-weight: 900;
+        opacity: 0.3;
+        color: #fff;
+    }
+
+    .project-main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 2rem 0;
+    }
+
+    .project-title {
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: rgba(255, 255, 255, 0.95);
+        transition: color 0.3s ease;
+        line-height: 1.25;
+    }
+
+    .project-card:hover .project-title {
+        color: #fff;
+    }
+
+    .project-description {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        opacity: 0.6;
+        margin-bottom: 2rem;
+    }
+
+    .project-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: auto;
+        padding-top: 1rem;
+    }
+
+    .project-dimension {
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        opacity: 0.3;
+    }
+
+    .project-status {
+        font-size: 0.75rem;
+        font-weight: 600;
+        opacity: 0.4;
+        font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        .projects-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .project-card {
+            padding: 2rem;
+        }
+    }
+</style>

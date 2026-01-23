@@ -5,7 +5,7 @@ tags: ["Personal"]
 projectTag: "Esperanto"
 role: "Proyecto Individual"
 status: "Empezando"
-dimension: "Pequeña"
+dimension: "Pequeño"
 ---
 
 Aunque de la existencia del esperanto me entere hace mucho, no hace tanto desarrolle una empatia con la idea, la cual cuentro muy noble y cercana a mis valores de progreso y emancipación de nuestros amarres culturales.
