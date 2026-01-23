@@ -36,20 +36,10 @@ const formatDate = (date?: Date) => {
 <Layout title={`${entry.data.title} | Proyectos`}>
     <article class="project-detail">
         <header class="project-header">
-            <div class="project-meta-top">
-                <span class="project-dimension">{entry.data.dimension}</span>
-                {
-                    entry.data.pubDate && (
-                        <time datetime={entry.data.pubDate.toISOString()}>
-                            {formatDate(entry.data.pubDate)}
-                        </time>
-                    )
-                }
-            </div>
-            <h1>{entry.data.title}</h1>
+            <h1 class="project-title">{entry.data.title}</h1>
             <p class="description">{entry.data.description}</p>
 
-            <div class="project-info-grid">
+            <div class="project-info-row">
                 <div class="info-item">
                     <span class="info-label">Rol</span>
                     <span class="info-value">{entry.data.role}</span>
@@ -58,34 +48,38 @@ const formatDate = (date?: Date) => {
                     <span class="info-label">Estado</span>
                     <span class="info-value">{entry.data.status}</span>
                 </div>
-                {
-                    entry.data.link && (
-                        <div class="info-item">
-                            <span class="info-label">Link</span>
-                            <a
-                                href={entry.data.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="info-value link"
-                            >
-                                Ver proyecto
-                                <svg
-                                    width="12"
-                                    height="12"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2.5"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                >
-                                    <path d="M7 7h10v10M7 17 17 7" />
-                                </svg>
-                            </a>
-                        </div>
-                    )
-                }
+                <div class="info-item">
+                    <span class="info-label">Dimensión</span>
+                    <span class="info-value">{entry.data.dimension}</span>
+                </div>
             </div>
+
+            {
+                entry.data.link && (
+                    <div class="project-link-wrapper">
+                        <a
+                            href={entry.data.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="external-link"
+                        >
+                            Ver proyecto online
+                            <svg
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M7 7h10v10M7 17 17 7" />
+                            </svg>
+                        </a>
+                    </div>
+                )
+            }
         </header>
 
         <div class="content">
@@ -95,7 +89,7 @@ const formatDate = (date?: Date) => {
         {
             relatedPosts.length > 0 && (
                 <footer class="related-content">
-                    <h2 class="section-title">Bitácora relacionada</h2>
+                    <h2 class="section-title">Publicaciones relacionadas</h2>
                     <div class="related-posts">
                         {relatedPosts.map((post) => (
                             <a
@@ -140,86 +134,82 @@ const formatDate = (date?: Date) => {
     }
 
     .project-header {
-        margin-bottom: 5rem;
-    }
-
-    .project-meta-top {
+        margin-bottom: 6rem;
+        text-align: center;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         align-items: center;
-        margin-bottom: 2rem;
-        font-size: 0.9rem;
-        opacity: 0.5;
-    }
-
-    .project-dimension {
-        background: rgba(255, 255, 255, 0.05);
-        padding: 0.2rem 0.6rem;
-        border-radius: 4px;
-        text-transform: uppercase;
-        font-weight: 700;
-        letter-spacing: 0.1em;
-        font-size: 0.75rem;
     }
 
     .project-header h1 {
-        font-size: 4rem;
+        font-size: 4.5rem;
         font-weight: 700;
-        line-height: 1.1;
+        line-height: 1;
         margin-bottom: 1.5rem;
         color: #fff;
-        letter-spacing: -0.03em;
+        letter-spacing: -0.04em;
     }
 
     .description {
-        font-size: 1.5rem;
-        line-height: 1.5;
-        opacity: 0.7;
-        margin-bottom: 3rem;
-        font-weight: 400;
+        font-size: 1.25rem;
+        line-height: 1.6;
+        opacity: 0.5;
+        margin-bottom: 4rem;
+        max-width: 600px;
     }
 
-    .project-info-grid {
+    .project-info-row {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 2rem;
-        padding: 2rem;
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        border-radius: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        padding: 3rem 0;
+        margin: 0 auto;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .info-item {
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 0.6rem;
+        text-align: center;
     }
 
     .info-label {
-        font-size: 0.75rem;
+        font-size: 0.65rem;
         text-transform: uppercase;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.15em;
         font-weight: 700;
-        opacity: 0.4;
+        opacity: 0.3;
     }
 
     .info-value {
-        font-size: 1rem;
-        font-weight: 500;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
         color: rgba(255, 255, 255, 0.9);
+        line-height: 1.4;
     }
 
-    .info-value.link {
+    .project-link-wrapper {
+        margin-top: 3rem;
+    }
+
+    .external-link {
         color: #fff;
         text-decoration: none;
         display: flex;
         align-items: center;
-        gap: 0.4rem;
-        transition: opacity 0.2s ease;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        opacity: 0.6;
+        transition: opacity 0.3s ease;
     }
 
-    .info-value.link:hover {
-        opacity: 0.7;
+    .external-link:hover {
+        opacity: 1;
     }
 
     .content {
@@ -271,7 +261,6 @@ const formatDate = (date?: Date) => {
     .related-post-card:hover {
         background: rgba(255, 255, 255, 0.04);
         border-color: rgba(255, 255, 255, 0.1);
-        transform: translateX(10px);
     }
 
     .related-post-card .post-title {
@@ -310,6 +299,12 @@ const formatDate = (date?: Date) => {
 
         .description {
             font-size: 1.25rem;
+        }
+
+        .project-info-row {
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            padding: 2.5rem 0;
         }
 
         .related-post-card {
