@@ -1,17 +1,107 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="daridius">
+	<section class="hero">
+		<h1>Bienvenid@ a mi cueva digital</h1>
+		<p>Un gusto verte por acá, espero encuentres algo que te guste :)</p>
+		<div class="cta">
+			<a href="/blog" class="button">Conoce mi blog</a>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.hero {
+		height: calc(100vh - 80px);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	h1 {
+		font-size: clamp(3rem, 10vw, 5rem);
+		font-weight: 700;
+		margin-bottom: 1rem;
+		letter-spacing: -0.04em;
+		background: linear-gradient(to bottom, #ffffff, #888888);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	p {
+		font-size: 1.5rem;
+		opacity: 0.5;
+		margin-bottom: 2.5rem;
+	}
+
+	.cta {
+		margin-top: 1rem;
+		animation: fade-up 1.2s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+	}
+
+	.button {
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		padding: 1.25rem 3rem;
+		background: rgba(255, 255, 255, 0.03);
+		color: #fff;
+		text-decoration: none;
+		border-radius: 12px;
+		font-weight: 600;
+		font-size: 1.1rem;
+		letter-spacing: -0.01em;
+		transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(10px);
+		overflow: hidden;
+	}
+
+	/* Subtle glow effect background */
+	.button::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 150%;
+		height: 150%;
+		background: radial-gradient(
+			circle,
+			rgba(255, 255, 255, 0.15) 0%,
+			transparent 70%
+		);
+		transform: translate(-50%, -50%) scale(0);
+		transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+		z-index: -1;
+	}
+
+	.button:hover {
+		border-color: rgba(255, 255, 255, 0.3);
+		transform: translateY(-2px);
+		box-shadow: 0 10px 30px -10px rgba(255, 255, 255, 0.1);
+		background: rgba(255, 255, 255, 0.07);
+	}
+
+	.button:hover::before {
+		transform: translate(-50%, -50%) scale(1);
+	}
+
+	.button:active {
+		transform: translateY(0);
+	}
+
+	@keyframes fade-up {
+		from {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+</style>

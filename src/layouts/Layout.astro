@@ -1,0 +1,146 @@
+---
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Daridius Personal Blog" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="/" class="logo">Daridius</a>
+                <div class="nav-links">
+                    <a href="/blog">Blog</a>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <slot />
+        </main>
+    </body>
+</html>
+
+<style is:global>
+    :root {
+        --bg-color: #050505;
+        --text-color: #eeeeee;
+        --accent-color: #ffffff;
+        --nav-height: 80px;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        font-family: "Outfit", system-ui, sans-serif;
+        background: var(--bg-color);
+        color: var(--text-color);
+        scroll-behavior: smooth;
+    }
+
+    body {
+        min-height: 100vh;
+    }
+
+    .navbar {
+        height: var(--nav-height);
+        display: flex;
+        align-items: center;
+        padding: 0 2rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(5, 5, 5, 0.8);
+        backdrop-filter: blur(12px);
+        z-index: 1000;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: var(--accent-color);
+        letter-spacing: -0.02em;
+        transition: opacity 0.2s ease;
+    }
+
+    .logo:hover {
+        opacity: 0.8;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: var(--text-color);
+        font-weight: 500;
+        font-size: 1rem;
+        opacity: 0.7;
+        transition: all 0.2s ease;
+    }
+
+    .nav-links a:hover {
+        opacity: 1;
+        color: var(--accent-color);
+    }
+
+    main {
+        padding-top: var(--nav-height);
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    /* Custom Scrollbar for Premium Feel */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: var(--bg-color);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #222;
+        border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #333;
+    }
+</style>

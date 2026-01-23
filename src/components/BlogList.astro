@@ -1,0 +1,109 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+
+const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort(
+    (a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) =>
+        b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+const formatDate = (date: Date) => {
+    return date.toLocaleDateString("es-ES", {
+        year: "numeric",
+        month: "short",
+        day: "2-digit",
+    });
+};
+---
+
+<div class="blog-list">
+    {
+        posts.map((post) => (
+            <a href={`/blog/${post.slug}`} class="post-item">
+                <div class="post-meta">
+                    <time datetime={post.data.pubDate.toISOString()}>
+                        {formatDate(post.data.pubDate)}
+                    </time>
+                </div>
+                <div class="post-info">
+                    <h2 class="post-title">{post.data.title}</h2>
+                    {post.data.tags && post.data.tags.length > 0 && (
+                        <div class="post-tags">
+                            {post.data.tags.map((tag: string) => (
+                                <span class="tag">#{tag}</span>
+                            ))}
+                        </div>
+                    )}
+                </div>
+            </a>
+        ))
+    }
+</div>
+
+<style>
+    .blog-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .post-item {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        gap: 2rem;
+        padding: 1.5rem 0;
+        text-decoration: none;
+        color: inherit;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.2s ease;
+    }
+
+    .post-item:hover {
+        border-bottom-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .post-item:hover .post-title {
+        color: #fff;
+        transform: translateX(8px);
+    }
+
+    .post-meta {
+        font-size: 0.9rem;
+        opacity: 0.4;
+        padding-top: 0.4rem;
+    }
+
+    .post-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .post-title {
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.85);
+        transition: all 0.3s ease;
+    }
+
+    .post-tags {
+        display: flex;
+        gap: 0.75rem;
+        opacity: 0.3;
+        font-size: 0.8rem;
+    }
+
+    @media (max-width: 640px) {
+        .post-item {
+            grid-template-columns: 1fr;
+            gap: 0.5rem;
+            padding: 2rem 0;
+        }
+
+        .post-meta {
+            padding-top: 0;
+        }
+
+        .post-item:hover .post-title {
+            transform: none;
+        }
+    }
+</style>
