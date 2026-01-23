@@ -6,6 +6,12 @@ const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort(
         b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
+const rawTags = [...new Set(posts.flatMap((post) => post.data.tags || []))];
+const MAIN_TAGS = ["Sobre mí", "Opinión", "Proyectos", "Reviews"];
+
+const mainTags = MAIN_TAGS.filter((tag) => rawTags.includes(tag));
+const otherTags = rawTags.filter((tag) => !MAIN_TAGS.includes(tag)).sort();
+
 const formatDate = (date: Date) => {
     return date.toLocaleDateString("es-ES", {
         year: "numeric",
@@ -15,31 +21,335 @@ const formatDate = (date: Date) => {
 };
 ---
 
-<div class="blog-list">
-    {
-        posts.map((post) => (
-            <a href={`/blog/${post.slug}`} class="post-item">
-                <div class="post-meta">
-                    <time datetime={post.data.pubDate.toISOString()}>
-                        {formatDate(post.data.pubDate)}
-                    </time>
+<div class="blog-container-layout">
+    <aside class="filter-sidebar">
+        <div class="filter-header">
+            <span class="filter-title">Filtros</span>
+            <button id="apply-filter" class="apply-btn"> Confirmar </button>
+        </div>
+
+        <div class="filter-groups">
+            <details class="filter-group" open>
+                <summary>
+                    <span>Categorías</span>
+                    <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        ><path d="m6 9 6 6 6-6"></path></svg
+                    >
+                </summary>
+                <div class="filter-list" id="categories-container">
+                    {
+                        mainTags.map((tag) => (
+                            <button class="filter-item" data-tag={tag}>
+                                <div class="checkbox" />
+                                <span class="tag-name">{tag}</span>
+                            </button>
+                        ))
+                    }
                 </div>
-                <div class="post-info">
-                    <h2 class="post-title">{post.data.title}</h2>
-                    {post.data.tags && post.data.tags.length > 0 && (
-                        <div class="post-tags">
-                            {post.data.tags.map((tag: string) => (
-                                <span class="tag">#{tag}</span>
-                            ))}
-                        </div>
-                    )}
+            </details>
+
+            <details class="filter-group">
+                <summary>
+                    <span>Temas</span>
+                    <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        ><path d="m6 9 6 6 6-6"></path></svg
+                    >
+                </summary>
+                <div class="filter-list" id="tags-container">
+                    {
+                        otherTags.map((tag) => (
+                            <button class="filter-item" data-tag={tag}>
+                                <div class="checkbox" />
+                                <span class="tag-name">{tag}</span>
+                            </button>
+                        ))
+                    }
                 </div>
-            </a>
-        ))
-    }
+            </details>
+        </div>
+    </aside>
+
+    <div class="blog-list" id="blog-list">
+        {
+            posts.map((post) => (
+                <a
+                    href={`/blog/${post.slug}`}
+                    class="post-item"
+                    data-tags={JSON.stringify(post.data.tags || [])}
+                >
+                    <div class="post-meta">
+                        <time datetime={post.data.pubDate.toISOString()}>
+                            {formatDate(post.data.pubDate)}
+                        </time>
+                    </div>
+                    <div class="post-info">
+                        <h2 class="post-title">{post.data.title}</h2>
+                        {post.data.tags && post.data.tags.length > 0 && (
+                            <div class="post-tags-row">
+                                {post.data.tags.map((tag: string) => (
+                                    <span
+                                        class={`tag-label ${MAIN_TAGS.includes(tag) ? "is-main" : ""}`}
+                                    >
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                </a>
+            ))
+        }
+        <div id="no-results" class="no-results" style="display: none;">
+            No hay entradas con estos filtros.
+        </div>
+    </div>
 </div>
 
+<script>
+    const filterContainers = [
+        document.getElementById("categories-container"),
+        document.getElementById("tags-container"),
+    ];
+    const applyBtn = document.getElementById("apply-filter");
+    const postItems = document.querySelectorAll(".post-item");
+    const noResults = document.getElementById("no-results");
+
+    let selectedTags = new Set<string>();
+
+    // Initial load from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const tagsFromUrl = urlParams.get("tags");
+    if (tagsFromUrl) {
+        tagsFromUrl.split(",").forEach((tag) => {
+            if (tag) selectedTags.add(tag);
+        });
+        updateFilterStyles();
+        filterPosts();
+    }
+
+    filterContainers.forEach((container) => {
+        container?.addEventListener("click", (e) => {
+            const target = (e.target as HTMLElement).closest(".filter-item");
+            if (!target) return;
+
+            const tag = target.getAttribute("data-tag");
+            if (tag) {
+                if (selectedTags.has(tag)) {
+                    selectedTags.delete(tag);
+                    target.classList.remove("active");
+                } else {
+                    selectedTags.add(tag);
+                    target.classList.add("active");
+                }
+            }
+        });
+    });
+
+    applyBtn?.addEventListener("click", () => {
+        const newUrl = new URL(window.location.href);
+        if (selectedTags.size > 0) {
+            newUrl.searchParams.set("tags", Array.from(selectedTags).join(","));
+        } else {
+            newUrl.searchParams.delete("tags");
+        }
+        window.history.pushState({}, "", newUrl);
+        filterPosts();
+
+        applyBtn.classList.add("active-blink");
+        setTimeout(() => applyBtn.classList.remove("active-blink"), 400);
+    });
+
+    function updateFilterStyles() {
+        document.querySelectorAll(".filter-item").forEach((btn) => {
+            const tag = btn.getAttribute("data-tag");
+            if (tag && selectedTags.has(tag)) {
+                btn.classList.add("active");
+            }
+        });
+    }
+
+    function filterPosts() {
+        let visibleCount = 0;
+        postItems.forEach((item) => {
+            const postTags = JSON.parse(item.getAttribute("data-tags") || "[]");
+            const matches =
+                selectedTags.size === 0 ||
+                Array.from(selectedTags).every((tag) => postTags.includes(tag));
+
+            if (matches) {
+                (item as HTMLElement).style.display = "grid";
+                visibleCount++;
+            } else {
+                (item as HTMLElement).style.display = "none";
+            }
+        });
+
+        if (noResults) {
+            noResults.style.display = visibleCount === 0 ? "block" : "none";
+        }
+    }
+</script>
+
 <style>
+    .blog-container-layout {
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        gap: 6rem;
+        align-items: start;
+    }
+
+    .filter-sidebar {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+        padding: 2rem;
+        animation: fade-in 1s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .filter-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .filter-title {
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        opacity: 0.5;
+    }
+
+    .apply-btn {
+        background: #fff;
+        color: #000;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .apply-btn:hover {
+        opacity: 0.9;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    }
+
+    .filter-groups {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .filter-group summary {
+        list-style: none;
+        padding: 0.8rem 0.5rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.8);
+        border-radius: 8px;
+        transition: all 0.2s ease;
+    }
+
+    .filter-group summary:hover {
+        background: rgba(255, 255, 255, 0.04);
+        color: #fff;
+    }
+
+    .filter-group[open] summary svg {
+        transform: rotate(180deg);
+    }
+
+    .filter-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+        padding: 0.75rem 0;
+    }
+
+    .filter-item {
+        background: transparent;
+        border: none;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.6rem 0.75rem;
+        border-radius: 8px;
+        cursor: pointer;
+        text-align: left;
+        color: rgba(255, 255, 255, 0.4);
+        transition: all 0.2s ease;
+        width: 100%;
+    }
+
+    .filter-item:hover {
+        background: rgba(255, 255, 255, 0.04);
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .filter-item.active {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.06);
+    }
+
+    .checkbox {
+        width: 14px;
+        height: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+        position: relative;
+        flex-shrink: 0;
+        transition: all 0.2s ease;
+    }
+
+    .filter-item.active .checkbox {
+        background: #fff;
+        border-color: #fff;
+    }
+
+    .filter-item.active .checkbox::after {
+        content: "";
+        position: absolute;
+        width: 4px;
+        height: 7px;
+        border: solid #000;
+        border-width: 0 1.5px 1.5px 0;
+        transform: rotate(45deg);
+        left: 4px;
+        top: 1.5px;
+    }
+
+    .tag-name {
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+
     .blog-list {
         display: flex;
         flex-direction: column;
@@ -47,63 +357,120 @@ const formatDate = (date: Date) => {
 
     .post-item {
         display: grid;
-        grid-template-columns: 120px 1fr;
-        gap: 2rem;
-        padding: 1.5rem 0;
+        grid-template-columns: 180px 1fr;
+        gap: 3rem;
+        padding: 2.5rem 1rem;
+        margin-left: -1rem;
+        margin-right: -1rem;
         text-decoration: none;
         color: inherit;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        transition: all 0.2s ease;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        border-radius: 12px;
     }
 
     .post-item:hover {
-        border-bottom-color: rgba(255, 255, 255, 0.2);
+        border-bottom-color: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.02);
     }
 
     .post-item:hover .post-title {
         color: #fff;
-        transform: translateX(8px);
     }
 
     .post-meta {
         font-size: 0.9rem;
-        opacity: 0.4;
-        padding-top: 0.4rem;
+        opacity: 0.3;
+        padding-top: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.02em;
     }
 
     .post-info {
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 1rem;
     }
 
     .post-title {
-        font-size: 1.4rem;
-        font-weight: 500;
-        color: rgba(255, 255, 255, 0.85);
+        font-size: 1.85rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.95);
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        line-height: 1.25;
+        letter-spacing: -0.01em;
+    }
+
+    .post-tags-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .tag-label {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.2);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
         transition: all 0.3s ease;
     }
 
-    .post-tags {
-        display: flex;
-        gap: 0.75rem;
-        opacity: 0.3;
-        font-size: 0.8rem;
+    .post-item:hover .tag-label {
+        color: rgba(255, 255, 255, 0.45);
     }
 
-    @media (max-width: 640px) {
+    .no-results {
+        padding: 8rem 0;
+        text-align: center;
+        opacity: 0.4;
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .blog-container-layout {
+            gap: 3rem;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .blog-container-layout {
+            grid-template-columns: 1fr;
+            gap: 4rem;
+        }
+
+        .filter-sidebar {
+            position: relative;
+            top: 0;
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
         .post-item {
             grid-template-columns: 1fr;
-            gap: 0.5rem;
-            padding: 2rem 0;
+            gap: 1.5rem;
+            padding: 2.5rem 1rem;
         }
 
         .post-meta {
             padding-top: 0;
         }
 
-        .post-item:hover .post-title {
-            transform: none;
+        .post-item:hover {
+            background: rgba(255, 255, 255, 0.02);
         }
     }
 </style>
