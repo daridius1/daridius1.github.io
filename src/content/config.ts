@@ -34,9 +34,17 @@ const registros = defineCollection({
     schema: z.object({
         title: z.string(),
         description: z.string(),
-        latestLabel: z.string(), // e.g. "Última vez", "Último libro"
-        type: z.enum(["dates", "list", "music"]),
-        items: z.array(z.string()).optional(),
+        latestLabel: z.string(),
+        type: z.enum(["dates", "list", "books", "music"]),
+        items: z.array(z.union([
+            z.string(),
+            z.object({
+                title: z.string(),
+                author: z.string().optional(),
+                date: z.string(),
+                link: z.string().optional(),
+            })
+        ])).optional(),
     }),
 });
 

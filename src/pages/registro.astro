@@ -5,7 +5,8 @@ import Layout from "../layouts/Layout.astro";
 const registries = await getCollection("registros");
 
 const formatDate = (dateStr: string) => {
-    const date = new Date(dateStr);
+    const [year, month, day] = dateStr.split("-").map(Number);
+    const date = new Date(year, month - 1, day);
     return date.toLocaleDateString("es-ES", {
         year: "numeric",
         month: "short",
@@ -15,9 +16,16 @@ const formatDate = (dateStr: string) => {
 
 const getLatest = (registry: any) => {
     if (!registry.data.items || registry.data.items.length === 0) return null;
-    // Get the last item in the array (assuming it's chronologically the last one added)
     const latest = registry.data.items[registry.data.items.length - 1];
+
+    // If it's a simple date string
     if (registry.data.type === "dates") return formatDate(latest);
+
+    // If it's an object (like a book)
+    if (typeof latest === "object" && latest !== null) {
+        return latest.title;
+    }
+
     return latest;
 };
 ---

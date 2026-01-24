@@ -18,7 +18,9 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 
 const formatDate = (dateStr: string) => {
-    const date = new Date(dateStr);
+    // Split YYYY-MM-DD and create date in local time to avoid TZ shifts
+    const [year, month, day] = dateStr.split("-").map(Number);
+    const date = new Date(year, month - 1, day);
     return date.toLocaleDateString("es-ES", {
         year: "numeric",
         month: "long",
@@ -26,13 +28,14 @@ const formatDate = (dateStr: string) => {
     });
 };
 
-// Sort entries if they are dates
-const sortedItems =
-    entry.data.type === "dates"
-        ? [...(entry.data.items || [])].sort(
-              (a, b) => new Date(b).getTime() - new Date(a).getTime(),
-          )
-        : entry.data.items || [];
+// Sort entries if they are dates or have a date property
+const sortedItems = [...(entry.data.items || [])].sort((a, b) => {
+    const getVal = (item: any) => {
+        if (typeof item === "string") return item;
+        return item.date || "";
+    };
+    return new Date(getVal(b)).getTime() - new Date(getVal(a)).getTime();
+});
 ---
 
 <Layout title={`${entry.data.title} | Registro`}>
@@ -53,11 +56,51 @@ const sortedItems =
                     {
                         sortedItems.map((item) => (
                             <div class="entry-item">
-                                <span class="entry-value">
-                                    {entry.data.type === "dates"
-                                        ? formatDate(item)
-                                        : item}
-                                </span>
+                                {typeof item === "string" ? (
+                                    <span class="entry-value">
+                                        {entry.data.type === "dates"
+                                            ? formatDate(item)
+                                            : item}
+                                    </span>
+                                ) : (
+                                    <div class="entry-card-content">
+                                        <div class="entry-main-info">
+                                            <span class="entry-title">
+                                                {item.title}
+                                            </span>
+                                            {item.author && (
+                                                <span class="entry-author">
+                                                    por {item.author}
+                                                </span>
+                                            )}
+                                        </div>
+                                        <div class="entry-meta-info">
+                                            <span class="entry-date">
+                                                {formatDate(item.date)}
+                                            </span>
+                                            {item.link && (
+                                                <a
+                                                    href={item.link}
+                                                    class="entry-link"
+                                                >
+                                                    Ver reseña
+                                                    <svg
+                                                        width="12"
+                                                        height="12"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2.5"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    >
+                                                        <path d="M7 7h10v10M7 17 17 7" />
+                                                    </svg>
+                                                </a>
+                                            )}
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                         ))
                     }
@@ -174,6 +217,79 @@ const sortedItems =
         font-size: 1rem;
         font-weight: 500;
         color: rgba(255, 255, 255, 0.9);
+    }
+
+    .entry-card-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .entry-main-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .entry-title {
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .entry-author {
+        font-size: 0.9rem;
+        opacity: 0.5;
+        font-style: italic;
+    }
+
+    .entry-meta-info {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        flex-shrink: 0;
+    }
+
+    .entry-date {
+        font-size: 0.9rem;
+        opacity: 0.4;
+        font-weight: 500;
+    }
+
+    .entry-link {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        opacity: 0.6;
+        transition: opacity 0.2s ease;
+        padding: 0.5rem 0.75rem;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 8px;
+    }
+
+    .entry-link:hover {
+        opacity: 1;
+        background: rgba(255, 255, 255, 0.06);
+    }
+
+    @media (max-width: 600px) {
+        .entry-card-content {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .entry-meta-info {
+            width: 100%;
+            justify-content: space-between;
+            gap: 1rem;
+        }
     }
 
     .registry-nav {
