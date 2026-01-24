@@ -17,16 +17,10 @@ interface Props {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 
-const formatDate = (dateStr: string) => {
-    // Split YYYY-MM-DD and create date in local time to avoid TZ shifts
-    const [year, month, day] = dateStr.split("-").map(Number);
-    const date = new Date(year, month - 1, day);
-    return date.toLocaleDateString("es-ES", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-    });
-};
+import { formatDate as format } from "../../utils/date";
+
+const formatDate = (dateStr: string) =>
+    format(dateStr, { year: "numeric", month: "long", day: "numeric" });
 
 // Sort entries if they are dates or have a date property
 const sortedItems = [...(entry.data.items || [])].sort((a, b) => {
@@ -144,12 +138,12 @@ const getLinkLabel = (type: string) => {
     .registry-detail {
         max-width: 800px;
         margin: 0 auto;
-        padding: 6rem 0;
+        padding: 3rem 0 6rem 0;
     }
 
     .registry-header {
         text-align: center;
-        margin-bottom: 5rem;
+        margin-bottom: 4rem;
         display: flex;
         flex-direction: column;
         align-items: center;

@@ -4,15 +4,10 @@ import Layout from "../layouts/Layout.astro";
 
 const registries = await getCollection("registros");
 
-const formatDate = (dateStr: string) => {
-    const [year, month, day] = dateStr.split("-").map(Number);
-    const date = new Date(year, month - 1, day);
-    return date.toLocaleDateString("es-ES", {
-        year: "numeric",
-        month: "short",
-        day: "numeric",
-    });
-};
+import { formatDate as format } from "../utils/date";
+
+const formatDate = (dateStr: string) =>
+    format(dateStr, { year: "numeric", month: "short", day: "numeric" });
 
 const getLatest = (registry: any) => {
     if (!registry.data.items || registry.data.items.length === 0) return null;
@@ -34,7 +29,6 @@ const getLatest = (registry: any) => {
     <section class="registry-container">
         <header class="registry-header">
             <h1>Registro</h1>
-            <p>Listas, metas y el rastro de mis obsesiones cotidianas.</p>
         </header>
 
         <div class="registry-grid">
@@ -76,7 +70,7 @@ const getLatest = (registry: any) => {
 
 <style>
     .registry-container {
-        padding: 6rem 0;
+        padding: 3rem 0 6rem 0;
     }
 
     .registry-header {

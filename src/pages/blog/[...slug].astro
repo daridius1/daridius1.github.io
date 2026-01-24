@@ -25,16 +25,10 @@ interface Props {
     next: CollectionEntry<"blog"> | null;
 }
 
+import { formatDate } from "../../utils/date";
+
 const { entry, prev, next } = Astro.props;
 const { Content } = await entry.render();
-
-const formatDate = (date: Date) => {
-    return date.toLocaleDateString("es-ES", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-    });
-};
 ---
 
 <Layout title={`${entry.data.title} | daridius`}>

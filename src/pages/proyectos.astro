@@ -7,23 +7,16 @@ const projects = (await getCollection("projects")).sort(
         (b.data.pubDate?.valueOf() || 0) - (a.data.pubDate?.valueOf() || 0),
 );
 
-const formatDate = (date?: Date) => {
-    if (!date) return "";
-    return date.toLocaleDateString("es-ES", {
-        year: "numeric",
-        month: "short",
-    });
-};
+import { formatDate as format } from "../utils/date";
+
+const formatDate = (date?: Date) =>
+    format(date, { year: "numeric", month: "short" });
 ---
 
 <Layout title="Proyectos | daridius">
     <section class="projects-container">
         <header class="projects-header">
             <h1>Proyectos</h1>
-            <p>
-                Una selección de mis trabajos, experimentos y obsesiones
-                técnicas.
-            </p>
         </header>
 
         <div class="projects-grid">
@@ -60,7 +53,7 @@ const formatDate = (date?: Date) => {
 
 <style>
     .projects-container {
-        padding: 6rem 0;
+        padding: 3rem 0 6rem 0;
     }
 
     .projects-header {

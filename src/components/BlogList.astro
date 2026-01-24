@@ -12,13 +12,10 @@ const MAIN_TAGS = ["Sobre mí", "Opinión", "Proyectos", "Reviews"];
 const mainTags = MAIN_TAGS.filter((tag) => rawTags.includes(tag));
 const otherTags = rawTags.filter((tag) => !MAIN_TAGS.includes(tag)).sort();
 
-const formatDate = (date: Date) => {
-    return date.toLocaleDateString("es-ES", {
-        year: "numeric",
-        month: "short",
-        day: "2-digit",
-    });
-};
+import { formatDate } from "../utils/date";
+
+const formatDateShort = (date: Date) =>
+    formatDate(date, { month: "short", day: "2-digit", year: "numeric" });
 ---
 
 <div class="blog-container-layout">
@@ -95,7 +92,7 @@ const formatDate = (date: Date) => {
                 >
                     <div class="post-meta">
                         <time datetime={post.data.pubDate.toISOString()}>
-                            {formatDate(post.data.pubDate)}
+                            {formatDateShort(post.data.pubDate)}
                         </time>
                     </div>
                     <div class="post-info">

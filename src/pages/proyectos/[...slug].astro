@@ -23,14 +23,7 @@ const relatedPosts = allPosts
     .filter((post) => post.data.tags?.includes(entry.data.projectTag))
     .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const formatDate = (date?: Date) => {
-    if (!date) return "";
-    return date.toLocaleDateString("es-ES", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-    });
-};
+import { formatDate } from "../../utils/date";
 ---
 
 <Layout title={`${entry.data.title} | Proyectos`}>
@@ -130,11 +123,11 @@ const formatDate = (date?: Date) => {
     .project-detail {
         max-width: 800px;
         margin: 0 auto;
-        padding: 6rem 0;
+        padding: 3rem 0 6rem 0;
     }
 
     .project-header {
-        margin-bottom: 6rem;
+        margin-bottom: 4rem;
         text-align: center;
         display: flex;
         flex-direction: column;
