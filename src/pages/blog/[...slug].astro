@@ -64,6 +64,50 @@ const formatDate = (date: Date) => {
             <Content />
         </div>
 
+        {
+            entry.data.music && (
+                <section class="post-music">
+                    <div class="music-card">
+                        <div class="music-icon">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M9 18V5l12-2v13" />
+                                <circle cx="6" cy="18" r="3" />
+                                <circle cx="18" cy="16" r="3" />
+                            </svg>
+                        </div>
+                        <div class="music-info">
+                            <span class="music-label">
+                                Te vamos a ponerte un tema
+                            </span>
+                            <div class="music-main">
+                                <h3 class="music-title">
+                                    {entry.data.music.title}
+                                </h3>
+                                <span class="music-separator">•</span>
+                                <p class="music-author">
+                                    {entry.data.music.author}
+                                </p>
+                            </div>
+                            {entry.data.music.verse && (
+                                <blockquote class="music-verse">
+                                    "{entry.data.music.verse}"
+                                </blockquote>
+                            )}
+                        </div>
+                    </div>
+                </section>
+            )
+        }
+
         <nav class="post-nav">
             <div class="nav-wrapper">
                 {
@@ -254,6 +298,99 @@ const formatDate = (date: Date) => {
     .content code {
         font-family: "JetBrains Mono", monospace;
         font-size: 0.9em;
+    }
+
+    .post-music {
+        margin-top: 6rem;
+    }
+
+    .music-card {
+        padding: 2.5rem;
+        background: rgba(40, 40, 40, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 24px;
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .music-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+            circle at top left,
+            rgba(255, 255, 255, 0.03),
+            transparent
+        );
+        pointer-events: none;
+    }
+
+    .music-icon {
+        width: 48px;
+        height: 48px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.4);
+        flex-shrink: 0;
+    }
+
+    .music-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .music-label {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.45);
+    }
+
+    .music-main {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    .music-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .music-separator {
+        opacity: 0.2;
+        font-size: 0.8rem;
+    }
+
+    .music-author {
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.7);
+        font-weight: 500;
+    }
+
+    .music-verse {
+        margin: 1.5rem 0 0 0;
+        padding-left: 1.5rem;
+        border-left: 2px solid rgba(255, 255, 255, 0.1);
+        font-style: italic;
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.4);
+        line-height: 1.6;
     }
 
     .post-nav {

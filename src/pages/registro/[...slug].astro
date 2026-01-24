@@ -36,6 +36,17 @@ const sortedItems = [...(entry.data.items || [])].sort((a, b) => {
     };
     return new Date(getVal(b)).getTime() - new Date(getVal(a)).getTime();
 });
+
+const getLinkLabel = (type: string) => {
+    switch (type) {
+        case "books":
+            return "Ver reseña";
+        case "music":
+            return "Leer post";
+        default:
+            return "Ver más";
+    }
+};
 ---
 
 <Layout title={`${entry.data.title} | Registro`}>
@@ -83,7 +94,9 @@ const sortedItems = [...(entry.data.items || [])].sort((a, b) => {
                                                     href={item.link}
                                                     class="entry-link"
                                                 >
-                                                    Ver reseña
+                                                    {getLinkLabel(
+                                                        entry.data.type,
+                                                    )}
                                                     <svg
                                                         width="12"
                                                         height="12"

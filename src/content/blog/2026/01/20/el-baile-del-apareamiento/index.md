@@ -2,7 +2,7 @@
 title: "El baile del apareamiento"
 description: "Just dance"
 pubDate: "2026-01-20"
-tags: ["Sobre mi"]
+tags: ["Sobre mí"]
 music:
   title: "Call Me Maybe"
   author: "Carly Rae Jepsen"
