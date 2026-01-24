@@ -30,4 +30,14 @@ const projects = defineCollection({
     }),
 });
 
-export const collections = { blog, projects };
+const registros = defineCollection({
+    schema: z.object({
+        title: z.string(),
+        description: z.string(),
+        latestLabel: z.string(), // e.g. "Última vez", "Último libro"
+        type: z.enum(["dates", "list", "music"]),
+        items: z.array(z.string()).optional(),
+    }),
+});
+
+export const collections = { blog, projects, registros };

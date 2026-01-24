@@ -1,0 +1,174 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+
+const registries = await getCollection("registros");
+
+const formatDate = (dateStr: string) => {
+    const date = new Date(dateStr);
+    return date.toLocaleDateString("es-ES", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+    });
+};
+
+const getLatest = (registry: any) => {
+    if (!registry.data.items || registry.data.items.length === 0) return null;
+    // Get the last item in the array (assuming it's chronologically the last one added)
+    const latest = registry.data.items[registry.data.items.length - 1];
+    if (registry.data.type === "dates") return formatDate(latest);
+    return latest;
+};
+---
+
+<Layout title="Registro | daridius">
+    <section class="registry-container">
+        <header class="registry-header">
+            <h1>Registro</h1>
+            <p>Listas, metas y el rastro de mis obsesiones cotidianas.</p>
+        </header>
+
+        <div class="registry-grid">
+            {
+                registries.map((registry) => {
+                    const latest = getLatest(registry);
+                    return (
+                        <a
+                            href={`/registro/${registry.slug}`}
+                            class="registry-card"
+                        >
+                            <div class="card-content">
+                                <h2 class="registry-title">
+                                    {registry.data.title}
+                                </h2>
+                                <p class="registry-description">
+                                    {registry.data.description}
+                                </p>
+                                <div class="card-footer">
+                                    <div class="footer-info">
+                                        {latest && (
+                                            <span class="registry-latest">
+                                                <span class="registry-label">
+                                                    {registry.data.latestLabel}:
+                                                </span>{" "}
+                                                {latest}
+                                            </span>
+                                        )}
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    );
+                })
+            }
+        </div>
+    </section>
+</Layout>
+
+<style>
+    .registry-container {
+        padding: 6rem 0;
+    }
+
+    .registry-header {
+        margin-bottom: 5rem;
+        max-width: 600px;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        letter-spacing: -0.02em;
+        background: linear-gradient(to bottom, #ffffff, #888888);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    p {
+        font-size: 1.25rem;
+        opacity: 0.5;
+        line-height: 1.6;
+    }
+
+    .registry-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .registry-card {
+        text-decoration: none;
+        color: inherit;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+        padding: 2.25rem;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .registry-card:hover {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.1);
+        transform: translateY(-5px);
+    }
+
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .registry-title {
+        font-size: 1.35rem;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 0.5rem;
+    }
+
+    .registry-description {
+        font-size: 0.95rem;
+        opacity: 0.5;
+        line-height: 1.5;
+        margin-bottom: 2.5rem;
+    }
+
+    .card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: auto;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    .footer-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .registry-latest {
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.4);
+        display: flex;
+        gap: 0.4rem;
+        align-items: center;
+    }
+
+    .registry-label {
+        font-weight: inherit;
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2.5rem;
+        }
+        .registry-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
