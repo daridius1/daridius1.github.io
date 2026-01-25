@@ -12,6 +12,10 @@ items:
     author: "Carly Rae Jepsen"
     date: "2026-01-20"
     link: "/blog/2026/01/20/el-baile-del-apareamiento"
+  - title: "Pam Pam"
+    author: "Wisin y Yandel"
+    date: "2026-01-24"
+    link: "/blog/2026/01/24/blog-actualizado"
 ---
 
 Esta es la lista de temas que he dedicado en el blog. Como diría el Rumpy: "Te vamos a ponerte un tema".
