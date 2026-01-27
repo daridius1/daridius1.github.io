@@ -23,13 +23,22 @@ const formatDate = (dateStr: string) =>
     format(dateStr, { year: "numeric", month: "long", day: "numeric" });
 
 // Sort entries if they are dates or have a date property
-const sortedItems = [...(entry.data.items || [])].sort((a, b) => {
-    const getVal = (item: any) => {
-        if (typeof item === "string") return item;
-        return item.date || "";
-    };
-    return new Date(getVal(b)).getTime() - new Date(getVal(a)).getTime();
-});
+const sortedItems = [...(entry.data.items || [])];
+if (
+    entry.data.type === "dates" ||
+    sortedItems.some((item) => typeof item !== "string" && item.date)
+) {
+    sortedItems.sort((a, b) => {
+        const getVal = (item: any) => {
+            if (typeof item === "string") return item;
+            return item.date || "";
+        };
+        const dateA = new Date(getVal(a)).getTime();
+        const dateB = new Date(getVal(b)).getTime();
+        if (isNaN(dateA) || isNaN(dateB)) return 0;
+        return dateB - dateA;
+    });
+}
 
 const getLinkLabel = (type: string) => {
     switch (type) {
@@ -43,7 +52,7 @@ const getLinkLabel = (type: string) => {
 };
 ---
 
-<Layout title={`${entry.data.title} | Registro`}>
+<Layout title={`${entry.data.title} | Registros`}>
     <article class="registry-detail">
         <header class="registry-header">
             <h1>{entry.data.title}</h1>
@@ -80,9 +89,11 @@ const getLinkLabel = (type: string) => {
                                             )}
                                         </div>
                                         <div class="entry-meta-info">
-                                            <span class="entry-date">
-                                                {formatDate(item.date)}
-                                            </span>
+                                            {item.date && (
+                                                <span class="entry-date">
+                                                    {formatDate(item.date)}
+                                                </span>
+                                            )}
                                             {item.link && (
                                                 <a
                                                     href={item.link}
@@ -116,7 +127,7 @@ const getLinkLabel = (type: string) => {
         </div>
 
         <nav class="registry-nav">
-            <a href="/registro" class="back-link">
+            <a href="/registros" class="back-link">
                 <svg
                     width="20"
                     height="20"
@@ -128,7 +139,7 @@ const getLinkLabel = (type: string) => {
                     stroke-linejoin="round"
                     ><path d="m15 18-6-6 6-6"></path></svg
                 >
-                Volver al registro
+                Volver a los registros
             </a>
         </nav>
     </article>

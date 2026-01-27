@@ -1,6 +1,6 @@
 ---
 title: "Chacotero Sentimental"
-description: "Las canciones que han acompañado cada una de mis historias en este blog."
+description: "Lista de temas relacionados a publicaciones del blog."
 latestLabel: "Último tema"
 type: "music"
 items:
@@ -18,4 +18,4 @@ items:
     link: "/blog/2026/01/24/blog-actualizado"
 ---
 
-Esta es la lista de temas que he dedicado en el blog. Como diría el Rumpy: "Te vamos a ponerte un tema".
+Como diría el Rumpy: "Te vamos a ponerte un tema".

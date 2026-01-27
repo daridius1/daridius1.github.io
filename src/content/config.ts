@@ -34,14 +34,14 @@ const registros = defineCollection({
     schema: z.object({
         title: z.string(),
         description: z.string(),
-        latestLabel: z.string(),
+        latestLabel: z.string().optional(),
         type: z.enum(["dates", "list", "books", "music"]),
         items: z.array(z.union([
             z.string(),
             z.object({
                 title: z.string(),
                 author: z.string().optional(),
-                date: z.string(),
+                date: z.string().optional(),
                 link: z.string().optional(),
             })
         ])).optional(),

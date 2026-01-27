@@ -1,10 +1,9 @@
 ---
 import { getCollection } from "astro:content";
-import Layout from "../layouts/Layout.astro";
+import Layout from "../../layouts/Layout.astro";
+import { formatDate as format } from "../../utils/date";
 
 const registries = await getCollection("registros");
-
-import { formatDate as format } from "../utils/date";
 
 const formatDate = (dateStr: string) =>
     format(dateStr, { year: "numeric", month: "short", day: "numeric" });
@@ -25,10 +24,10 @@ const getLatest = (registry: any) => {
 };
 ---
 
-<Layout title="Registro | daridius">
+<Layout title="Registros | daridius">
     <section class="registry-container">
         <header class="registry-header">
-            <h1>Registro</h1>
+            <h1>Registros</h1>
         </header>
 
         <div class="registry-grid">
@@ -37,7 +36,7 @@ const getLatest = (registry: any) => {
                     const latest = getLatest(registry);
                     return (
                         <a
-                            href={`/registro/${registry.slug}`}
+                            href={`/registros/${registry.slug}`}
                             class="registry-card"
                         >
                             <div class="card-content">
@@ -49,14 +48,19 @@ const getLatest = (registry: any) => {
                                 </p>
                                 <div class="card-footer">
                                     <div class="footer-info">
-                                        {latest && (
-                                            <span class="registry-latest">
-                                                <span class="registry-label">
-                                                    {registry.data.latestLabel}:
-                                                </span>{" "}
-                                                {latest}
-                                            </span>
-                                        )}
+                                        {latest &&
+                                            registry.data.latestLabel && (
+                                                <span class="registry-latest">
+                                                    <span class="registry-label">
+                                                        {
+                                                            registry.data
+                                                                .latestLabel
+                                                        }
+                                                        :
+                                                    </span>{" "}
+                                                    {latest}
+                                                </span>
+                                            )}
                                     </div>
                                 </div>
                             </div>
