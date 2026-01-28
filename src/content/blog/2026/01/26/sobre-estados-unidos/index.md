@@ -1,8 +1,12 @@
 ---
 title: "Sobre Estados Unidos"
-description: "El árbol o el bosque"
+description: "One nation controlled by the media, information age of hysteria"
 pubDate: "2026-01-26"
-tags: ["Opinión", "Política"]
+tags: ["Ideas", "Opinión", "Política"]
+music:
+  title: "American Idiot"
+  author: "Green Day"
+  verse: "And can you hear the sound of hysteria?"
 ---
 
 En el último tiempo he estado particularmente inmerso en la política gringa, no de forma muy "sofisticada" por así decirlo (estoy empezando a escuchar podcasts de contingencia política, e intento complementar esto viendo los resúmenes de noticias de CNN y Fox News como para contrastar), pero estando mucho más al tanto de lo que sucede allá.

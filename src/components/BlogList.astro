@@ -7,7 +7,7 @@ const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort(
 );
 
 const rawTags = [...new Set(posts.flatMap((post) => post.data.tags || []))];
-const MAIN_TAGS = ["Sobre mí", "Opinión", "Proyectos", "Reviews"];
+const MAIN_TAGS = ["Sobre mí", "Ideas", "Proyectos", "Reviews"];
 
 const mainTags = MAIN_TAGS.filter((tag) => rawTags.includes(tag));
 const otherTags = rawTags.filter((tag) => !MAIN_TAGS.includes(tag)).sort();
@@ -22,11 +22,19 @@ const formatDateShort = (date: Date) =>
     <aside class="filter-sidebar">
         <div class="filter-header">
             <span class="filter-title">Filtros</span>
-            <button id="apply-filter" class="apply-btn"> Confirmar </button>
+        </div>
+
+        <div
+            id="selected-wrapper"
+            class="selected-wrapper"
+            style="display: none;"
+        >
+            <span class="filter-subtitle">Seleccionados</span>
+            <div id="selected-container" class="selected-container"></div>
         </div>
 
         <div class="filter-groups">
-            <details class="filter-group" open>
+            <details class="filter-group">
                 <summary>
                     <span>Categorías</span>
                     <svg
@@ -127,6 +135,9 @@ const formatDateShort = (date: Date) =>
     const postItems = document.querySelectorAll(".post-item");
     const noResults = document.getElementById("no-results");
 
+    const selectedWrapper = document.getElementById("selected-wrapper");
+    const selectedContainer = document.getElementById("selected-container");
+
     let selectedTags = new Set<string>();
 
     // Initial load from URL
@@ -136,10 +147,11 @@ const formatDateShort = (date: Date) =>
         tagsFromUrl.split(",").forEach((tag) => {
             if (tag) selectedTags.add(tag);
         });
-        updateFilterStyles();
+        refreshFilterUI();
         filterPosts();
     }
 
+    // Event Delegation for Filter Lists
     filterContainers.forEach((container) => {
         container?.addEventListener("click", (e) => {
             const target = (e.target as HTMLElement).closest(".filter-item");
@@ -149,16 +161,29 @@ const formatDateShort = (date: Date) =>
             if (tag) {
                 if (selectedTags.has(tag)) {
                     selectedTags.delete(tag);
-                    target.classList.remove("active");
                 } else {
                     selectedTags.add(tag);
-                    target.classList.add("active");
                 }
+                applyFilters();
+                refreshFilterUI();
             }
         });
     });
 
-    applyBtn?.addEventListener("click", () => {
+    // Event Delegation for Selected List
+    selectedContainer?.addEventListener("click", (e) => {
+        const target = (e.target as HTMLElement).closest(".filter-item");
+        if (!target) return;
+
+        const tag = target.getAttribute("data-tag");
+        if (tag) {
+            selectedTags.delete(tag);
+            applyFilters();
+            refreshFilterUI();
+        }
+    });
+
+    function applyFilters() {
         const newUrl = new URL(window.location.href);
         if (selectedTags.size > 0) {
             newUrl.searchParams.set("tags", Array.from(selectedTags).join(","));
@@ -167,18 +192,36 @@ const formatDateShort = (date: Date) =>
         }
         window.history.pushState({}, "", newUrl);
         filterPosts();
+    }
 
-        applyBtn.classList.add("active-blink");
-        setTimeout(() => applyBtn.classList.remove("active-blink"), 400);
-    });
+    function refreshFilterUI() {
+        // Toggle wrapper visibility
+        if (selectedWrapper) {
+            selectedWrapper.style.display =
+                selectedTags.size > 0 ? "block" : "none";
+        }
 
-    function updateFilterStyles() {
-        document.querySelectorAll(".filter-item").forEach((btn) => {
-            const tag = btn.getAttribute("data-tag");
-            if (tag && selectedTags.has(tag)) {
-                btn.classList.add("active");
-            }
-        });
+        // Clear container
+        if (selectedContainer) selectedContainer.innerHTML = "";
+
+        // Reset all original buttons first
+        document
+            .querySelectorAll(".filter-list .filter-item")
+            .forEach((btn) => {
+                const tag = btn.getAttribute("data-tag");
+                if (tag && selectedTags.has(tag)) {
+                    (btn as HTMLElement).classList.add("active");
+
+                    // Create clone for selected list
+                    const clone = btn.cloneNode(true) as HTMLElement;
+                    clone.classList.add("selected-item");
+                    clone.classList.remove("active"); // Optional: remove active style from clone if we want it to look different
+
+                    selectedContainer?.appendChild(clone);
+                } else {
+                    (btn as HTMLElement).classList.remove("active");
+                }
+            });
     }
 
     function filterPosts() {
@@ -234,6 +277,62 @@ const formatDateShort = (date: Date) =>
         text-transform: uppercase;
         letter-spacing: 0.15em;
         opacity: 0.5;
+    }
+
+    .selected-wrapper {
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        animation: fade-in 0.3s ease;
+    }
+
+    .filter-subtitle {
+        display: block;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        opacity: 0.6;
+        margin-bottom: 1rem;
+        color: var(--accent-color);
+    }
+
+    .selected-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    /* Selected items style overrides */
+    .selected-container .filter-item {
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+    }
+
+    .selected-container .filter-item:hover {
+        background: rgba(
+            255,
+            255,
+            255,
+            0.15
+        ); /* Reddish hover to indicate removal? Or just brighter */
+    }
+
+    .selected-container .checkbox {
+        background: #fff;
+        border-color: #fff;
+    }
+
+    .selected-container .checkbox::after {
+        /* Turn checkmark into minus or X maybe? For now keeping check is fine as per request "list of selected" */
+        content: "";
+        position: absolute;
+        width: 4px;
+        height: 7px;
+        border: solid #000;
+        border-width: 0 1.5px 1.5px 0;
+        transform: rotate(45deg);
+        left: 4px;
+        top: 1.5px;
     }
 
     .apply-btn {

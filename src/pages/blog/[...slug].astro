@@ -387,6 +387,25 @@ const { Content } = await entry.render();
         line-height: 1.6;
     }
 
+    @media (max-width: 600px) {
+        .music-card {
+            flex-direction: column;
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+
+        .music-icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        .music-verse {
+            margin-top: 1rem;
+            padding-left: 1rem;
+            font-size: 0.95rem;
+        }
+    }
+
     .post-nav {
         margin-top: 8rem;
         padding-top: 4rem;

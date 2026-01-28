@@ -2,7 +2,7 @@
 title: "Sobre el transporte público"
 description: "Y la asignación de recursos"
 pubDate: "2026-01-17"
-tags: ["Opinión", "Salismo"]
+tags: ["Ideas", "Salismo"]
 ---
 
 De 10 cosas que pienso, 9 son sobre la optimización, y de esas 9, 8 son sobre cosas que encuentro que están muy mal optimizadas en nuestra sociedad.

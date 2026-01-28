@@ -1,0 +1,309 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+    const news = await getCollection("noticias");
+    return news.map((entry) => ({
+        params: { slug: entry.slug },
+        props: { entry },
+    }));
+}
+
+interface Props {
+    entry: CollectionEntry<"noticias">;
+}
+
+import { Image } from "astro:assets";
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+import { formatDate as format } from "../../utils/date";
+const dateStr = format(entry.data.pubDate, {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+});
+---
+
+<Layout title={`${entry.data.title} | Noticias`}>
+    <div class="news-container">
+        <div class="newspaper-frame">
+            <header class="newspaper-header">
+                <div class="header-top">
+                    <span class="location">{entry.data.location}</span>
+                    <span class="date">{dateStr}</span>
+                </div>
+                <div class="world-news-label">THE DARIDIUS TIMES</div>
+                <h1>{entry.data.title}</h1>
+            </header>
+
+            <div class="newspaper-content">
+                {
+                    entry.data.image && (
+                        <figure class="news-figure-container">
+                            <div class="news-photo-frame">
+                                <Image
+                                    src={entry.data.image}
+                                    alt={entry.data.caption || entry.data.title}
+                                    widths={[360, 540, 720]}
+                                    sizes={`(max-width: 360px) 360px, (max-width: 720px) 540px, 720px`}
+                                    format="avif"
+                                    quality="mid"
+                                    class="news-image"
+                                />
+                            </div>
+                            {entry.data.caption && (
+                                <figcaption>{entry.data.caption}</figcaption>
+                            )}
+                        </figure>
+                    )
+                }
+
+                <div class="news-body">
+                    <Content />
+                </div>
+            </div>
+
+            <footer class="newspaper-footer">
+                <a href="/noticias" class="news-button">
+                    {entry.data.buttonText}
+                </a>
+            </footer>
+        </div>
+    </div>
+</Layout>
+
+<!-- Sonido de noticias tipo HOI4 -->
+<audio id="news-sound" src="/audio/hoi4-news.mp3" preload="auto"></audio>
+<script>
+    const playAudio = () => {
+        const audio = document.getElementById("news-sound") as HTMLAudioElement;
+        if (audio && audio.paused) {
+            audio.volume = 0.5;
+            audio.play().catch((e) => console.log("Audio play blocked", e));
+        }
+    };
+
+    window.addEventListener("click", playAudio, { once: true });
+
+    // Intentar reproducir al cargar
+    document.addEventListener("DOMContentLoaded", () => {
+        const audio = document.getElementById("news-sound") as HTMLAudioElement;
+        if (audio) {
+            audio.volume = 0.5;
+            audio.play().catch(() => {
+                console.log("Autoplay blocked. Waiting for click.");
+            });
+        }
+    });
+</script>
+
+<style is:global>
+    @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Special+Elite&display=swap");
+
+    .news-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem 1rem;
+        min-height: calc(100vh - 80px);
+        background-color: #0c0c0c;
+    }
+
+    .newspaper-frame {
+        background-color: #d8cfb3;
+        background-image: url("https://www.transparenttextures.com/patterns/paper.png");
+        color: #1a1a1a;
+        max-width: 700px;
+        width: 100%;
+        padding: 2.5rem;
+        box-shadow:
+            0 20px 50px rgba(0, 0, 0, 0.5),
+            inset 0 0 100px rgba(0, 0, 0, 0.1);
+        border: 2px solid #5a4b36;
+        position: relative;
+        font-family: "Special Elite", system-ui, serif;
+    }
+
+    .newspaper-frame::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        pointer-events: none;
+    }
+
+    .newspaper-header {
+        text-align: center;
+        border-bottom: 3px double #5a4b36;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        position: relative;
+    }
+
+    .header-top {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        opacity: 0.7;
+        margin-bottom: 1rem;
+    }
+
+    .world-news-label {
+        font-family: "Playfair Display", serif;
+        font-size: 1.2rem;
+        font-weight: 900;
+        letter-spacing: 0.3em;
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+
+    .newspaper-header h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 2.8rem;
+        line-height: 1.1;
+        font-weight: 900;
+        margin: 1rem 0;
+        color: #000;
+        text-transform: uppercase;
+    }
+
+    .newspaper-content {
+        line-height: 1.6;
+        font-size: 1.1rem;
+    }
+
+    .news-figure-container {
+        margin: 0 auto 2rem auto;
+        max-width: 480px;
+        text-align: center;
+    }
+
+    .news-photo-frame {
+        background: #e6e0d0;
+        padding: 6px;
+        border: 1px solid #5a4b36;
+        position: relative;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Viñeta para efecto antiguo */
+    .news-photo-frame::after {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        right: 6px;
+        bottom: 6px;
+        box-shadow: inset 0 0 40px rgba(66, 50, 20, 0.6);
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    .news-photo-frame img {
+        width: 100%;
+        height: auto;
+        display: block;
+        /* Efecto foto antigua exagerado */
+        filter: sepia(0.8) grayscale(0.2) contrast(1.4) brightness(0.9)
+            hue-rotate(-5deg);
+        mix-blend-mode: multiply; /* Fusión con el fondo */
+    }
+
+    .news-figure-container figcaption {
+        background: transparent;
+        color: #4a3b2a;
+        font-size: 0.85rem;
+        padding: 0.5rem 0.5rem 0 0.5rem;
+        font-style: italic;
+        font-weight: 600;
+        margin-top: 0.5rem;
+    }
+
+    .news-body p {
+        margin-bottom: 1.5rem;
+        text-align: justify;
+    }
+
+    .news-body b,
+    .news-body strong {
+        font-weight: 900;
+    }
+
+    .newspaper-footer {
+        margin-top: 3rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .news-button {
+        display: inline-block;
+        background: #443b2d;
+        color: #d8cfb3;
+        text-decoration: none;
+        padding: 1rem 3rem;
+        font-weight: bold;
+        border: 2px solid #5a4b36;
+        transition: all 0.2s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    .news-button:hover {
+        background: #5a4b36;
+        transform: translateY(-2px);
+        box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    .news-button:active {
+        transform: translateY(0);
+        box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 768px) {
+        .newspaper-frame {
+            padding: 1.5rem;
+            max-width: 100%;
+            border-width: 1px;
+        }
+        .newspaper-header h1 {
+            font-size: 1.8rem;
+        }
+        .world-news-label {
+            font-size: 1rem;
+            letter-spacing: 0.2em;
+        }
+        .newspaper-content {
+            font-size: 0.95rem;
+        }
+        .news-figure-container {
+            max-width: 100%;
+            padding: 4px;
+        }
+        .news-button {
+            padding: 0.8rem 2rem;
+            font-size: 0.9rem;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .newspaper-frame {
+            padding: 1.25rem;
+        }
+        .newspaper-header h1 {
+            font-size: 1.5rem;
+        }
+        .newspaper-content {
+            font-size: 0.85rem;
+        }
+    }
+</style>
