@@ -406,13 +406,77 @@
             let soundEnabled = localStorage.getItem("tiptap-sound") !== "false";
             const soundBtn = document.getElementById("soundBtn") as HTMLButtonElement;
             
+            // Sistema de audio simple con loop nativo
+            const crowdAudio = new Audio("/audio/crowd_perfect_loop.mp3");
+            crowdAudio.loop = true;
+            crowdAudio.volume = 0;
+            let audioStarted = false;
+            let isFading = false;
+            const targetVolume = 0.5;
+            const fadeInDuration = 2000; // 2 segundos para fade in
+            
+            // Función para fade in gradual
+            function fadeIn(duration = fadeInDuration) {
+                if (isFading || !soundEnabled) return;
+                isFading = true;
+                
+                const startVolume = crowdAudio.volume;
+                const startTime = Date.now();
+                
+                function animate() {
+                    const elapsed = Date.now() - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    
+                    crowdAudio.volume = startVolume + (targetVolume - startVolume) * progress;
+                    
+                    if (progress < 1 && soundEnabled) {
+                        requestAnimationFrame(animate);
+                    } else {
+                        crowdAudio.volume = soundEnabled ? targetVolume : 0;
+                        isFading = false;
+                    }
+                }
+                
+                animate();
+            }
+            
+            // Función para iniciar el audio con fade in
+            function startAudio() {
+                if (!audioStarted && soundEnabled) {
+                    crowdAudio.play().catch(() => {
+                        console.log("Esperando interacción del usuario");
+                    });
+                    fadeIn(fadeInDuration);
+                    audioStarted = true;
+                }
+            }
+            
+            // Iniciar audio con cualquier interacción
+            const startOnInteraction = () => {
+                startAudio();
+                document.removeEventListener("click", startOnInteraction);
+                document.removeEventListener("touchstart", startOnInteraction);
+            };
+            
+            document.addEventListener("click", startOnInteraction);
+            document.addEventListener("touchstart", startOnInteraction);
+            
+            // Intentar iniciar automáticamente
+            startAudio();
+            
             function updateSoundButton() {
                 const soundIcon = document.getElementById("soundIcon");
                 if (soundBtn && soundIcon) {
                     if (soundEnabled) {
                         soundIcon.innerHTML = '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>';
+                        if (audioStarted && crowdAudio.paused) {
+                            crowdAudio.volume = targetVolume;
+                            crowdAudio.play().catch(() => {});
+                        }
                     } else {
                         soundIcon.innerHTML = '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line>';
+                        crowdAudio.pause();
+                        crowdAudio.volume = 0;
                     }
                     soundBtn.classList.toggle("muted", !soundEnabled);
                 }
