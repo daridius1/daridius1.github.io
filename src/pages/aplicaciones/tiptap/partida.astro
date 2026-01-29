@@ -1,3 +1,7 @@
+---
+import BallAnimation from "./BallAnimation.astro";
+---
+
 <!doctype html>
 <html lang="es">
     <head>
@@ -335,10 +339,12 @@
 
             <main>
                 <div class="turn-box" id="turnIndicator">Cargando...</div>
-                <div class="accum-wrapper">
+                <div class="accum-wrapper" style="position: relative;">
                     <div class="accum-value" id="accumulator">1</div>
                 </div>
             </main>
+            
+            <BallAnimation />
 
             <div class="controls">
                 <button id="btnSigue" class="btn btn-plus">SIGUE</button>
@@ -562,10 +568,15 @@
             if (els.btnSigue) {
                 els.btnSigue.onclick = () => {
                     if (state.gameOver) return;
-                    state.accumulator++;
-                    state.activePlayerIndex =
-                        state.activePlayerIndex === 0 ? 1 : 0;
-                    updateUI();
+                    
+                    const currentValue = state.accumulator;
+                    const direction = state.activePlayerIndex === 0 ? "right-to-left" : "left-to-right";
+                    
+                    (window as any).animateBall(currentValue, direction, () => {
+                        state.accumulator++;
+                        state.activePlayerIndex = state.activePlayerIndex === 0 ? 1 : 0;
+                        updateUI();
+                    });
                 };
             }
             if (els.btnPierde) {

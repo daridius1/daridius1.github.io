@@ -1,0 +1,172 @@
+---
+// Componente de animación de pelota rebotando
+---
+
+<div class="ball-container" id="ballContainer">
+    <svg id="trajectoryPath" class="trajectory-svg" viewBox="0 0 100 40">
+    </svg>
+</div>
+
+<style>
+    .ball-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90vw;
+        height: 40vh;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+        z-index: 10;
+    }
+
+    .ball-container.active {
+        display: flex;
+    }
+
+    .trajectory-svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .trajectory-svg path {
+        fill: none;
+        stroke: white;
+        stroke-width: 0.3;
+        stroke-linecap: round;
+    }
+</style>
+
+<script>
+    // Función global para animar la pelota
+    window.animateBall = function(
+        bounces: number, 
+        direction: "left-to-right" | "right-to-left", 
+        callback: () => void
+    ) {
+        const svg = document.getElementById("trajectoryPath") as SVGSVGElement;
+        const container = document.getElementById("ballContainer");
+        const accumulator = document.getElementById("accumulator");
+        const turnIndicator = document.getElementById("turnIndicator");
+        
+        if (!svg || !container || !accumulator) return;
+        
+        // Ocultar contador, turno y mostrar container
+        accumulator.style.display = "none";
+        if (turnIndicator) turnIndicator.style.display = "none";
+        container.classList.add("active");
+        
+        // Limpiar paths anteriores
+        svg.innerHTML = "";
+        
+        const isLeftToRight = direction === "left-to-right";
+        
+        // Dibujar bounces+1 arcos (primero y último a la mitad)
+        const totalArcs = bounces + 1;
+        const effectiveArcs = totalArcs - 1;
+        const arcWidth = 100 / effectiveArcs;
+        
+        const allPaths: SVGPathElement[] = [];
+        let totalPathLength = 0;
+        
+        for (let i = 0; i < totalArcs; i++) {
+            const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+            
+            const offset = -0.5 * arcWidth;
+            const startX = isLeftToRight ? offset + (i * arcWidth) : 100 - (offset + (i * arcWidth));
+            const endX = isLeftToRight ? offset + ((i + 1) * arcWidth) : 100 - (offset + ((i + 1) * arcWidth));
+            const midX = (startX + endX) / 2;
+            
+            const peakY = 5;
+            const fullD = `M ${startX} 35 Q ${midX} ${peakY} ${endX} 35`;
+            path.setAttribute("d", fullD);
+            path.setAttribute("fill", "none");
+            path.setAttribute("stroke", "white");
+            path.setAttribute("stroke-width", "0.3");
+            
+            svg.appendChild(path);
+            
+            const pathLength = path.getTotalLength();
+            
+            // Aplicar recorte inicial para primer y último arco
+            if (i === 0) {
+                path.style.strokeDasharray = `0 ${pathLength / 2} ${pathLength / 2} ${pathLength}`;
+                totalPathLength += pathLength / 2;
+            } else if (i === totalArcs - 1) {
+                path.style.strokeDasharray = `${pathLength / 2} ${pathLength}`;
+                totalPathLength += pathLength / 2;
+            } else {
+                totalPathLength += pathLength;
+            }
+            
+            allPaths.push(path);
+        }
+        
+        // Animar ventana deslizante
+        const windowSize = totalPathLength * 0.15; // Ventana del 15% del total
+        const speed = 0.5; // unidades por milisegundo (velocidad constante)
+        const duration = totalPathLength / speed; // duración basada en distancia total
+        const startTime = Date.now();
+        
+        function animateWindow() {
+            const elapsed = Date.now() - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            // Posición de la ventana a lo largo del path total
+            const windowCenter = isLeftToRight ? progress * totalPathLength : (1 - progress) * totalPathLength;
+            const windowStart = Math.max(0, windowCenter - windowSize / 2);
+            const windowEnd = Math.min(totalPathLength, windowCenter + windowSize / 2);
+            
+            // Aplicar ventana a cada path
+            let accumulatedLength = 0;
+            allPaths.forEach((path, i) => {
+                const pathLength = path.getTotalLength();
+                const effectiveLength = (i === 0 || i === totalArcs - 1) ? pathLength / 2 : pathLength;
+                const pathStart = accumulatedLength;
+                const pathEnd = accumulatedLength + effectiveLength;
+                
+                if (windowEnd < pathStart || windowStart > pathEnd) {
+                    // Ventana no toca este path - ocultar todo
+                    path.style.strokeDasharray = `0 ${pathLength * 10}`;
+                } else {
+                    // Calcular qué parte del path es visible
+                    const visibleStart = Math.max(0, windowStart - pathStart);
+                    const visibleEnd = Math.min(effectiveLength, windowEnd - pathStart);
+                    const visibleLength = visibleEnd - visibleStart;
+                    
+                    if (i === 0) {
+                        // Primer arco: offset porque empieza en pathLength/2
+                        const offset = pathLength / 2;
+                        const dashStart = offset + visibleStart;
+                        path.style.strokeDasharray = `0 ${dashStart} ${visibleLength} ${pathLength * 10}`;
+                    } else if (i === totalArcs - 1) {
+                        // Último arco: normal porque empieza en 0
+                        path.style.strokeDasharray = `0 ${visibleStart} ${visibleLength} ${pathLength * 10}`;
+                    } else {
+                        // Arco completo
+                        path.style.strokeDasharray = `0 ${visibleStart} ${visibleLength} ${pathLength * 10}`;
+                    }
+                }
+                
+                accumulatedLength += effectiveLength;
+            });
+            
+            if (progress < 1) {
+                requestAnimationFrame(animateWindow);
+            } else {
+                // Terminar animación
+                setTimeout(() => {
+                    container.classList.remove("active");
+                    svg.innerHTML = "";
+                    if (accumulator) accumulator.style.display = "block";
+                    if (turnIndicator) turnIndicator.style.display = "block";
+                    callback();
+                }, 200);
+            }
+        }
+        
+        animateWindow();
+    };
+</script>
