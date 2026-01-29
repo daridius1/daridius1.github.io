@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+        <title>TipTap | Setup</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            :root {
+                --color-1: #3b82f6;
+                --color-2: #ef4444;
+                --bg-current: var(--color-1);
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                -webkit-tap-highlight-color: transparent;
+                user-select: none;
+            }
+
+            body {
+                font-family: "Outfit", sans-serif;
+                width: 100vw;
+                height: 100vh;
+                height: 100svh;
+                display: flex;
+                flex-direction: column;
+                transition: background-color 0.4s ease;
+                background-color: var(--bg-current);
+                color: white;
+                overflow: hidden;
+                position: fixed;
+            }
+
+            /* --- SETUP VIEW --- */
+            #setup-view {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 2rem;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .setup-title {
+                font-size: 2.5rem;
+                font-weight: 900;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+            }
+
+            .input-group {
+                width: 100%;
+                max-width: 400px;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .player-input {
+                background: rgba(255, 255, 255, 0.1);
+                border: 2px solid rgba(255, 255, 255, 0.2);
+                padding: 1rem 1.5rem;
+                border-radius: 15px;
+                color: white;
+                font-family: inherit;
+                font-size: 1.2rem;
+                font-weight: 700;
+                outline: none;
+                transition: border-color 0.3s;
+                user-select: text;
+            }
+
+            .player-input:focus {
+                border-color: white;
+            }
+
+            .starter-selection {
+                display: flex;
+                gap: 1rem;
+                justify-content: center;
+                margin-top: 1rem;
+            }
+
+            .starter-btn {
+                background: rgba(255, 255, 255, 0.1);
+                border: 2px solid rgba(255, 255, 255, 0.1);
+                padding: 0.8rem 1.2rem;
+                border-radius: 12px;
+                color: white;
+                font-weight: 700;
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+
+            .starter-btn.active {
+                background: white;
+                color: black;
+                border-color: white;
+            }
+
+            .start-game-btn {
+                background: white;
+                color: black;
+                border: none;
+                padding: 1.2rem 3rem;
+                border-radius: 50px;
+                font-size: 1.5rem;
+                font-weight: 900;
+                text-transform: uppercase;
+                cursor: pointer;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+                transition: transform 0.2s;
+            }
+
+            .start-game-btn:active {
+                transform: scale(0.95);
+            }
+
+            .back-link {
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+                color: rgba(255, 255, 255, 0.6);
+                text-decoration: none;
+                font-size: 0.9rem;
+                font-weight: 700;
+            }
+
+            @media (max-height: 500px) {
+                .setup-title {
+                    font-size: 1.8rem;
+                }
+            }
+        </style>
+    </head>
+    <body style="background-color: #3b82f6;">
+        <section id="setup-view">
+            <h1 class="setup-title">TIPTAP</h1>
+            <div class="input-group">
+                <input
+                    type="text"
+                    id="name1"
+                    class="player-input"
+                    placeholder="Jugador 1"
+                    value="Juan"
+                />
+                <input
+                    type="text"
+                    id="name2"
+                    class="player-input"
+                    placeholder="Jugador 2"
+                    value="Jose"
+                />
+
+                <p
+                    style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8; text-transform: uppercase; font-weight: 700;"
+                >
+                    ¿Quién empieza?
+                </p>
+                <div class="starter-selection">
+                    <button
+                        id="pick1"
+                        class="starter-btn active"
+                        data-player="1">JUGADOR 1</button
+                    >
+                    <button id="pick2" class="starter-btn" data-player="2"
+                        >JUGADOR 2</button
+                    >
+                </div>
+            </div>
+            <button id="startGame" class="start-game-btn">¡A JUGAR!</button>
+        </section>
+
+        <script>
+            let activePlayerIndex = 0;
+            const pick1 = document.getElementById("pick1") as HTMLButtonElement;
+            const pick2 = document.getElementById("pick2") as HTMLButtonElement;
+            const name1 = document.getElementById("name1") as HTMLInputElement;
+            const name2 = document.getElementById("name2") as HTMLInputElement;
+            const startBtn = document.getElementById(
+                "startGame",
+            ) as HTMLButtonElement;
+
+            pick1.onclick = () => {
+                pick1.classList.add("active");
+                pick2.classList.remove("active");
+                activePlayerIndex = 0;
+            };
+            pick2.onclick = () => {
+                pick2.classList.add("active");
+                pick1.classList.remove("active");
+                activePlayerIndex = 1;
+            };
+
+            startBtn.onclick = () => {
+                const n1 = name1.value.trim() || "Jugador 1";
+                const n2 = name2.value.trim() || "Jugador 2";
+
+                const params = new URLSearchParams({
+                    p1: n1,
+                    p2: n2,
+                    start: activePlayerIndex.toString(),
+                });
+                window.location.href = `/aplicaciones/tiptap/partida?${params.toString()}`;
+            };
+
+            // Prevent scroll/zoom on mobile
+            document.addEventListener(
+                "touchmove",
+                (e) => {
+                    const target = e.target as HTMLElement;
+                    if (
+                        target.tagName !== "BUTTON" &&
+                        target.tagName !== "INPUT"
+                    )
+                        e.preventDefault();
+                },
+                { passive: false },
+            );
+        </script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Aplicaciones | daridius">
+    <main>
+        <h1>Aplicaciones</h1>
+        <p>Listado de herramientas y aplicaciones interactivas.</p>
+        <ul>
+            <li><a href="/aplicaciones/tiptap">TipTap Game</a></li>
+        </ul>
+    </main>
+</Layout>
+
+<style>
+    main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+        min-height: calc(100vh - 80px);
+    }
+    h1 {
+        font-size: 3rem;
+        background: linear-gradient(to bottom, #ffffff, #888888);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1rem;
+    }
+    p {
+        color: #888;
+        margin-bottom: 2rem;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    li {
+        margin-bottom: 1rem;
+    }
+    a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: opacity 0.2s;
+    }
+    a:hover {
+        opacity: 0.7;
+    }
+</style>
