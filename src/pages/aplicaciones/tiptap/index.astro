@@ -69,6 +69,10 @@
                 gap: 1rem;
             }
 
+            .input-wrapper {
+                position: relative;
+            }
+
             .player-input {
                 background: rgba(255, 255, 255, 0.1);
                 border: 2px solid rgba(255, 255, 255, 0.2);
@@ -79,12 +83,34 @@
                 font-size: 1.2rem;
                 font-weight: 700;
                 outline: none;
-                transition: border-color 0.3s;
+                transition: all 0.3s;
                 user-select: text;
+                width: 100%;
             }
 
             .player-input:focus {
                 border-color: white;
+            }
+
+            #name1 {
+                border-color: white;
+                border-width: 3px;
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+            }
+
+            .start-badge {
+                position: absolute;
+                top: -12px;
+                right: 15px;
+                background: white;
+                color: #3b82f6;
+                padding: 0.3rem 0.8rem;
+                border-radius: 20px;
+                font-size: 0.7rem;
+                font-weight: 900;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             }
 
             .starter-selection {
@@ -139,6 +165,71 @@
                 font-weight: 700;
             }
 
+            .swap-btn {
+                background: rgba(255, 255, 255, 0.15);
+                border: 2px solid rgba(255, 255, 255, 0.3);
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                color: white;
+                font-size: 1.5rem;
+                cursor: pointer;
+                transition: all 0.2s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .swap-btn:hover {
+                background: rgba(255, 255, 255, 0.25);
+                border-color: rgba(255, 255, 255, 0.5);
+                transform: rotate(180deg);
+            }
+
+            .swap-btn:active {
+                transform: scale(0.9) rotate(180deg);
+            }
+
+            .button-row {
+                display: flex;
+                gap: 1rem;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+
+            .sound-btn {
+                background: rgba(255, 255, 255, 0.15);
+                border: 2px solid rgba(255, 255, 255, 0.3);
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                color: white;
+                cursor: pointer;
+                transition: all 0.2s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .sound-btn svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            .sound-btn:hover {
+                background: rgba(255, 255, 255, 0.25);
+                border-color: rgba(255, 255, 255, 0.5);
+            }
+
+            .sound-btn:active {
+                transform: scale(0.9);
+            }
+
+            .sound-btn.muted {
+                opacity: 0.5;
+            }
+
             @media (max-height: 500px) {
                 .setup-title {
                     font-size: 1.8rem;
@@ -150,69 +241,89 @@
         <section id="setup-view">
             <h1 class="setup-title">TIPTAP</h1>
             <div class="input-group">
-                <input
-                    type="text"
-                    id="name1"
-                    class="player-input"
-                    placeholder="Jugador 1"
-                    value="Juan"
-                />
-                <input
-                    type="text"
-                    id="name2"
-                    class="player-input"
-                    placeholder="Jugador 2"
-                    value="Jose"
-                />
-
-                <p
-                    style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8; text-transform: uppercase; font-weight: 700;"
-                >
-                    ¿Quién empieza?
-                </p>
-                <div class="starter-selection">
-                    <button
-                        id="pick1"
-                        class="starter-btn active"
-                        data-player="1">JUGADOR 1</button
-                    >
-                    <button id="pick2" class="starter-btn" data-player="2"
-                        >JUGADOR 2</button
-                    >
+                <div class="input-wrapper">
+                    <input
+                        type="text"
+                        id="name1"
+                        class="player-input"
+                        placeholder="Jugador 1"
+                        value="Juan"
+                    />
+                    <span class="start-badge">PARTE</span>
+                </div>
+                <div class="input-wrapper">
+                    <input
+                        type="text"
+                        id="name2"
+                        class="player-input"
+                        placeholder="Jugador 2"
+                        value="Jose"
+                    />
+                </div>
+                <div class="button-row">
+                    <button id="swapBtn" class="swap-btn">
+                        ⇅
+                    </button>
+                    <button id="soundBtn" class="sound-btn">
+                        <svg id="soundIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                        </svg>
+                    </button>
                 </div>
             </div>
-            <button id="startGame" class="start-game-btn">¡A JUGAR!</button>
+            <button id="startGame" class="start-game-btn">JUGAR</button>
         </section>
 
         <script>
-            let activePlayerIndex = 0;
-            const pick1 = document.getElementById("pick1") as HTMLButtonElement;
-            const pick2 = document.getElementById("pick2") as HTMLButtonElement;
             const name1 = document.getElementById("name1") as HTMLInputElement;
             const name2 = document.getElementById("name2") as HTMLInputElement;
             const startBtn = document.getElementById(
                 "startGame",
             ) as HTMLButtonElement;
+            const swapBtn = document.getElementById("swapBtn") as HTMLButtonElement;
+            const soundBtn = document.getElementById("soundBtn") as HTMLButtonElement;
 
-            pick1.onclick = () => {
-                pick1.classList.add("active");
-                pick2.classList.remove("active");
-                activePlayerIndex = 0;
+            // Estado del sonido (guardado en localStorage)
+            let soundEnabled = localStorage.getItem("tiptap-sound") !== "false";
+            
+            function updateSoundButton() {
+                const soundIcon = document.getElementById("soundIcon");
+                if (!soundIcon) return;
+                
+                if (soundEnabled) {
+                    soundIcon.innerHTML = '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>';
+                } else {
+                    soundIcon.innerHTML = '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line>';
+                }
+                soundBtn.classList.toggle("muted", !soundEnabled);
+            }
+            
+            updateSoundButton();
+
+            // Botón de sonido
+            soundBtn.onclick = () => {
+                soundEnabled = !soundEnabled;
+                localStorage.setItem("tiptap-sound", soundEnabled.toString());
+                updateSoundButton();
             };
-            pick2.onclick = () => {
-                pick2.classList.add("active");
-                pick1.classList.remove("active");
-                activePlayerIndex = 1;
+
+            // Botón para invertir nombres
+            swapBtn.onclick = () => {
+                const temp = name1.value;
+                name1.value = name2.value;
+                name2.value = temp;
             };
 
             startBtn.onclick = () => {
                 const n1 = name1.value.trim() || "Jugador 1";
                 const n2 = name2.value.trim() || "Jugador 2";
 
+                // El jugador de arriba (p1) siempre empieza primero (start: 0)
                 const params = new URLSearchParams({
                     p1: n1,
                     p2: n2,
-                    start: activePlayerIndex.toString(),
+                    start: "0",
                 });
                 window.location.href = `/aplicaciones/tiptap/partida?${params.toString()}`;
             };

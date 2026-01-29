@@ -51,6 +51,12 @@ const pathname = Astro.url.pathname;
                             : ""}>Proyectos</a
                     >
                     <a
+                        href="/aplicaciones"
+                        class={pathname.startsWith("/aplicaciones")
+                            ? "current"
+                            : ""}>Aplicaciones</a
+                    >
+                    <a
                         href="/registros"
                         class={pathname.startsWith("/registros")
                             ? "current"
