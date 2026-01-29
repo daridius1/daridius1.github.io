@@ -41,12 +41,12 @@
 
 <script>
     // Función global para animar la pelota
-    window.animateBall = function(
+    (window as any).animateBall = function(
         bounces: number, 
         direction: "left-to-right" | "right-to-left", 
         callback: () => void
     ) {
-        const svg = document.getElementById("trajectoryPath") as SVGSVGElement;
+        const svg = document.getElementById("trajectoryPath");
         const container = document.getElementById("ballContainer");
         const accumulator = document.getElementById("accumulator");
         const turnIndicator = document.getElementById("turnIndicator");
@@ -81,7 +81,21 @@
             const endX = offset + ((i + 1) * arcWidth);
             const midX = (startX + endX) / 2;
             
-            const peakY = 5;
+            // Primer arco siempre a la misma altura
+            const startHeight = 2; // Y=2 (muy alto, constante)
+            
+            // Ajustar altura mínima según bounces: 1→15, 2→22, 3→26, 4+→30
+            const minHeight = Math.min(30, 15 + (bounces - 1) * 5);
+            
+            // Rango de decrecimiento: siempre va de startHeight a minHeight
+            // Sin importar cuántos bounces, siempre llega gradualmente al mínimo
+            const heightRange = minHeight - startHeight;
+            
+            // Altura que decrece progresivamente dentro de la iteración
+            // Para derecha a izquierda, invertir el índice
+            const heightIndex = isLeftToRight ? i : (totalArcs - 1 - i);
+            const peakY = startHeight + (heightRange * (heightIndex / totalArcs));
+            
             const fullD = `M ${startX} 35 Q ${midX} ${peakY} ${endX} 35`;
             path.setAttribute("d", fullD);
             path.setAttribute("fill", "none");
@@ -107,7 +121,9 @@
         }
         
         // Animar ventana deslizante
-        const windowSize = totalPathLength * 0.15; // Ventana del 15% del total
+        // Tamaño de ventana que decrece: 1→0.18, 2→0.13, 3→0.11, 4→0.10... mínimo 0.05
+        const windowSizeRatio = (0.15 / Math.sqrt(bounces)) + 0.05;
+        const windowSize = totalPathLength * windowSizeRatio;
         
         // Duración con raíz cuadrada: 1→0.6s, 2→1s, 3→1.17s, 4→1.29s, 5→1.4s...
         // Crece más que geométrica pero menos que lineal
@@ -169,8 +185,10 @@
             } else {
                 // Terminar animación
                 setTimeout(() => {
-                    container.classList.remove("active");
-                    svg.innerHTML = "";
+                    if (container) {
+                        container.classList.remove("active");
+                    }
+                    if (svg) svg.innerHTML = "";
                     if (accumulator) accumulator.style.display = "block";
                     if (turnIndicator) turnIndicator.style.display = "block";
                     callback();
