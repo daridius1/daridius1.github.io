@@ -74,9 +74,11 @@
         for (let i = 0; i < totalArcs; i++) {
             const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
             
+            // SIEMPRE dibujar arcos de izquierda a derecha en coordenadas X
+            // La dirección del movimiento se controla con la ventana, no con las coordenadas
             const offset = -0.5 * arcWidth;
-            const startX = isLeftToRight ? offset + (i * arcWidth) : 100 - (offset + (i * arcWidth));
-            const endX = isLeftToRight ? offset + ((i + 1) * arcWidth) : 100 - (offset + ((i + 1) * arcWidth));
+            const startX = offset + (i * arcWidth);
+            const endX = offset + ((i + 1) * arcWidth);
             const midX = (startX + endX) / 2;
             
             const peakY = 5;
@@ -106,18 +108,27 @@
         
         // Animar ventana deslizante
         const windowSize = totalPathLength * 0.15; // Ventana del 15% del total
-        const speed = 0.5; // unidades por milisegundo (velocidad constante)
-        const duration = totalPathLength / speed; // duración basada en distancia total
+        
+        // Duración con raíz cuadrada: 1→0.6s, 2→1s, 3→1.17s, 4→1.29s, 5→1.4s...
+        // Crece más que geométrica pero menos que lineal
+        const duration = (0.6 + 0.4 * Math.sqrt(bounces - 1)) * 1000; // en milisegundos
+        
+        const travelDistance = totalPathLength + windowSize; // La ventana debe recorrer más para barrer todo
         const startTime = Date.now();
         
         function animateWindow() {
             const elapsed = Date.now() - startTime;
             const progress = Math.min(elapsed / duration, 1);
             
-            // Posición de la ventana a lo largo del path total
-            const windowCenter = isLeftToRight ? progress * totalPathLength : (1 - progress) * totalPathLength;
-            const windowStart = Math.max(0, windowCenter - windowSize / 2);
-            const windowEnd = Math.min(totalPathLength, windowCenter + windowSize / 2);
+            // Velocidad constante - sin easing
+            
+            // Para derecha a izquierda, invertir el progreso
+            const directedProgress = isLeftToRight ? progress : (1 - progress);
+            
+            // Posición de la ventana a lo largo del path (siempre en términos de accumulatedLength)
+            const windowCenter = (directedProgress * travelDistance) - (windowSize / 2);
+            const windowStart = windowCenter - windowSize / 2;
+            const windowEnd = windowCenter + windowSize / 2;
             
             // Aplicar ventana a cada path
             let accumulatedLength = 0;

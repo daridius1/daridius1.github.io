@@ -161,6 +161,11 @@ import BallAnimation from "./BallAnimation.astro";
                 font-size: clamp(0.9rem, 3vw, 1.2rem);
             }
 
+            .btn:disabled {
+                opacity: 0.4;
+                cursor: not-allowed;
+            }
+
             /* --- MODAL STYLES --- */
             .modal-overlay {
                 position: fixed;
@@ -569,6 +574,10 @@ import BallAnimation from "./BallAnimation.astro";
                 els.btnSigue.onclick = () => {
                     if (state.gameOver) return;
                     
+                    // Bloquear botones durante animación
+                    if (els.btnSigue) els.btnSigue.disabled = true;
+                    if (els.btnPierde) els.btnPierde.disabled = true;
+                    
                     const currentValue = state.accumulator;
                     const direction = state.activePlayerIndex === 0 ? "right-to-left" : "left-to-right";
                     
@@ -576,6 +585,10 @@ import BallAnimation from "./BallAnimation.astro";
                         state.accumulator++;
                         state.activePlayerIndex = state.activePlayerIndex === 0 ? 1 : 0;
                         updateUI();
+                        
+                        // Desbloquear botones después de animación
+                        if (els.btnSigue) els.btnSigue.disabled = false;
+                        if (els.btnPierde) els.btnPierde.disabled = false;
                     });
                 };
             }
