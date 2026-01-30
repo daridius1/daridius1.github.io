@@ -8,7 +8,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -b gh-pages"
+    "deploy": "gh-pages -d dist -b gh-pages",
+    "update:music": "node scripts/update-music-registry.js"
   },
   "dependencies": {
     "astro": "^5.16.14"

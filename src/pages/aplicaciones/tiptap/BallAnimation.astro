@@ -48,14 +48,9 @@
     ) {
         const svg = document.getElementById("trajectoryPath");
         const container = document.getElementById("ballContainer");
-        const accumulator = document.getElementById("accumulator");
-        const turnIndicator = document.getElementById("turnIndicator");
         
-        if (!svg || !container || !accumulator) return;
+        if (!svg || !container) return;
         
-        // Ocultar contador, turno y mostrar container
-        accumulator.style.display = "none";
-        if (turnIndicator) turnIndicator.style.display = "none";
         container.classList.add("active");
         
         // Limpiar paths anteriores
@@ -189,8 +184,6 @@
                         container.classList.remove("active");
                     }
                     if (svg) svg.innerHTML = "";
-                    if (accumulator) accumulator.style.display = "block";
-                    if (turnIndicator) turnIndicator.style.display = "block";
                     callback();
                 }, 200);
             }

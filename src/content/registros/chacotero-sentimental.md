@@ -16,6 +16,18 @@ items:
     author: "Wisin y Yandel"
     date: "2026-01-24"
     link: "/blog/2026/01/24/blog-actualizado"
+  - title: "American Idiot"
+    author: "Green Day"
+    date: "2026-01-26"
+    link: "/blog/2026/01/26/sobre-estados-unidos"
+  - title: "Invaders"
+    author: "Iron Maiden"
+    date: "2026-01-27"
+    link: "/blog/2026/01/27/las-hormigas"
+  - title: "Fue Culpa Mía"
+    author: "Cebollitas"
+    date: "2026-01-29"
+    link: "/blog/2026/01/29/tiptap"
 ---
 
 Como diría el Rumpy: "Te vamos a ponerte un tema".
