@@ -13,6 +13,12 @@ const blog = defineCollection({
             author: z.string(),
             verse: z.string().optional(),
         }).optional(),
+        match: z.object({
+            teams: z.string(),
+            competition: z.string(),
+            date: z.string(),
+            place: z.string(),
+        }).optional(),
     }),
 });
 
@@ -35,7 +41,7 @@ const registros = defineCollection({
         title: z.string(),
         description: z.string(),
         latestLabel: z.string().optional(),
-        type: z.enum(["dates", "list", "books", "music"]),
+        type: z.enum(["dates", "list", "books", "music", "matches"]),
         items: z.array(z.union([
             z.string(),
             z.object({
@@ -43,6 +49,8 @@ const registros = defineCollection({
                 author: z.string().optional(),
                 date: z.string().optional(),
                 link: z.string().optional(),
+                competition: z.string().optional(),
+                place: z.string().optional(),
             })
         ])).optional(),
     }),

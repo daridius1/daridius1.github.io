@@ -46,6 +46,8 @@ const getLinkLabel = (type: string) => {
             return "Ver reseña";
         case "music":
             return "Leer post";
+        case "matches":
+            return "Ver crónica";
         default:
             return "Ver más";
     }
@@ -85,6 +87,16 @@ const getLinkLabel = (type: string) => {
                                             {item.author && (
                                                 <span class="entry-author">
                                                     por {item.author}
+                                                </span>
+                                            )}
+                                            {item.competition && (
+                                                <span class="entry-competition">
+                                                    {item.competition}
+                                                </span>
+                                            )}
+                                            {item.place && (
+                                                <span class="entry-place">
+                                                    {item.place}
                                                 </span>
                                             )}
                                         </div>
@@ -257,7 +269,9 @@ const getLinkLabel = (type: string) => {
         color: #fff;
     }
 
-    .entry-author {
+    .entry-author,
+    .entry-competition,
+    .entry-place {
         font-size: 0.9rem;
         opacity: 0.5;
         font-style: italic;

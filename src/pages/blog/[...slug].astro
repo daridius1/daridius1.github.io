@@ -54,18 +54,18 @@ const { Content } = await entry.render();
             <p class="description">{entry.data.description}</p>
         </header>
 
-        <div class="content">
-            <Content />
-        </div>
-
         {
-            entry.data.music && (
-                <section class="post-music">
-                    <div class="music-card">
-                        <div class="music-icon">
+            entry.data.match && (
+                <section class="match-metadata">
+                    <div class="match-header">
+                        <span class="label">Crónica de Partido</span>
+                        <h2 class="match-title">{entry.data.match.teams}</h2>
+                    </div>
+                    <div class="match-grid">
+                        <div class="match-item">
                             <svg
-                                width="24"
-                                height="24"
+                                width="16"
+                                height="16"
                                 viewBox="0 0 24 24"
                                 fill="none"
                                 stroke="currentColor"
@@ -73,31 +73,90 @@ const { Content } = await entry.render();
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                             >
-                                <path d="M9 18V5l12-2v13" />
-                                <circle cx="6" cy="18" r="3" />
-                                <circle cx="18" cy="16" r="3" />
+                                <>
+                                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+                                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+                                    <path d="M4 22h16" />
+                                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+                                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+                                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+                                </>
                             </svg>
+                            <span>{entry.data.match.competition}</span>
                         </div>
-                        <div class="music-info">
-                            <span class="music-label">
-                                Te vamos a ponerte un tema
-                            </span>
-                            <div class="music-main">
-                                <h3 class="music-title">
-                                    {entry.data.music.title}
-                                </h3>
-                                <span class="music-separator">•</span>
-                                <p class="music-author">
-                                    {entry.data.music.author}
-                                </p>
-                            </div>
-                            {entry.data.music.verse && (
-                                <blockquote class="music-verse">
-                                    "{entry.data.music.verse}"
-                                </blockquote>
-                            )}
+                        <div class="match-item">
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <>
+                                    <rect
+                                        x="3"
+                                        y="4"
+                                        width="18"
+                                        height="18"
+                                        rx="2"
+                                        ry="2"
+                                    />
+                                    <line x1="16" y1="2" x2="16" y2="6" />
+                                    <line x1="8" y1="2" x2="8" y2="6" />
+                                    <line x1="3" y1="10" x2="21" y2="10" />
+                                </>
+                            </svg>
+                            <span>{entry.data.match.date}</span>
+                        </div>
+                        <div class="match-item">
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <>
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </>
+                            </svg>
+                            <span>{entry.data.match.place}</span>
                         </div>
                     </div>
+                </section>
+            )
+        }
+
+        <div class="content">
+            <Content />
+        </div>
+
+        {
+            entry.data.music && (
+                <section class="music-metadata">
+                    <div class="music-header">
+                        <span class="label">Te vamos a ponerte un tema</span>
+                        <div class="music-info">
+                            <h3 class="music-title">
+                                {entry.data.music.title}
+                            </h3>
+                            <span class="music-author">
+                                por {entry.data.music.author}
+                            </span>
+                        </div>
+                    </div>
+                    {entry.data.music.verse && (
+                        <p class="music-verse-simple">
+                            "{entry.data.music.verse}"
+                        </p>
+                    )}
                 </section>
             )
         }
@@ -294,115 +353,97 @@ const { Content } = await entry.render();
         font-size: 0.9em;
     }
 
-    .post-music {
-        margin-top: 6rem;
+    .match-metadata,
+    .music-metadata {
+        margin: 3rem 0;
+        padding: 2rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    .music-card {
-        padding: 2.5rem;
-        background: rgba(40, 40, 40, 0.4);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        border-radius: 24px;
+    .match-metadata {
+        margin-top: 0; /* Already follows header */
+        margin-bottom: 4rem;
+    }
+
+    .label {
+        display: block;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.3);
+        margin-bottom: 1rem;
+    }
+
+    .match-title {
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 1.5rem;
+    }
+
+    .match-grid {
         display: flex;
-        gap: 2rem;
-        align-items: flex-start;
-        position: relative;
-        overflow: hidden;
+        gap: 2.5rem;
+        flex-wrap: wrap;
     }
 
-    .music-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(
-            circle at top left,
-            rgba(255, 255, 255, 0.03),
-            transparent
-        );
-        pointer-events: none;
-    }
-
-    .music-icon {
-        width: 48px;
-        height: 48px;
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        border-radius: 12px;
+    .match-item {
         display: flex;
         align-items: center;
-        justify-content: center;
-        color: rgba(255, 255, 255, 0.4);
-        flex-shrink: 0;
+        gap: 0.75rem;
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .match-item svg {
+        opacity: 0.4;
+    }
+
+    .music-header {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
     }
 
     .music-info {
-        flex: 1;
         display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-    }
-
-    .music-label {
-        font-size: 0.7rem;
-        text-transform: uppercase;
-        letter-spacing: 0.15em;
-        font-weight: 700;
-        color: rgba(255, 255, 255, 0.45);
-    }
-
-    .music-main {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
+        align-items: baseline;
+        gap: 1rem;
         flex-wrap: wrap;
     }
 
     .music-title {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         font-weight: 600;
         color: #fff;
     }
 
-    .music-separator {
-        opacity: 0.2;
-        font-size: 0.8rem;
-    }
-
     .music-author {
         font-size: 1.1rem;
-        color: rgba(255, 255, 255, 0.7);
-        font-weight: 500;
+        color: rgba(255, 255, 255, 0.5);
     }
 
-    .music-verse {
-        margin: 1.5rem 0 0 0;
+    .music-verse-simple {
+        margin-top: 1.5rem;
+        font-style: italic;
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.4);
         padding-left: 1.5rem;
         border-left: 2px solid rgba(255, 255, 255, 0.1);
-        font-style: italic;
-        font-size: 1rem;
-        color: rgba(255, 255, 255, 0.4);
-        line-height: 1.6;
     }
 
     @media (max-width: 600px) {
-        .music-card {
+        .match-grid {
             flex-direction: column;
-            gap: 1.5rem;
-            padding: 2rem;
+            gap: 1rem;
         }
 
-        .music-icon {
-            width: 40px;
-            height: 40px;
-        }
-
-        .music-verse {
-            margin-top: 1rem;
-            padding-left: 1rem;
-            font-size: 0.95rem;
+        .music-info {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.25rem;
         }
     }
 

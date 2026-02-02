@@ -28,6 +28,10 @@ items:
     author: "Cebollitas"
     date: "2026-01-29"
     link: "/blog/2026/01/29/tiptap"
+  - title: "Romántico Viajero"
+    author: "Himno Oficial Club Universidad de Chile"
+    date: "2026-02-01"
+    link: "/blog/2026/02/01/de-vuelta-al-nacional"
 ---
 
 Como diría el Rumpy: "Te vamos a ponerte un tema".

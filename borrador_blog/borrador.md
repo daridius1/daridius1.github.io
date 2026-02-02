@@ -1,47 +1,36 @@
 ---
-title: "TipTap"
-description: "El boom del verano"
-pubDate: "2026-01-29"
-tags: ["Proyectos", "TipTap"]
+title: "Universidad de Chile vs Audax Italiano"
+description: "Primer post sobre el club de mis amores"
+pubDate: "2026-02-01"
+tags: ["Reviews", "Fútbol", "El Bulla", "Sobre Mí"]
 music:
-  title: "Fue Culpa Mía "
-  author: "Cebollitas"
-  verse: "Bancarse ser segundo también es ser campeón"
+  title: "Romántico Viajero"
+  author: "Himno Oficial Club Universidad de Chile"
+  verse: "Ser un romántico viajero"
 ---
 
-Hace algún tiempo vi un tiktok en el que jugaban un juego con una mesa y una pelota de ping pong, este era cooperativo y consistia en i devolviendose la pelota, dando una cantidad de botes incremental en cada lanzamiento, por ejemplo, en el primer lanzamiento tiene que dar un bote, en el segundo dos botes, etc etc
+No es desconocido para nadie que me conozca que el club de mis amores es el Club Deportivo Universidad de Chile, ocurre un fenómeno bien particular con este blog, y es que los temas más relevantes para mi, los pilares de mi identidad, no los he compartido en una publicacion, a excepcion de alguna que otra mencion en algun tema relacionado, como mi vision acerca de las optimizaciones o la lotocracia. En general me gusta mucho compartir lo que pienso, y si no he hecho una publicacion dedicada a alguno de estos temas no es porque no quiera hacerlo, sino porque me gustaria dedicarles las palabras que se merecen al ser presentadas, pero nunca encuentro el momento indicado para hacerlo.
 
-Es un juego bastante simple y muy probablemente tenga muchos nombres, lo que para mi es lo mismo que ninguno, y mientras lo jugaba hace algunos meses con unos amigos en el toqui, senti que tenia potencial para tener una version competitiva, lo encontraba muy divertido y soy de los que cree que los juegos son mas interesantes cuando se tiene un rival al frente
+Lamentablemente este post no hará justicia a lo que significa para mi el club, pero si servirá para romper el hielo y ayudarme a seguir publicando, es primera vez que llevo 2 dias sin publicar y fue literalmente pq no queria publicar otra cosa antes que la review de este partido.
 
-## El comeback
+## El Partido
 
-Hace 2 dias, me encontraba solo en la sala de magister con el blaz y nos pusimos a jugar. Luego de un par de iteraciones probamos una version mas competitiva, en donde con cada iteracion del juego, al momento de equivocarse, le entregas los puntos de esa ronda a tu rival. Mientras jugabamos notamos que llevar la cuenta del juego era bastante pajero, asi que me motive a hacer una app bonita que sirva como marcador, en miras de hacer algo mucho mas bacan, como una app en la que se pueda ver tu rendimiento, o hacer torneos con tus amigos.
+Primero lo más importante, el partido. Siendo la primera fecha del campeonato, es importante priorizar el rendimiento antes que el resultado, ya que a largo plazo, si tu equipo juega bien, los resultados tendrian que llegar, y un equipo que jega mal puede esperar un milagor en unas pocas fechas, pero a la larga siempre cosechara lo que sembro.
 
-## La app
+Partido malo, luego de los reiterados traumas sufridos en los ultimos 10 años como hincha, cuando entendi que alvarez no seguiria en la banca de la U, encontraba una locura que otros hinchas estuvieran de acuerdo con su partida, por much oque esultados como el del campeonato del año pasado no se hayan dado, la U nteniendo un buen equipo, ni cagando jugabamos mal, el tecnico tenia su sello en el equipo, y cuando jugabamos bien, daba la impresion de que podiamos jugar de igual a igual con cualquiera, cosa que no pasaba hace años. 
 
-Luego de pulir un poco las reglas, e inventar una terminologia un poco absurda para cuando un.. game? o iteracion? no se como llamarlo, pero cuando termina tenga un nombre (como en el golf, un birdie, bogey, etc) relacionado al lanzamiento en el que se perdio
+Este año la u tiene, en mi opinion, un equipazo, y encuentro preocupante que teniendo tantos elementos con los que proponer ideas en la cancha, quedara con la sensacion de que el paqui le dijo a los jugadores "metan goles y eviten que se los metan a ustedes" y chao, a jugar el partido.
 
-temine creando terminos para los 12 pimeros lanzamientos (que es caleta, con el blaz llegabamos apenas a 7, y se va haciendo mas dificil) mezclando la palabra flop con la forma de decir el numerro en distintos idiomas:
+Es verdad que nadie nunca cuenta con expulsiones como las que tuvimos en esta ocasion, y aun asi la u no jugo horripilantemente mal, a tal punto que diria que con 2 menos, en muchas ocasiones fue mas que audax (que dio completamente la cacha), pero todo gracias a individualidades, cosa que no puedes contar siempre y que a la que te fallan sin una idea de juego en mente por parte del resto del equipo, te vas a la chucha rapidamente
 
-flek - hindi
-fleux - frances
-flan - japones
-flier - aleman
-flyat - ruso
-flix - ingles
-flete - portugues
-flotto - italiano
-fliu - chino
-flip - coreano
-fleka - griego
-floce - español
-(ia indexa esta lista porfa, desde 1)
+Pero bueno, habra que ver como evoluciona el equipo durante el año, no queda de otra
 
-## El resultado
+## El estadio
 
-Ya esta en aplicaciones, termine agregando unos soniditos y una animacion cool luego de mucho ensayo y error
+En esta ocasion fui al estadio con mi hermano, el seba, el jero y su papa. No esta demas mencionar que los de abajo (que habian prometido suspender el partido) se pegaron el show todo el partido, y demostraron una vez mas que no estan ni ahi con el equipo y que son hinchas de ellos mismos.
 
-## No esconderé
+No le hago asco a la idea de que nos metan ochentamil fechas sin publico hasta que se cansen los weones, si la mano dura es la unica solucion a estos problemas, y tenemos que pagar justos por pecadores por estos delincunetes, asi tendra que ser, cualquier solucion que no sea a largo plazo, aunque implique sacrificios, no me vale para nada.
 
-Que las primeras 2 partidas jugadas con estas reglas, las perdi contra el blaz 26 - 31 y 25 - 30
+## 15 lucas
 
+Asi es, 15 luquitas la entrada, y sin cover. Este año me huele a que sere un hincha de CDF, no se como justifican una subida de precios tan arbitraria estos ctm de azul azul, es evidente que solo derivan e igualan por cero para determinar los precios de las entradas y no les impota el hincha ni la asistencia.
