@@ -7,5 +7,6 @@ items:
     link: "https://blaz.cl"
   - title: "Blog de Dmitri"
     link: "https://erz.cl"
+  - title: "Blog de Rob"
+    link: "https://wobewww.github.io/"
 ---
-
