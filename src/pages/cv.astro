@@ -142,12 +142,14 @@ import Layout from "../layouts/Layout.astro";
             <!-- Achievements -->
             <section class="cv-section">
                 <h2 class="section-label">Logros</h2>
-                <div class="achievements-grid">
-                    <div class="achievement-card">
-                        <h3 class="ach-title">ICPC</h3>
-                        <p class="ach-desc">
-                            International Collegiate Programming Contest
-                        </p>
+                <div class="achievements-list">
+                    <div class="achievement-item">
+                        <div class="ach-header">
+                            <h3 class="ach-title">ICPC</h3>
+                            <span class="ach-desc">
+                                International Collegiate Programming Contest
+                            </span>
+                        </div>
                         <ul class="ach-list">
                             <li>Final Latinoamericana, México (2024)</li>
                             <li>1er Lugar Nacional - Chile (2022)</li>
@@ -155,33 +157,37 @@ import Layout from "../layouts/Layout.astro";
                             <li>3er Lugar Nacional - Chile (2019)</li>
                         </ul>
                     </div>
-                    <div class="achievement-card">
-                        <h3 class="ach-title">
-                            IOI <span class="ach-meta">2019</span>
-                        </h3>
-                        <p class="ach-desc">
-                            International Olympiad in Informatics
-                        </p>
+                    <div class="achievement-item">
+                        <div class="ach-header">
+                            <h3 class="ach-title">IOI</h3>
+                            <span class="ach-desc">
+                                International Olympiad in Informatics
+                            </span>
+                        </div>
                         <p class="ach-note">
-                            Representante de Chile en Azerbaiyán
+                            Representante de Chile en Azerbaiyán (2019)
                         </p>
                     </div>
-                    <div class="achievement-card">
-                        <h3 class="ach-title">OCI</h3>
-                        <p class="ach-desc">Olimpiada Chilena de Informática</p>
+                    <div class="achievement-item">
+                        <div class="ach-header">
+                            <h3 class="ach-title">OCI</h3>
+                            <span class="ach-desc"
+                                >Olimpiada Chilena de Informática</span
+                            >
+                        </div>
                         <ul class="ach-list">
                             <li>1er Lugar Nacional (2018)</li>
                             <li>2do Lugar Nacional (2017)</li>
                         </ul>
                     </div>
-                    <div class="achievement-card">
-                        <h3 class="ach-title">
-                            CMAT <span class="ach-meta">2018</span>
-                        </h3>
-                        <p class="ach-desc">
-                            Campeonato Escolar de Matemáticas
-                        </p>
-                        <p class="ach-note">1er Lugar Nacional Grupal</p>
+                    <div class="achievement-item">
+                        <div class="ach-header">
+                            <h3 class="ach-title">CMAT</h3>
+                            <span class="ach-desc">
+                                Campeonato Escolar de Matemáticas
+                            </span>
+                        </div>
+                        <p class="ach-note">1er Lugar Nacional Grupal (2018)</p>
                     </div>
                 </div>
             </section>
@@ -407,39 +413,36 @@ import Layout from "../layouts/Layout.astro";
         background: rgba(255, 255, 255, 0.2);
     }
 
-    .achievements-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    .achievements-list {
+        display: flex;
+        flex-direction: column;
         gap: 2rem;
     }
 
-    .achievement-card {
-        padding: 1.75rem;
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.04);
-        border-radius: 20px;
+    .achievement-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1.25rem 0;
+        border-left: 2px solid rgba(255, 255, 255, 0.05);
+        padding-left: 1.5rem;
+    }
+
+    .ach-header {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
     }
 
     .ach-title {
-        font-size: 1.1rem;
-        font-weight: 700;
+        font-size: 1.2rem;
+        font-weight: 600;
         color: #fff;
-        margin-bottom: 0.25rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .ach-meta {
-        font-size: 0.7rem;
-        color: rgba(255, 255, 255, 0.2);
-        letter-spacing: 0.1em;
     }
 
     .ach-desc {
         font-size: 0.85rem;
         color: rgba(255, 255, 255, 0.4);
-        margin-bottom: 1rem;
         font-weight: 500;
     }
 
@@ -449,10 +452,11 @@ import Layout from "../layouts/Layout.astro";
         display: flex;
         flex-direction: column;
         gap: 0.4rem;
+        margin-top: 0.5rem;
     }
 
     .ach-list li {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
         color: rgba(255, 255, 255, 0.6);
         padding-left: 1rem;
         position: relative;
@@ -462,12 +466,13 @@ import Layout from "../layouts/Layout.astro";
         content: "•";
         position: absolute;
         left: 0;
-        color: rgba(255, 255, 255, 0.2);
+        color: rgba(255, 255, 255, 0.3);
     }
 
     .ach-note {
         font-size: 0.9rem;
         color: rgba(255, 255, 255, 0.6);
+        margin-top: 0.25rem;
     }
 
     .skills-lang-row {

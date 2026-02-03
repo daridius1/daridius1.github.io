@@ -19,10 +19,22 @@ const formatDateShort = (date: Date) =>
 ---
 
 <div class="blog-container-layout">
-    <aside class="filter-sidebar">
-        <div class="filter-header">
-            <span class="filter-title">Filtros</span>
-        </div>
+    <div class="filters-header">
+        <button id="open-filters-btn" class="open-filters-btn">
+            <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+                <path d="M3 6h18M7 12h10M10 18h4"></path>
+            </svg>
+            Filtros
+        </button>
 
         <div
             id="selected-wrapper"
@@ -32,63 +44,68 @@ const formatDateShort = (date: Date) =>
             <span class="filter-subtitle">Seleccionados</span>
             <div id="selected-container" class="selected-container"></div>
         </div>
+    </div>
 
-        <div class="filter-groups">
-            <details class="filter-group">
-                <summary>
-                    <span>Categorías</span>
+    <div id="filters-modal" class="filters-modal" style="display: none;">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Filtros</h3>
+                <button id="close-modal-btn" class="close-modal-btn">
                     <svg
-                        width="12"
-                        height="12"
+                        width="24"
+                        height="24"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
-                        stroke-width="2.5"
+                        stroke-width="2"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        ><path d="m6 9 6 6 6-6"></path></svg
                     >
-                </summary>
-                <div class="filter-list" id="categories-container">
-                    {
-                        mainTags.map((tag) => (
-                            <button class="filter-item" data-tag={tag}>
-                                <div class="checkbox" />
-                                <span class="tag-name">{tag}</span>
-                            </button>
-                        ))
-                    }
-                </div>
-            </details>
+                        <path d="M18 6 6 18M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
 
-            <details class="filter-group">
-                <summary>
-                    <span>Temas</span>
-                    <svg
-                        width="12"
-                        height="12"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        ><path d="m6 9 6 6 6-6"></path></svg
-                    >
-                </summary>
-                <div class="filter-list" id="tags-container">
-                    {
-                        otherTags.map((tag) => (
-                            <button class="filter-item" data-tag={tag}>
-                                <div class="checkbox" />
-                                <span class="tag-name">{tag}</span>
-                            </button>
-                        ))
-                    }
+            <div class="modal-body">
+                <div class="filter-groups">
+                    <div class="filter-group">
+                        <h4 class="filter-group-title">Categorías</h4>
+                        <div class="filter-list" id="categories-container">
+                            {
+                                mainTags.map((tag) => (
+                                    <button class="filter-item" data-tag={tag}>
+                                        <div class="checkbox" />
+                                        <span class="tag-name">{tag}</span>
+                                    </button>
+                                ))
+                            }
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4 class="filter-group-title">Temas</h4>
+                        <div class="filter-list" id="tags-container">
+                            {
+                                otherTags.map((tag) => (
+                                    <button class="filter-item" data-tag={tag}>
+                                        <div class="checkbox" />
+                                        <span class="tag-name">{tag}</span>
+                                    </button>
+                                ))
+                            }
+                        </div>
+                    </div>
                 </div>
-            </details>
+            </div>
+
+            <div class="modal-footer">
+                <button id="apply-filters-btn" class="apply-filters-btn">
+                    Aplicar filtros
+                </button>
+            </div>
         </div>
-    </aside>
+    </div>
 
     <div class="blog-list" id="blog-list">
         {
@@ -131,14 +148,20 @@ const formatDateShort = (date: Date) =>
         document.getElementById("categories-container"),
         document.getElementById("tags-container"),
     ];
-    const applyBtn = document.getElementById("apply-filter");
     const postItems = document.querySelectorAll(".post-item");
     const noResults = document.getElementById("no-results");
 
     const selectedWrapper = document.getElementById("selected-wrapper");
     const selectedContainer = document.getElementById("selected-container");
 
+    const modal = document.getElementById("filters-modal");
+    const openModalBtn = document.getElementById("open-filters-btn");
+    const closeModalBtn = document.getElementById("close-modal-btn");
+    const applyFiltersBtn = document.getElementById("apply-filters-btn");
+    const modalOverlay = document.getElementById("modal-overlay");
+
     let selectedTags = new Set<string>();
+    let tempSelectedTags = new Set<string>();
 
     // Initial load from URL
     const urlParams = new URLSearchParams(window.location.search);
@@ -151,6 +174,31 @@ const formatDateShort = (date: Date) =>
         filterPosts();
     }
 
+    // Abrir modal
+    openModalBtn?.addEventListener("click", () => {
+        tempSelectedTags = new Set(selectedTags);
+        refreshModalUI();
+        modal!.style.display = "flex";
+        document.body.style.overflow = "hidden";
+    });
+
+    // Cerrar modal
+    function closeModal() {
+        modal!.style.display = "none";
+        document.body.style.overflow = "";
+    }
+
+    closeModalBtn?.addEventListener("click", closeModal);
+    modalOverlay?.addEventListener("click", closeModal);
+
+    // Aplicar filtros y cerrar modal
+    applyFiltersBtn?.addEventListener("click", () => {
+        selectedTags = new Set(tempSelectedTags);
+        applyFilters();
+        refreshFilterUI();
+        closeModal();
+    });
+
     // Event Delegation for Filter Lists
     filterContainers.forEach((container) => {
         container?.addEventListener("click", (e) => {
@@ -159,13 +207,12 @@ const formatDateShort = (date: Date) =>
 
             const tag = target.getAttribute("data-tag");
             if (tag) {
-                if (selectedTags.has(tag)) {
-                    selectedTags.delete(tag);
+                if (tempSelectedTags.has(tag)) {
+                    tempSelectedTags.delete(tag);
                 } else {
-                    selectedTags.add(tag);
+                    tempSelectedTags.add(tag);
                 }
-                applyFilters();
-                refreshFilterUI();
+                refreshModalUI();
             }
         });
     });
@@ -194,34 +241,49 @@ const formatDateShort = (date: Date) =>
         filterPosts();
     }
 
+    function refreshModalUI() {
+        document
+            .querySelectorAll(".filter-list .filter-item")
+            .forEach((btn) => {
+                const tag = btn.getAttribute("data-tag");
+                if (tag && tempSelectedTags.has(tag)) {
+                    (btn as HTMLElement).classList.add("active");
+                } else {
+                    (btn as HTMLElement).classList.remove("active");
+                }
+            });
+    }
+
     function refreshFilterUI() {
         // Toggle wrapper visibility
         if (selectedWrapper) {
             selectedWrapper.style.display =
-                selectedTags.size > 0 ? "block" : "none";
+                selectedTags.size > 0 ? "flex" : "none";
         }
 
         // Clear container
         if (selectedContainer) selectedContainer.innerHTML = "";
 
-        // Reset all original buttons first
-        document
-            .querySelectorAll(".filter-list .filter-item")
-            .forEach((btn) => {
-                const tag = btn.getAttribute("data-tag");
-                if (tag && selectedTags.has(tag)) {
-                    (btn as HTMLElement).classList.add("active");
+        // Create selected items
+        selectedTags.forEach((tag) => {
+            const btn = document.createElement("button");
+            btn.className = "filter-item selected-item";
+            btn.setAttribute("data-tag", tag);
+            
+            const checkbox = document.createElement("div");
+            checkbox.className = "checkbox";
+            
+            const tagName = document.createElement("span");
+            tagName.className = "tag-name";
+            tagName.textContent = tag;
+            
+            btn.appendChild(checkbox);
+            btn.appendChild(tagName);
+            
+            selectedContainer?.appendChild(btn);
+        });
 
-                    // Create clone for selected list
-                    const clone = btn.cloneNode(true) as HTMLElement;
-                    clone.classList.add("selected-item");
-                    clone.classList.remove("active"); // Optional: remove active style from clone if we want it to look different
-
-                    selectedContainer?.appendChild(clone);
-                } else {
-                    (btn as HTMLElement).classList.remove("active");
-                }
-            });
+        refreshModalUI();
     }
 
     function filterPosts() {
@@ -246,75 +308,170 @@ const formatDateShort = (date: Date) =>
     }
 </script>
 
-<style>
+<style is:global>
     .blog-container-layout {
-        display: grid;
-        grid-template-columns: 320px 1fr;
-        gap: 6rem;
-        align-items: start;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
     }
 
-    .filter-sidebar {
+    .filters-header {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .open-filters-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 1.5rem;
         background: rgba(255, 255, 255, 0.02);
         border: 1px solid rgba(255, 255, 255, 0.05);
-        border-radius: 20px;
-        padding: 2rem;
-        animation: fade-in 1s cubic-bezier(0.16, 1, 0.3, 1);
+        border-radius: 12px;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.95rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        align-self: flex-start;
     }
 
-    .filter-header {
+    .open-filters-btn:hover {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+    }
+
+    .filters-modal {
+        position: fixed;
+        inset: 0;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: fade-in 0.2s ease;
+    }
+
+    .modal-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(8px);
+    }
+
+    .modal-content {
+        position: relative;
+        width: 90%;
+        max-width: 800px;
+        height: 80vh;
+        max-height: 600px;
+        background: rgba(20, 20, 20, 0.98);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 24px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 2rem;
-        padding-bottom: 1rem;
+        padding: 2rem;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        flex-shrink: 0;
     }
 
-    .filter-title {
-        font-size: 0.85rem;
+    .modal-title {
+        font-size: 1.5rem;
         font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.15em;
-        opacity: 0.5;
+        color: #fff;
+    }
+
+    .close-modal-btn {
+        background: transparent;
+        border: none;
+        color: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+        border-radius: 8px;
+    }
+
+    .close-modal-btn:hover {
+        background: rgba(255, 255, 255, 0.05);
+        color: #fff;
+    }
+
+    .modal-body {
+        flex: 1;
+        overflow-y: auto;
+        padding: 2rem;
+    }
+
+    .modal-footer {
+        padding: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        flex-shrink: 0;
+    }
+
+    .apply-filters-btn {
+        width: 100%;
+        padding: 1rem;
+        background: #fff;
+        color: #000;
+        border: none;
+        border-radius: 12px;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .apply-filters-btn:hover {
+        background: rgba(255, 255, 255, 0.9);
+        transform: translateY(-1px);
     }
 
     .selected-wrapper {
-        margin-bottom: 2rem;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 16px;
         animation: fade-in 0.3s ease;
     }
 
     .filter-subtitle {
-        display: block;
         font-size: 0.75rem;
         text-transform: uppercase;
         letter-spacing: 0.1em;
-        opacity: 0.6;
-        margin-bottom: 1rem;
-        color: var(--accent-color);
+        opacity: 0.5;
+        font-weight: 600;
     }
 
     .selected-container {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
         gap: 0.5rem;
     }
 
-    /* Selected items style overrides */
     .selected-container .filter-item {
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.08);
         color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .selected-container .filter-item:hover {
-        background: rgba(
-            255,
-            255,
-            255,
-            0.15
-        ); /* Reddish hover to indicate removal? Or just brighter */
+        background: rgba(255, 100, 100, 0.2);
+        border-color: rgba(255, 100, 100, 0.3);
     }
 
     .selected-container .checkbox {
@@ -323,7 +480,6 @@ const formatDateShort = (date: Date) =>
     }
 
     .selected-container .checkbox::after {
-        /* Turn checkmark into minus or X maybe? For now keeping check is fine as per request "list of selected" */
         content: "";
         position: absolute;
         width: 4px;
@@ -335,58 +491,30 @@ const formatDateShort = (date: Date) =>
         top: 1.5px;
     }
 
-    .apply-btn {
-        background: #fff;
-        color: #000;
-        border: none;
-        padding: 0.5rem 1rem;
-        border-radius: 8px;
-        font-size: 0.8rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .apply-btn:hover {
-        opacity: 0.9;
-        transform: translateY(-1px);
-        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
-    }
-
     .filter-groups {
         display: flex;
         flex-direction: column;
-        gap: 0.75rem;
+        gap: 2.5rem;
     }
 
-    .filter-group summary {
-        list-style: none;
-        padding: 0.8rem 0.5rem;
-        cursor: pointer;
+    .filter-group {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .filter-group-title {
         font-size: 0.9rem;
-        font-weight: 500;
+        font-weight: 600;
         color: rgba(255, 255, 255, 0.8);
-        border-radius: 8px;
-        transition: all 0.2s ease;
-    }
-
-    .filter-group summary:hover {
-        background: rgba(255, 255, 255, 0.04);
-        color: #fff;
-    }
-
-    .filter-group[open] summary svg {
-        transform: rotate(180deg);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
     }
 
     .filter-list {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 0.35rem;
-        padding: 0.75rem 0;
     }
 
     .filter-item {
@@ -547,26 +675,18 @@ const formatDateShort = (date: Date) =>
         }
     }
 
-    @media (max-width: 1200px) {
-        .blog-container-layout {
-            gap: 3rem;
-        }
-    }
-
     @media (max-width: 1024px) {
-        .blog-container-layout {
-            grid-template-columns: 1fr;
-            gap: 4rem;
-        }
-
-        .filter-sidebar {
-            position: relative;
-            top: 0;
-            max-width: 100%;
+        .modal-content {
+            width: 95%;
+            height: 85vh;
         }
     }
 
     @media (max-width: 768px) {
+        .filter-list {
+            grid-template-columns: 1fr;
+        }
+
         .post-item {
             grid-template-columns: 1fr;
             gap: 1.5rem;
@@ -579,6 +699,17 @@ const formatDateShort = (date: Date) =>
 
         .post-item:hover {
             background: rgba(255, 255, 255, 0.02);
+        }
+
+        .modal-content {
+            width: 100%;
+            height: 100vh;
+            max-height: 100vh;
+            border-radius: 0;
+        }
+
+        .selected-container {
+            flex-direction: column;
         }
     }
 </style>

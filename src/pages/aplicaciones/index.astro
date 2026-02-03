@@ -1,49 +1,136 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+
+const apps = [
+    {
+        name: "TipTap Game",
+        description: "Juego de habilidad y reflejos",
+        url: "/aplicaciones/tiptap",
+    },
+];
 ---
 
 <Layout title="Aplicaciones | daridius">
-    <main>
-        <h1>Aplicaciones</h1>
-        <p>Listado de herramientas y aplicaciones interactivas.</p>
-        <ul>
-            <li><a href="/aplicaciones/tiptap">TipTap Game</a></li>
-        </ul>
-    </main>
+    <section class="apps-container">
+        <header class="apps-header">
+            <h1>Aplicaciones</h1>
+        </header>
+
+        <div class="apps-list">
+            {
+                apps.map((app) => (
+                    <a href={app.url} class="app-item">
+                        <div class="app-info">
+                            <h2 class="app-name">{app.name}</h2>
+                            <p class="app-description">{app.description}</p>
+                        </div>
+                        <svg
+                            class="app-arrow"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </a>
+                ))
+            }
+        </div>
+    </section>
 </Layout>
 
 <style>
-    main {
+    .apps-container {
+        padding: 3rem 0 6rem 0;
         max-width: 800px;
         margin: 0 auto;
-        padding: 2rem;
-        min-height: calc(100vh - 80px);
     }
+
+    .apps-header {
+        margin-bottom: 3rem;
+    }
+
     h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        letter-spacing: -0.02em;
         background: linear-gradient(to bottom, #ffffff, #888888);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        margin-bottom: 1rem;
     }
+
     p {
-        color: #888;
-        margin-bottom: 2rem;
+        font-size: 1.25rem;
+        opacity: 0.5;
+        line-height: 1.6;
     }
-    ul {
-        list-style: none;
-        padding: 0;
+
+    .apps-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
     }
-    li {
-        margin-bottom: 1rem;
-    }
-    a {
-        color: #fff;
+
+    .app-item {
         text-decoration: none;
-        font-size: 1.2rem;
-        transition: opacity 0.2s;
+        color: inherit;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.02);
+        border-left: 2px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.2s ease;
     }
-    a:hover {
-        opacity: 0.7;
+
+    .app-item:hover {
+        background: rgba(255, 255, 255, 0.04);
+        border-left-color: rgba(255, 255, 255, 0.3);
+        padding-left: 2rem;
+    }
+
+    .app-info {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .app-name {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 0.25rem;
+    }
+
+    .app-description {
+        font-size: 0.9rem;
+        opacity: 0.4;
+        line-height: 1.4;
+    }
+
+    .app-arrow {
+        opacity: 0.2;
+        transition: all 0.2s ease;
+        flex-shrink: 0;
+    }
+
+    .app-item:hover .app-arrow {
+        opacity: 0.5;
+        transform: translateX(5px);
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        .app-arrow {
+            display: none;
+        }
     }
 </style>

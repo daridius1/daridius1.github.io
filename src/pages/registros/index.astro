@@ -3,7 +3,11 @@ import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import { formatDate as format } from "../../utils/date";
 
-const registries = await getCollection("registros");
+const registries = (await getCollection("registros")).sort((a, b) => {
+    if (a.slug === "blogs-amigos") return 1;
+    if (b.slug === "blogs-amigos") return -1;
+    return 0;
+});
 
 const formatDate = (dateStr: string) =>
     format(dateStr, { year: "numeric", month: "short", day: "numeric" });
@@ -30,40 +34,44 @@ const getLatest = (registry: any) => {
             <h1>Registros</h1>
         </header>
 
-        <div class="registry-grid">
+        <div class="registry-list">
             {
                 registries.map((registry) => {
                     const latest = getLatest(registry);
                     return (
                         <a
                             href={`/registros/${registry.slug}`}
-                            class="registry-card"
+                            class="registry-item"
                         >
-                            <div class="card-content">
+                            <div class="registry-info">
                                 <h2 class="registry-title">
                                     {registry.data.title}
                                 </h2>
                                 <p class="registry-description">
                                     {registry.data.description}
                                 </p>
-                                <div class="card-footer">
-                                    <div class="footer-info">
-                                        {latest &&
-                                            registry.data.latestLabel && (
-                                                <span class="registry-latest">
-                                                    <span class="registry-label">
-                                                        {
-                                                            registry.data
-                                                                .latestLabel
-                                                        }
-                                                        :
-                                                    </span>{" "}
-                                                    {latest}
-                                                </span>
-                                            )}
-                                    </div>
-                                </div>
                             </div>
+                            {latest && registry.data.latestLabel && (
+                                <div class="registry-latest">
+                                    <span class="latest-label">
+                                        {registry.data.latestLabel}:
+                                    </span>
+                                    <span class="latest-value">{latest}</span>
+                                </div>
+                            )}
+                            <svg
+                                class="registry-arrow"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="m9 18 6-6-6-6" />
+                            </svg>
                         </a>
                     );
                 })
@@ -75,11 +83,12 @@ const getLatest = (registry: any) => {
 <style>
     .registry-container {
         padding: 3rem 0 6rem 0;
+        max-width: 800px;
+        margin: 0 auto;
     }
 
     .registry-header {
-        margin-bottom: 5rem;
-        max-width: 600px;
+        margin-bottom: 3rem;
     }
 
     h1 {
@@ -98,83 +107,99 @@ const getLatest = (registry: any) => {
         line-height: 1.6;
     }
 
-    .registry-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 2rem;
+    .registry-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
     }
 
-    .registry-card {
+    .registry-item {
         text-decoration: none;
         color: inherit;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.5rem;
         background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        border-radius: 20px;
-        padding: 2.25rem;
-        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        display: flex;
-        flex-direction: column;
+        border-left: 2px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.2s ease;
     }
 
-    .registry-card:hover {
-        background: rgba(255, 255, 255, 0.05);
-        border-color: rgba(255, 255, 255, 0.1);
-        transform: translateY(-5px);
+    .registry-item:hover {
+        background: rgba(255, 255, 255, 0.04);
+        border-left-color: rgba(255, 255, 255, 0.3);
+        padding-left: 2rem;
     }
 
-    .card-content {
-        display: flex;
-        flex-direction: column;
+    .registry-info {
         flex: 1;
+        min-width: 0;
     }
 
     .registry-title {
-        font-size: 1.35rem;
+        font-size: 1.25rem;
         font-weight: 600;
         color: #fff;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.25rem;
     }
 
     .registry-description {
-        font-size: 0.95rem;
-        opacity: 0.5;
-        line-height: 1.5;
-        margin-bottom: 2.5rem;
-    }
-
-    .card-footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: auto;
-        padding-top: 1.5rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.03);
-    }
-
-    .footer-info {
-        display: flex;
-        align-items: center;
+        font-size: 0.9rem;
+        opacity: 0.4;
+        line-height: 1.4;
     }
 
     .registry-latest {
-        font-size: 0.85rem;
-        font-weight: 500;
-        color: rgba(255, 255, 255, 0.4);
         display: flex;
-        gap: 0.4rem;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.25rem;
+        flex-shrink: 0;
     }
 
-    .registry-label {
-        font-weight: inherit;
+    .latest-label {
+        font-size: 0.75rem;
+        opacity: 0.3;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-weight: 500;
+    }
+
+    .latest-value {
+        font-size: 0.9rem;
+        opacity: 0.5;
+        font-weight: 500;
+    }
+
+    .registry-arrow {
+        opacity: 0.2;
+        transition: all 0.2s ease;
+        flex-shrink: 0;
+    }
+
+    .registry-item:hover .registry-arrow {
+        opacity: 0.5;
+        transform: translateX(5px);
     }
 
     @media (max-width: 768px) {
         h1 {
             font-size: 2.5rem;
         }
-        .registry-grid {
-            grid-template-columns: 1fr;
+
+        .registry-item {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .registry-latest {
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        .registry-arrow {
+            display: none;
         }
     }
 </style>
