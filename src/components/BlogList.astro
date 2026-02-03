@@ -322,10 +322,11 @@ const formatDateShort = (date: Date) =>
     }
 
     .open-filters-btn {
-        display: inline-flex;
+        display: flex;
         align-items: center;
+        justify-content: center;
         gap: 0.75rem;
-        padding: 1rem 1.5rem;
+        padding: 1.25rem 1.5rem;
         background: rgba(255, 255, 255, 0.02);
         border: 1px solid rgba(255, 255, 255, 0.05);
         border-radius: 12px;
@@ -334,7 +335,7 @@ const formatDateShort = (date: Date) =>
         font-weight: 600;
         cursor: pointer;
         transition: all 0.2s ease;
-        align-self: flex-start;
+        width: 100%;
     }
 
     .open-filters-btn:hover {

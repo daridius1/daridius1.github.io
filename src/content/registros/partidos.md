@@ -4,7 +4,7 @@ description: "Regitro de partidos comentados en el blog"
 latestLabel: "Último partido"
 type: "matches"
 items:
-  - title: "De vuelta al Nacional"
+  - teams: "Universidad de Chile vs Audax Italiano"
     competition: "Campeonato Nacional 2026"
     date: "2026-01-30"
     place: "Estadio Nacional"

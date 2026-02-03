@@ -45,10 +45,11 @@ const registros = defineCollection({
         items: z.array(z.union([
             z.string(),
             z.object({
-                title: z.string(),
+                title: z.string().optional(),
                 author: z.string().optional(),
                 date: z.string().optional(),
                 link: z.string().optional(),
+                teams: z.string().optional(),
                 competition: z.string().optional(),
                 place: z.string().optional(),
             })

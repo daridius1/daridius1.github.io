@@ -81,9 +81,17 @@ const getLinkLabel = (type: string) => {
                                 ) : (
                                     <div class="entry-card-content">
                                         <div class="entry-main-info">
-                                            <span class="entry-title">
-                                                {item.title}
-                                            </span>
+                                            {item.teams ? (
+                                                <span class="entry-title">
+                                                    {item.teams}
+                                                </span>
+                                            ) : (
+                                                item.title && (
+                                                    <span class="entry-title">
+                                                        {item.title}
+                                                    </span>
+                                                )
+                                            )}
                                             {item.author && (
                                                 <span class="entry-author">
                                                     por {item.author}
