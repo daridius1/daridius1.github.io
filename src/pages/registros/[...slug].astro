@@ -58,7 +58,11 @@ const getLinkLabel = (type: string) => {
     <article class="registry-detail">
         <header class="registry-header">
             <h1>{entry.data.title}</h1>
-            <p class="description">{entry.data.description}</p>
+            {
+                entry.data.description && (
+                    <p class="description">{entry.data.description}</p>
+                )
+            }
         </header>
 
         <div class="registry-content">
@@ -183,7 +187,8 @@ const getLinkLabel = (type: string) => {
     .registry-header h1 {
         font-size: 4rem;
         font-weight: 700;
-        line-height: 1;
+        line-height: 1.1;
+        padding-bottom: 0.1em;
         margin-bottom: 1.5rem;
         color: #fff;
         letter-spacing: -0.04em;

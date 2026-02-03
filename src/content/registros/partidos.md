@@ -1,6 +1,6 @@
 ---
 title: "Partidos"
-description: "Regitro de partidos comentados en el blog"
+description: "Registro de partidos comentados en el blog"
 latestLabel: "Último partido"
 type: "matches"
 items:

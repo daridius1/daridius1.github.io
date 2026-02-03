@@ -39,7 +39,7 @@ const projects = defineCollection({
 const registros = defineCollection({
     schema: z.object({
         title: z.string(),
-        description: z.string(),
+        description: z.string().optional(),
         latestLabel: z.string().optional(),
         type: z.enum(["dates", "list", "books", "music", "matches"]),
         items: z.array(z.union([
@@ -57,15 +57,6 @@ const registros = defineCollection({
     }),
 });
 
-const noticias = defineCollection({
-    schema: ({ image }) => z.object({
-        title: z.string(),
-        pubDate: z.coerce.date(),
-        location: z.string().default("Santiago"),
-        image: image().optional(),
-        caption: z.string().optional(),
-        buttonText: z.string().default("¡Interesante!"),
-    }),
-});
 
-export const collections = { blog, projects, registros, noticias };
+
+export const collections = { blog, projects, registros };

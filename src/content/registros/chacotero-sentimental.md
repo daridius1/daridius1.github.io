@@ -29,9 +29,13 @@ items:
     date: "2026-01-29"
     link: "/blog/2026/01/29/tiptap"
   - title: "Romántico Viajero"
-    author: "Himno Oficial Club Universidad de Chile"
+    author: "Club Universidad de Chile"
     date: "2026-02-01"
     link: "/blog/2026/02/01/de-vuelta-al-nacional"
+  - title: "Irresponsables"
+    author: "Babasónicos"
+    date: "2026-02-03"
+    link: "/blog/2026/02/03/el-dia-del-post"
 ---
 
 Como diría el Rumpy: "Te vamos a ponerte un tema".
