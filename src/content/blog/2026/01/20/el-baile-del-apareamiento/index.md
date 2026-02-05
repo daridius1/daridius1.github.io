@@ -20,7 +20,7 @@ Revisando una repo que tenía una versión extremadamente cuma de lo que podría
 
 Mientras miraba embobado el video de esta joven bailando, por un pequeño segundo tuve un momento de lucidez, un segundo de infinito conocimiento en el que pude abandonar mi cuerpo de humano y apreciar a esta chica bailando sin mis neuronas reproductivas funcionando. Resulta que lo que vi fue algo... confuso.
 
-No quiero usar una palabra como cringe, pero debo admitir que lo que hace un segundo eran majestuosos pasos de baile, se transformaron en desabridos y sin sentido movimientos de piernas y caderas. Por un segundo vi a esta joven bailarina como si fuera el pájaro de este [video](https://www.youtube.com/watch?v=1Sj-UdjqlFw) (es un pájaro haciendo un baile de apareamiento, por si acaso).
+No quiero usar una palabra como cringe, pero que lo que hace un segundo eran majestuosos pasos de baile, se transformaron en desabridos y sin sentido movimientos de piernas y caderas. Por un segundo vi a esta joven bailarina como si fuera el pájaro de este [video](https://www.youtube.com/watch?v=1Sj-UdjqlFw) (es un pájaro haciendo un baile de apareamiento, por si acaso).
 
 ## Darwin tenía razón
 

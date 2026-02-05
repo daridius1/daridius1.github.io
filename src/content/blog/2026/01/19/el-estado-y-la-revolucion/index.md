@@ -17,7 +17,7 @@ A lo largo de todo el libro se evidencia explícitamente que la solución a esto
 
 Aunque es obvio que la revolución no termina cuando se toma el poder, me quiero concentrar en esa primera parte. Leer a Lenin el 2026, sabiendo lo que pasó durante el resto del siglo XX (y sin desconocer el sesgo de Hollywood que implica haber crecido en una sociedad occidental), hace que sea muy fácil ser injusto con su diagnóstico. Es cómodo mirar para atrás y juzgar 'con el diario del lunes', ignorando la incertidumbre total que se tenía sobre a dónde llegaría la revolución. Y aun así, su mirada crítica sobre la necesidad de la violencia para llevar a cabo la revolución es algo que, hay que admitirlo, superó la prueba del tiempo.
 
-Esto me resulta mucho más interesante para alguien nacido en Chile como yo, lugar donde quizá el experimento más grande del socialismo por la urna se enfrentó a la cruda realidad de los movimientos antirrevolucionarios que nacen por parte de la clase dominante cuando su privilegio se ve amenazado al nivel que solo el comunismo realmente se ha atrevido a amenazar.
+Esto resulta mucho más interesante para alguien nacido en Chile como yo, lugar donde quizá el experimento más grande del socialismo por la urna se enfrentó a la cruda realidad de los movimientos antirrevolucionarios que nacen por parte de la clase dominante cuando su privilegio se ve amenazado al nivel que solo el comunismo realmente se ha atrevido a amenazar.
 
 Aunque mi corazón sigue creyendo en formas pacíficas (o al menos no así de violentas) de hacer una transición a una sociedad más igualitaria, creo que la historia le da la razón a Lenin (siendo que murió hace más de 100 años) y es algo a lo que no se puede desmerecer.
 
