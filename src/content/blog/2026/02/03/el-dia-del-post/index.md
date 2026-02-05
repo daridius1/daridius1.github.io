@@ -3,9 +3,6 @@ title: "El día del post"
 description: "Postday, Postotón o alguna wea así"
 pubDate: "2026-02-03"
 tags: ["Proyectos", "Blog"]
-music:
-  title: "Irresponsables"
-  author: "Babasónicos"
 ---
 
 Ha habido una grave disminución de la frecuencia de publicaciones en el blog, grave porque en verdad me sobran temas de los que hablar, y últimamente el backlog de temas ha crecido practicamente a diario, si el tema sigue así jamás llegaré a la meta de poner al día el blog conmigo mismo, onda, el manga jamás alcanzaría al anime.
@@ -20,4 +17,8 @@ Creo que quedó más bonito, cambié el landpage a algo mucho más sensual (que 
 
 ## Eso
 
-Listo y equipado, este blog fue redactado relativamente temprano, ya que lo usual es que el post los suba de noche, incluso a veces empezado ya el día siguiente. ¿Teclado sin la tecla R? *listo*, ¿galleta misteriosa? *listo*, ¿monitores del año del pico? *listo*, vamos a luchar como nunca antes, con los audífonos a todo chancho y, al ritmo de:
+Listo y equipado, este blog fue redactado relativamente temprano, ya que lo usual es que el post los suba de noche, incluso a veces empezado ya el día siguiente. ¿Teclado sin la tecla R? *listo*, ¿galleta misteriosa? *listo*, ¿monitores del año del pico? *listo*, a darle átomos.
+
+## Plot twist
+
+Llegó pega de Palestino para mi memoria, por lo que se reagenda el día del post para este Jueves 5 de Febrero, si no avanzo ese día es porque la wea ya es chacota y no hay nada que hacer al respecto.

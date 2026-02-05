@@ -32,10 +32,6 @@ items:
     author: "Club Universidad de Chile"
     date: "2026-02-01"
     link: "/blog/2026/02/01/de-vuelta-al-nacional"
-  - title: "Irresponsables"
-    author: "Babasónicos"
-    date: "2026-02-03"
-    link: "/blog/2026/02/03/el-dia-del-post"
 ---
 
 Como diría el Rumpy: "Te vamos a ponerte un tema".
