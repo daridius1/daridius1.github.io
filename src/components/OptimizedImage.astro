@@ -1,0 +1,40 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  src: string;
+  alt: string;
+}
+
+const { src, alt } = Astro.props;
+
+// Resolver la imagen relativa al directorio del post
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/content/blog/**/*.{jpeg,jpg,png,gif,webp,avif}');
+
+// Buscar la imagen que coincida con el src
+let imagePath = null;
+for (const path in images) {
+  if (path.includes(src)) {
+    imagePath = path;
+    break;
+  }
+}
+
+let imageModule = null;
+if (imagePath) {
+  imageModule = await images[imagePath]();
+}
+---
+
+{!imageModule ? (
+  <img src={src} alt={alt} />
+) : (
+  <Image 
+    src={imageModule.default} 
+    alt={alt}
+    widths={[400, 800, 1200]}
+    sizes="(max-width: 800px) 100vw, 800px"
+    format="webp"
+    quality={80}
+  />
+)}

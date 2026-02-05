@@ -12,7 +12,8 @@
     "update:music": "node scripts/update-music-registry.js"
   },
   "dependencies": {
-    "astro": "^5.16.14"
+    "astro": "^5.16.14",
+    "sharp": "^0.34.5"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0"

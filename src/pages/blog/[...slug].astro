@@ -1,6 +1,7 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
+import OptimizedImage from "../../components/OptimizedImage.astro";
 
 export async function getStaticPaths() {
     const blogEntries = (await getCollection("blog")).sort(
@@ -135,7 +136,7 @@ const { Content } = await entry.render();
         }
 
         <div class="content">
-            <Content />
+            <Content components={{ img: OptimizedImage }} />
         </div>
 
         {
