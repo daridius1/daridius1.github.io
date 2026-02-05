@@ -1,5 +1,5 @@
 ---
-title: "El baile del apareamiento"
+title: "El baile"
 description: "Just dance"
 pubDate: "2026-01-20"
 tags: ["Sobre mí"]

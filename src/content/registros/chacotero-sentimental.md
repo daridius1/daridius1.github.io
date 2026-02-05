@@ -11,7 +11,7 @@ items:
   - title: "Call Me Maybe"
     author: "Carly Rae Jepsen"
     date: "2026-01-20"
-    link: "/blog/2026/01/20/el-baile-del-apareamiento"
+    link: "/blog/2026/01/20/el-baile"
   - title: "Pam Pam"
     author: "Wisin y Yandel"
     date: "2026-01-24"
