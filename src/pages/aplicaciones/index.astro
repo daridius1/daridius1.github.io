@@ -4,8 +4,18 @@ import Layout from "../../layouts/Layout.astro";
 const apps = [
     {
         name: "TipTap",
-        description: "Juego",
+        description: "Juego de ritmo y memoria",
         url: "/aplicaciones/tiptap",
+    },
+    {
+        name: "Calculadora de elecciones",
+        description: "Calculadora electoral histórica",
+        url: "/aplicaciones/elecciones",
+    },
+    {
+        name: "Tazas vs Vasos",
+        description: "Experimento físico con tazas y vasos",
+        url: "/aplicaciones/stack-game",
     },
 ];
 ---
@@ -45,7 +55,6 @@ const apps = [
 </Layout>
 
 <style>
-
     .apps-list {
         display: flex;
         flex-direction: column;

@@ -1,0 +1,98 @@
+---
+import StackGameComponent from "../../../components/StackGame.jsx";
+import "../../../styles/global.css";
+import heroImg from "../../../assets/bg.jpg";
+---
+
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tazas vs Vasos | Daridius</title>
+        <style>
+            body,
+            html {
+                margin: 0;
+                padding: 0;
+                min-height: 100dvh;
+            }
+            .hero-bg {
+                position: fixed;
+                inset: 0;
+                z-index: -1;
+            }
+            .hero-bg img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .hero-overlay {
+                position: absolute;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.4);
+            }
+            main {
+                position: relative;
+                z-index: 10;
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="hero-bg">
+            <img src={heroImg.src} alt="" />
+            <div class="hero-overlay"></div>
+        </div>
+
+        <main>
+            <div class="space-y-8">
+                <header
+                    class="flex flex-col md:flex-row md:items-end justify-between gap-6"
+                >
+                    <div class="space-y-4">
+                        <a
+                            href="/aplicaciones"
+                            class="text-xs font-bold uppercase tracking-widest text-white/30 hover:text-white transition-colors flex items-center gap-2 group"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-4 w-4 transition-transform group-hover:-translate-x-1"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2.5"
+                                    d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                            </svg>
+                            Volver a aplicaciones
+                        </a>
+                        <h1
+                            class="text-4xl font-black text-white tracking-tighter sm:text-6xl"
+                        >
+                            Tazas vs Vasos
+                        </h1>
+                        <p class="text-white/60 max-w-2xl text-lg">
+                            Para entender cuál es el sentido de este juego, te
+                            recomiendo leer <a
+                                href="/blog/2026/01/09/sobre-las-tazas"
+                                class="text-white underline decoration-white/30 hover:decoration-white transition-all"
+                                >este artículo</a
+                            >.
+                        </p>
+                    </div>
+                </header>
+
+                <div class="w-full flex justify-center">
+                    <StackGameComponent client:only="react" />
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
