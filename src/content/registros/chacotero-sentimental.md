@@ -32,6 +32,10 @@ items:
     author: "Club Universidad de Chile"
     date: "2026-02-01"
     link: "/blog/2026/02/01/de-vuelta-al-nacional"
+  - title: "Santa Maradona"
+    author: "Mano Negra"
+    date: "2026-02-05"
+    link: "/blog/2026/02/05/el-futbol"
 ---
 
 Como diría el Rumpy: "Te vamos a ponerte un tema".
