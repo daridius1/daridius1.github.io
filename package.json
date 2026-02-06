@@ -12,8 +12,19 @@
     "update:music": "node scripts/update-music-registry.js"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.6",
+    "@astrojs/react": "^4.4.2",
+    "@tailwindcss/typography": "^0.5.19",
+    "@tailwindcss/vite": "^4.1.18",
+    "@types/react": "^19.2.13",
+    "@types/react-dom": "^19.2.3",
     "astro": "^5.16.14",
-    "sharp": "^0.34.5"
+    "daisyui": "^5.5.18",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0"

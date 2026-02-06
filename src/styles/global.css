@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@plugin "@tailwindcss/typography";
+
+@layer base {
+
+    html,
+    body {
+        background-color: #050608;
+        color: white;
+    }
+}
