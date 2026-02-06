@@ -10,6 +10,7 @@ export default defineConfig({
     domains: [],
   },
 
+  site: 'https://daridius.cl',
   integrations: [react()],
 
   vite: {
