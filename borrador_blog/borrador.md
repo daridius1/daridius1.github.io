@@ -1,50 +1,29 @@
 ---
-title: "El futbol"
-description: "Y su impacto cultural"
-pubDate: "2026-02-05"
-tags: ["Sobre mí", "Ideas", "Futbol", "El Bulla"]
-music:
-  title: "Santa Maradona"
-  author: "Mano Negra"
-  verse: "Santa Maradona priez pour moi"
+title: "Compresión extrema de imágenes"
+description: "Un uso genial de la IA"
+pubDate: "2026-02-06"
+tags: ["Ideas", "IA"]
 ---
 
-El futbol siempre ha sido parte de mi vida, de alguna forma u otra. El impacto que ha tenido a lo largo de mi existencia extiende sus tentaculos a casi todas las dimensiones de mi identidad, amigos, familia, videojuegos, musica, etc.
+Dentro de lo que es mi obsesión por optimizar las cosas, mientras veía un video que comparaba los distintos algoritmos de compresión de imágenes, me quedé pensando en la tremenda diferencia que puede hacer utilizar un algorimo que, haciendo algunos sacrificios bastante modestos de lo que puede ser la calidad de la imagen, o la fidelidad respecto a la imagen original, logran reducir su tamaño de forma drástica.
 
-Lamentablemente el futbol tiene una fama que no se merece, pero que esconde a ojos de muchos lo hermoso que es, no tan solo el deporte, si no la cultura que se crea en torno a el. La imagen "del fifas" fanatico del futbol, que solo entiende la vida por medio de conceptos futbolisticos, e irremediablemente desemboca en problemas de violencia intrafamiliar hace que mucha gente reduzca el futbol a 22 personas siguiendo una pelota, al deporte y a sus reglas, y cuya locura no tiene mayor explicacion que ser la fuga de los problemas de salud mental que arrastran los hombres que no son capaces de ir al psicologo.
+Y pensé, ¿cuál será la versión más extrema de sacrificio de fidelidad a la imagen original, que aún así permita reconocerla? con lo que empecé a delirar con algoritmos que de alguna forma omitan ciertos detalles si es que considera que, según la calidad de la imagen, no son visibles al ojo humano, o cosas así, porque al final, si el cielo de la imagen que se esta tomando tiene una gradiente de distinta proporcion o magnitud, pero transmite la misma información al ojo humano, se podria considerar (en terminos extrictamente practicos) la misma imagen no? 
 
-Es una pena, realmente una pena. Es una pena no entender el futbol, porque el futbol es de las cosas mas hermosas que existen y que nos definen.
+Cuando se quiere resolver cualquier problema en computacion en 2026, para bien o para mal, tarde o temprano se llega a la IA, y aunque me quede un buen rato pegado en formas mas tradicionales de hacer esto, en el momento que la ia paso por mi cabeza todo se hizo extremadamente claro.
 
-## El arte
+## Primera iteracion
 
-Pense en algun momento remitirme a una definicion de diccionario, o a algun gran pensador que defina el arte, y partir desde ahi, pero conclui que no estoy ni ahi con estas definiciones. Y es que mirar en menos las sensaciones, las emociones, los sentimientos que genera el futbol me parece un acto pedante a mas no poder. Como se le explica a alguien que una rabona no tiene nada que envidiarle a una pintura? o que un pase entre lineas emociona tanto como una pieza de musica clasica? Muchos de los goles mas importantes de la historia han derramado mas lagrimas que cualquier cuadro de picasso, han desmoralizado mas que cualquier pelicula, han llegado al corazon de mas personas que cualquier libro escrito jamas.
+Y es que los algoritmos de ia hacen ya literalmente eso, recuerdo la primera vez que vi la explicacion de como funcionaban los deep fake, en lo que parece una metodologia muy similar. Se entrena un modelo con la cara de una persona, y este tiene que reducir la imagen a un vector que nadie puede explicar que considera y que no de la cara, y luego el mismo modelo tiene que redibujar la cara a partir de ese vector. El como este algoritmo servia para hacer deep fakes creo que es harina de otro costal, lo importante es que si consideramos que a partir de ese vector, con ese modelo, se podria reconstruir la cara, y de que ese vector pesaba evidentemente menos, y muy oproblabmente bastante, bastante menos, es completamnete razonable catalogar el vector resultante como una version de la imagen comprimida no?
 
-Un buen regate demuestra mas atrevimiento que muchas obras de teatro, hay penales fallidos que probablemente han roto mas corazones que cualquier romance de telenovela.
+## Segunda iteracion
 
-Por que ocurre esto? dificil de explicar, y es que no tiene explicacion, si la tuviera dejaria de ser lo que es... cualquier obra de arte puede ser mirada en menos si se demuestra la suficiente ignorancia, "es solo un juego", "son solo ruidos sin sentido" "es un simple dibujo". El futbol nos pilla a muchos desde que somos mas pequeños, y es que el futbol es parte fundamental de la identidad de muchas personas, innegablemente hombres, que solo han sabido llorar cuando el equipo de sus amores ha salido campeon despues de inumerables años, cuando el unico abrazo que se han dado con su abuelo ha sido en un estadio, alentando codo a codo con junto a miles y miles de personas, cuando la unica cancion que han coreado junto a su hermano son los canticos de sus colores, y cuando la unica conversacion que han tenido con su papa que no tuviera que ver con una gotera en el techo, o un clavo mal puesto ha sido sobre las posibilidades de la seleccion en eliminatorias.
+Luego pense, aca lo importante es engañár al ojo humano mas que una funcion de similitud que probalbemten usaba el algoritmo de los deep fake, por lo que con la recoleccion de respuestas humanas, sobre si dos imagenes son iguales o no, se podria llegar muy lejos en la compresion de lo que si o lo que no importa para cuadno apreciamos una foto. Al final esto esta hecho solo como compresion en caso de imagenes que queremos guardar con el mero fin de verlas y apreciarlas, nada mas.
 
-## En mi vida
+## reinventando la rueda
 
-Creo que algunos de los ejemplos que di son un poco mas extremos, pero se asemejan, sin duda, a lo que ha sido mi vida como hombre. Me emociono con bastantes pocas cosas, pero la mayor cantidad de las veces que algo ha llegado a mi corazon ha sido por medio del futbol, y no el futbol como tal.
+Luego de llegar a estas conclusiones pense "si o si esta wea se le ocurrio a otro weon", y efectivamente, no me tomo mucho toparme con un video en youtube que no solo comparte casi la misma idea, si no que explica porque funciona, pone ejemplos, el weon que explica esta mas rico que yo, y pone en evidencia que esta aventura esta ya mas que explorada, de todas formas me parecio un tema muy interesante, los suficientemente interesante como para compartirlo con ustedes e invitar a la reflexion sobre... alguna cosa supongo.
 
-Nunca se me ha hecho un nudo en la garganta como cuando al equipo de futbol del DCC en la mona le metieron el cuarto gol en la final, nunca me he sentido mas cercano a mi papa que viendo un partido de la u, nunca me he sentido mas libre que gritandole a un futbolista del equipo contrario "maricon culiao" siendo un niño, al lado de mi papa, sin ser reprochado por este acto de desahogo, nunca me he sentido mas util que, habiendo sido malo para la pelota toda la vida, marcando un gol clave en el equipo de mis amigos.
+## La leccion
 
-Es mucho mas que eso, solo el gol de deeney en la semifinal del ascenso ingles contra el leicester hace que se me ponga la piel de gallina, solo la intro de la champions hace que sienta que algo epico esta por comenzar, solo la musica del fifa me hace sentir un niño otra vez, solo los goles de chile en la copa america del 2015 me hacen soñar con que nada es imposible.
+Es que un chino siempre lo hizo primero, a esta altura me pregunto si programando lograre mis ambiciosas metas, o me tendre que volver vtuber o diputado.
 
-Lo he contado en mas de alguna ocasion, quiza el mayor referente que he tenido en mi vida ha sido mi abuelo materno, el murio hace unos años, tuvimos vidas completamente distintas, todo lo que a el le falto yo lo tuve en abundancia. Ademas del apellido, no escucho la musica ranchera que escuchaba el, no veo las peliculas mexicanas con las que se divertia, ni he llenado los puzzles con los que pasaba el rato. Aunque me enseño a jugar ajedrez y a las cartas, estas partidas no viven en mi memoria. Pero hay algo que si compartimos, incluso en sus ultimos momentos, con una mente deteriorada por la demencia, el era de la U, veia los partidos de la u sin entender realmente lo que estaba pasando, creyendo que la repeticion de los goles valian tambien para el marcador.
-
-Desde mi adolesencia hasta mi temprana adultez, no lloré, diria que desde que tuve 15 años hasta el año pasado no llore, no se por que a veces cuesta tanto llorar, en el funeral de mi abuelo, no llore, en el de mi prima tampoco, y aunque no diria que me genera culpa, es algo que definitivamente lamento no poder hacer. Un dia mi abuela, de la nada, me entrega un cassette, me dice que era de mi abuelo y que solo sabia que era de la u. Recibiendo este recuerdo como a quien le pasan un super 8 decidi guardar este cassette para cuando tuviera la oportunidad de escucharlo y pasarlo a digital para inmortalizarlo. Dias despues, ya en mi casa, me consegui una radio y un cable auxiliar, con los que conecte el audio al computador y me puse a escuchar.
-
-Eran los relatos goles de la U en la copa chile del 1994, hasta la fecha 6, copa que ni siquiera ganamos, pero que contaba con un equipazo que ese mismo año, luego de 25 años y con la mancha del descenso en su historia reciente, salio campeon del torneo nacional, de la mano de un idolo como lo fue marcelo salas, con quien comparto apellido.
-
-Mientras escuchaba los relatos, una ola de sensaciones azoto mi cuerpo, y sin verlo venir en absoluto, me encontre llorando, porque? a dia de hoy no lo se, pero sin duda mientras lloraba, senti una tremenda felicidad.
-
-Podria decir que fue la felicidad de tener una buena vida y de haber tenido un tremendo abuelo como lo fue el mio, pero la verdad es que no lo se, no tengo idea. Solo se que por unos breves segundos llore como no lo hacia hace años.
-
-Hay gente que encuentra ridicula a las personas que lloran por un gol, por un partido ganado o por uno perdido. Y es que para muchas personas, yo habre llorado por escuchar el relato de un gol ocurrido hace mas de 30 años, cuando yo no existia, y que no significo nada para la historia de la U. Pero para mi significo mucho mas que eso.
-
-Mientras hago esta publicacion escuche muchas canciones, revivi muchos momentos, los mejores goles de los mundiales, resumenes de partidos importantes, canciones del futbol o del fifa que a dia de hoy encuentran espacio en mi reproductor.
-
-El cassette de mi abuelo lo digitalice y lo subi a youtube(link https://www.youtube.com/watch?v=Wt1UMLlpUz0&t=1252s).
-
-Que viva el futbol, aguante la U.

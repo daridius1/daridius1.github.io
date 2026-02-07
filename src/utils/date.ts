@@ -10,6 +10,10 @@ export const formatDate = (
 
     const d = typeof date === "string" ? new Date(date) : date;
 
+    if (!(d instanceof Date) || isNaN(d.getTime())) {
+        return "";
+    }
+
     // Use UTC to prevent timezone shifts for YYYY-MM-DD dates
     return d.toLocaleDateString("es-ES", {
         ...options,

@@ -19,7 +19,7 @@ const { Content } = await entry.render();
 
 import { formatDate as format } from "../../utils/date";
 
-const formatDate = (dateStr: string) =>
+const formatDate = (dateStr: string | undefined | null) =>
     format(dateStr, { year: "numeric", month: "long", day: "numeric" });
 
 // Sort entries if they are dates or have a date property
@@ -75,7 +75,14 @@ const getLinkLabel = (type: string) => {
                 <div class="entries-grid">
                     {
                         sortedItems.map((item) => (
-                            <div class="entry-item">
+                            <div
+                                class:list={[
+                                    "entry-item",
+                                    typeof item !== "string" && item.special
+                                        ? `is-${item.special}`
+                                        : "",
+                                ]}
+                            >
                                 {typeof item === "string" ? (
                                     <span class="entry-value">
                                         {entry.data.type === "dates"
@@ -84,63 +91,80 @@ const getLinkLabel = (type: string) => {
                                     </span>
                                 ) : (
                                     <div class="entry-card-content">
-                                        <div class="entry-main-info">
-                                            {item.teams ? (
-                                                <span class="entry-title">
-                                                    {item.teams}
-                                                </span>
-                                            ) : (
-                                                item.title && (
-                                                    <span class="entry-title">
-                                                        {item.title}
-                                                    </span>
-                                                )
-                                            )}
-                                            {item.author && (
-                                                <span class="entry-author">
-                                                    por {item.author}
-                                                </span>
-                                            )}
-                                            {item.competition && (
-                                                <span class="entry-competition">
-                                                    {item.competition}
-                                                </span>
-                                            )}
-                                            {item.place && (
-                                                <span class="entry-place">
-                                                    {item.place}
-                                                </span>
-                                            )}
-                                        </div>
-                                        <div class="entry-meta-info">
-                                            {item.date && (
-                                                <span class="entry-date">
+                                        {entry.data.type === "dates" ? (
+                                            <div class="entry-date-row">
+                                                <span class="entry-value">
                                                     {formatDate(item.date)}
                                                 </span>
-                                            )}
-                                            {item.link && (
-                                                <a
-                                                    href={item.link}
-                                                    class="entry-link"
-                                                >
-                                                    {getLinkLabel(
-                                                        entry.data.type,
+                                                {item.title && (
+                                                    <span class="entry-label">
+                                                        {item.title}
+                                                    </span>
+                                                )}
+                                            </div>
+                                        ) : (
+                                            <>
+                                                <div class="entry-main-info">
+                                                    {item.teams ? (
+                                                        <span class="entry-title">
+                                                            {item.teams}
+                                                        </span>
+                                                    ) : (
+                                                        item.title && (
+                                                            <span class="entry-title">
+                                                                {item.title}
+                                                            </span>
+                                                        )
                                                     )}
-                                                    <svg
-                                                        width="12"
-                                                        height="12"
-                                                        viewBox="0 0 24 24"
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        stroke-width="2.5"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    >
-                                                        <path d="M7 7h10v10M7 17 17 7" />
-                                                    </svg>
-                                                </a>
-                                            )}
-                                        </div>
+                                                    {item.author && (
+                                                        <span class="entry-author">
+                                                            por {item.author}
+                                                        </span>
+                                                    )}
+                                                    {item.competition && (
+                                                        <span class="entry-competition">
+                                                            {item.competition}
+                                                        </span>
+                                                    )}
+                                                    {item.place && (
+                                                        <span class="entry-place">
+                                                            {item.place}
+                                                        </span>
+                                                    )}
+                                                </div>
+                                                <div class="entry-meta-info">
+                                                    {item.date && (
+                                                        <span class="entry-date">
+                                                            {formatDate(
+                                                                item.date,
+                                                            )}
+                                                        </span>
+                                                    )}
+                                                    {item.link && (
+                                                        <a
+                                                            href={item.link}
+                                                            class="entry-link"
+                                                        >
+                                                            {getLinkLabel(
+                                                                entry.data.type,
+                                                            )}
+                                                            <svg
+                                                                width="12"
+                                                                height="12"
+                                                                viewBox="0 0 24 24"
+                                                                fill="none"
+                                                                stroke="currentColor"
+                                                                stroke-width="2.5"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            >
+                                                                <path d="M7 7h10v10M7 17 17 7" />
+                                                            </svg>
+                                                        </a>
+                                                    )}
+                                                </div>
+                                            </>
+                                        )}
                                     </div>
                                 )}
                             </div>
@@ -254,6 +278,49 @@ const getLinkLabel = (type: string) => {
     .entry-item:hover {
         background: rgba(255, 255, 255, 0.04);
         border-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .entry-item.is-silver {
+        background: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.05) 0%,
+            rgba(200, 200, 200, 0.15) 50%,
+            rgba(255, 255, 255, 0.05) 100%
+        );
+        border-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    }
+
+    .entry-item.is-silver .entry-title {
+        background: linear-gradient(to bottom, #ffffff, #aaaaaa);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 800;
+    }
+
+    .entry-date-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .entry-label {
+        font-size: 0.75rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        padding: 0.2rem 0.6rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+        opacity: 0.8;
+        margin-left: auto;
+    }
+
+    .is-silver .entry-label {
+        background: rgba(255, 255, 255, 0.2);
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.3);
     }
 
     .entry-value {

@@ -16,8 +16,11 @@ const getLatest = (registry: any) => {
     if (!registry.data.items || registry.data.items.length === 0) return null;
     const latest = registry.data.items[registry.data.items.length - 1];
 
-    // If it's a simple date string
-    if (registry.data.type === "dates") return formatDate(latest);
+    // If it's a simple date string or a date object inside a "dates" type
+    if (registry.data.type === "dates") {
+        const dateVal = typeof latest === "string" ? latest : latest.date;
+        return formatDate(dateVal);
+    }
 
     // If it's an object (like a book or match)
     if (typeof latest === "object" && latest !== null) {

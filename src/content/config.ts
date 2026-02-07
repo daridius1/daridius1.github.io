@@ -52,6 +52,7 @@ const registros = defineCollection({
                 teams: z.string().optional(),
                 competition: z.string().optional(),
                 place: z.string().optional(),
+                special: z.string().optional(),
             })
         ])).optional(),
     }),
