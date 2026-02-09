@@ -1,29 +1,31 @@
 ---
-title: "Compresión extrema de imágenes"
-description: "Un uso genial de la IA"
-pubDate: "2026-02-06"
-tags: ["Ideas", "IA"]
+title: "El peor de los timing"
+description: "Un mal resultado, un peor partido"
+pubDate: "2026-02-08" #"2026-01-15"
+tags: ["Reviews", "Fútbol", "El Bulla"]
+match:
+  teams: "Huachipato vs Universidad de Chile"
+  competition: "Campeonato Nacional"
+  date: "2026-02-08"
+  place: "Estadio CAP"
 ---
 
-Dentro de lo que es mi obsesión por optimizar las cosas, mientras veía un video que comparaba los distintos algoritmos de compresión de imágenes, me quedé pensando en la tremenda diferencia que puede hacer utilizar un algorimo que, haciendo algunos sacrificios bastante modestos de lo que puede ser la calidad de la imagen, o la fidelidad respecto a la imagen original, logran reducir su tamaño de forma drástica.
+Me propuse hablar de cada partido de la U en este blog, aunque estoy cachando que cuando pierde muchas ganas de escribir no hay, así que la voy a hacer corta.
 
-Y pensé, ¿cuál será la versión más extrema de sacrificio de fidelidad a la imagen original, que aún así permita reconocerla? con lo que empecé a delirar con algoritmos que de alguna forma omitan ciertos detalles si es que considera que, según la calidad de la imagen, no son visibles al ojo humano, o cosas así, porque al final, si el cielo de la imagen que se esta tomando tiene una gradiente de distinta proporcion o magnitud, pero transmite la misma información al ojo humano, se podria considerar (en terminos extrictamente practicos) la misma imagen no? 
+## El Partido
 
-Cuando se quiere resolver cualquier problema en computacion en 2026, para bien o para mal, tarde o temprano se llega a la IA, y aunque me quede un buen rato pegado en formas mas tradicionales de hacer esto, en el momento que la ia paso por mi cabeza todo se hizo extremadamente claro.
+Desastroso, creo que la pregunta de cualquier persona que vio el primer y segundo partido de la U es, ¿a qué juega la U? Creo que el incha de la U debe ser de los más capacitados en el mundo para diagnosticar tempranamente a un técnico que, en verdad, no tiene futuro en el equipo.
 
-## Primera iteracion
+Nada personal, como hincha suelo tomar la posición de darle tiempo a los procesos y de entender que el fútbol es algo muy volátil, y se tiene menos control sobre los resultados de lo que la gente cree, y en el primer partido ocurrieron muchas cosas con las que ningún técnico cuenta para su debut, principalmente las 2 expulsiones.
 
-Y es que los algoritmos de ia hacen ya literalmente eso, recuerdo la primera vez que vi la explicacion de como funcionaban los deep fake, en lo que parece una metodologia muy similar. Se entrena un modelo con la cara de una persona, y este tiene que reducir la imagen a un vector que nadie puede explicar que considera y que no de la cara, y luego el mismo modelo tiene que redibujar la cara a partir de ese vector. El como este algoritmo servia para hacer deep fakes creo que es harina de otro costal, lo importante es que si consideramos que a partir de ese vector, con ese modelo, se podria reconstruir la cara, y de que ese vector pesaba evidentemente menos, y muy oproblabmente bastante, bastante menos, es completamnete razonable catalogar el vector resultante como una version de la imagen comprimida no?
+Entonces, porque crucificar al Paqui? Lo que pasa es que... no... simplemente no, no veo nada en el paqui, no veo nada en como juega la U. A mi estas situaciones no me generan odio, no digo lo que digo con animo de "cricificar" a un tecnico, yo la verdad le daria las gracias por el profesionalismo, le haria un bonito post en IG, y nos ahorraria a la U, como institucion, el mal rato de tener a una persona que, por ser respetuoso, diria que simplemente no tiene las herramientas para dirigir a un equipo como la U.
 
-## Segunda iteracion
+## Lo lamentable
 
-Luego pense, aca lo importante es engañár al ojo humano mas que una funcion de similitud que probalbemten usaba el algoritmo de los deep fake, por lo que con la recoleccion de respuestas humanas, sobre si dos imagenes son iguales o no, se podria llegar muy lejos en la compresion de lo que si o lo que no importa para cuadno apreciamos una foto. Al final esto esta hecho solo como compresion en caso de imagenes que queremos guardar con el mero fin de verlas y apreciarlas, nada mas.
+La U en este momento tiene, EL MEDIO EQUIPO, como no veía hace muuuchos años. Lo admito, soy viuda de alvarez, creo que si la meta este año hubiese sido ganar el torneo nacional, con alvarez lo hubiesemos logrado. Pero bueno, no creo que vuela a pesar de que quedó medio varado con el tema de que no se cerro el tema con perú, pero pico.
 
-## reinventando la rueda
+## Puntualmente sobre el partido
 
-Luego de llegar a estas conclusiones pense "si o si esta wea se le ocurrio a otro weon", y efectivamente, no me tomo mucho toparme con un video en youtube que no solo comparte casi la misma idea, si no que explica porque funciona, pone ejemplos, el weon que explica esta mas rico que yo, y pone en evidencia que esta aventura esta ya mas que explorada, de todas formas me parecio un tema muy interesante, los suficientemente interesante como para compartirlo con ustedes e invitar a la reflexion sobre... alguna cosa supongo.
+Es bonito ver un gol de turboman por la u despues de todos estos años. El primero de huachipato nada que hacer realmente, el segundo nos liquida, ambos muy buenos goles a mi gusto, el segundo con mayor complicidad de nuestra defensa en mi opinion.
 
-## La leccion
-
-Es que un chino siempre lo hizo primero, a esta altura me pregunto si programando lograre mis ambiciosas metas, o me tendre que volver vtuber o diputado.
-
+Bien castellon, bien Diego Vargas, ojala que le pueda entregar buenas cosas al equipo para que crezca, y lo peor de la u, altamirano por lejos, pero bueno, un mal partido lo puede tener cualquiera.

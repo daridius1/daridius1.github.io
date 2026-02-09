@@ -7,4 +7,9 @@ music:
   title: "Titulo"
   author: "Autor"
   verse: "Verso"
+match:
+  teams: "Universidad de Chile vs Audax Italiano"
+  competition: "Campeonato Nacional"
+  date: "2026-01-30"
+  place: "Estadio Nacional"
 ---
