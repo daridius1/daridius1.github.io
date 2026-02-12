@@ -11,7 +11,7 @@ Del esperanto supe hace mucho, pero solo ahora lo logré conectar con mi filosof
 
 ## ¿El plan?
 
-Este sí que tiene pinta de que no va a pasar, pero hago manifiesta mi intención de aprender esperanto. Aunque creo que es objetivamente medio inútil, ChatGPT me dijo que para mí —que soy español nativo y hablo inglés bien— el esperanto sería pan comido, lo que me hace pensar que ni cagando sería la wea más inútil que he aprendido.
+Este sí que tiene pinta de que no va a pasar, pero hago manifiesta mi intención de aprender esperanto. Aunque creo que es objetivamente medio inútil, ChatGPT me dijo que para mí (que soy español nativo y hablo inglés bien) el esperanto sería pan comido, lo que me hace pensar que ni cagando sería la wea más inútil que he aprendido.
 
 ## Cómo hacerlo
 

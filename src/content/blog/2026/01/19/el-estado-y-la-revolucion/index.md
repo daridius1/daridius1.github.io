@@ -31,7 +31,7 @@ Eso fue. Gran diagnóstico y todo, y aunque sigue siendo fuerte a día de hoy, s
 
 Este es el concepto, diría, más repetido a lo largo de todo el libro y, al mismo tiempo, el más polémico. Aunque gran parte de mis críticas se enfocan en la inocencia en cuanto al funcionamiento y organización de las masas una vez iniciada la revolución, la idea de que el Estado se va a disolver naturalmente pasada la fase del control proletario me parece tan ingenua como inofensiva.
 
-Aunque me sorprende la seguridad y la actitud de que el hecho de que esto ocurra es [Lógico](https://www.youtube.com/watch?v=icYkp6MjYGQ), se trata de una etapa tan avanzada respecto del paso previo —que me parece el real problema— que la verdad no me genera nada muy importante. No está mal tampoco hacer futurología y, si crees que la historia es así de lineal y predecible, cada loco con su tema; en eso no me meto.
+Aunque me sorprende la seguridad y la actitud de que el hecho de que esto ocurra es [Lógico](https://www.youtube.com/watch?v=icYkp6MjYGQ), se trata de una etapa tan avanzada respecto del paso previo (que me parece el real problema), que la verdad no me genera nada muy importante. No está mal tampoco hacer futurología y, si crees que la historia es así de lineal y predecible, cada loco con su tema; en eso no me meto.
 
 > Y de ella se deduce que la «fuerza especial de represión» del proletariado por la burguesía, de millones de trabajadores por un puñado de ricachos, debe sustituirse por una «fuerza especial de represión» de la burguesía por el proletariado (dictadura del proletariado).
 
@@ -55,7 +55,7 @@ En mis delirios antisistema, en los que sueño con un Estado lotocrático, se me
 
 Dejar la misión de solucionar los vicios de la sociedad en manos de unos pocos siempre llevará al desastre. No me importa qué tan fundamentada esté su ideología, cuán honestos o inteligentes sean, ni la legitimidad con la que lleguen: las estructuras de poder humanas son así y pensar que se puede hacer algo al respecto me parece ingenuo.
 
-Menciono la cita porque soy optimista y sí creo que la toma del poder político pueda salvarnos de la explotación. Pero si en vez de pelearnos por decidir qué líder o qué idea nos permita esto, nos concentráramos en cómo crear un sistema lo más políticamente horizontal posible —sin buenas intenciones, sino con ciencia, teoría de juegos y una mirada sistemática crítica—, estoy seguro llegaríamos a mejor puerto.
+Menciono la cita porque soy optimista y sí creo que la toma del poder político pueda salvarnos de la explotación. Pero si en vez de pelearnos por decidir qué líder o qué idea nos permita esto, nos concentráramos en cómo crear un sistema lo más políticamente horizontal posible (sin buenas intenciones, sino con ciencia, teoría de juegos y una mirada sistemática crítica), estoy seguro llegaríamos a mejor puerto.
 
 > Educando al Partido obrero, el marxismo educa a la vanguardia del proletariado, vanguardia capaz de tomar el Poder y de conducir a todo el pueblo al socialismo, de dirigir y organizar el nuevo régimen, de ser el maestro, el dirigente, el jefe de todos los trabajadores y explotados en la obra de construir su propia vida social sin burguesía y contra la burguesía.
 

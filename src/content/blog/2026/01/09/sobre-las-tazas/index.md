@@ -15,7 +15,7 @@ Por hoy día, analizaremos principalmente uno de los objetos que yo más odio.
 
 ## Las tazas
 
-¿Cómo se ve el mueble que guarda las tazas en tu casa? Si consideras el volumen de una taza, ¿se está aprovechando correctamente el espacio del mueble? La respuesta obviamente es no. La taza, siendo un contenedor cóncavo de líquidos y teniendo todo para seguir una de las máximas más importantes del almacenamiento —la apilabilidad—, no lo hace.
+¿Cómo se ve el mueble que guarda las tazas en tu casa? Si consideras el volumen de una taza, ¿se está aprovechando correctamente el espacio del mueble? La respuesta obviamente es no. La taza, siendo un contenedor cóncavo de líquidos y teniendo todo para seguir una de las máximas más importantes del almacenamiento (la apilabilidad), no lo hace.
 
 Sobre la existencia de la taza y el vaso, que son literalmente 2 cosas que hacen lo mismo, le he dado un par de vueltas a por qué existen ambas. Y aunque el vaso resulta un poco más natural, la taza representa una ventaja en torno a las bebidas con temperatura distante de la ambiente que, aunque me gustaría obviar, no puedo hacerlo.
 

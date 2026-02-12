@@ -17,7 +17,7 @@ Es una pena, realmente una pena. Es una pena no entender el fútbol, porque el f
 
 ## El arte
 
-Pensé en algún momento remitirme a una definición de diccionario, o a algún gran pensador que defina el arte, y partir desde ahí, pero concluí que no estoy ni ahí con estas definiciones. Y es que mirar en menos las sensaciones, las emociones, los sentimientos que genera el fútbol me parece un acto pedante a más no poder. ¿Cómo se le explica a alguien que una rabona no tiene nada que envidiarle a una pintura? ¿o que un pase entre líneas emociona tanto como una pieza de música clásica? Muchos de los goles más importantes de la historia han derramado más lágrimas que cualquier cuadro de Picasso, han desmoralizado más que cualquier película, han llegado al corazón de más personas que cualquier canción.
+Pensé en algún momento remitirme a una definición de diccionario, o a algún gran pensador que defina el arte, y partir desde ahí, pero concluí que no estoy ni ahí con estas definiciones. Y es que mirar en menos las sensaciones, las emociones, los sentimientos que genera el fútbol me parece un acto pedante a más no poder. ¿Cómo se le explica a alguien que una rabona no tiene nada que envidiarle a una pintura? ¿o que un pase entre líneas emociona tanto como una pieza de música clásica? Muchos de los goles más importantes de la historia han derramado más lágrimas que cualquier cuadro de Picasso, han desmoralizado más que cualquier película, han llegado al corazón de más personas que muxhas canciones.
 
 Un buen regate demuestra más atrevimiento que muchas obras de teatro, hay penales fallidos que probablemente han roto más corazones que cualquier romance de telenovela.
 
@@ -43,7 +43,7 @@ Podría decir que fue la felicidad de tener una buena vida y de haber tenido un 
 
 Hay gente que encuentra ridícula a las personas que lloran por un gol, por un partido ganado o por uno perdido. Y es que para muchas personas, yo habré llorado por escuchar el relato de un gol ocurrido hace más de 30 años, cuando yo no existía, y que no significó nada para la historia de la U. Pero para mí significó mucho más que eso.
 
-Mientras escribía esta publicación escuché muchas canciones, reviví muchos momentos, los mejores goles de los mundiales, resúmenes de partidos importantes, canciones del fútbol o del FIFA que a día de hoy encuentran espacio en mi reproductor.
+Mientras escribía esta publicación escuché muchas canciones, reviví muchos momentos, los mejores goles de los mundiales, resúmenes de partidos importantes, canciones del FIFA que a día de hoy encuentran espacio en mi reproductor.
 
 El cassette de mi abuelo lo digitalicé y lo subí a YouTube ([link](https://www.youtube.com/watch?v=Wt1UMLlpUz0&t=1252s)).
 
