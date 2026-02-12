@@ -9,7 +9,8 @@
     "astro": "astro",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist -b gh-pages",
-    "update:music": "node scripts/update-music-registry.js"
+    "update:music": "node scripts/update-music-registry.js",
+    "update:matches": "node scripts/update-matches-registry.js"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.6",
