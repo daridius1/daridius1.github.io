@@ -9,4 +9,9 @@ items:
     date: "2026-01-30"
     place: "Estadio Nacional"
     link: "/blog/2026/02/01/de-vuelta-al-nacional"
+  - teams: "Huachipato vs Universidad de Chile"
+    competition: "Campeonato Nacional 2026"
+    date: "2026-02-08"
+    place: "Estadio CAP"
+    link: "/blog/2026/02/08/el-peor-de-los-timing"
 ---

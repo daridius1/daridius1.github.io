@@ -5,7 +5,7 @@ pubDate: "2026-02-08"
 tags: ["Reviews", "Fútbol", "El Bulla"]
 match:
   teams: "Huachipato vs Universidad de Chile"
-  competition: "Campeonato Nacional"
+  competition: "Campeonato Nacional 2026"
   date: "2026-02-08"
   place: "Estadio CAP"
 ---
