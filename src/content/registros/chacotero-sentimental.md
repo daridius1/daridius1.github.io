@@ -36,6 +36,10 @@ items:
     author: "Mano Negra"
     date: "2026-02-05"
     link: "/blog/2026/02/05/el-futbol"
+  - title: "Freebola"
+    author: "Glup!"
+    date: "2026-02-12"
+    link: "/blog/2026/02/12/papelucho-mi-primera-tocata-gmi"
 ---
 
 Como diría el Rumpy: "Te vamos a ponerte un tema".
