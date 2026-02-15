@@ -4,7 +4,7 @@ description: "No se aprecia lo que se tiene hasta que se pierde"
 pubDate: "2026-01-15"
 tags: ["Sobre mí", "Anécdotas"]
 music:
-  title: "Un siglo sin ti"
+  title: "Un Siglo Sin Ti"
   author: "Chayanne"
   verse: "Y ahora que no estás aquí, me doy cuenta cuánta falta me haces"
 ---

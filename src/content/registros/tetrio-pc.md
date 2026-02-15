@@ -16,6 +16,7 @@ items:
     title: "11 PC"
     special: "silver"
   - "2026-02-08"
+  - "2026-02-15"
 ---
 
 Cuando juego Tetris, la mayor parte del tiempo estoy intentando hacer Perfect Clears, para más detalles leer [esta publicación](/blog/2026/01/06/tetris)

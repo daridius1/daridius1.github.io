@@ -10,6 +10,9 @@ items:
   - title: "Reineta a la mantequilla"
     date: "2026-02-11"
     link: "/blog/2026/02/11/reineta-a-la-mantequilla"
+  - title: "Pizza vegana"
+    date: "2026-02-15"
+    link: "/blog/2026/02/15/pizza-vegana"
 ---
 
 Sección inspirada en "Cocinando con Caldo" del blog de Caldostrong.

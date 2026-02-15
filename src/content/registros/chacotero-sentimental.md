@@ -4,7 +4,7 @@ description: "Lista de temas relacionados a publicaciones del blog."
 latestLabel: "Último tema"
 type: "music"
 items:
-  - title: "Un siglo sin ti"
+  - title: "Un Siglo Sin Ti"
     author: "Chayanne"
     date: "2026-01-15"
     link: "/blog/2026/01/15/vuelve-la-tne-a-mi-vida"
