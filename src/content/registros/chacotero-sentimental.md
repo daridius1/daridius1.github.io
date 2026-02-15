@@ -40,6 +40,10 @@ items:
     author: "Glup!"
     date: "2026-02-12"
     link: "/blog/2026/02/12/papelucho-mi-primera-tocata-gmi"
+  - title: "Modern Love"
+    author: "David Bowie"
+    date: "2026-02-14"
+    link: "/blog/2026/02/14/el-amor"
 ---
 
 Como diría el Rumpy: "Te vamos a ponerte un tema".

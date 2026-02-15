@@ -1,31 +1,52 @@
 ---
-title: "Dolor de ojos"
-description: "Tercera fecha y la U no tiene norte"
-pubDate: "2026-02-13"
-tags: ["Reviews", "Fútbol", "El Bulla"]
-match:
-  teams: "Palestino vs Universidad de Chile"
-  competition: "Campeonato Nacional 2026"
-  date: "2026-02-13"
-  place: "Municipal de La Cisterna"
+title: "El amor"
+description: "En el día del amor"
+pubDate: "2026-02-14"
+tags: ["Sobre mí"]
+music:
+  title: "Modern Love"
+  author: "David Bowie"
+  verse: "Get things done"
 ---
 
-Me gustaría comentar lo que fue el partido, pero no encuentro las palabras para describir el desastre de partido que tuve que ver. Una bosta, el equipo no juega a nada, no tiene identidad, y al tiempo que jugabamos como un equipo de segunda, daba la impresión de que el técnico de la U estaba cumpliendo fechas de suspensión, y en su lugar dejaron al prácticante, esa es la energía que transmite el Paqui.
+El dia de los enamorados, que bonito, que lindo. Cuantas cosas se pueden hablar de este dia? o del amor en general? el amor no es indiferente a nadie, y tanto en su ausencia como en su abundancia, mucho se puede decir del amor.
 
-Durante la pretemporada, teniendo sin duda el mejor equipo del campeonato en el papel, varias de las dudas estaban en el arco. Irónicamente, Castellón ha sido de lo mejorcito de la U estas últimas fechas, mientras que el resto del equipo ha dejado bastante, pero bastante que desear.
+Y de san valentin? es una fecha comercial que deberia ser reinterpretada? un dia especial para los enamorados? el dia del amigo? el dia del gimnasio para los corazones rotos? el dia de la paja? Creo que la ultima de estas opciones es la que mas se ajusta a mi realidad.
 
-Hay 2 posibilidades, o de un momento a otro todos los jugadores de la U se volvieron weones malos, o el técnico es una mierda. Yo me inclino por la segunda opción. No tengo nada personal contra Meneghini, pero creo que todo el mundo se da cuenta que no es para la U.
+## Mi san valentin
 
-## La última jugada
+Hace un tiempo que mi hermano empezo una relacion, y como mis papas estan de viaje, me toco pasar san valentin solo en casa. No hubo muchas alternativas de panoramas, por lo que agende una cita con manuela y me clave una de las pajas mas deprimentes de las que tengo memoria, incluso para estandares de san valentin.
 
-El partido termino a cero, con un polémico gol anulado a la U en la última jugada del partido. El VAR llamó al arbitro por una jugada que, en mi opinión, nada tenia que ver con el gol (y de hecho, la mano, además de estúpida, nos perjudicaba). Creo que se puede lograr entender la dimensión "jurídica" de porque el gol fue anulado, pero sin duda es de esos cobros que te dan la sensación de que están matando al fútbol.
+Como lo pase? Bien, en verdad no me genera absolutamente nada ver historias de parejas felices, contenido relacionado al amor, o cosas por el estilo. Quiza a eso de las 6 de la tarde, momento en que tome la valentia de dejar de ver la pantalla del celular, y pase a ver la pantalla del computador, paso por mi cabeza la idea de invitar a algunos amigos solteros para pasar la tarde. Esta idea fue rapidamente sedada por la serotonina de las luces led, y no le di muchas vueltas mas.
 
-En todo caso, no nos mereciamos ese gol. Fue un cagazo digno de blooper del año por parte del Zanahoria, que no fue consecuencia de nada parecido a una jugada bien elaborada, o una iniciativa clara por parte de la U.
+Creo que si no fuera por mi blog, este dia no se habria diferenciado en absolutamente nada de cualquier otro sabado solo en casa, pero como me anime a escribir de este tema, de alguna forma me obligue a pensar, y reflexionar sobre este tema tan importante.
 
-## Preocupante
+## Mi amor
 
-El desempeño de Charles, que venia de ser la figura del equipo. Vargas me llegó a dar pena, y del resto no tengo mucho que decir. Assadi tal vez salvó un poco, pero si la U quiere empezar a ganar necesita mucho más que eso.
+El amor juega un rol muy importante en mi vida, siempre he sido un hombre feliz y creo que el siempre haberme sentido amado jugo un rol muy importante en esto. Ademas de un nucleo familiar solido y una familia con la que siempre me he sentido muy unido, tengo un monton de amigos en los que puedo confiar, y pasar un buen rato.
 
-## Lo que se viene
+Desde pequeño que me gusta sociabilizar, ser el payaso del curso, llevarme bien con todo el mundo, y en general, si soy honesto con migo mismo, llamar la atencion. Afortunadamente siempre se me ha dado, no se si fue primero el huevo o la gallina, pero esto me ha permitido ir puliendo mis habilidades sociales a lo largo de los años. Desde chistes que he contado mil veces, anecdotas que repito hasta el cansancio, o las mismas tallas que nunca fallan, creo que no solo he aprendido a conectar con cualquier persona, sino que siento que termino conectando con la mayoria de las personas.
 
-Quedan 2 partidos muy importantes, contra Colo Colo por los puntos, y contra Palestino por la clasificación a fase de grupos de la Sudamericana. Espero que podamos encontrar algo de fútbol para esas fechas, aunque lo veo difícil.
+Desde todos los extremos, he llegado a pensar que hasta con un taliban podria llevarme bien, tirar la talla, y hasta encontrar puntos en comun donde no los hay (pq me costaria creer que los haya). Y es que conectar con alguien es algo que me gusta tanto, que me he hecho la costumbre de, a los uber facho con los que coincido, hablarles (siempr ele hablo a los uber), y encontrarles la razon (aunque no sea algo con lo que este de acuerdo), solo para conocer la version mas honesta que pueden llegar a mostrar en esos 15 minutos de viaje.
+
+Me pasa que realmente no me cae mal casi nadie, o al menos nadie que conozca me genera el rechazo suficiente como para no porder compartir con el, reirme con el, o pasar un buen rato. Y aunque he sido tildado de "falso" por esto, me da un poco lo mismo, es una actitud completamente geniuna de mi parte, y creo que seria mas estupido obligarme a odiar a alguien.
+
+Tengo una forma bien "masculina tradicional" de llevar mis amistades, con muchos de mis amigos con los que ya no coincido en la cotidianidad, la relacion se limita a encuentros esporadicos, que aunque escasos, se sienten igual de cercanos que siempre. Y es que no me nace la necesidad de juntarme con mis amigos, no he desarrollado un apego con ninguno y siento honestamente que es la forma mas sana de llevar una amistad. Cada cierto tiempo procuro reunirme con todos, pero si no tengo ganas de juntarme con alguno, que sentido tendria buscar este encuentro de todas formas? es sano para una relacion reunirse por obligacion? yo creo que no, y si un amigo es de verdad un amigo, el momento se va a dar de todas formas.
+
+Esta actitud tambien ha sido objeto de algunas criticas, pero algo que definitivamente no hare sera ser lo que no soy.
+
+## Mi romance
+
+Y creo que esta forma de ver las relaciones ha tenido un impacto directo en mi vida amorosa. Nunca he sentido la necesidad de estar en pareja, y aunque es algo que me gustaria experimentar en algun momento, creo que lo que veo en mi dia a dia sobre las relaciones de pareja en la vida real me han hecho tomar distancia de las oportunidades que se me han presentado de conocer una media naranja.
+
+A mis 25 años, jamas he estado en una relacion. Y aunque usualmente digo que me gustaria estar en una, en todas y cada una de las oportunidades que se me han presentado he terminado cortando el cable, no se porque.
+
+Quiza si se porque, pero es algo que prefiero dejar para mi. Lo que si puedo decir es que, aunque me he farriado buenas oportunidades, no me arripiento de nada. Siempre he estado feliz conmigo mismo, siempre me he considerado una persona exitosa, y si ser medio raro con esto de las relaciones, prefiero abrazar a mi yo completo, con sus virtudes y defectos.
+
+## Oiga sobrino
+
+Creo que la polola es inevitable, estoy medio decidido a tener una, y aunque no tengo ningun apuro, es algo que deberia pasar. Diria que me va relativamente bien con las mujeres, suelo tomar la iniciativa, tengo una bateria social infinita (al menos a la fecha, jamas me he "chatiado" de estar con gente), y tengo una red de amistades lo suficientemente amplia como para asumir que tarde o temprano conocere a la indicada.
+
+## Por ahora
+
+Aprovechar mi solteria y mi juventud para hacer todas las weas locas a las que siempre me he dedicado. He visto a muchas personas a las que pololear les consume una parte importante de su tiempo, lo que me da pavor de solo pensarlo.
