@@ -9,7 +9,7 @@ music:
   verse: "Verso"
 match:
   teams: "Universidad de Chile vs Audax Italiano"
-  competition: "Campeonato Nacional"
+  competition: "Campeonato Nacional 2026"
   date: "2026-01-30"
   place: "Estadio Nacional"
 ---
