@@ -44,6 +44,10 @@ items:
     author: "David Bowie"
     date: "2026-02-14"
     link: "/blog/2026/02/14/el-amor"
+  - title: "Eye Of The Tiger"
+    author: "Survivor"
+    date: "2026-02-16"
+    link: "/blog/2026/02/16/operacion-sixpack"
 ---
 
 Como diría el Rumpy: "Te vamos a ponerte un tema".
