@@ -1,15 +1,15 @@
 ---
 title: "Programación competitiva"
-description: "Mi primer código"
+description: "Mis comienzos"
 pubDate: "2026-02-17"
 tags: ["Sobre mí", "Computación"]
 music:
-  title: "Problema"
+  title: "El Problema"
   author: "Los Progcomp"
   verse: "Y cómo uso el Fenwick Tree si no lo entiendo"
 ---
 
-Me encontraba yo en la sala de clases, cuando de la nada se asoma un ex-alumno del colegio y promociona un taller de programación sin mucho entusiasmo. Desde pequeño que fui un entusiasta de los computadores; por entusiasta me refiero a que me gustaba jugar videojuegos, y aunque en la actualidad pareciera que todos los niños tienen la misma afición, diría que en ese entonces no era igual de generalizado como lo es ahora.
+Me encontraba yo en la sala de clases, cuando de la nada se asoma un ex-alumno del colegio y promociona un taller de programación sin mucho entusiasmo. Desde pequeño que fui un entusiasta de los computadores (por entusiasta me refiero a que me gustaba jugar videojuegos), y aunque en la actualidad pareciera que todos los niños tienen la misma afición, diría que en ese entonces no era igual de generalizado como lo es ahora.
 
 Ya llevaba un tiempo en ese entonces con el bicho de aprender programación, por lo que me inscribí para ver qué pasaba. Me enganché altiro, y es que la sensación de escribir por primera vez un código que funciona es muy loca, creo que rara vez he vuelto a sentir algo así. El objetivo principal del taller era preparar niños para que participaran en la Olimpiada Chilena de Informática, por lo que después de un tiempo practicando me inscribí para participar.
 

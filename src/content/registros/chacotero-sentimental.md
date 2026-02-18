@@ -48,7 +48,7 @@ items:
     author: "Survivor"
     date: "2026-02-16"
     link: "/blog/2026/02/16/operacion-sixpack"
-  - title: "Problema"
+  - title: "El Problema"
     author: "Los Progcomp"
     date: "2026-02-17"
     link: "/blog/2026/02/17/programacion-competitiva"

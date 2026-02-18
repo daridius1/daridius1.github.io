@@ -14,4 +14,9 @@ items:
     date: "2026-02-08"
     place: "Estadio CAP"
     link: "/blog/2026/02/08/el-peor-de-los-timing"
+  - teams: "Palestino vs Universidad de Chile"
+    competition: "Campeonato Nacional 2026"
+    date: "2026-02-13"
+    place: "Municipal de La Cisterna"
+    link: "/blog/2026/02/13/dolor-de-ojos"
 ---
