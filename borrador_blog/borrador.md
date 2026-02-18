@@ -1,23 +1,31 @@
 ---
-title: "Operacion sixpack"
-description: "No hay excusas"
-pubDate: "2026-02-16"
-tags: ["Sobre mí", "Ejercicio"]
+title: "Programación competitiva"
+description: "Mi primer código"
+pubDate: "2026-02-17"
+tags: ["Sobre mí", "Computación"]
 music:
-  title: "Eye Of the Tiger"
-  author: "Survivor"
-  verse: "Risin' up, straight to the top"
+  title: "Problema"
+  author: "Los Progcomp"
+  verse: "Y cómo uso el Fenwick Tree si no lo entiendo"
 ---
 
-Como lo comente en [link a la pulicacion "a mover la raja], me inscribi a clases semiparticulares de "entrenamiento híbrido" el primer lunes del año, siendo ya la septima semana puedo decir que el plan va viento en popa.
+Me encontraba yo en la sala de clases, cuando de la nada se asoma un ex-alumno del colegio y promociona un taller de programación sin mucho entusiasmo. Desde pequeño que fui un entusiasta de los computadores, por entusiasta me refiero a que me gustaba jugar videojuegos, y aunque en la actualidad pareciera que todos los niños tienen la misma afición, diría que en ese entonces no era igual de generalizado como lo es ahora.
 
-Esta es, por lejos, la ocasion en la que mas en serio me he tomado esto de hacer ejercicio. Ademas de pasar de 3 clases a la semana a 5, estoy con una dieta disciplinada a cagar, sin nada de azucar que no venga de una fruta, ni frituras o comida chatarra (sin contar instancias sociales, donde igual picoteo un poco de papas fritas para no quedar de weon fome), con 100+ gramos de proteina y 5 gramos de creatina todos los dias.
+Ya llevaba un tiempo en ese entonces con el bicho de aprender porgramación, por lo que me inscribi para ver que pasaba. Me enganche altiro, y es que la sensacion de escribir por primera vez un codigo que funciona es muy loca, creo que rara vez he vuelto a sentir algo asi. El objetivo principal del taller era preparar niños para que participaran en la Olimpiada Chilena de Informática, por lo que despues de un tiempo practicando me inscribi para participar.
 
-Gran parte de mi optimismo es que no me da paja ir, es mas, los dias que no voy me dan ganas de haber ido, motivo principal de porque me pase al plan full de lunes a viernes.
+En la competencia regional me fue como el hoyo, saque 0 puntos por un bug que no pude resolver en toda la competencia, poco ayudo el juez de la competicion, que se cayo casi al inicio y no me dejo comprobar si mis siguientes intentos de arreglar el problema funcionaron o no. Poco importaba en todo caso, pq al añó siguente me di cuenta de que habia leido mal el enunciado.
 
-## La meta
+Pese a este tremendo fracaso, me volvi a inscribir al mismo taller al año siguiente, en esa regional me fue bastante mejor, diría que ahí empezó mi carrera como programador competitivo.
 
-Voy a sacar sixpack ctm, ya se lo prometi a mucha gente asi que no puedo cagoniar. Por suerte el lado mas facil para mi (el de la alimentacion), parece ser el mas importante. La verdad es que no sufro con las dietas, incluso diria que me ha costado mas obligarme a comer cuando no he llegado a la meta calorica que privarme de comer cosas ricas, a las que les puedo decir que no sin mucho esfuerzo.
+## Lo relevante
 
-Todo lo anterior sumado a un buen punto de partida (empece relativamente flaco, por lo que no tengo que perder tanto peso para alcanzar la meta), me dan confianza de que lo voy a lograr. ¿y si no lo logro? lo voy a lograr, ya me lo prometi, y me daria muuuy en el orgullo dejar esto a medias, aunque nunca se sabe lo que nos depara el futuro.
+Bueno, para hablar de mis logros está mi curriculum, y aunque siento que le dediqué bastante poco para haber sido competidor, tuve mis momentos y logre ganar alguna que otra competencia.
+
+Lo importante fue su tremenda influencia en mi vida, tanto vocacional como personal. En el momento en que me inscribí en el taller, creo que definí con seguridad tanto la carrera que estudiaría como la universidad en la que lo haría.
+
+A nivel personal, conocí a muchos grandes amigos que mantengo a dia de hoy, tuve la oportunidad de viajar a otras regiones y paises, a los que no hubiese viajado en otro contexto.
+
+## Una introduccion
+
+Pensaba contar mi experiencia como programador competitivo en general, pero creo que sera mejor ir por parte, ya que son muchas las historias y en verdad no hay apuro en contarlas todas de una vez.
 

@@ -111,7 +111,7 @@ const formatDateShort = (date: Date) =>
         {
             posts.map((post) => (
                 <a
-                    href={`/blog/${post.slug}`}
+                    href={`/blog/${post.id}`}
                     class="post-item"
                     data-tags={JSON.stringify(post.data.tags || [])}
                 >
@@ -269,17 +269,17 @@ const formatDateShort = (date: Date) =>
             const btn = document.createElement("button");
             btn.className = "filter-item selected-item";
             btn.setAttribute("data-tag", tag);
-            
+
             const checkbox = document.createElement("div");
             checkbox.className = "checkbox";
-            
+
             const tagName = document.createElement("span");
             tagName.className = "tag-name";
             tagName.textContent = tag;
-            
+
             btn.appendChild(checkbox);
             btn.appendChild(tagName);
-            
+
             selectedContainer?.appendChild(btn);
         });
 

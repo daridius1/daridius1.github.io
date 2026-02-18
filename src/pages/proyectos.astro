@@ -22,7 +22,7 @@ const formatDate = (date?: Date) =>
         <div class="projects-list">
             {
                 projects.map((project) => (
-                    <a href={`/proyectos/${project.slug}`} class="project-item">
+                    <a href={`/proyectos/${project.id}`} class="project-item">
                         <div class="project-info">
                             <h2 class="project-title">{project.data.title}</h2>
                             <p class="project-description">
@@ -60,7 +60,6 @@ const formatDate = (date?: Date) =>
 </Layout>
 
 <style>
-
     .projects-list {
         display: flex;
         flex-direction: column;

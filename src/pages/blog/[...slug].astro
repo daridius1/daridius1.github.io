@@ -1,5 +1,5 @@
 ---
-import { getCollection, type CollectionEntry } from "astro:content";
+import { getCollection, render, type CollectionEntry } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import OptimizedImage from "../../components/OptimizedImage.astro";
 
@@ -10,7 +10,7 @@ export async function getStaticPaths() {
     );
 
     return blogEntries.map((entry: CollectionEntry<"blog">, index: number) => ({
-        params: { slug: entry.slug },
+        params: { slug: entry.id },
         props: {
             entry,
             prev:
@@ -29,7 +29,7 @@ interface Props {
 import { formatDate } from "../../utils/date";
 
 const { entry, prev, next } = Astro.props;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 ---
 
 <Layout title={`${entry.data.title} | daridius`}>
@@ -166,7 +166,7 @@ const { Content } = await entry.render();
             <div class="nav-wrapper">
                 {
                     prev ? (
-                        <a href={`/blog/${prev.slug}`} class="nav-card prev">
+                        <a href={`/blog/${prev.id}`} class="nav-card prev">
                             <span class="nav-label">Anterior</span>
                             <span class="nav-title">{prev.data.title}</span>
                         </a>
@@ -195,7 +195,7 @@ const { Content } = await entry.render();
 
                 {
                     next ? (
-                        <a href={`/blog/${next.slug}`} class="nav-card next">
+                        <a href={`/blog/${next.id}`} class="nav-card next">
                             <span class="nav-label">Siguiente</span>
                             <span class="nav-title">{next.data.title}</span>
                         </a>

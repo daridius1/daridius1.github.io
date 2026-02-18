@@ -1,11 +1,11 @@
 ---
-import { getCollection, type CollectionEntry } from "astro:content";
+import { getCollection, render, type CollectionEntry } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
     const projects = await getCollection("projects");
     return projects.map((entry) => ({
-        params: { slug: entry.slug },
+        params: { slug: entry.id },
         props: { entry },
     }));
 }
@@ -15,7 +15,7 @@ interface Props {
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 
 // Fetch related blog posts
 const allPosts = await getCollection("blog");
@@ -86,7 +86,7 @@ import { formatDate } from "../../utils/date";
                     <div class="related-posts">
                         {relatedPosts.map((post) => (
                             <a
-                                href={`/blog/${post.slug}`}
+                                href={`/blog/${post.id}`}
                                 class="related-post-card"
                             >
                                 <span class="post-date">
