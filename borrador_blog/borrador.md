@@ -1,31 +1,31 @@
 ---
-title: "Programación competitiva"
-description: "Mi primer código"
-pubDate: "2026-02-17"
-tags: ["Sobre mí", "Computación"]
-music:
-  title: "Problema"
-  author: "Los Progcomp"
-  verse: "Y cómo uso el Fenwick Tree si no lo entiendo"
+title: "Viuda de Álvarez"
+description: "Agua en el barco"
+pubDate: "2026-02-22"
+tags: ["Reviews", "Fútbol", "El Bulla"]
+match:
+  teams: "Universidad de Chile vs Deportes Limache"
+  competition: "Campeonato Nacional 2026"
+  date: "2026-02-22"
+  place: "Estadio Nacional"
 ---
 
-Me encontraba yo en la sala de clases, cuando de la nada se asoma un ex-alumno del colegio y promociona un taller de programación sin mucho entusiasmo. Desde pequeño que fui un entusiasta de los computadores, por entusiasta me refiero a que me gustaba jugar videojuegos, y aunque en la actualidad pareciera que todos los niños tienen la misma afición, diría que en ese entonces no era igual de generalizado como lo es ahora.
+Limache, a pesar de ser un equipo insignificante, juega un fútbol bastante inteligente. Tuve la dicha de ver el partido que jugaron contra Colo Colo hace algunas semanas, en el que demostró que, sin ser un equipo que juegue por la posesión, tiene una capacidad de aprovechar errores tremenda, ya del año pasado que de la mano de Popín Castro vienen demostrando que son un equipo complicado de enfrentar.
 
-Ya llevaba un tiempo en ese entonces con el bicho de aprender porgramación, por lo que me inscribi para ver que pasaba. Me enganche altiro, y es que la sensacion de escribir por primera vez un codigo que funciona es muy loca, creo que rara vez he vuelto a sentir algo asi. El objetivo principal del taller era preparar niños para que participaran en la Olimpiada Chilena de Informática, por lo que despues de un tiempo practicando me inscribi para participar.
+Presentí lo peor para este partido. Como lo he dejado bien claro en el resto de reviews de partidos, al igual que todo el resto de hinchas de la U, quiero que se vaya el Paqui, y si un pésimo resultado en este partido materializaba este deseo, es un precio que estaba dispuesto a pagar, sobretodo en tan temprana fecha.
 
-En la competencia regional me fue como el hoyo, saque 0 puntos por un bug que no pude resolver en toda la competencia, poco ayudo el juez de la competicion, que se cayo casi al inicio y no me dejo comprobar si mis siguientes intentos de arreglar el problema funcionaron o no. Poco importaba en todo caso, pq al añó siguente me di cuenta de que habia leido mal el enunciado.
+Lamentablemente la U empató, lo que probablemente signifique que el Paqui se mantenga al mando del equipo, sin llevarnos importantes tres puntos.
 
-Pese a este tremendo fracaso, me volvi a inscribir al mismo taller al año siguiente, en esa regional me fue bastante mejor, diría que ahí empezó mi carrera como programador competitivo.
+## El juego
 
-## Lo relevante
+La U jugó... mejor? Es sin duda el mejor partido de la era Meningitis, pero que un equipo juegue decente no puede ser el ojetivo del mejor plantel del campeonato, diría incluso esta por debajo de lo mínimo.
 
-Bueno, para hablar de mis logros está mi curriculum, y aunque siento que le dediqué bastante poco para haber sido competidor, tuve mis momentos y logre ganar alguna que otra competencia.
+En cuanto a desempeños individuales, volvió el Castellón de siempre, Altamirano recupera un poco el nivel, Assadi se lesionó, y aunque Lucero no jugó bien, lo de Vargas es muy preocupante. Hubo una jugada que, aunque anulada, no fue capaz de pegarle a una pelota en dirección al arco, yo quiero mucho a Turboman pero no se cuanto se perdona por la historia.
 
-Lo importante fue su tremenda influencia en mi vida, tanto vocacional como personal. En el momento en que me inscribí en el taller, creo que definí con seguridad tanto la carrera que estudiaría como la universidad en la que lo haría.
+## Alvarismo
 
-A nivel personal, conocí a muchos grandes amigos que mantengo a dia de hoy, tuve la oportunidad de viajar a otras regiones y paises, a los que no hubiese viajado en otro contexto.
+Me soprpende que aun haya gente que siga pensando que era buena idea echar a alvarez, incluso faltandole el respeto. Cualquier hincha con dos dedos de frente sabía que lo que nos esta pasando ahora era una posibilidad, pero me da la sensación de que muchos estan más preocupados de demostrar "aguante" que de procurar lo mejor para el equipo.
 
-## Una introduccion
+## Superclasico
 
-Pensaba contar mi experiencia como programador competitivo en general, pero creo que sera mejor ir por parte, ya que son muchas las historias y en verdad no hay apuro en contarlas todas de una vez.
-
+Bueno, como ya nos sacamos la racha, estas fechas ya no son tan terribles como antes. Un poco de alivio genera la leve mejora futbolistica que demostramos hoy dia. pero la sesacion de que va a ser un partido de mierda no me la saca nadie.
