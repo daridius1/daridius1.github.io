@@ -1,31 +1,540 @@
 ---
-title: "Viuda de Álvarez"
-description: "Agua en el barco"
+title: "Teoría del mundo multipolar"
+description: "Delirios rusos"
 pubDate: "2026-02-22"
-tags: ["Reviews", "Fútbol", "El Bulla"]
-match:
-  teams: "Universidad de Chile vs Deportes Limache"
-  competition: "Campeonato Nacional 2026"
-  date: "2026-02-22"
-  place: "Estadio Nacional"
+tags: ["Reviews", "Libros"]
 ---
 
-Limache, a pesar de ser un equipo insignificante, juega un fútbol bastante inteligente. Tuve la dicha de ver el partido que jugaron contra Colo Colo hace algunas semanas, en el que demostró que, sin ser un equipo que juegue por la posesión, tiene una capacidad de aprovechar errores tremenda, ya del año pasado que de la mano de Popín Castro vienen demostrando que son un equipo complicado de enfrentar.
+Mientras escuchaba un programa de radio en el que hablaba Alberto Mayol, este mencionaba a un autor que jugaba un rol clave en la vision politica rusa, y que hace muchos años planteo el orden geopolitico al que pareciea nos acercamos dia a dia.
 
-Presentí lo peor para este partido. Como lo he dejado bien claro en el resto de reviews de partidos, al igual que todo el resto de hinchas de la U, quiero que se vaya el Paqui, y si un pésimo resultado en este partido materializaba este deseo, es un precio que estaba dispuesto a pagar, sobretodo en tan temprana fecha.
+## Un mundo multipolar
 
-Lamentablemente la U empató, lo que probablemente signifique que el Paqui se mantenga al mando del equipo, sin llevarnos importantes tres puntos.
+El libro se presenta como una critica al orden unipolar y al modelo liberal de occidente. A diferencia de las otras criticas que he leido, esta es la primera que no se centra en su funcionamiento, si no en la legitimidad de su expansion, tal y como la ha llevado a cabo occidente a lo largo de los ultimos siglos.
 
-## El juego
+## El concepto de civilización
 
-La U jugó... mejor? Es sin duda el mejor partido de la era Meningitis, pero que un equipo juegue decente no puede ser el ojetivo del mejor plantel del campeonato, diría incluso esta por debajo de lo mínimo.
+No voy explicar el libro en detalle, pero creo que es necesario dar un pequeño contexto sobre el concepto de civilización, ya que es el corazon del modelo, el cual pretende abandonar el principio de Westfaila(https://es.wikipedia.org/wiki/Soberan%C3%ADa_de_Westfalia) y transicionar a un sistema internacional en el que la entidad de organizacion principal es la *civilización*, y no la nacion.
 
-En cuanto a desempeños individuales, volvió el Castellón de siempre, Altamirano recupera un poco el nivel, Assadi se lesionó, y aunque Lucero no jugó bien, lo de Vargas es muy preocupante. Hubo una jugada que, aunque anulada, no fue capaz de pegarle a una pelota en dirección al arco, yo quiero mucho a Turboman pero no se cuanto se perdona por la historia.
+Para sobresimplificar el concepto, la idea principal es que en vez de tener el centro del mundo en occidente (puntualmente en EEUU) existan multiples centros de poder, tantos como civilizaciones existan en el mundo. La deifinición de civilizacion no es muy lejana a la que tenemos interiorizada de por si, en el que el autor identifica algunas tales como: occidente, eurasia, china, arabe, latina, hindu, etc.
 
-## Alvarismo
+## Primeros capitulos
 
-Me soprpende que aun haya gente que siga pensando que era buena idea echar a alvarez, incluso faltandole el respeto. Cualquier hincha con dos dedos de frente sabía que lo que nos esta pasando ahora era una posibilidad, pero me da la sensación de que muchos estan más preocupados de demostrar "aguante" que de procurar lo mejor para el equipo.
+Al inicio, el libro se dedica principalmente a establecer conceptos y definiciones que ayuden a entender lo que se viene, creo que el resumen anterior captura el concepto clave para entender la teoria, y en su mayor parte, estos capitulos se dedican a justificar esta division del mundo como algo en esencia correcto.
 
-## Superclasico
+A pesar de que, entiendo porque cualquier modelo filosofico necesita establecer esto para tener un desarrollo coherente, creo que si te explican el concepto a la rapida, y vas con la mente dispuesta a aceptar la idea, no son necesarias 40 paginas de explicaciones tan minuciosas y especificas. Sabiendo lo que se ahora me habria saltado esta parte, y aunque parte importante de este inicio se dedica a describir estas propuestas de civilizaciones, en la parte mas funcdamental de la discusion casi no se mencionan, solo se toma en cuenta la existencia de estas civilizaciones, mas no lo que las caracteriza
 
-Bueno, como ya nos sacamos la racha, estas fechas ya no son tan terribles como antes. Un poco de alivio genera la leve mejora futbolistica que demostramos hoy dia. pero la sesacion de que va a ser un partido de mierda no me la saca nadie.
+En todo caso, aqui esta la lista de civilizaciones/ polos del mundo multipolar propuestos por el autor:
+
+  Civilización occidental
+• Civilización ortodoxa (eurasiática)
+• civilización islámica
+• civilización hindú
+• Civilización china (confuciana)
+• Civilización japonesa (potencial)
+• civilización latinoamericana
+• Civilización budista
+• civilización africana
+
+
+## Parte por parte
+
+CITA
+En las
+condiciones contemporáneas, Rusia apenas tiene suficiente potencial para oponerse a
+Occidente por sí sola, por lo que es imposible volver a un sistema bipolar. Pero en el
+contexto de la multipolaridad, esta civilización bien podría convertirse en un factor muy
+importante y en algunos casos decisivo del equilibrio de poder global. Esto se ha vuelto
+particularmente evidente desde el año 2000, cuando Moscú comenzó a reforzar
+gradualmente su posición en la arena internacional, superando el caos de la década de
+1990.
+FIN CITA
+
+Me da la impresion que para cualquier propuesta de nuevo modelo, se debe batallar en dos frentes, el primero respondiendo a la pregunta de "por que se llegaria a esto" y el segundo "que justifica llegar a esto". Esta primera linea me sirvio de preambulo para entender que el libro seguiria principalmente la segunda linea argumental, ya que manifiesta desde el inicio la casi omnipotencia geopolitica de occidente como civilizacion hasta ese momento (el libro fue publicado el 2012), y se enfoca en explicar la ilegitimidad de este orden, no tanto en explicar como se llegaria a esto.
+
+CITA
+Weber mostró esto maravillosamente cuando identificó
+el capitalismo como la expresión de la ética protestante, donde la recompensa del hombre
+durante la vida mediante la riqueza y el éxito se considera un reflejo directo de su valor
+moral. El signo de igualdad entre prosperidad y moralidad como marca distintiva de la
+sociedad occidental de la modernidad tiene, pues, fuentes religiosas y culturales. El
+capital y el capitalismo demuestran ser no simplemente el estándar del poder, sino el
+estándar del derecho.
+Desde el principio, el marxismo desafía este enfoque y, reconociendo el poder del capital,
+le niega el derecho a la superioridad moral.
+FIN CITA
+
+Siento que aca es cuando el libro empieza a ponerse interesante, y como no, esto ocurre con la primera gran aparicion del marxismo en la discusion. Es evidente que este modelo de marxista no tiene absolutamente nada, en palabras del autor, el marxismo sera de utilidad para la critica del universalismo de la civilizacion occidental. Tomar solo el aspecto de la critica a occidente de una teoria tan compleja como el marxismo me parece un poco forzado, sobre todo considerando que durante el resto de la obra se critica duramente tanto el materialismo como las visiones universales y lineales de la historia.
+
+CITA
+Occidente no se convierte en un modelo para
+la imitación y el anhelo, una tierra prometida, donde todas las preguntas reciben su
+respuesta, sino como la ciudadela de la explotación, la mentira, la violencia y la injusticia.
+FIN CITA
+
+A pesar de que esta observacion se explica como parte de la critica marxista, es evidente que el autor odia a occidente, y diria que utiliza oportunidades como esta para manifestar su odio a este modelo. Aunque es facil comprender el odio a la civilizacion que pretende imponer su vision de mundo como la occidental, una teoria como esta debe parecer imparcial ante las falecias de un modelo, ya sea el dominante o no.
+
+CITA
+Aceptando la lógica del capital, estamos automáticamente obligados tarde o temprano a
+reconocer a Occidente y su civilización como el punto de referencia, el modelo a imitar
+y el horizonte de desarrollo. Pero esto se opone directamente a la idea de un orden mundial
+multipolar y al valor del pluralismo de civilizaciones. Para algunas civilizaciones, la
+prosperidad material y las formas capitalistas de economía son aceptables y deseables,
+pero para otras civilizaciones es posible que no lo sean en absoluto. El capitalismo no es
+obligatorio y no es la única forma de organizar una economía. Puede ser aceptado o
+rechazado
+FIN CITA
+
+CITA
+El capitalismo surgió en Occidente, y allí puede desarrollarse más o
+morir. Pero su expansión más allá de los límites del mundo occidental, aunque
+condicionada al afán de crecimiento del capital, está completamente injustificada desde
+la perspectiva de las sociedades no occidentales sobre las que se proyecta. Cada
+civilización puede tener su propio tiempo, su propia noción de la historia, su propia visión
+de la economía y del desarrollo material. El capitalismo invade las sociedades no
+occidentales como una continuación de la práctica colonial y, en consecuencia, puede y
+debe ser rechazado, revertido, como la agresión de una cultura extranjera o una
+civilización extranjera
+FIN CITA
+
+CITA
+En cuanto a la demanda de las feministas de ampliar la presencia del principio femenino
+en la teorización de las RI, precisamente esto no se reproduce necesariamente en la TMM.
+FIN CITA
+
+Tremenda fue mi sorpresa cuando me encontre con, como un tema en si mismo, *La relevancia de la teoría feminista para la TMM*, pensé que se vendria una vision politica corte ajedrez en cuatro dimensiones, pero resulto que del feminismo solo rescata el plantear un cambio y una reconstruccion radical las teorias sociopoliticas.
+
+Que sentido tuvo mencionar al feminismo para esto, y mas aun, unicamente rescatar uno de sus aspectos, probablemente, mas marginales? me pregunto si, en un espiritu mas panfeltero que filosofico, el autor aspira a encontrar minimos comunes con filosofias opuestas a la suya, pero opuestas tambien a las logicas capitalistas en una forma de decir "el enemigo de mi enemigo es mi amigo"
+
+CITA
+Si las feministas luchan contra los esfuerzos de los hombres por hacer pasar sus arquetipos
+y actitudes de género como algo universal, deberían juzgar de la misma manera el intento
+de hacer pasar por universal cualquier valor con un origen histórico y local, incluida la
+idea de la igualdad de sexos, que en su forma contemporánea es sin duda un concepto
+puramente occidental, moderno y parcialmente posmoderno.
+FIN CITA
+
+El feminismo, a pesar de ser mas un movimiento que una ideologia, sin una hoja de ruta clara, tiene sus raices en un problema que (al menos para las feministas) es considerado universal. Siento en este argumento un chantaje bastante barato, en el que casi que cualquier persona que luche por un tipo de igualded deberia respaldar esta teoria, y no me parece algo tan claro. El mismo condicionamiento se le podria hacer al comunismo por ejemplo.
+
+CITA
+Si seguimos visiones de la historia universalistas y occidentales, la transición a un sistema
+internacional global es algo «irreversible» y «justo» para todas las sociedades del mundo.
+Incluso cuando los países se incluyeron originalmente en este sistema como colonias
+europeas, gradualmente reciben independencia y adquieren soberanía nacional. Pero así
+es sólo como están las cosas superficialmente. Bajo la fina película de la modernización
+de los sistemas políticos en la mayoría de los países no occidentales, se conserva un
+modelo sociocultural completamente diferente, que por regla general corresponde
+precisamente al sistema internacional clásico o antiguo. La modernización se extiende a
+las capas superiores de la sociedad, pero la mayoría permanece en una condición de
+sociedad tradicional. Por lo tanto, las antiguas sociedades coloniales que recibieron la
+independencia son solo formalmente «soberanas» y, en consecuencia, solo formalmente
+actores de pleno derecho del sistema de Westfalia. Esencialmente, siguen siendo
+sociedades tradicionales, como antes.
+FIN CITA
+
+Me gusto mucho este parrafo. Ademas de ser verdad, creo que es la critica empirica mas fuerte que se le puede hacer al expansionismo liberal. Aunque no creo que liquide del todo por si sola la legitimidad de este comportamiento, como minimo demuestra que la forma de llevar a cabo esta expansion ha traido mas problemas que soluciones en muchos casos. Si a esto le sumas la poca autocritica que han demostrado las potencias occidentales a lo largo del tiempo, es logico pensar que esta deuda historia podria terminar siendo pagada bastante cara.
+
+CITA
+El mundo que se globaliza, con la intención de
+dar un paso decisivo más allá de los límites de la modernidad, descubre de pronto que en
+muchas regiones del mundo la modernidad, aparentemente, ni siquiera ha sido aún
+aprobada y la era moderna no ha comenzado. Y aquí surge la sospecha de que tal vez en
+estas sociedades no occidentales la modernidad en su comprensión europea habitual es
+del todo imposible, y la era moderna nunca comenzará.
+FIN CITA
+
+CITA
+Así, el universalismo y el
+globalismo basado en él resultan ser sólo formas de colonialismo, imperialismo y
+racismo, es decir, la proyección de un sistema ético comunitario (histórica y
+geográficamente predeterminado) sobre toda la humanidad.
+FIN CITA
+
+Hay algo en la palabra racismo que toca una fibra sensible en la conciencia colectiva occidental. Y aunque creo que el punto se podria explicar por si solo con los primeros dos conceptos, el tercero le da un peso mucho mas fuerte a la acusacion.
+
+CITA
+Al mismo tiempo, la dimensión semántica significativa de la naturaleza de la unidad en
+comparación con el sistema global, donde la unidad básica era el estado-nación, puede
+compararse en la TMM con la diferencia entre las partículas elementales de la física
+clásica y los fractales (Mandelbrot) o bucles (en la teoría de supercuerdas de Witten)
+FIN CITA
+
+CITA
+Pero en todos los casos, este individuo atómico se representa sobre la base de la
+antropología occidental y se conceptualiza a la luz de las ideas clásicas modernas y
+posmodernas. En otras palabras, el límite de la complejidad de los sistemas turbulentos
+es el individuo como concepto, construido de acuerdo con los patrones de la sociología
+europea occidental. En consecuencia, todos los cálculos en torno a los problemas del
+portador de la soberanía se construyen de una forma u otra sobre la base de este concepto.
+Los átomos se pueden combinar de la manera más fantástica e ingeniosa, pero cualquier
+composición siempre será un código digital, sujeto a cálculos estadísticos.
+FIN CITA
+
+CITA
+Pero el pluralismo de civilizaciones derriba el suelo bajo tal conceptualización. El
+problema es que las diferentes civilizaciones operan con diferentes construcciones
+antropológicas, la mayoría de las cuales no se resuelven en individuos atómicos. En otras
+palabras, los individuos atómicos no son elementos irresolubles (atómicos) o
+autónomamente sustanciales.
+FIN CITA
+
+
+CITA
+El principio de casta hindú tiene poco en común con la democracia religiosa islámica o
+el ritualismo chino. Además, las mismas bases civilizatorias pueden producir diversas
+conceptualizaciones del poder en sus relaciones con otras sociedades y personas
+separadas. En la civilización cristiana vemos al menos dos modelos medievales polares
+del estado normativo: 1) la sinfonía de autoridades y el cesaropapismo de Bizancio (del
+que todavía hay ecos en los países ortodoxos, especialmente en Rusia) y 2) el agustiniano,
+en el sentido de la enseñanza de las «dos ciudades», el principio del primado del obispo
+de Roma, característico del occidente católico. Después de la Reforma, se sumó a esto un
+amplio espectro de concepciones protestantes sobre la naturaleza de la autoridad, desde
+la monarquía luterana hasta el calvinismo profético-liberal y el anabaptismo escatológico
+FIN CITA
+
+CITA
+Al adoptar el modelo del mundo multipolar, los sistemas de autoridad arraigados en las
+peculiaridades civilizatorias de las sociedades tradicionales perderán la necesidad de
+ocultarse bajo normas democráticas occidentales equívocas y superficialmente adoptadas.
+FIN CITA
+
+Durante la lectura del libro, no es tan claro si la forma en la que las civilizaciones se van a organizar es un tema del que se vaya a hablar, y no obstante, se hablo. Aunque en argumentos asi, con tal de parecer imparcial sea facil caer un medias tintas, pero no amarillare en esto: Creo en la horizontalidad de la sociedad como un fin universal. Mas alla de si esta bandera se la atribuyan ideologias comunistas, o socialdemocratas, sin duda la posibilidad de vivir en sociedades mas igualitarias (y por ende, mas justas), es un objetivo que universalmente se debe perseguir.
+
+No creo que una estructura basada en civilizaciones sea incompatible con esto en la teoria, quiza en la practica si, pero defender como creo que lo hace este libro sistemas de castas me parece algo espantoso. Antes de que salga algun aweonao jugando al empate con analisis miserablemente cualitativos, se debe aclarar que el racismo es algo presente en absolutamente todas las sociedades, pero tenerlo presente explicitamente en normas juridicas no solo me parece peor, ha demostrado ser peor. No se puede vivir jugando al empate, es necesario matizar las cosas para lograr cualquier avance, sobre todo cuando se vive en un mundo tan lento y de cambios graduales como el nuestro.
+
+Es facil tener una vision asi cuando se tiene una carencia absoluta de empatia y se esta en una posicion de privilegio. Las ideologias del siglo XX (las de occidente, lo se) fueron transversalmente claras en estos temas.
+
+CITA
+El pluralismo civilizatorio de la TMM no insiste en absoluto en la abolición de la
+democracia donde existe o en impedir su surgimiento y crecimiento donde no existe o es
+débil y nominal. Nada de eso. La TMM no es antidemocrática. Pero tampoco es
+normativamente democrática, ya que muchas civilizaciones y sociedades no consideran
+en absoluto a la democracia en su versión occidental un valor o la forma óptima de
+organización sociopolítica.
+FIN CITA
+
+Me parece, no creo que una sociedad deba ser una democracia liberal para tener la horizontalidad del hombre entre sus ideales. Una teocracia, un estado militarista, y hasta incluso un totalitarismo pueden "apuntar" a un modelo mas igualitario, que las estructuras extremadamente jerarquicas nunca sirvan para esto me parece algo un poco mas, por decirlo de alguna manera, perdonable.
+
+CITA
+La estratificación social de las sociedades en una civilización no es un problema
+internacional, no tiene una forma universal y se aborda a través del centro estratégico de
+la civilización, cualquiera que sea su constitución: como gobierno, parlamento,
+emperador, partido gobernante, unión de líderes espirituales, etc.
+FIN CITA
+
+Que retrograda forma de pensar. Es una vision con la que se podria justificar todo tipo de atrocidades, no hace falta darle muchas vueltas para darse cuenta de esto.
+
+CITA
+Los marxistas tienen razón en esto: el capital tiene su propia lógica, y una vez aceptada,
+lleva el sistema social y político a una forma burguesa, idéntica a la occidental. Entonces,actuar contra la hegemonía del «Norte rico» y expresar lealtad al sistema capitalista es
+una total contradicción y una barrera conceptual fundamental en el camino hacia el
+establecimiento de una verdadera multipolaridad.
+El sociólogo estadounidense Sorokin vio claramente los límites de la civilización
+occidental materialista. Desde su perspectiva, una sociedad centrada en la economía
+basada en el hedonismo, el individualismo, el consumismo y la comodidad está
+condenada a una rápida desaparición. Será reemplazada por una sociedad ideacional, que
+tiene como piedra angular valores radicalmente espirituales y a veces antimateriales. Este
+pronóstico puede ser un hilo conductor para la TMM en su relación con la economía en
+general. Si vemos en la multipolaridad precisamente el día de mañana, y no una mera
+continuación del hoy, debemos seguir la intuición de este destacado sociólogo.
+Hoy, la mayoría de los economistas occidentales y no occidentales están convencidos de
+que no hay alternativa a la economía de mercado. Tal confianza equivale a la confianza
+en que todas las sociedades se mueven por la inclinación hacia la comodidad material y
+el consumismo y, en consecuencia, que no puede haber multipolaridad. Si admitimos que
+la economía es el destino, automáticamente admitimos que la economía liberal es el
+destino, y en este caso la hegemonía económica del «Norte rico» se vuelve natural,
+justificada y legítima.
+FIN CITA
+
+No puedo estar mas de acuerdo, al defender el *sociedad occidental pack* en su totalidad, suelo caer en la incomoda posicion de defender el capitalismo. Aunque entiendo pq se pueden confundir opiniones asi con las de un liberal conformista, creo que la virtud se haya en imaginar lo que haya mas alla del horizonte. Tal como no me gusta negar los avances que hemos logrado como sociedad gracias a este modelo, me cuesta entender el conformismo de muchos, que se cierran a la posibilidad de que exista algo mejor.
+
+Me sorprende de hecho que siga siendo un debate, la historia se ha encargado una y otra vez de derribar la tesis de Fukuyama. El capitalismo es algo que debe ser superado, se puede discutir la forma, lo entiendo, pero no se puede ser tan miope. La historia es larguisima y solo somos una etapa, somos capaces de vivir en un mundo mejor, y pensar que el capitalismo es el fin de la historia con todas las fallas que ha demostrado tener me parece sumamente mediocre.
+
+CITA
+De aquí se sigue la conclusión lógica de que el modelo económico del mundo multipolar
+debe construirse sobre el rechazo del ecocentrismo y sobre la colocación de los factores
+económicos por debajo de los sociales, culturales, religiosos y políticos. No es material,
+pero la idea es el destino y, en consecuencia, la economía no debe dictar qué hacer en la
+esfera política, sino que la esfera política debe dominar las motivaciones y estructuras
+económicas. Sin la relativización de la economía, sin la subordinación de lo material a lo
+espiritual, sin la transformación de la esfera económica en una dimensión subordinada y
+secundaria de la civilización como tal, la multipolaridad es inalcanzable.
+En consecuencia, la TMM debe rechazar todo tipo de concepciones eco-céntricas, tanto
+liberales como marxistas (ya que en el marxismo la economía también es pensada como
+destino histórico). El anticapitalismo, y especialmente el antiliberalismo, deben
+convertirse en los vectores rectores del establecimiento de una TMM. Podemos tomar
+como puntos de referencia positivos el espectro de conceptos alternativos que hasta hoy
+siguen siendo marginales entre las teorías económicas clásicas (por razones hegemónicas
+totalmente comprensibles).
+FIN CITA
+
+CITA
+Para construir un mundo multipolar, es
+necesario iniciar un ataque frontal contra los medios de comunicación globalistas.El papel de los medios de comunicación en una sociedad tradicional es muy limitado. Su
+crecimiento de influencia está directamente relacionado con la modernidad, la
+democracia burguesa y la sociedad civil. Los medios de comunicación de masas son un
+elemento constitutivo de la democracia y pretenden encarnar una dimensión adicional,
+entre las autoridades y la sociedad, las élites y las masas.
+FIN CITA
+
+CITA
+Por su naturaleza, los medios de comunicación de masas son burgueses y llevan la marca
+de la cultura occidental. Entonces, para la construcción de una TMM, es necesario
+reconsiderar seriamente su papel en la sociedad. Podemos identificar dos etapas en este
+camino. La primera etapa consiste en crear una red de medios de comunicación
+civilizatorios, que serviría como portavoz constante de los procesos de integración y
+facilitaría la consolidación de la identidad civilizatoria. En este caso, los medios de
+comunicación civilizatorios podrían socavar el monopolio de los medios de comunicación
+globales (y por lo tanto sujetos a los intereses de Occidente) y crear las condiciones
+previas para la consolidación de grupos culturales y sociales en torno al eje de una
+civilización común.
+FIN CITA
+
+FINGIRE SORPRESA, a pesar de que lo de la burguesia y la elite es verdad, [i know what kind of men you are](https://www.youtube.com/watch?v=frPICCbO3bQ). El periodismo es una pieza fundamental de nuestra sociedad, y aunque estos ataques se vistan de banderas ideologicas, que como aca, pueden incluso llegar a estar bien fundamentadas. No les creo nada.
+
+## El apendice
+
+Al llegar al apendice, pense en no leerlo, pense que ya le habia sacado todo el jugo al libro, pero me equivoque, es sin duda la mejor parte. Creo que es genial despues de leer tantas paginas de argumentacion teoria y formal, poder ver la cara de quien es realmente aleksandr dugin, y que es lo que realmente piensa. Es importante para entender la politica y las ideas la capacidad de perfilar quien se esconde detras de los discursos y argumentos.
+
+Ademas de esto, el apendice nos da un contexto mucho mejor de la situacion politica en la que se escribe el libro, de rusia, y de la relacion del autor con putin. Genial. Decidi agregar las mejores preguntas enteras y sus respuestas, disfruten.
+
+CITA PREGUNTA
+Alexander Dugin sobre el eurasianismo, la geopolítica de la tierra y el mar y una
+teoría rusa de la multipolaridad
+FIN CITA PREGUNTA
+
+CITA RESPUESTA
+Las RI han sido consideradas como una ciencia social angloamericana. Recientemente,
+la disciplina ha comenzado a mirar más allá de Estados Unidos e Inglaterra, a China
+(Theory Talk #51, Theory Talk #45), India (Theory Talk #63, Theory Talk #42), África
+(Theory Talk #57, Theory Talk #10) y en otros lugares para conocer perspectivas no
+occidentales sobre asuntos internacionales y teoría de relaciones internacionales.
+Sin embargo, los teóricos de las relaciones internacionales han prestado poca atención a
+las perspectivas rusas sobre la disciplina y la práctica de las relaciones internacionales.
+Ofrecemos un vistazo emocionante a la teoría geopolítica rusa a través de una entrevista
+con el controvertido pensador geopolítico ruso Alexander Dugin, fundador del
+Movimiento Euroasiático Internacional y supuestamente una influencia importante en la
+política exterior de Putin. En esta charla, Dugin, entre otros, analiza su Teoría de un
+mundo multipolar, ofrece una crítica firme de las relaciones internacionales occidentales
+y liberales, y expone la contribución única de Rusia al panorama de la teoría de las
+relaciones internacionales.
+FIN CITA RESPUESTA
+
+CITA PREGUNTA
+Su teoría de la multipolaridad está dirigida contra la hegemonía intelectual,
+política y social de Occidente. Al mismo tiempo, si bien recurre a las herramientas
+del análisis neomarxista y la teoría crítica, no se opone a la hegemonía occidental
+«desde la izquierda», como hacen esos enfoques, sino sobre la base del
+tradicionalismo (René Guénon, Julius Evola), la antropología cultural y la
+fenomenología heideggeriana, o «desde la derecha». ¿Cree que tal enfoque puedeatraer a los practicantes angloamericanos de RI, o está diseñado para atraer
+principalmente a teóricos y practicantes no occidentales? En resumen, ¿qué
+pueden aprender los teóricos de las RI de Occidente de la teoría de la
+multipolaridad?
+FIN CITA PREGUNTA
+
+CITA RESPUESTA
+Según el análisis totalmente correcto de Hobson, Occidente se basa en un tipo
+fundamental de racismo. No hay diferencia entre el racismo evolutivo de Lewis Morgan
+(con su modelo de salvajismo, barbarie, civilización) y el racismo biológico de Hitler.
+Hoy se afirma el mismo racismo sin vinculación con la raza, sino sobre la base de los
+modos tecnológicos y los grados de modernización y progreso de las sociedades (como
+siempre, el criterio «como en Occidente» es la medida general). El hombre occidental es
+un completo racista hasta la médula, generalizando su etnocentrismo hasta proporciones
+megalómanas. Algo me dice que es imposible cambiarlo. Incluso las críticas radicales a
+la hegemonía occidental están profundamente infectadas por el virus racista del
+universalismo, como mostró Edward Said con el ejemplo del «orientalismo»,
+demostrando que la lucha anticolonial es una forma de ese mismo colonialismo y
+eurocentrismo.
+Así que la Teoría de un Mundo Multipolar difícilmente encontrará adeptos en el mundo
+occidental, a menos quizás entre aquellos académicos que sean seriamente capaces de
+llevar a cabo una deconstrucción de la identidad occidental, y tal deconstrucción supone
+el rechazo de los clichés tanto de la Derecha (nacionalista) como de la Izquierda
+(universalista y progresista). El racismo de Occidente siempre adquiere diversas formas.
+Hoy su forma principal es el liberalismo, y las teorías antiliberales (la mayoría de
+izquierda) están plagadas del mismo universalismo, mientras que los antiliberalismos de
+derecha han sido desacreditados. Por eso apelo no a la primera teoría política
+(liberalismo), ni a la segunda (comunismo, socialismo), ni a la tercera (fascismo,
+nazismo), sino a algo que llamo la Cuarta Teoría Política (o 4PT), basada en una
+deconstrucción radical del sujeto de la Modernidad y la aplicación del método analítico
+existencial de Martin Heidegger.
+Los tradicionalistas son traídos para la crítica profunda de la modernidad occidental, para
+establecer la pluralidad de civilizaciones y para rehabilitar culturas no occidentales
+(premodernas). En Rusia y los países asiáticos, la Teoría de un Mundo Multipolar se capta
+con facilidad y naturalidad; en Occidente, se encuentra con una hostilidad completamente
+comprensible y completamente esperada, una falta de voluntad para estudiarlo
+cuidadosamente y calumnias groseras. Pero siempre hay excepciones.
+FIN CITA RESPUESTA
+
+CITA PREGUNTA
+¿Qué es la Cuarta Teoría Política (4PT) y cómo se relaciona con la Teoría de un
+Mundo Multipolar y con su crítica a los enfoques teóricos predominantes en el
+campo de las RI?
+FIN CITA PREGUNTA
+
+CITA RESPUESTA
+Hablé un poco sobre esto en la respuesta a la pregunta anterior. La Cuarta Teoría Política
+es importante para salir del dominio estricto de la Modernidad en el ámbito de lo Político,
+para la relativización de Occidente y su re-regionalización. Occidente mide toda la
+historia de la Modernidad en términos de la lucha de tres ideologías políticas por la
+supremacía (liberalismo, socialismo y nacionalismo). Pero como Occidente no pone ni
+por un momento en entredicho el hecho de que piensa para toda la humanidad, evalúa de
+la misma manera a otras culturas y civilizaciones, sin considerar que en el mejor de loscasos los paralelismos con estas tres ideologías son puros simulacros, mientras que la
+mayoría de las veces simplemente no hay paralelos. Si el liberalismo ganó la competencia
+de las tres ideologías en Occidente a fines del siglo XX, eso no significa todavía que esta
+ideología sea realmente universal a escala mundial. No lo es en absoluto. Este episodio
+de la historia política occidental de la modernidad puede ser el destino de Occidente, pero
+no el destino del mundo. Entonces se necesitan otros principios de lo político, más allá
+del liberalismo, que pretende la dominación global (el tercer totalitarismo), y sus
+alternativas fallidas (Comunismo y Fascismo), que son históricamente tan occidentales y
+modernas como el liberalismo. Esto explica la necesidad de introducir una Cuarta Teoría
+Política como marco político para la base correcta de una Teoría de un Mundo Multipolar.
+La Cuarta Teoría Política es el correlato directo y necesario de la Teoría de un Mundo
+Multipolar en el dominio de la teoría política.
+FIN CITA RESPUESTA
+
+CITA PREGUNTA
+Stephen Walt argumentó en un artículo de septiembre en Foreign Policy que Rusia
+«no es tan amenazante como la antigua Unión Soviética», en parte porque Rusia
+«ya no cuenta con una ideología que pueda reunir seguidores en todo el mundo».
+¿Estás de acuerdo con la evaluación de Walt?
+FIN CITA PREGUNTA
+
+CITA RESPUESTA
+Hay algo en eso. Hoy, Rusia se considera a sí misma como un estado-nación. Putin es
+realista; nada más. Walt tiene razón en eso. Pero la Teoría de un mundo multipolar y la
+Cuarta teoría política, así como el eurasianismo, son líneas generales de una ideología
+mucho más amplia y de gran escala, dirigida contra la hegemonía occidental y que desafía
+al liberalismo, la globalización y el dominio estratégico estadounidense. Por supuesto,
+Rusia como Estado-nación no es competencia para Occidente. Pero como cabeza de
+puente de la Teoría de un Mundo Multipolar y la Cuarta Teoría Política, cambia su
+significado. Las políticas rusas en el espacio postsoviético y el valor de Rusia para formar
+alianzas no occidentales son indicadores. Por ahora, Putin está probando este potencial
+conceptual con mucha cautela. Pero el endurecimiento de las relaciones con Occidente y
+muy probablemente las crisis internas de la globalización forzarán en algún momento un
+giro más cuidadoso y serio hacia la creación de alianzas alternativas globales. Sin
+embargo, ya observamos tales uniones: la Organización de Cooperación de Shanghai,
+BRICS, la Unión Euroasiática, y tales uniones requieren una nueva ideología. No una
+como el marxismo, se excluye cualquier universalismo, pero tampoco simples maniobras
+realistas de hegemonías regionales. El liberalismo es un desafío global. La respuesta
+también debe ser global.
+¿Putin entiende esto? Honestamente, no lo sé. A veces parece que sí, y a veces parece que
+no.
+FIN CITA RESPUESTA
+
+CITA PREGUNTA
+Vladimir Putin caracterizó recientemente el orden mundial contemporáneo de la
+siguiente manera: «Hemos entrado en un período de interpretaciones diferentes y
+silencios deliberados en la política mundial. El derecho internacional se ha visto
+obligado a retroceder una y otra vez por la embestida del nihilismo legal. La
+objetividad y la justicia han sido sacrificadas en el altar de la conveniencia política.
+Las interpretaciones arbitrarias y las valoraciones sesgadas han reemplazado a las
+normas legales. Al mismo tiempo, el control total de los medios de comunicación
+globales ha hecho posible, cuando se desea, retratar a los blancos como negros y a
+los negros como blancos». ¿Está de acuerdo con esta evaluación? De ser así, ¿qué
+se requiere como respuesta a esta situación internacional?
+
+CITA RESPUESTA
+Estas son palabras verdaderas, pero bastante ingenuas. Putin simplemente está indignado
+de que Occidente establezca reglas en su propio interés, las cambie cuando sea necesario
+e interprete las supuestas «normas universales» a su favor. Pero la cuestión es que esa es
+la estructura de la voluntad de poder y la organización misma del discurso logo-falo-fono-
+céntrico. La objetividad y la justicia no son posibles mientras el discurso sea un
+monólogo. Occidente no conoce y no reconoce al otro. Pero esto significa que todo
+continuará hasta que este otro recupere el derecho al reconocimiento. Y ese es un largo
+camino. El punto de la Teoría de un Mundo Multipolar es que no hay reglas establecidas
+por un solo jugador. Las reglas deben ser establecidas por los centros de poder real. El
+estado de hoy es demasiado pequeño para eso; de ahí la conclusión de que las
+civilizaciones deberían ser estos centros. Que haya una objetividad atlántica y una justiciaoccidental. Una objetividad euroasiática y la justicia rusa los contrarrestarán. Y el mundo
+chino o Pax Sinica [mundo/paz: la misma palabra en ruso] se verá diferente al islámico.
+Blanco y negro no son evaluaciones objetivas. Dependen de la estructura del orden
+mundial: lo que es negro y lo que
+FIN CITA RESPUESTA
+
+CITA PREGUNTA
+¿Cómo nos ayuda su enfoque a comprender las acciones de Rusia en el escenario
+mundial mejor que otros enfoques de Relaciones Internacionales? ¿Qué falta en los
+análisis de RI de Rusia que no operan con el ap
+FIN CITA PREGUNTA
+
+CITA RESPUESTA
+Interesante pregunta. El comportamiento de Rusia a nivel internacional está determinado
+hoy por los siguientes factores: Primero, la inercia histórica, acumulando el poder de los
+precedentes (la Teoría de un Mundo Multipolar piensa que el pasado existe como una
+estructura; en consecuencia, este factor se tiene en cuenta desde muchos lados y en
+detalle, mientras que el «tempocentrismo» [Steve Hobden, John Hobson] de las teorías
+clásicas de las relaciones internacionales hace que esto pase desapercibido. Tenemos que
+prestar atención a esto, especialmente teniendo en cuenta el hecho de que Rusia sigue
+siendo en muchos sentidos una sociedad tradicional y pertenece al «sistema imperial» de
+RI. Hay, además, inercia soviética y motivos estables («estalinismo en RI»).
+En segundo lugar, la lógica proyectiva de oposición a Occidente, derivada de las
+motivaciones más prácticas, pragmáticas y realistas (en el espíritu del cesarismo,
+analizado por los neogramscianos), conducirá necesariamente a Rusia (incluso a pesar de
+la voluntad de sus líderes) a una confrontación sistémica con la hegemonía
+estadounidense y la globalización, y entonces realmente se necesitará la Teoría de un
+Mundo Multipolar (los modelos clásicos de RI, sin prestar atención a la Teoría de un
+Mundo Multipolar, pierden de vista el futuro posible; es decir, se roban a sí mismos la
+capacidad predictiva potencial debido a prejuicios puramente ideológicos y miedos
+autoimpuestos).
+Pero si un oponente te subestima, tienes más posibilidades de asestar un golpe inesperado.
+Así que no estoy demasiado preocupado por la subestimación de la Teoría de un Mundo
+Multipolar entre los teóricos de las RI.
+FIN CITA RESPUESTA
+
+CITA PREGUNTA
+Si su teoría de las RI no se basa en principios política y filosóficamente liberales, y
+si critica esos principios no desde la izquierda sino desde la derecha, usando el
+lenguaje de los grandes espacios o «Großraum», ¿es una teoría fascista de las
+relaciones internacionales? ¿Están parcialmente en lo cierto los académicos que
+caracterizan su pensamiento como «neofascismo», como Andreas Umland y A
+FIN CITA PREGUNTA
+
+CITA RESPUESTA
+Las acusaciones de fascismo son simplemente una figura retórica en la grosera
+propaganda política propia del liberalismo contemporáneo como el tercer totalitarismo.
+Karl Popper sentó las bases para esto en su libro «La sociedad abierta y sus enemigos»,
+donde redujo la crítica del liberalismo de la derecha al fascismo, Hitler y Auschwitz, y la
+crítica del liberalismo de la izquierda a Stalin y el GULAG. La realidad es algo más
+compleja, pero George Soros, que financia a Umland y Shekhovstov y es un ferviente
+seguidor de Popper, se contenta con versiones reducidas de la política. Si yo fuera fascista,
+lo diría. Pero soy representante del eurasianismo y autor de la Cuarta Teoría Política. Al
+mismo tiempo, soy un antirracista consecuente y radical y me opongo al proyecto del
+Estado-nación (es decir, un antinacionalista). El eurasianismo no tiene relación con el
+fascismo. Y la Cuarta Teoría Política enfatiza que, si bien es antiliberal, es
+simultáneamente anticomunista y antifascista. Creo que no se puede ser más claro, pero
+el ejército propagandístico del «tercer totalitarismo» no está de acuerdo y no hay
+argumentos que lo convenzan. 1984 debe buscarse hoy no donde muchos piensan: no en
+la URSS, no en el Tercer Reich, sino en el Fondo Soros y el «Brave New World». Por
+cierto, Huxley demostró ser más correcto que Orwell. No puedo prohibir a otros que me
+llamen fascista, aunque no lo soy, aunque en última instancia esto da una mala imagen no
+tanto de mí como de los propios acusadores: luchando contra una amenaza imaginaria, el
+acusador pierde una real. Cuanto más estúpido, mendaz y directo es un liberal, más
+sencillo es pelear con él.
+FIN CITA RESPUESTA
+
+CITA PREGUNTA
+Última pregunta: Se llamas a usted mismo el «último filósofo del imperio», ¿Qué es
+el eurasianismo y cómo se relaciona con el pivote global de las distribuciones de
+poder?
+FIN CITA PREGUNTA
+
+CITA RESPUESTA
+El eurasianismo es una cosmovisión desarrollada, a la que dediqué algunos libros e
+innumerables artículos y entrevistas. En principio, se encuentra en la base de la Teoría de
+un Mundo Multipolar y la Cuarta Teoría Política, combinada con la geopolítica, y resuena
+con el Tradicionalismo.
+El principal pensamiento del eurasianismo es la antropología plural, el rechazo del
+universalismo. El significado de imperio para mí es que no existe un imperio sino al
+menos dos, e incluso más. De la misma manera, la civilización nunca es singular; siempre
+hay alguna otra civilización que determina sus fronteras. Schmitt llamó a esto el
+Pluriverso y lo consideró la principal característica de lo Político. El Imperio Eurasiáticoes la unificación política y estratégica de Turan, eje geográfico de la historia en oposición
+a la civilización del Mar o Imperio atlantista. Hoy, los EE.UU. son este Imperio atlantista.
+Kenneth Waltz, en el contexto del neorrealismo en las RI, conceptualizó el equilibrio de
+dos polos. El análisis es muy acertado, aunque se equivoca sobre la estabilidad de un
+mundo bipolar y la duración de la URSS. Pero en general, tiene razón: hay un equilibrio
+global de imperios en el mundo, no estados-nación, la mayoría de los cuales no pueden
+reclamar soberanía, que sigue siendo nominal (la «hipocresía global» de Stephen
+Krasner). Precisamente por esa razón, soy un filósofo del imperio, como lo son casi todos
+los intelectuales estadounidenses, lo sepan o no. La única diferencia es que ellos se
+consideran filósofos del único imperio, mientras que yo me considero el filósofo de uno
+de los imperios, el euroasiático. Soy más humilde y más democrático. Esa es toda la
+diferencia.
+FIN CITA RESPUESTA
