@@ -1,38 +1,32 @@
 ---
-title: "Los therians"
-description: "La última psyop de la CIA"
-pubDate: "2026-02-24"
+title: "Re: Re: Las Hormigas"
+description: "Ya no invaden mi cocina"
+pubDate: "2026-02-25"
 tags: ["Ideas", "Opinión"]
+music:
+  title: "Versos Al Viento"
+  author: "Makiza"
+  verse: "Escribo lento, pero acierto"
 ---
 
-De vez en cuando llegan estas noticias que prenden de la nada, y que sin nada de interesante se toman la agenda del pais. Cuando me percate (gracias al quinto reel consecutivo) que esto de los therians era mas que una arbitrariedad de mi algoritmo de instagram, si no una tendencia real. Pero no fue hasta que lo vi en el matinal que entendi que era incluso mas que eso, pero cuando mi papa lo saco como tema de conversacion en la mesa fue que dimensione la magnitud de lo que estaba pasando.
+Mientras conversaba con mi amigo Dmitri hace algún tiempo, este me anticipó que respondería alguna de mis publicaciones en su blog. Este día finalmente llegó, y decidió responder mi columna sobre las hormigas(Link a la columna), en este post(https://erz.cl/blog/0003/).
 
-El fenomeno de los therians es unico, jamas en la historia se habia visto algo similar, y desde ahora tendremos que replantearnos el como pensamos las cosas, y buscar nuevos paradigmas que nos permitan construir una sociedad a partir de esta nueva realidad... O quizas no?
+Antes de continuar, aprovecho de decir que la guerra contra las hormigas ha terminado. Luego de una brillante idea proporcionada por chatgpt sobre como evitar que estas se metan a la basura, y constantes ejecuciones de hormigas exploradoras, no han vuelto a invadir la despensa, solo han habido esporadicas apariciones de exploradoras que han sido ejecutadas en el acto.
 
-Hay 2 dimensiones en las que me gustaria comentar sobre esto. La primera es la mas obvia: cada vez que sale una noticia como esta me pregunto ¿que clase de ley degenerada estaran pasando por el congreso en este preciso momento? Con los reiterados fracasos de la seleccion, supongo que la politica queda corta de oportunidades para pasar los nuevos "alto maipo" y recurre a noticias como esta para desviar la atencion.
+## El resultado de la victoria
 
-Claramente no soy el unico que penso esto, y aunque de estas teorias pueden nacer interesantes reflexiones, esta primera dimension no es la que mas me llama la atencion.
+No solo se ha evitado que las hormigas arruinen los alimentos y el orden de la casa, sino que también, con su rendición se ha evitado que más hormigas mueran. A excepción de que se tome la desición de compartir la comida con ellas, en general la mejor opción suele ser cortar por lo sano, evitar que el conflicto se alargue con medidas drásticas e impecables.
 
-## Los therians
+No me gusta sonar como un monstruo, pero debo admitir que las hormigas no me generan nada. Creo que igual me horririzaría ver a alguien, no se, torturando a una hormiga. ¿Pero matarla? me pregunto cual es la proporción de personas a las que genuinamente les afecta ver morir a una hormiga, y cuantas simplemente lo tienen interiorizado desde la moral y nada más.
 
-Aun asi, no esta demas analizar brevemente el ultimo engendro de la naturaleza identitaria del hombre. Que son los therians? Son weones que se identifican como animales ¿que tiene esto de malo? que se yo. Como buen progre, aunque muchas veces se me hace dificil ser consecuente con la idea de que la identidad es algo de lo que una persona debe hayarse empoderada y libre de ataduras, todo tiene un limite. No es necesario leer un paper para saber que gente que esta dispuesta todo para llamar la atencion o transgredir los estandares buscando sentirse parte de algo nuevo, sentirse especial.
+## Sobre el utilitarismo
 
-Uno tiene que ser critico con cualquier fenomeno social, incluso si se condice con aquello que crees sea lo correcto. Afortunadamente para esta columna, nos encontramos en un tiempo donde ideas conservadoras han ganado terreno sin parar en la guerra cultural, por lo que cuestionar la genuidad de ciertas identidades que individuos dicen tener no es algo mal visto como lo pudo ser en, no se, 2019.
+Comparto que el fin no justifica los medios. La verdad no se que decir al respecto, creo que es verdad que se presta para justificar cosas terribles, y al final, como casi todo en la vida, hay que aprender a aplicar criterio, no creo en los absolutos y para todo hay excepciones.
 
-Cuando las teorias sobre el genero y la sexualidad como un espectro dominaron el relato, surgieron testimonios de personas que, inconformes con el abanico de identidades con los que se describian distintas partes del espectro, decian tener una identidad distinta, y relativamente unica en comparacion a las de este nuevo "mainstream".
+## Sobre el dilema del tranvía
 
-Si mezclas la idea de que la identidad es algo completamente personal, una extrema sensibilidad en la que no se puede cuestionar la legitimidad de la identidad de nadie (ni siquiera desde el punto de vista semantico), un alto incentivo social a "ser valiente", "ser distinto" o "romper estigmas", y una persona carente de pertenencia, es demasiado facil concluir que, deshonestas interpretaciones de la identidad saldrian a la luz.
+Me gusto la comparacion, en todo caso no creo que sea un dilema, creo que la eleccion de pulsar el boton es objetivamente la alternativa correcta. Logro comprender pq alguien podria cuestionarselo, sobre todo si teine el cortisol bajo, pero encuentro virtud en la capacidad de tomar decisiones dificiles con la mente fria, por un bien mayor.
 
-Es triste, porque conozco gente que genuinamente se siente identificada con formas no tradicionales de sexualidad o identidad de genero, cuya postura ha sido ridiculizada con el pasar del tiempo gracias a gente que, lamentablemente, mas de alguno tan solo surfeo la ola en busca de atencion, o queriendo ser parte de algo.
+## Sobre como funciona una hormiga
 
-Realmente con estos temas se vio de todo, da la impresion que hubo gente que relamente hizo competencia para demostrar que "eran mas diversos" que el resto, y aunque no soy capaz de identificar a alguien que haya caido en esto, y es practicamente impisible hacer el caso para alguien en particular, me permitire concluir que (en base a los puntos antes mencionados sobre las condiciones que se dieron para que esto ocurra) si o si hubo gente que, conciente o inconcientemente, sin animos de perjudicar o buscando solo reposicionarse socialmente, llego a conclusiones deshonestas y exageradas.
-
-Mirando para atras, es imposible no comprender la derrota cultural que ha sufrido el progresismo en los ultimos años. Los memes de que habia tantas identidades como pokemones, y de que cada dia salia uno nuevo conectaban inmediatamente con la gente que no entendia que pasaba, y a la que no le hacia sentido que esta ola de personas, no solo introdujera conceptos del individuo revolucionarios de un dia para otro, si no que ademas esto los ubicaba en una posicion de superioridad moral, con la que no se podian cuestionar sus hallazgos y conclusiones.
-
-No se puede vivir en un mundo asi, y efectivamente, la gente se canso. Los therians no son nada nuevo, pero esta ola de horror en la gente creo que sera el ultimo clavo en el ataud del progresismo como fuerza cultural dominante. Tirar como talla que "la gente ahora se cree cualquier cosa" ni siquiera es algo politico, si no que se integro de lleno en el sentido comun. "ah entonces yo me identifico como un helicoptero" es una herramienta con la que se podria desprestigiar practicamente cualquier hilo argumental.
-
-## Mi opinion de los therians
-
-Me dan lo mismo, me llego a cuestionar si son realmente el fenomeno que dicen ser. Al final, si hubieran solo cuatro therians en chile, y se repartieran las camaras de TVN, CHV, MEGA y Canal 13, la percepcion que tendriamos actualmente seria la misma.
-
-Weones raros ha habido siempre, tendencias a partir de nuevos paradigmas han habido siempre, incluso abrazando la idea de que no son algo tan pasajero como creo que son. No creo que sean sintoma de nada nuevo, nothing ever happens.
+Intrerfensate interepretacione, creo que es la mas cercana a la realidad, pero la encuentro mas fome ase que me quedo con la mia

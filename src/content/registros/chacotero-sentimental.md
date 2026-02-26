@@ -52,6 +52,10 @@ items:
     author: "Los Progcomp"
     date: "2026-02-17"
     link: "/blog/2026/02/17/programacion-competitiva"
+  - title: "Versos Al Viento"
+    author: "Makiza"
+    date: "2026-02-25"
+    link: "/blog/2026/02/25/re-re-las-hormigas"
 ---
 
 Como diría el Rumpy: "Te vamos a ponerte un tema".
