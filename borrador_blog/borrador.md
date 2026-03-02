@@ -1,20 +1,25 @@
 ---
-title: "RSS"
-description: "Dadle al botón delike y suscribiros"
-pubDate: "2026-02-25"
-tags: ["Proyectos", "Blog"]
+title: "Superclásico"
+description: "Paqui salvando los muebles"
+pubDate: "2026-03-01"
+tags: ["Reviews", "Fútbol", "El Bulla"]
+match:
+  teams: "Colo Colo vs Universidad de Chile"
+  competition: "Campeonato Nacional 2026"
+  date: "2026-03-01"
+  place: "Estadio Monumental"
 ---
 
-A pesar de llevar un tiempo ya implementado, nunca hice público el feed RSS del blog. Desde el comienzo que algunos de mis más fieles lectores lo pidieron, y como dijo el Puma, (a veces hay que escuchar la voz del pueblo)[link: https://www.youtube.com/watch?v=tiV9FAMMnss].
+Sacar tres puntos en el monumental para el hincha de la U es lo más parecido que hay a culiar (por lo que me han contado). Después de más de 20 años sin poder ganar en Macul, haberse sacado esa mochila de la mano del profesor Álvarez, y haber repetido la hazaña hoy día con el Paqui deja bajo tierra uno de los mayores traumas institucionales que ha tenido el equipo en su historia.
 
-## Como agregar el RSS
+## VAMOOOOOO
 
-Solo deben agregar el link daridius.cl/rss.xml(aca puedes usar un cloque o algo asi que tenga boton de copiar? sabes si astro tiene algo asi?) a su lector de feeds preferido.
+Se tira como talla que perder este partido habría sido bueno para que se vaya el Paqui, pero weón, no. Ganar en el monumental es ganar en el monumental, y si bien la continuidad de un entrenador en el que aún no veo futuro es mala noticia, hay demasiadas pocas cosas que podrian aguar una victoria de visita contra el colo, y definitivamente una pequeña burbuja de oxigeno para el paqui no es una de ellas
 
-Si no tienen uno, les recomiendo Read You(https://f-droid.org/es/packages/me.ash.reader/) para android, es open source, o sea que es bueno.
+## La forma
 
-Si tienen iphone, no puedo recomendar segun experiencia, pero por ahi en reddit salia que NetNewsWire(https://netnewswire.com/) es bueno. Al menos es opensource asu que bien.
+Para los partidos importantes, la forma es lo de menos. La U jugó mal, un poco menos mal que los primeros tres partidos pero mal de todas formas. ¿Esto es importante para el analisis futbolistico del proceso? Si. ¿Es importante en este momento? No. El hincha de la U debe aprender a ser feliz, y este es uno de esos dias que solo toca difrutar del llanto al ritmo de la hora de king kong.
 
-## Cambios en el blog
+## El mejor de la U
 
-Aproveché de hacer unos cambios en el blog, tiene que ver con mejorar un poco la estructura de algunas cosas, por lo que la mayoria de cambios no los notarán.
+Arturo Vidal. Aunque en verdad no fue el peor del colo, ver mandarse cagadas al hocicon del equipo rival es la guinda de la torta para mi, dia redondo.
