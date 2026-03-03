@@ -2,7 +2,7 @@
 title: "Papelucho mi primera tocata GMI"
 description: "Ohh oh oh ohhh ohhh ohhh ohh"
 pubDate: "2026-02-12"
-tags: ["Sobre mí", "Roca x Paja", "Música"]
+tags: ["Sobre mí", "Roca x Paja", "Música", "Anécdotas"]
 music:
   title: "Freebola"
   author: "Glup!"
