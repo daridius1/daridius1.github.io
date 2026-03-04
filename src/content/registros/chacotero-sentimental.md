@@ -56,6 +56,10 @@ items:
     author: "Makiza"
     date: "2026-02-25"
     link: "/blog/2026/02/25/re-re-las-hormigas"
+  - title: "Get Jinxed"
+    author: "League of Legends"
+    date: "2026-03-04"
+    link: "/blog/2026/03/04/league-of-legends"
 ---
 
 Como diría el Rumpy: "Te vamos a ponerte un tema".
