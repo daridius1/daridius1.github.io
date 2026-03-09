@@ -2,7 +2,7 @@
 title: "Titulo"
 description: "Descripcion"
 pubDate: "" #"2026-01-15"
-tags: ["Tag1", "Tag2"]
+tags: ["Tag1", "Tag2"] #["Reviews", "Fútbol", "El Bulla"]
 music:
   title: "Titulo"
   author: "Autor"
