@@ -1,29 +1,29 @@
 ---
-title: "LPM"
-description: "Hay formas y formas de quedar eliminado"
-pubDate: "2026-03-05" #"2026-01-15"
+title: "Se acabó"
+description: "El fin de una era"
+pubDate: "2026-03-10"
 tags: ["Reviews", "Fútbol", "El Bulla"]
 match:
-  teams: "Universidad de Chile vs Palestino"
-  competition: "Fase Preliminar Copa Sudamericana 2026"
-  date: "2026-03-04"
+  teams: "Universidad de Chile vs Universidad de Concepción"
+  competition: "Campeonato Nacional 2026"
+  date: "2026-03-09"
   place: "Estadio Nacional"
 ---
 
-Puta la wea que rabia, esto no da para más, hay que echar al Paqui. Todo el mundo lo sabe, lo que más me da pena es que por el superclásico puede que este fraude se extienda por 2 o 3 partidos más, pero la verdad no le veo un poco de futuro a esto.
+Otro desastre de partido, afortunadamente el último de Paqui. A pesar de que nos robaron con el último penal, el equipo no merecíá ganar, jugamos como el hoyo como todo el resto del campeonato, y si esa mano no cobrada significó la salida del técnico, creo que es un pequeño precio a pagar.
 
-## Lo curioso
+## Sobre el partido
 
-Creo que desde el inicio, el partido se planteo bastante mejor que en otras ocasiones, el equipo se asocio, tuvo identidad, y por un momento vi una luiz al final del tunel. Los primeros minutos del segundo tiempo también fueron prometedores, pero a penas ocurre algo que se sale del guión, pareciera que el Paqui es incapaz de timonear el barco.
+Horrendo, si no fuera por sospechas de que el equipo hizo la cama, estaría mucho más preocupado de los rendiomientos individuales. La verdadera preocupacion es el preparador fisico, aunque asumo que va a cambiar con el cambio del cuerpo tecnico.
 
-## Los descansos
+## Gracias por todo
 
-Como se jugó sin publico, los microfonos y las camaras lograron captar las instrucciones del entrenador durante el recien implementado descanso para tomar agua, y llega a dar pena ver al paqui hablandole al aire, con una cara de perno de epoca, y sin nadie del equipo pescandolo.
+No me tomo personal el futbol, sobretodo con gente que trabaja en la institucion. Gracias por presentarte al trabajo paqui, no se si se puede agradecer alguna otra cosa. Simplemente no se dio, el cargo de entrenador de la U es dificil de tomar, que te vaya bien en tu proxima aventura.
 
-## La debacle
+## El reemplazo
 
-El gran problema de este weon es que dirige como entrenador de equipo chico, es increible, y los cambios, nada que decir, terribles. La debacle de los ultimos minutos es toda culpa del paqui.
+Como nunca hay tecnicos disponibles para contratar, tanto Don Gustavo como Don Jorge buscan equipo, yo me conformaria con cualquiera de los 2.
 
-## La forma
+## Sobre el blog
 
-En la ultima jugada, dios mio que rabia, no fuimos capaces de aguantar un minuto el resultado, no se que decir al respecto.
+Estos dias no me anime a escribir mucho, siendo que tengo muchos temas en el tintero, pero bueno, espero retomar el ritmo durante estos dias.
