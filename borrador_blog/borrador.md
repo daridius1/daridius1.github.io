@@ -1,12 +1,16 @@
 ---
-title: "Monkeytype"
-description: "El reemplazo del tetris"
-pubDate: "2026-03-13"
+title: "La tercera guerra mundial"
+description: "Desde cero"
+pubDate: "2026-03-16"
 tags: ["Sobre mi"]
 ---
 
-Hace un tiempo, discuti con el blaz sobre la impotancia de escribir rapido en un teclado. basicamente el decia que la gente que escribe lento en el computador es estupida y que yo deberia aprender a escribir rapido. lamentablamente le termine dando la razon. Y bueno, como hace poco deje todas las versiones del tetris, encontre en monkeytype un reemplazo para matar el tiempo ejercitando los dedos.
+No creo ser la única persona que le da vueltas a la posibilidad de que haya una tercera guerra mundial. Y aunque me gusta la politica, creo que tengo esa dimension un poco dejada de lado. En lo que he estado fantaseando ultimamente es en la sociedad post-guerra, en particular a como se reconstruiria la infraestructura digital.
 
-## El progreso
+## El escenario
 
-La verdad esta avanzando bien, el principal objetivo a corto plazo es reeducar mis dedos para que cada tecla sea presionada por el dedo que corresponda segun la distribucion que se recomienda en la mayoria de las paginas de interneet. Por ahora estoy escribiendo a 40 palabras por minuto aprox, y aunque es bastsante menos que escribiendo como lo hacia antes, seguire practicando este estilo, con la promesa de que podre alcanzar un mejor rendimiento cuando perfeccione la tecnica.
+Pienso en un mundo donde, debido a la alta dependencia que tenemos como pais de las infraestructura digital gringa, como conseecuencia de la guerra se nos "corta el internet" por asi decirlo, y tenemos que redigitalizar la sociedad desde cero, en la que podemos utilizar los aprendizajes de los ultimos años, y que no se han podido llevar a cabo pq como todos saben, el internet esta hecho medio al lote.
+
+## La novela
+
+Como dije en algun post, en est blog explorare las distintas facetas del arte, y escribir ficcion es algo con lo que ultimamente he sentido mayor curiosidad.
