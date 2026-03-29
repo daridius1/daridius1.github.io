@@ -1,41 +1,30 @@
 ---
-title: "CaDCC"
-description: "Mi rol"
-pubDate: "2026-03-21"
-tags: ["Proyectos", "CaDCC"]
+title: "Slowly"
+description: "Mensajería no instantánea"
+pubDate: "2026-03-26"
+tags: ["Sobre mí"]
 ---
 
-Bueno, el Centro de Alumnes de del Departamento de Ciencias de la Computación (CaDCC en adelante) es, como el nombre sugiere, la organizacion encargada de representar a los estudiantes de la carrera de computacion en la universidad de chile, de la que soy parte.
+Nunca me ha gustado responder los mensajes altiro, y en la inmediatez del mundo digital en que vivimos, este comportamiento pareciera que es un crimen. A mi me parece lo mas normal del mundo. A veces se me ha ido la mano, es verdad, al punto de quiza ghostear, es cierto, pero bueno, asi soy yo, el que quiera ser mi amigo se la tendra que bancar, se lo hago a todos por igual (aunque ultimamente igual respondo mas rapido que antes).
 
-En mis primeros años de universidad, no me involucre mucho con el mundo universitario. Iba recurrentemente a la U, y sin duda hice mucha vida social, pero siempre en el contexto de lo circunstancial (nada de grupos organizados, centros de estudiantes, iniciativas, etc). Creo que mi vision de este tipo de organizaciones era mas la del "los weones del centro de alumnos no hacen nada y se roban la plata", solo si me preguntaban a opinion en todo caso, en verdad eran cosas que simplemente no me importaban y que solo sabia que existian.
+Le tengo un miedo patologico a las mujeres, cuando una me habla me sudan las manos, me tirita el cuerpo, me pongo nervioso, incluso en ocasiones, me defeco en un ataque diarreico al tan solo percibir la presencia de una a menos de 30 metros. Parte de este miedo nace al temor de que se enamoren de mi. Esto no tiene nada de malo, pero si se enamoran demasiado puede que me hablen por whatsapp y tenga que ghostearlas, y me da un poco de lata.
 
-## La pandemia
+## Que es slowly
 
-Como entre a la U el 2019, esta primera etapa en la universidad se sintio bastante corta. En Octubre ocurrio el estallido social, y desde ese momento hasta la vuelta a la presencialidad post-pandemia, mi interaccion con el mundo se limito a jugar lol y tirar la talla con mis amigos en discord. La universidad no puede ser eso, no debe ser eso, y cuando finalmente se empezaron a levantar las restricciones, volvi teniendo en mente ponerme al dia con lo que no pude vivir de vida universitaria.
+Es una applicacion en la que, cada usuario puede enviar cartas a otros, las cuales son como mensajes normales, pero donde la duracion del envio es proporcional a la distancia entre los usuarios. Se supone que esto permite interacciones mas profundas con la gente, lo cual hasta ahora he notado, aunque no se cuanto me dure el interes por hablarle a las personas que conozca. Ya de por si no suelo tener mucho interes en chatear con personas que si conozco.
 
-## El CaDCC
+## Contactos
 
-Ya llevaba un año en el DCC y habia escuchado la existencia del centro, pero nunca participé en sus actividades. Uno de mis grandes amigos del colegio era parte del centro, pero entre asistir a tour virtual por el dcc y stompearme a un renekton con tryndamere, casi siempre me quedaba con la segunda opción.
+Hasta ahora he intercambiado cartas con personas de:
 
-## El llamado
+Kazajistan
+Polonia
+Malasya
+MExico
+Turquia
+Emiratos arabes unidos
+Brasil
 
-Cuando se hizo el llamado a ser parte del CaDCC 2022, participé en la videollamada en la que se termino conformando el cadcc del año siguiente. La lista era abierta, y a excepcion de unos pocos amigos, no conocia a casi nadie. Terminé asumiendo el cargo de secretario. Lo pasé muy bien siendo cadcc. Durante ese año fue por lejos mi primera prioridad, y aunque significo mucho sacrificio, valio la pena cada segundo.
+## SObre el blog
 
-## La dupla
-
-El cargo de presidenta lo ocupo la milla, y aunque nos conociamos de antes, no eramos realmente amigos. Con el tiempo nos fuimos acercando mucho, y de cierta forma el rol de cadcc fue absorbiendo nuestra vida, lo que nos hizo no solo compartir si no trabajar en equipo en reiteradas ocasiones, con lo que se fue fortaleciendo cada vez mas y mas nuestra amistad.
-
-En algun punto del año (no sabria decir cual) ya andabamos de besties por la vida, y entre la cercania y el rol que teniamos, diria que el cadcc entero fue gravitando cada vez mas y mas en torno a nuestra relacion de amistad. 
-
-Con los años me he terminado preguntando si esta dinamica termino siendo positiva o negativa. La obsesion que le terminamos desarrollando a las labores del centro de alumnos hizo que en muchos sentidos terminaramos dejando un poco de lado nuestra vida academica, ademas de que la sensacion de que solo nosotros podriamos hacer bien la pega nos hizo ir delegando cada vez menos y menos en el resto de integrantes del cadcc, que era un gran equipo en todo caso.
-
-## Los resultados
-
-Esta es quiza la unica observacion negativa que tendria de esta dinamica. Si evaluamos nuestro cadcc netamente en cuanto a resultados, puedo decir con tranquilidad que, al menos de los años en los que yo he estado, es fuerte candidato a ser el mejor cadcc que hubo. Aunque algunos proyectos terminaron siendo no tan exitosos, la iniciativa que teniamos no tenia comparacion. Por un año el cadcc fue todo sobre lo que hablabamos, no hubo tal cosa como tiempo libre, todo giraba en torno a lo que podiamos hacer por el centro de alumnos.
-
-Otros cadcc sin duda han sabido ejecutar muy bien las tareas que se han propuesto, y que se esperan del centro: resolver problemas de los estudiantes, organizar la fondcc, el paseo, etc. Pero siento que lo que diferencia a un buen cadcc de un gran cadcc es la capacidad de innovar, atreverse con proyectos nuevos. Cuando con la milla terminabamos de hacer una pega, ya estabamos pensando en la siguiente, nonstop 24/7,
-
-## En la acutalidad
-
-Extraño mucho ser parte de las actividades del centro de alumnos, pero tengo basatante claro que es una etapa ya superada y que si quiero seguir siendo parte de proyectos asi, debo salir una vez mas de mi zona de confort y descubrir nuevos horizontes. Mis años de cadcc han sido probablemente los mejores de mi vida, la gente que conoci y las experiencias que vivi siempre quedaran en mi corazon.
-
+He estado subiendo menos, aunque me he sentido una persona bastante productiva en general ultimamente, asi que esta bien. Sigo teniendo muchos temas en el tintero, pero me queda toda una vida para subir mierda.
