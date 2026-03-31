@@ -11,13 +11,13 @@ Mis más cercanos saben que me tomo mi privacidad muy en serio. Ya lo he comenta
 
 A nivel personal, suelo tomar medidas (no siempre efectivas, pero como mínimo simbólicas) para mantener mi privacidad lo más resguardada posible. No tanto de las personas, sino de las corporaciones que tienen un nivel de control enorme sobre nuestros dispositivos.
 
-Aun así, soy consciente de que esto no alcanza. El control que esas empresas tienen sobre nuestros teléfonos, computadores y servicios, sumado a la dificultad real de saber si estamos siendo vulnerados o no, y la dependencia que tenemos de esos mismos dispositivos hace que sea muy difícil (quizá imposible) estar completamente protegido. Aun esforzánose por compartir la menos información posible con celu, la batalla se siente un poco perdida. Y si esto le pasa incluso a quienes intentamos hacer algo, es inevitable pensar en la situación de la gente que ni siquiera lo intenta.
+Aun así, soy consciente de que esto no alcanza. El control que esas empresas tienen sobre nuestros teléfonos, computadores y servicios, sumado a la dificultad real de saber si estamos siendo vulnerados o no, y la dependencia que tenemos de esos mismos dispositivos hace que sea muy difícil (quizá imposible) estar completamente protegido. Aun esforzándose por compartir la menos información posible con celu, la batalla se siente un poco perdida. Y si esto le pasa incluso a quienes intentamos hacer algo, es inevitable pensar en la situación de la gente que ni siquiera lo intenta.
 
 ## La importancia de la privacidad
 
 El poder que le estamos dando a estas grandes corporaciones todavía no alcanza todo su potencial, y aun así ya parece casi ilimitado. La rapidez con la que estas tecnologías llegaron a nuestras manos no nos permitió, como humanidad, mantener el ritmo de educación digital que se necesitaría para usarlas de forma responsable y segura.
 
-Se suele decir que la gente mayor es más ignorante de “lo digital” porque no sabe usar Bluetooth o no sabe lo que es el wifi. Pero a veces pienso que ese recelo con el que crecieron (por contradictorio que suene) los protege más que a quienes nacieron en un mundo donde entregar datos se volvió natural. Las generaciones que han vivido toda su vida con estas herramientas desarrollan una confianza que, en mi opinión, estas plataformas no se merecen. Se acostumbra a entregar datos porque es “lo normal”. Y eso tiene un costo altísimo. Mi generación crecío con una actitud de entrega total, es hasta divertido pensar que los que solo le dan a "aceptar" una y otra vez al instalar un programa son los que saben de tecnología, y mi mamá, que es a la que le da ansiedad apretar el botón de "acepto los términos y condiciones" sin leerlos es la pava que no cacha nada.
+Se suele decir que la gente mayor es más ignorante de “lo digital” porque no sabe usar Bluetooth o no sabe lo que es el wifi. Pero a veces pienso que ese recelo con el que crecieron (por contradictorio que suene) los protege más que a quienes nacieron en un mundo donde entregar datos se volvió natural. Las generaciones que han vivido toda su vida con estas herramientas desarrollan una confianza que, en mi opinión, estas plataformas no se merecen. Se acostumbra a entregar datos porque es “lo normal”. Y eso tiene un costo altísimo. Mi generación creció con una actitud de entrega total, es hasta divertido pensar que los que solo le dan a "aceptar" una y otra vez al instalar un programa son los que saben de tecnología, y mi mamá, que es a la que le da ansiedad apretar el botón de "acepto los términos y condiciones" sin leerlos es la pava que no cacha nada.
 
 Cuando he discutido sobre esto me han preguntado: “¿Qué importa que sepan qué comiste hoy? ¿Qué importa que sepan tu ubicación? No pueden hacer nada con eso”. Podría pasarme el día entero explicando por qué sí pueden, y por qué es peligroso.
 
@@ -27,21 +27,21 @@ Además, vivir tantos años en una relativa paz nos hizo creer que el sufrimient
 
 En un curso de privacidad de datos escuché una idea que se me quedó grabada: en privacidad, “uno más uno es tres”. Los modelos que relacionan información hoy son tan avanzados que, a partir de datos que parecen arbitrarios, se pueden inferir información extra con muchísima precisión.
 
-Un ejemplo conocido era que un supermercado que, siguiendo patrones de compra, pudo deducir que una loca estaba embarazada a partir de datos como la compra de ciertos productos, cambios de dieta, y cosas así. En este caso, el "1+1" es la información que el supermercado recolecta de las compras, y suman "3" ya que a partir de esta información se pueden inferir con presición cosas como un embarazo.
+Un ejemplo conocido era que un supermercado, siguiendo patrones de compra, pudo deducir que una loca estaba embarazada a partir de datos como la compra de ciertos productos, cambios de dieta, y cosas así. En este caso, el "1+1" es la información que el supermercado recolecta de las compras, y suman "3" ya que a partir de esta información se pueden inferir con precisión cosas como un embarazo.
 
 Otro ejemplo que dieron en el ramo fue que se intentó predecir la orientación política de personas usando sólo sus likes en redes sociales. Y esos modelos obtuvieron un mejor rendimiento que familiares cercanos al predecir esta orientación (en promedio, sólo la pareja superaba al modelo). O al menos así recuerdo que era la wea, si quieren fuentes googleenlo ustedes mismos. Si eso les molesta están en el blog equivocado.
 
 Y por último, sobre los peligros que esta información presenta, conversando con alguien que desarrolla, me contó que en una empresa de cobros usaban IA que recolectaba datos de fuentes abiertas para encontrar deudores a partir de descripciones muy vagas: un primer nombre, una zona, a qué se dedica, y weas así. El programa recolectaba y cruzaba información y era muy efectivo. Pal pico po weón.
 
-Es difícil remar en contra de las redes sociales, pero hacerlo se ha vuelto importante para mí, las detesto. No sólo porque se toman licencias de saber cosas que no quiero que sepan, sino porque además afectan la productividad y alimentan una lógica que siempre empuja a querer más, a ser adicto. Pero hay algo que últimamente me preocupa más de lo usual, el impacto directo sobre la opinión pública. Con todo lo anterior, uno podría pensar que “mientras más anonimidad, mejor”. Y yo creo que no siempre es así. Es cómplicado.
+Es difícil remar en contra de las redes sociales, pero hacerlo se ha vuelto importante para mí, las detesto. No sólo porque se toman licencias de saber cosas que no quiero que sepan, sino porque además afectan la productividad y alimentan una lógica que siempre empuja a querer más, a ser adicto. Pero hay algo que últimamente me preocupa más de lo usual, el impacto directo sobre la opinión pública. Con todo lo anterior, uno podría pensar que “mientras más anonimidad, mejor”. Y yo creo que no siempre es así. Es complicado.
 
 ## Las plataformas masivas
 
-En plataformas como twitter, por el tamaño que tienen, se crea realidad. Ese espacio influye en la opinión pública, y hoy está infestado de multicuentas, bots, y malas prácticas que aprovechan el algoritmo para potenciar discursos de forma rancia. Y más encima, al permitir publicar sin una identidad real de respaldo, se vuelve muy fácil difundir mierda sin miedo a represalias.
+En plataformas como Twitter, por el tamaño que tienen, se crea realidad. Ese espacio influye en la opinión pública, y hoy está infestado de multicuentas, bots, y malas prácticas que aprovechan el algoritmo para potenciar discursos de forma rancia. Y más encima, al permitir publicar sin una identidad real de respaldo, se vuelve muy fácil difundir mierda sin miedo a represalias.
 
 No digo que el problema sea “la gente opinando” o “la libertad de expresión”. El problema es que una infraestructura de comunicación masiva, que termina moldeando percepciones y decisiones, puede ser manipulada con demasiada facilidad.
 
-Por un lado, valoro el anonimato o, al menos, la posibilidad de no tener que exponer tu identidad para participar en conversaciones públicas. Pero por otro lado, la anonimidad hace difícil poder tener una plataforma pública donde al menos exista alguna garantía de que hay una persona real detrás de cada cuenta, y que la proporcionalidad de las opiniones sea más o menos real. La plataforma esta demasiado podrida.
+Por un lado, valoro el anonimato o, al menos, la posibilidad de no tener que exponer tu identidad para participar en conversaciones públicas. Pero por otro lado, la anonimidad hace difícil poder tener una plataforma pública donde al menos exista alguna garantía de que hay una persona real detrás de cada cuenta, y que la proporcionalidad de las opiniones sea más o menos real. La plataforma está demasiado podrida.
 
 ## Posibles soluciones
 
@@ -51,7 +51,7 @@ Pasé mucho rato escribiendo sobre posibles soluciones, pero las ideas que se me
 
 Como en casi todos los temas que nos afectan como sociedad, se llega al gobierno. En teoría, el gobierno debería ser la entidad capaz de resolver problemas que requieren un criterio común, como regular espacios compartidos que nos afectan a todos.
 
-Pero estamos estancados. Cuando buscamos soluciones, pensamos en políticas públicas concretas o en “soluciones técnicas”, y hablamos menos de lo que, para mí, es lo realmente importante: cómo tener un estado legítimo capaz de tomar esas decisiones de forma realmente representativas y que busquen el bien común.
+Pero estamos estancados. Cuando buscamos soluciones, pensamos en políticas públicas concretas o en “soluciones técnicas”, y hablamos menos de lo que, para mí, es lo realmente importante: cómo tener un estado legítimo capaz de tomar esas decisiones de forma realmente representativa y que busquen el bien común.
 
 ## Un Estado legítimo
 
