@@ -13,8 +13,9 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/content/blog/*
 
 // Buscar la imagen que coincida con el src
 let imagePath = null;
+const normalizedSrc = src.replace(/^(\.\/|\/)/, '');
 for (const path in images) {
-  if (path.includes(src)) {
+  if (path.endsWith(normalizedSrc)) {
     imagePath = path;
     break;
   }

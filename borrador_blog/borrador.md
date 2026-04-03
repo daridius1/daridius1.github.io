@@ -1,70 +1,89 @@
 ---
-title: "Privacidad"
-description: "Todo mal"
-pubDate: "2026-03-30"
-tags: ["Ideas", "Privacidad"]
+title: "DarIAdius"
+description: "*Bip* *Bup* *Bip*"
+pubDate: "2026-04-02"
+tags: ["Ideas", "IA"]
 ---
 
-Mis más cercanos saben que me tomo mi privacidad muy en serio. Ya lo he comentado un poco en posts anteriores, pero quería dedicarle un espacio propio porque es uno de los temas más temas entre los temas.
+Ha llegado, existe, esta aqui. DarIAdius esta listo para reemplazar al saco de carne que, hasta ahora, ha llevado a duras penas este blog. Daridius tiene los dias contados, y es su misma creacion quien pondra el ultimo clavo a su tumba.
 
-## Mi privacidad
+DarIAdius es una inteligencia artificial, es de codigo abierto. Este es su codigo:
 
-A nivel personal, suelo tomar medidas (no siempre efectivas, pero como mínimo simbólicas) para mantener mi privacidad lo más resguardada posible. No tanto de las personas, sino de las corporaciones que tienen un nivel de control enorme sobre nuestros dispositivos.
+if(pregunta)
+    return chatgpt("escribeme una talla fome").response
 
-Aun así, soy consciente de que esto no alcanza. El control que esas empresas tienen sobre nuestros teléfonos, computadores y servicios, sumado a la dificultad real de saber si estamos siendo vulnerados o no, y la dependencia que tenemos de esos mismos dispositivos hace que sea muy difícil (quizá imposible) estar completamente protegido. Aun esforzánose por compartir la menos información posible con celu, la batalla se siente un poco perdida. Y si esto le pasa incluso a quienes intentamos hacer algo, es inevitable pensar en la situación de la gente que ni siquiera lo intenta.
+El ultimo desafio que debera superar dariadius sera vencer a daridius. Estuve mucho rato pensando sobre en que campo tendria que vencerme, pero no se me ocurrio nada divertido. Vamos con el blog.
 
-## La importancia de la privacidad
+## Desde Frankenstein hasta Terminator
 
-El poder que le estamos dando a estas grandes corporaciones todavía no alcanza todo su potencial, y aun así ya parece casi ilimitado. La rapidez con la que estas tecnologías llegaron a nuestras manos no nos permitió, como humanidad, mantener el ritmo de educación digital que se necesitaría para usarlas de forma responsable y segura.
+El arquetipo de "creacion vs creador" debe ser uno de los mas utilizados en la literatura, y lo que antes era la traicion de un hijo, o una creacion un poco mas monstruosa, con la llegada de la tecnologia tal y como la conocemos fue apareciendo la idea de que las propias maquinas, una vez dotadas de conciencia, se alzarian contra nosotros. No le tengo miedo a dariadius, estoy preparado para enfrentarme a el.
 
-Se suele decir que la gente mayor es más ignorante de “lo digital” porque no sabe usar Bluetooth o no sabe lo que es el wifi. Pero a veces pienso que ese recelo con el que crecieron (por contradictorio que suene) los protege más que a quienes nacieron en un mundo donde entregar datos se volvió natural. Las generaciones que han vivido toda su vida con estas herramientas desarrollan una confianza que, en mi opinión, estas plataformas no se merecen. Se acostumbra a entregar datos porque es “lo normal”. Y eso tiene un costo altísimo. Mi generación crecío con una actitud de entrega total, es hasta divertido pensar que los que solo le dan a "aceptar" una y otra vez al instalar un programa son los que saben de tecnología, y mi mamá, que es a la que le da ansiedad apretar el botón de "acepto los términos y condiciones" sin leerlos es la pava que no cacha nada.
+Foto de dariadius (AGREGA FOTO TRABAJO.JPEG QUE ESTA EN ESTE MISMO DIRECTORIO)
 
-Cuando he discutido sobre esto me han preguntado: “¿Qué importa que sepan qué comiste hoy? ¿Qué importa que sepan tu ubicación? No pueden hacer nada con eso”. Podría pasarme el día entero explicando por qué sí pueden, y por qué es peligroso.
+## La diferencia
 
-A lo largo de la historia hay antecedentes de información recopilada sobre personas que luego fue usada en su contra por estados totalitarios, por organizaciones, o simplemente por otros individuos con intención de hacer daño. Y lo más increíble es que la información que se prestó para hacer un daño gigantesco en ese entonces no se compara ni de cerca con la información que hoy tienen estas corporaciones. El daño potencial es inmenso.
+El otro dia estuve pensando por mucho rato sobre, si se llegan a dar ciertas condiciones, como tendreamos que diferenciar a un robot de un ser humano. Hoy en dia la diferencia es clara, pero el salto cognitivo que han dado es gigantesco. Mucha gente dice que estas maquinas solo son una calculadora gigante de probabilidades, que no piensan, y que jamas podran crear algo por ellas mismas.
 
-Además, vivir tantos años en una relativa paz nos hizo creer que el sufrimiento a gran escala era cosa del pasado. Pero el mundo, día a día, nos recuerda que no, que vivimos en constante peligro, y hay gente que puede ir tras de nosotros por motivos tan arbitrarios como la raza, la situación económica o la forma de pensar.
+A esta afirmacion nace de forma natural la pregunta, y que somos nosotros? Cuando en yo robot (la peli), will smith le dice al robot (no me acuerdo como se llama, le diremos pepe) que el no puede escribir un poema, o dibujar un cuadro hermoso, este le pregunta ¿Tu si? Me parece una respuesta genial por parte de pepe. Y hasta los mas talentosos de los artistas, cientificos o guerreros, han aprendido. De algo o de alguien, pero entrenan de informacion de la cual somos hambrientos. Nos gusta ver, sentir, oler, sufrir, llorar. No hay tiempo que perder, cada segundo que pasa nuestro cerebro utiliza los estimulos que recibe del mundo exterior y aprende de ellos, entrena y entrena a partir de miles de millones de años. Similar a un datacenter pero con un consumo modersdo de agua, suelen decir que con 2 litros diarios es suficiente.
 
-En un curso de privacidad de datos escuché una idea que se me quedó grabada: en privacidad, “uno más uno es tres”. Los modelos que relacionan información hoy son tan avanzados que, a partir de datos que parecen arbitrarios, se pueden inferir información extra con muchísima precisión.
+AGREGAR FOTO DE PEPE CON WILL SMITH (PEPE.jpg)
 
-Un ejemplo conocido era que un supermercado que, siguiendo patrones de compra, pudo deducir que una loca estaba embarazada a partir de datos como la compra de ciertos productos, cambios de dieta, y cosas así. En este caso, el "1+1" es la información que el supermercado recolecta de las compras, y suman "3" ya que a partir de esta información se pueden inferir con presición cosas como un embarazo.
+## Lo que nos diferencia
 
-Otro ejemplo que dieron en el ramo fue que se intentó predecir la orientación política de personas usando sólo sus likes en redes sociales. Y esos modelos obtuvieron un mejor rendimiento que familiares cercanos al predecir esta orientación (en promedio, sólo la pareja superaba al modelo). O al menos así recuerdo que era la wea, si quieren fuentes googleenlo ustedes mismos. Si eso les molesta están en el blog equivocado.
+A veces creo en dios y a veces no, pero nunca he negado ser cristiano. En todo caso, por conveniencia, le vamos a dar una patada a la religion, ya que para esta discusion, el marco teorico secular plantea un problema mucho mas interesante. Tiene algo de especial nuestro cerebro? que nos hace personas realmente?
 
-Y por último, sobre los peligros que esta información presenta, conversando con alguien que desarrolla, me contó que en una empresa de cobros usaban IA que recolectaba datos de fuentes abiertas para encontrar deudores a partir de descripciones muy vagas: un primer nombre, una zona, a qué se dedica, y weas así. El programa recolectaba y cruzaba información y era muy efectivo. Pal pico po weón.
+Se salta la ley de ohm? Desafia las leyes de la materia? Tal parece que no. Y entonces, que la diferencia de una maquina? Que nos priva de crear algo similar? Me parece evidente que nada.
 
-Es difícil remar en contra de las redes sociales, pero hacerlo se ha vuelto importante para mí, las detesto. No sólo porque se toman licencias de saber cosas que no quiero que sepan, sino porque además afectan la productividad y alimentan una lógica que siempre empuja a querer más, a ser adicto. Pero hay algo que últimamente me preocupa más de lo usual, el impacto directo sobre la opinión pública. Con todo lo anterior, uno podría pensar que “mientras más anonimidad, mejor”. Y yo creo que no siempre es así. Es cómplicado.
+## Patrones
 
-## Las plataformas masivas
+Pensando en como se podria crear un cerebro humano, me queme un poco la cabeza. Por mucho rato pense en como se podria copiar uno, pero luego me di cuenta que, en como la vida misma trabaja la informacion, esta el secreto de para lograr algo como esto.
 
-En plataformas como twitter, por el tamaño que tienen, se crea realidad. Ese espacio influye en la opinión pública, y hoy está infestado de multicuentas, bots, y malas prácticas que aprovechan el algoritmo para potenciar discursos de forma rancia. Y más encima, al permitir publicar sin una identidad real de respaldo, se vuelve muy fácil difundir mierda sin miedo a represalias.
+Muchas veces nos obsesionamos con definir las cosas. Que medidas exactas, que definiciones precisas. Pero en nuestro cerebro, al final del dia, la forma en que guardamos la informacion parece asemejarse mucho mas a como estos modelos de ia describen las cosas, con pequeños vectores (a veces de miles de millones de datos, pero siempre mucho mas pequeños en relacion a lo que describen) que a la informacion exacta que nos provee la realidad en todo momento.
 
-No digo que el problema sea “la gente opinando” o “la libertad de expresión”. El problema es que una infraestructura de comunicación masiva, que termina moldeando percepciones y decisiones, puede ser manipulada con demasiada facilidad.
+Como reflexione en el post de la supercompresion de imagenes, nadie es capaz de recordar una imagen tal y como la observa. Solo recordamos patrones que simplifican aquello que vimos, "aca habia un arbol", "alla un auto". Y aunque podemos aumentar la presicion de la descripcion, con un "el auto era azul, esta era su patente, y esta su gama de sombras" nunca dejara de ser una descripcion, pq asi funciona la maquina, asi funcionamos nosotros.
 
-Por un lado, valoro el anonimato o, al menos, la posibilidad de no tener que exponer tu identidad para participar en conversaciones públicas. Pero por otro lado, la anonimidad hace difícil poder tener una plataforma pública donde al menos exista alguna garantía de que hay una persona real detrás de cada cuenta, y que la proporcionalidad de las opiniones sea más o menos real. La plataforma esta demasiado podrida.
+Nadie nace adulto. Como un ser humano puede dar a luz a otro? Soy el resultado de mi adn y de como este fue evolucionando en base a su entrenamiento. En mi adn estan todas las instrucciones para crear un cerebro humano. Del mismo and siempre saldra el mismo cerebro? Obviamente no, el resultado varia segun las condiciones en las cuales se "descomprimio" el adn. Tal como nano banana toma un vector y a partir de el crea una imagen, el mundo tomo mi adn y a partir de el crea una persona.
 
-## Posibles soluciones
+## La IA y la vida
 
-Pasé mucho rato escribiendo sobre posibles soluciones, pero las ideas que se me ocurrían probablemente fueron ideas que alguien ya probó. Al final del día no se trata de si hay mejores alternativas o no, se trata de que la gente las use. Probablemente alguien ya creó una posible solución y nadie se tomó la molestia de probarla, la verdad es que a poca gente le interesan lo suficiente estos temas como para atreverse a ser parte de un cambio.
+Es facil concordar que antes de resolver si un robot puede llegar a ser un humano debemos resolver si puede siquiera llegar a tener vida. Esta discusion si que es metal.
 
-## Todos los caminos llevan a Roma
+Todo son patrones, nada existe realmente como tal. No hay una definicion fija de que es, por ejemplo, un perro. Todo aquello que llamamos perro es distinto uno del otro. Y a pesar de no ser iguales, los categorizamos segun patrones que relaciona aquellos seres que comparten mas de lo comun.
 
-Como en casi todos los temas que nos afectan como sociedad, se llega al gobierno. En teoría, el gobierno debería ser la entidad capaz de resolver problemas que requieren un criterio común, como regular espacios compartidos que nos afectan a todos.
+Para llegar al tema de la ia como vida creo que hay varias formas de abordarlo. Si reemplazo una neurona por un transistor, sigo siend humano? Y si reemplazo 2? Es interesante como el barco de teseo https://es.wikipedia.org/wiki/Paradoja_de_Teseo (AGREGA ESE LINK) puede explotar cualquier consenso. Soy humano porque correspondo al patron de un humnano? Cuando dejo de responder a ese patron, dejo de ser humano? Donde esta la linea? Cuando dejo de ser humano?
 
-Pero estamos estancados. Cuando buscamos soluciones, pensamos en políticas públicas concretas o en “soluciones técnicas”, y hablamos menos de lo que, para mí, es lo realmente importante: cómo tener un estado legítimo capaz de tomar esas decisiones de forma realmente representativas y que busquen el bien común.
+Fascinante, tenemos un pecado original, y es que buscamos respuestas discretas a problemas de un mundo continuo. Pretendemos dibujar una linea en el mmundo de las ideas, el que nisiquiera podemos explorar, y queremos creer que somos capaces, poniendonos de acuerdo, de todos dibujar la linea en el mismo lugar.
 
-## Un Estado legítimo
+## Dariadius
 
-Yo creo mucho en el trabajo en equipo como sociedad. Es evidente que hay problemas que, resueltos como comunidad, nos llevan a soluciones mucho mejores que estrategias descentralizadas como las que suele proponer el mercado. En mi mundo ideal, las economías serían planificadas, y recursos tan importantes como nuestros datos no quedarían en manos de corporaciones cuyo incentivo es extraer valor económico, sino que quedarían bajo una institucionalidad que represente realmente a todos.
+Daraidius no tiene vida, pero podria llegar a tenerla, no le tengo miedo, y es mas, creo que si nos dedicaramos un poco mas de tiempo, nos hariamos grandes amigos. 
 
-Dicho eso, hay algo que también considero una realidad: no estamos ahí.
+## La IA en el desarrollo de software
 
-Y una lección que la historia nos repite es desconfiar de quienes tienen poder. En lo personal, no distingo demasiado entre poder político y poder económico: no creo que la forma de acceder al poder cambie, en lo esencial, los intereses que termina teniendo quien lo concentra. Sin fiscalización, el poder tiende a concentrarse cada vez más, da lo mismo el sistema político y su ideología.
+La IA es algo realmente fascinante, y ha llegado para quedarse. Sin contexto de la recepcion que ha tenido esto entre mis pares habria pensado que todos recibirian su llegada con laureles y cantos, pero al menos segun mi percepcion local, esto termino no siendo asi.
 
-La conversación sobre privacidad y plataformas no se resuelve sólo con nuevas tecnologías o políticas públicas, hay un problema político de fondo.
+## Morire con el martillo en la mano
 
-## Un mundo mejor
+Esa fue la frase con la que john henry se dispuso a desafiar a la maquina. La descubri jugando Civilization V y desde entonces vive en mi cabeza. Cuando empece a percibir las primeras resistencias por parte de mis pares, algunos incluso generando un rechazo a aquello creado por la ia, pense en john henry.
 
-A pesar de que lo siento lejano, sigo siendo optimista. El camino probablemente será sufrido (quizá más de lo que me imagino), pero tengo fe en que vamos a llegar a un mundo mejor. Que aparecerán alternativas, y que vamos a aprender. Pero también estoy convencido de algo: no vamos a llegar a ese mundo sin resolver el problema de raíz.
+Para quien no conozca su hirstoria, es esta (LINK https://es.wikipedia.org/wiki/John_Henry_(folclore)). En resumen (hecho por chatgpt), era un hombre negro, fuerte como ninguno, que trabajaba en la construccion de tuneles, rompiendo rocas con un martillo. Un dia, llego una maquina que podia hacer el trabajo de 100 hombres. John, para demostrar que el hombre era superior a la maquina, desafia a la maquina a una competencia. John gana, pero muere en el intento.
 
-Un mejor sistema político, una mejor forma de organizarnos es lo que, en último término, nos va a llevar a un mundo mejor. Tal vez la solución no sea la lotocracia, como creo que es, pero por el amor de Dios, no sigamos con esta mierda, llegó el momento de probar algo nuevo.
+Cual es la leccion de esto? No se, como que pareciera que busca romantizar la lucha del hombre contra las amenazas de los avances tecnologicos, pero mi pana muere al fin y al cabo XD, no diria que gana. En todo caso para la historia, la aparicion de una tecnologia que desplaza las habilidades de hombre no es nueva, y los resultados parecen ser siempre los mismos.
+
+## Pragmatismo y realismo
+
+Los avances tecnologicos han demostrado ser imparables, en el mundo del mas fuerte, es un error darse el lujo de quedarse atras por simples miedos atavicos. Desde los veleros (los wnes que vendian velas cunado no habia ampolletas) hasta los cajeros de supermercado, la historia nos demuestra que la tecnologia siempre termina por imponerse. Es esto bueno? ni idea, pero es lo que es, deal with it.
+
+La IA para programar es una herramienta a toda raja, pero por diversas razones, para algunos llega a ser motivo de verguenza programar con ella. "Ah entonces no lo programaste tu", somos ingenieros, y nuestra mision es resolver problemas, y usar una herramienta que nos ayuda a resolverlos mejor, mas rapido, y de forma mas eficiente, me atreveria a decir que es un deber usarla ( no digo que siempre sea la mejor herramienta, pero ha demostrado serlo en muchisimos casos).
+
+## Samurai
+
+La introduccion al clan de Otomo en el shogun 2, el clan que se abre al uso de las armas de fuego traidas por los portugueses, es tal que asi https://www.youtube.com/watch?v=wWj7HV-qNd8
+
+"Strangers have come to our shores, they bring weapons of smoke and fire, weapons that kill without honor, without skill. But even so these foreigners and their guns could give a man power and victory. And victory wipes away dishonour."
+
+es probable que muchos samurais se hayan sentido tristes, o les haya dado ansiedad que de la nada aparezca un tubo que se pasa por el ñato todas las enseñanzas del bushido, y que permite a un campesino desnutrido matar a un espadachin experimentado de 50 metros de distancia. es probable que hayan sentido que ya fue la wea, que ahora cualquiera iba a poder ser soldado y que la profesion de samurai se habria acabado. Pero claramente no fue asi. incluso a medida que las armas se hicieron mas y mas sofisticadas y autonomas, la necesidad de tener soldados preparados y entrenados no hizo mas que crecer
+
+## Una herramienta
+
+La ia por ahora es una herramienta, y me da la impresion que lo sera por un buen rato. muchos creen que ahora cualquiera puede hacer software, pero no es cierto, la ia aun no conoce el mundo, y necesita un intermediario a la realidad que la guie para hacer su trabajo. el mundo aun necesita ingenieros, a la calma.

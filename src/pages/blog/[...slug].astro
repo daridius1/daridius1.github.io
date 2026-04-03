@@ -358,8 +358,22 @@ const { Content } = await render(entry);
         max-width: 100%;
         height: auto;
         display: block;
-        margin: 2rem 0;
+        margin: 2rem auto;
         border-radius: 12px;
+    }
+
+    .image-medium img {
+        max-width: 50%;
+    }
+
+    .image-caption {
+        display: block;
+        text-align: center;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.4);
+        margin-top: -1.5rem;
+        margin-bottom: 2rem;
+        font-style: italic;
     }
 
     .match-metadata,
