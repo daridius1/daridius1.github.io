@@ -1,6 +1,6 @@
 ---
-title: "Procesamiento de datos: Clanker Masterclass"
-description: "La forma correcta de usar IA para la recolección de datos electorales"
+title: "Procesamiento de datos"
+description: "Clanker Masterclass"
 pubDate: "2026-01-12"
 tags: ["Proyectos", "Calculadora de Elecciones"]
 ---

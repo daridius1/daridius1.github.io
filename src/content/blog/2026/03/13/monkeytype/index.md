@@ -2,7 +2,7 @@
 title: "Monkeytype"
 description: "El reemplazo del tetris"
 pubDate: "2026-03-13"
-tags: ["Sobre mi"]
+tags: ["Sobre mí", "Mecanografía"]
 ---
 
 Hace un tiempo, discutí con el blaz sobre la importancia de escribir rápido en un teclado. Básicamente él decía que la gente que escribe lento en el computador es estúpida y que yo debería aprender a escribir rápido. Lamentablemente le terminé dando la razón. Y bueno, como hace poco dejé todas las versiones del tetris, encontré en monkeytype un reemplazo para matar el tiempo ejercitando los dedos.

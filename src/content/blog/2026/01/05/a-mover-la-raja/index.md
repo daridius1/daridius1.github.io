@@ -2,7 +2,7 @@
 title: "A mover la raja"
 description: "La tradición de cada año"
 pubDate: "2026-01-05"
-tags: ["Sobre mí", "Ejercicio"]
+tags: ["Sobre mí", "Cambio físico"]
 ---
 
 ## La tradición de cada año
