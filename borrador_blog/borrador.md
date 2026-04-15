@@ -1,38 +1,50 @@
 ---
-title: "CD Anakena"
-description: "Sus orígenes"
-pubDate: "2026-04-07"
-tags: ["Proyectos", "Anakena"]
+title: "Civilization VI"
+description: "From the first stirrings of life beneath water..."
+pubDate: "2026-04-14"
+tags: ["Reviews", "Videojuegos"]
 ---
 
-Érase 2022, y como todos los días, me encontraba pensando en cuál podría ser mi siguiente aporte a la comunidad de computación como integrante del cadcc.
+He de conocer aún a un ñoño de la historia que sea joven y que no se haya jugado ningún juego de estrategia. Es parte de la fantasía de reescribirla que titulos como estos utilizan para enganchar a aquellos que sueñan con comandar las legiones romanas, conquistar europa con napoleon, o con pintores frustrados.
 
-## El DCC
+Claramente no soy la excepcion a esta regla, y esta vez vamos a hablar de uno de los juegos que, si no es mi favorito de toda la vida, sin duda se sienta en la mesa de los grandes. El Civilization VI.
 
-Casi cualquier persona con la que he hablado con un par de copas encima lo sabe, estoy perdidamente enamorado de mi carrera. No sabría decir por qué, supongo que es una mezcla entre varios factores. Desde chico fui fanático de los computadores, aprendí a programar relativamente temprano, y desde el momento que entré a la carrera me sentí muy identificado con la comunidad del departamento.
+## Civilization V
 
-Hoy en día estar todo el día en el computador no es que sea considerado algo bueno, pero como mínimo está bastante más normalizado que antes. Los smartphones y las redes sociales son transversales en la sociedad, y es que hasta mi abuela pasa el rato con videos de Facebook desde su celular.
+Desde pequeño me gustaron los juegos de estrategia, pero hasta la adolescencia me limitaba principalmente a los que se jugaban en el navegador, ya que no tenia un computador propio en el que instalar mis juegos.
 
-Siento que mi generación fue parte de una transición digital del punto de vista social. Aunque no siento que haya habido mucho estigma entre mis pares sobre pasatiempos como jugar videojuegos o ver anime (al menos en comparación a unos pocos años atrás). Las generaciones mayores eran aún muy ajenas al mundo digital, y al menos desde mi experiencia, los niños nerds muy metidos en el computador éramos más estigmatizados que hoy en día.
+No se como conoci el civ v, pero recuerdo que al inicio lo veia mas que lo jugaba. Como estaba altamente restringido mi uso del computador, pero habian llegado los smartphones, las restriciones al uso del celular quedaron en una zona gris, y como podia estar en el celu, pero seguia queriendo consumir civ, no quedo mas alternativa que ver youtubers.
 
-Siempre me sentí parte de este mundo, de la cultura del computín, y el DCC como espacio seguro para aquellos que vienen de este mundo conquistó mi corazón. Los memes, los dibujos en las salas, los temas de los pasillos, siempre me sentí como en casa. Sin embargo, con el tiempo me fui dando cuenta de que los estigmas asociados a este perfil seguían entre nosotros, en nuestra conciencia colectiva, incluso con consecuencias en nuestra autoestima y autopercepción.
+## La adicicon
 
-## La mona
+Siempre fui muy fanatico de los videojuegos, de estar en el computador. Durante las tomas en mi liceo, al quedarme solo en casa sin casi control parental, este fanatismo se descontroló. Junto con el LOL y el TF2, el civ v se convirtio en mi opio, y me la pasaba jugando todo el dia.
 
-En algún momento, desconozco cuándo, me enteré de la existencia de una actividad de la que hasta ese entonces jamás había escuchado, la mona. Esta, se podría decir, son las olimpiadas que se realizan entre las distintas especialidades de la facultad, cada departamento tiene su cupo y computación compite contra otras ingenierías como industrial, civil, mecánica, etc.
+NAda que agregar, un gran juego, y cuando me entere que saldria una nueva version mi cuerpo se apodero del hype.
 
-Para el cadcc, se me asignó la pega de gestionar el tema de las olimpiadas. Poniendo en orden las ideas, me di cuenta que no teníamos ninguna base de la que apoyarnos para organizar esto. El departamento, como el resto de la universidad, se encontraba en una etapa de transición post-pandemia, y la labor principal de los cadcc de la transición fue recuperar la herencia cultural de la carrera, la que se vio fuertemente afectada luego de prácticamente 2 años de no presencialidad.
+## La salida
 
-Como en la mayoría de los proyectos de ese año, me ultra obsesioné con ganar la mona, y durante el proceso de reclutamiento y propaganda, me encontré con una fuerte presencia de todos los estigmas habidos y por haber sobre los computines, incluso entre nosotros. Desde tíos hasta compañeros de carrera, cuando comentaba el tema de esta olimpiada, compuesta principalmente de deportes físicos, y el plan para ganarla, recibí burlas e incredulidad, y es que para todos, computación solo estaba compuesta de ñoños, que no han tocado pasto en su vida, y que son poco menos que perdedores crónicos incapaces de organizarse para competir en algo así.
+Y no obstante, cuando salio, no lo jugue XD. Entre que empece a dedicarle mas tiempo al lol y a los total war. No fue hasta que regalaron el juego en epic que, dios mio, me volvi a enamorar de la franquicia. No pasaron muchos dias hasta que me compre todas las expansiones y me puse en una maraton de aprender a jugarlo. Diria que lo que mas valoro del juego es la cantidad de mecanicas con las que se atrevieron, principalmente la de los distritos, que hace que planificacion de las ciudades sea una experiencia mucho mas interesante y entretenida, al menos para mi.
 
-Inaceptable, me daba mucha rabia, y de entre todo este pesimismo, los comentarios que más me dolieron fueron los del tipo "es que no me siento realmente un dcc". Para mucha gente más cercana al mundo del deporte, el departamento no se sentía como un lugar cercano, un lugar del que fueran parte. Se sentían marginales por no corresponder a este estereotipo de computín. ¡Todos éramos dcc! el departamento tenía una diversidad increíble, y tal como eran muchos a los que le gustaba el anime, ¡muchos eran a los que les gustaba el fútbol! ¡todos son bienvenidos! algo se tenía que hacer, eran muchos los que compartían la pasión por el deporte, tan solo no se conocían. Teníamos que sacarnos el estigma, teníamos que demostrar de qué estábamos hechos, y para eso, teníamos que ganar la mona.
+## El arte
 
-## El proyecto
+Aprendi a valorarlo con el tiempo, al inicio fue un poco chocante la transicion de realismo a cartoonish, pero despues de mucho tiempo puedo decir que banco.
 
-Siento que si me pongo a hablar del proyecto con un poco de detalle tendría que abrir otro blog. De la mano de este proyecto se fue conformando el núcleo de mi grupo de amigos de la U. Dejando a muchas personas en el tintero, junto con la Milla, el Jero, el Seba y el Tomy formamos Anakena. Creo que es por lejos el proyecto más grande en el que he participado en relación a su tamaño y a mi participación.
+## La musica
 
-Por ahora solo queda decir que fue un éxito total, además de la mejor experiencia de mi vida. Desde las victorias más dulces a las derrotas más amargas, ha sido increíble lo que se ha llegado a formar. Aunque al inicio le dediqué mi vida, con el tiempo le he ido soltando la mano al club. Mi mayor miedo es que Anakena muera junto con nuestra vida universitaria, espero no sea así.
+El sonido in game, que en general es en funcion de cada civilizacion, nunca lo pude apreciar del todo, pero el tema principal me encanta, es mooy bueno.
 
-Me dan ganas de seguir escribiendo, pero tocará continuar la historia en otra ocasión. Lo que importa es que a día de hoy, casi 4 años después, Anakena sigue, y es lo más grande. Creo dejó una huella imborrable en el DCC, además de un cambio para bien, en una carrera que debe darse cuenta de lo grande que es, y tomarle el peso. Hace muchos años dejamos de ser un nicho.
+## El contenido
 
-Aguante Anakena.
+Incluso habiendo dejado la vara tan alta como la dejo el civ 6, con temas como las frases de las tecnologias, las maravillas, las maravillas naturales, los personajes historicos, etc, el civ 7 creo que lo hace mucho mejor; la mejora a los grandes personajes diria es la mas significativa, y es que pasaron de ser algo sin mucho cariño a una dinamica sumamente interesante.
+
+## La lealtad
+
+Que gran inclusion al juego, y es que soluciona el problema del sinsentido que era que, por ejemplo, llegara un wn con un colono y te chantara una ciudad en medio de tu imperio, ademas de que hace que la expansion del imperio sea mucho mas realista y desafiante.
+
+## Los distritos
+
+genial, similar a las otras adiciones mencionadas, transforma mecanicas muy lineales en algo mucho mas complejo y divertido, de las mejores adiciones al juego
+
+## La vuelta
+
+El sabado, luego de un buen rato sin jugar nada, me instale el civ vi en el notebook, y esta tan bueno como lo recordaba. Espero poder recuperar las riendas de mi vida, pero por ahora, solo soy un jugador de civ

@@ -2,7 +2,7 @@
 title: "League of Legends"
 description: "La droga más dura"
 pubDate: "2026-03-04"
-tags: ["Reviews", "Sobre mí", "Juegos"]
+tags: ["Reviews", "Sobre mí", "Videojuegos"]
 music:
   title: "Get Jinxed"
   author: "League of Legends"

@@ -60,6 +60,11 @@ items:
     author: "League of Legends"
     date: "2026-03-04"
     link: "/blog/2026/03/04/league-of-legends"
+  - title: "Sogno di Volare"
+    author: "Christopher Tin"
+    date: "2026-04-14"
+    link: "/blog/2026/04/14/civilization-vi"
+
 ---
 
 Como diría el Rumpy: "Te vamos a ponerte un tema".
