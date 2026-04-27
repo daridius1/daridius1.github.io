@@ -1,50 +1,33 @@
 ---
-title: "Civilization VI"
-description: "From the first stirrings of life beneath water..."
-pubDate: "2026-04-14"
-tags: ["Reviews", "Videojuegos"]
+title: "Clásico universitario"
+description: "Bocanada de aire para Gago"
+pubDate: "2026-04-27" #"2026-01-15"
+tags: ["Fútbol", "El Bulla"] #["Reviews", "Fútbol", "El Bulla"]
+match:
+  teams: "Universidad de Chile vs Universidad Católica"
+  competition: "Campeonato Nacional 2026"
+  date: "2026-04-25"
+  place: "Estadio Nacional"
 ---
 
-He de conocer aún a un ñoño de la historia que sea joven y que no se haya jugado ningún juego de estrategia. Es parte de la fantasía de reescribirla que titulos como estos utilizan para enganchar a aquellos que sueñan con comandar las legiones romanas, conquistar europa con napoleon, o con pintores frustrados.
+Luego de la salida de Meneghini, y con un equipo que, en relación a las expectativas de inicio de año, pasa por un mal momento, nos enfrentamos contra uno de nuestros clásicos rivales. La llegada de Gago en lo personal me generó algunas esperanzas, no creo que sea el nuevo Sampaoli, pero creo tiene credenciales que permiten especular en una propuesta futbolistica mucho mas seria que la que culaquiera podria imaginar con el paqui.
 
-Claramente no soy la excepcion a esta regla, y esta vez vamos a hablar de uno de los juegos que, si no es mi favorito de toda la vida, sin duda se sienta en la mesa de los grandes. El Civilization VI.
+## El nuevo DT
 
-## Civilization V
+Aunque Gago partio relativamente bien, veniamos de un mal momento, luego de una dolorosa derrota a ultimo minuto contra el ñublenchester y un mediocre empate contra everton, ambos una respoinsabilidad no menor del tecnico. Aunque la hinchada de este hermoso equipo esta llena de esquizofrenicos, estos resultados adversos y malos desempeños me parecen dentro de las posibilidades de la integracion de un entrenador al equipo, que no creo suceda de un dia para otro. Este partido sin embargo, es otra cosa. En clasicos no hay excusas, y en cualquier contexto el deber es ganarlo.
 
-Desde pequeño me gustaron los juegos de estrategia, pero hasta la adolescencia me limitaba principalmente a los que se jugaban en el navegador, ya que no tenia un computador propio en el que instalar mis juegos.
+## El arranque
 
-No se como conoci el civ v, pero recuerdo que al inicio lo veia mas que lo jugaba. Como estaba altamente restringido mi uso del computador, pero habian llegado los smartphones, las restriciones al uso del celular quedaron en una zona gris, y como podia estar en el celu, pero seguia queriendo consumir civ, no quedo mas alternativa que ver youtubers.
+El primer tiempo la u le dio una paliza a la cato, en todo sentido. Aunque el predominio se vio mas marcado en una banda, diria que el equipo entero manejo bien el partido. De hecho mi mayor critica es no haber tenido la capacidad de traducir ese dominio en goles.
 
-## La adicicon
+## Lucero
 
-Siempre fui muy fanatico de los videojuegos, de estar en el computador. Durante las tomas en mi liceo, al quedarme solo en casa sin casi control parental, este fanatismo se descontroló. Junto con el LOL y el TF2, el civ v se convirtio en mi opio, y me la pasaba jugando todo el dia.
+Nos cagaron con los canteranos. Rivero venia con detalle y lucero no se ha hallado en el area como uno esperaba para un jugador de su talla. Casi llegando MAyo hace su debut goleador, siendo que oportunidades ha tenido y no se le pide nada mas. Al menos se nota que no es un jugador tecnicamente nulo, como lo era el tucu cuando jugaba mal. Me recuerda un poco a los partidos malos que tuvo di yorio el año pasado: un aporte al equipo pero ineficiente en su tarea principal.
 
-NAda que agregar, un gran juego, y cuando me entere que saldria una nueva version mi cuerpo se apodero del hype.
+Dentro de todo, en esta ocasio, al fin hizo un gol, y en una ocasion importante.
 
-## La salida
+## Segundo tiempo
 
-Y no obstante, cuando salio, no lo jugue XD. Entre que empece a dedicarle mas tiempo al lol y a los total war. No fue hasta que regalaron el juego en epic que, dios mio, me volvi a enamorar de la franquicia. No pasaron muchos dias hasta que me compre todas las expansiones y me puse en una maraton de aprender a jugarlo. Diria que lo que mas valoro del juego es la cantidad de mecanicas con las que se atrevieron, principalmente la de los distritos, que hace que planificacion de las ciudades sea una experiencia mucho mas interesante y entretenida, al menos para mi.
+Un poco mas flojita la u, teniendo en cuenta los rendimientos del año pasado, es un poco sorprendente que assadi y altamirano salgan desde la banca en partidos como estos, aunque sus ingresos demostraron pq es asi... flotjitos ambos. Un alivio ver a aranguiz de vuelta.
 
-## El arte
-
-Aprendi a valorarlo con el tiempo, al inicio fue un poco chocante la transicion de realismo a cartoonish, pero despues de mucho tiempo puedo decir que banco.
-
-## La musica
-
-El sonido in game, que en general es en funcion de cada civilizacion, nunca lo pude apreciar del todo, pero el tema principal me encanta, es mooy bueno.
-
-## El contenido
-
-Incluso habiendo dejado la vara tan alta como la dejo el civ 6, con temas como las frases de las tecnologias, las maravillas, las maravillas naturales, los personajes historicos, etc, el civ 7 creo que lo hace mucho mejor; la mejora a los grandes personajes diria es la mas significativa, y es que pasaron de ser algo sin mucho cariño a una dinamica sumamente interesante.
-
-## La lealtad
-
-Que gran inclusion al juego, y es que soluciona el problema del sinsentido que era que, por ejemplo, llegara un wn con un colono y te chantara una ciudad en medio de tu imperio, ademas de que hace que la expansion del imperio sea mucho mas realista y desafiante.
-
-## Los distritos
-
-genial, similar a las otras adiciones mencionadas, transforma mecanicas muy lineales en algo mucho mas complejo y divertido, de las mejores adiciones al juego
-
-## La vuelta
-
-El sabado, luego de un buen rato sin jugar nada, me instale el civ vi en el notebook, y esta tan bueno como lo recordaba. Espero poder recuperar las riendas de mi vida, pero por ahora, solo soy un jugador de civ
+Arce y vasquez muy bien, linea de atras solida dejando de lado algunas cagaditas. Me vuelvo a ilusionar un poco con este año, aunque es sabido que me ilusiono con poco.
