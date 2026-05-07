@@ -1,4 +1,4 @@
-Instrucciones para crear un post:
+# Instrucciones para crear un post
 
 1. Lee el contenido de borrador.md y corrige puntuación y ortografía. Intenta tener un buen sentido de que es error ortografico y que es parte del humor que se puede usar en cierto contexto, como una frase catchy escrita mal a propósito.
 2. Puedes corregir redacción si crees que es necesario, pero la prioridad es mantener el espiritu del texto.
@@ -7,4 +7,4 @@ Instrucciones para crear un post:
 5. El contenido de borrador deberia seguir el template de template.md.
 6. Al hacer las respectivas modificaciones, crea el archivo siguiendo la estructura de carpetas de, como por ejemplo, src/content/blog/2026/01/15/vuelve-la-tne-a-mi-vida/index.md
 7. en src/content/registros/chacotero-sentimental.md hay un registro de las canciones relacionadas a un blog, cuando un blog tenga cancion, agregala al registro.
-8. en este directorio de borrador puede que haya fotos o cosas asi que aparezcan en el blog, debes moverlas a la carpeta donde se guarde el blog y añadirla donde indique el blog mismo. 
+8. en este directorio de borrador puede que haya fotos o cosas asi que aparezcan en el blog, debes moverlas a la carpeta donde se guarde el blog y añadirla donde indique el blog mismo.
