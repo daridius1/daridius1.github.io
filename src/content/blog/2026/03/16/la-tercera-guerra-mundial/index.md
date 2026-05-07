@@ -15,7 +15,6 @@ Pienso en un mundo donde, debido a la alta dependencia que tenemos como país de
 
 Como dije en algún post, en este blog exploraré las distintas facetas del arte, y escribir ficción es algo con lo que últimamente he sentido mayor curiosidad.
 
-
 ## El cambio
 
 Hay algo que siempre he romantizado de los escenarios "post-quedólazorra". Recuerdo una cita de Aang en The Legend of Korra (nunca la ví, el clip me salia en TikTok):

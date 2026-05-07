@@ -25,7 +25,7 @@ Cuando se hizo el llamado a ser parte del CaDCC 2022, participé en la videollam
 
 El cargo de presidenta lo ocupó la Milla, y aunque nos conocíamos de antes, no éramos realmente amigos. Con el tiempo nos fuimos acercando mucho, y de cierta forma el rol de CaDCC fue absorbiendo nuestra vida, lo que nos hizo no solo compartir sino trabajar en equipo en reiteradas ocasiones, con lo que se fue fortaleciendo cada vez más y más nuestra amistad.
 
-En algún punto del año (no sabría decir cuál) ya andábamos de besties por la vida, y entre la cercanía y el rol que teníamos, diría que el CaDCC entero fue gravitando cada vez más y más en torno a nuestra relación de amistad. 
+En algún punto del año (no sabría decir cuál) ya andábamos de besties por la vida, y entre la cercanía y el rol que teníamos, diría que el CaDCC entero fue gravitando cada vez más y más en torno a nuestra relación de amistad.
 
 Con los años me he terminado preguntando si esta dinámica terminó siendo positiva o negativa. La obsesión que le terminamos desarrollando a las labores del centro de alumnos hizo que en muchos sentidos termináramos dejando un poco de lado nuestra vida académica, además de que la sensación de que solo nosotros podríamos hacer bien la pega nos hizo ir delegando cada vez menos y menos en el resto de integrantes del CaDCC, que era un gran equipo en todo caso.
 
