@@ -1,32 +1,40 @@
 ---
-title: "Mcdonalizacion del software"
-description: "McFrontpage"
-pubDate: "2026-05-07"
-tags: ["Ideas", "IA"]
+title: "Luz, cámara !acción!"
+description: "La magia del fútbol"
+pubDate: "2026-05-08"
+tags: ["Ideas", "Fútbol"]
 ---
 
-Hace unos dias estaba hablando con unos amigos sobre el futuro del desarrollo de software con el rapido avance de la ia. Aunque un poco cliche, parece ser un tema inevitable entre los computines, y es que el terreno que han ganado estas tecnologias en cuanto a productividad en nuestra area en general es ridiculo, y quien sabe hasta donde llegaran nuestros avances.
+Lo he comentado en inumerables ocasiones, cualquier persona que me conozca sabe que me gusta mucho el futbol. En particular la dimension del espectaculo es una de las que, a lo largo de mi vida, siempre , me ha llamado mas la atencion. Los protagonistas son los mas obvios encargados de sulpir esta necesidad, son los que estan a la vista, las rabonas, los pases entre lineas, un buen cambio de ritmo, entre otras virtudes tecnicas que hacen de un partido algo entretenido de ver. En ese sentido los jugadores de futbol son un poco como los actores de una novela, y cuando esta es buena, reciben la mayor parte de los elogios de los consumidores.
 
-Al menos para mi, empezar a usar copilot en mis proyectos personales fue revolucionario. Y aunque por lo que se comenta en los pasillos del internet, copilot no es el mejor asistente que hay, fue suficiente para dar la sensacion de que proyectos que antes tomaban un mes se pueden hacer en un dia.
+Este post esta dedicado a los que estan tras bambalinas en cada partido, a los camarografos, a los periodistas, a los relatores y a muchos mas, pero principalmente al señor director.
 
-Respecto a la velocidad con la que avanzan las herramientas de IA, uno de los escepticismos mas comunes gira en torno al limite del modelo de transformadores y a lo estancados que parecen estar quedando con el tiempo los modelos mas grandes. A pesar que desde el punto de vista tecnico, todo esto parece ser cierto, siento que los mas grandes avances de productividad en el corto plazo los va a ofrecer la creacion de nuevas herramientas que utilicen los modelos mas que la mejora de estos.
+## La U
 
-## La nueva productividad
+Cabe aclarar que para mi, el futbol y la u son dos cosas distintas. no veo a la u para divertirme, la veo pq es mi deber verla. A veces es divertido, y honestamente... a veces no. Cualquier hincha de verdad no tendria problema en admitir que hay partidos que si se lograron ver enteros sin quedarse dormido fue por mero compromiso.
 
-Me da la impresion de que en estos momentos, no en todas, pero si en muchas de las areas del desarrollo web, la intensidad laboral esta disminuyendo cada vez mas. A pesar de no tener el dato duro, en base a la experiencia de los desarrolladores de mi entorno, y un poco a la mia, la forma en la que se esta utilizando la IA hace que la experiencia del desarrollo sea un tanto dispersa. Cuando se programaba codigo a mano (algo que en lo personal alcance a ser, y me da la impresion que sere una de las ultimas generaciones) era muy razonable mantener un ritmo de trabajo constante, ya que entre los distintos pasos que tiene resolver un problema, ya casi no habia "cuellos de botella" por parte del software. Gracias a tecnologias como el hot reload, o los rapidos tiempos de compilacion que ofrecen la mayoria de los framworks, no habia que esperar casi nada para seguir trabajando, el unico cuello de botella era el ritmo que fuera capaz de tener nuestro cerebro.
+## El espectaculo
 
-No obstante, eso ha cambiado. Al menos a dia de hoy, la IA es rapida pero no tanto, y mientras desarrollamos, muchas tareas nos deja en "halt" y es dificil hacer otra cosa mientras esta trabaja, al menos con los flujos de trabajo que se tienen actualemente. Quiza aca me tire una callampera de epoca, pero siento que en estos titulares populistas de las empresas de ia hay un poco de verdad y un poco de mentira. Siento que es verdad que cosas que antes se hacian en un mes de trabajo se hacen en un dia, pero de *trabajo efectivo*, siendo trabajo efectivo algo asi como el tiempo en el que estuviste prestando alta atencion a lo que estabas haciendo. No digo que antes la genete programaba 100% concentrada la totalidad de su jornada laboral, esto es mentira, pero creo que como minimo la *densidad* del trabajo no es la misma.
+Entonces, a que futbol me refiero? Bueno, en mi caso principalmente al futbol europeo y a la primera B de chile.
 
-## Symphnony
+Para que un partido sea bueno, esta claro que los jugadores y el cuerpo tecnico tienen que poner de su parte. Si los jugadores no son atrevidos, o el cuerpo tecnico no plantea un partido interesante no hay nada que hacer desde el punto de vista del espectaculo. En casos asi, por ultimo, hasta una patada o un combo se agradecen con tal de mantener al espectador inmerso.
 
-Uno de los grandes saltos de productividad en esta rapida y frenetica etapa de la ia creo se dara cuando se logre solucionar este problema, cuando se logren rellenar estos "huecos" de productividad. Symphony(<https://openai.com/index/open-source-codex-orchestration-symphony/>) es un sistema de orquestación de agentes de IA que intenta resolver el problema del cambio de contexto. Se entiende el problema del cambio de contexto como el costo que lleva al desarrollador pasar de un proyecto a otro, en el que tienes que "volver a enchufarte" con el contexto tanto del problema como de como se esta solucionando. Es natural pensar que si cambiar de contexto fuera gratis por asi decirlo, la solucion logica al tema de la densidad del trabajo seria simplemente trabajar en varios proyectos a la vez. sobre esto, una de las lineas que me llego de este interesante articulo (que me compartio el blaz btw) fue "The agents were fast, but we had a system bottleneck: human attention.". Diria que gracias a este articulo fui capaz de articular cosas que pensaba pero que no podia explicarme ni a mi mismo, muy recomendado.
+## El relato
 
-Aunque parece que el proyecto no tendra continueiidad, no me cabe duda que va en la direccion correcta. El siguiente paso es buscar optimizaciones del tipo la pelicula de mcdonals, ningun trabajador puede estar esperando a que las hamgburguesas se terminan de freir, siempre hay algo que hacer. El local funcionando como un reloj perfecto en el que todo se sirve *just in time* (quiero aclarar que no vi la pelicula, me salio en un tiktok, pero tiene gran parte del espiritu).
+Es muy importante el relato de un partido de futbol. No sabria dar la explicacion de porque, si acaso es realmente necesario o es la costumbre lo que termina de crear la necesidad, pero un partido sin un relator se siente tremendamente desabrido, al menos para mi. No solo eso, si no que cuando un relator es malo se siente mucho mas de lo que alguien que no ve futbol se puede imaginar, lo que incluso puede llegar a generar odio entre los espectadores.
 
-## McSoftware
+Aparte de eso, la emocion que puede llegar a aportar un gol bien relatado es enorme, al final, la pega de este es contagiar al televidente de las emociones que no puede llegar a sentir por el simple hecho de no estar en el estadio. capturar la energia de un momento, y transmitirla lo mas que se pueda a traves de la pantalla.
 
-Si herramientas como esta lleguen a resolver estos problemas solo el tiempo lo dira, pero la callampera definitiva que me he dedicado a compartir en mis ultimos carretes ha sido que, uno de los grandes mercados por explotar de parte de nuestra industria es el del software "simlpe", y que ha dia de hoy no cuesta ni una quinta parte del trabajo crear como desarrollador. Incluso en 2026 he sabido de personas que cobran del orden de los 300000 por crear un landingpage, es evidente para cualquiera del medio que esto es insostenible con el tiempo, y el mercado se encargara de regular este costo.
+## La camara
 
-Intentos por cubrir este mercado no es que no haya habido, y creo incluso herramientas como wordpress intentan simplificar la labor de brindar estos servicios. Pero tal cosa como software muy barato, hecho "a la medida" pero a gran escala, no es algo que se ahya masificado aun, hasta donde yo sepa. No creo que pase mucho tiempo hasta que veamos en los comerciales de los partidos de futbol anuncios del tipo "crea tu software hecho a medida por solo 50 lucas".
+No menos importante es el trabajo de las camaras, que supongo no se valora hasta que se extraña. Si mal no recuerdo, en el amistoso que jugo chile recientemente  con cabo verde, el camarografo era desastroso, y se noto mucho mas de lo que se puede imaginar. Hay ocasiones inlcuso en la que la mala ubicacion de la camara puede llegar a arruinar un poco la experiencia. Hasta que cosas estas ocurren, pasa desapercibido el profesinoalismo y la experiencia que debe llevar a cabo el encargado de capturar los distintos momentos, tanto en lo que pasa dentro como fuera de la cancha.
 
-En un mundo donde las consultoras como accenture son un restaurant caro y herramientas como wordpress son un super8, siento que un mcdonals es lo que puede revolucionar la industria. Software sin amor. Un ingeniero haciendo el pedido de 8 clientes a la vez, 5 prompts por cada cliente. Lo que antes fue un proyecto ahora sera un ticket, aqui esta su pagina web, si no le gusto, compre otra. Siguiente!
+## El director
+
+Y con esto llegamos a casi el motivo por el cual redacto este post. La labor de capturar lo que ocurre en el estadio en tiempo real me parece digna de admiracion. Cuando estoy un poco mas imaginativo de lo comun, siempre me pongo a hablar de aquellos aspectos culturales sutiles que esconden enorme genialidad. y cuando estoy viendo un partido de premier y el director pone la toma de ambos tecnicos dandose la mano despues del partido me paro y aplaudo. hay tanto detras de estos gestos, de estos momentos. siento que hasta se puede sospechar el resultado de un partido en funcion de esta unica y solemne toma. Ver las caras de angustia de los hinchas mientras hay una revision del var. la cara de concentracion de un jugador a punto de patear un penal. simplemente fenomenal.
+
+Quiza estoy exagerando un poco, como en la mayoria de las coasas, pero el director tiene que vere lo que muchos no ven, tiene que estar atento al momento, en cuestion de segundos puedes pasar de un momento intrascendente a uno que sera recordado para siempre en la historia del futbol, y si no eres lo suficientemente agil, pierdes esa oportunidad para siempre.
+
+## La evolucion
+
+Si alguien cree que todos estos detalles son menores, lo invito a ver la repeticion de un partido del siglo pasado. Simplemente no es lo mismo. Y no creo que sea un tema unicamente de la calidad o de la cantidad de camaras. es toda una evolucion de la industria al servicio del espectaculo. Genial.
