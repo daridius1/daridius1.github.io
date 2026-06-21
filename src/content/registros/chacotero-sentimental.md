@@ -64,7 +64,10 @@ items:
     author: "Christopher Tin"
     date: "2026-04-14"
     link: "/blog/2026/04/14/civilization-vi"
-
+  - title: "Six Seven"
+    author: "Laurinha Costa, Dj Cabello"
+    date: "2026-06-20"
+    link: "/blog/2026/06/20/tetris"
 ---
 
 Como diría el Rumpy: "Te vamos a ponerte un tema".

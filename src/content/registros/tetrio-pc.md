@@ -17,6 +17,10 @@ items:
     special: "silver"
   - "2026-02-08"
   - "2026-02-15"
+  - "2026-05-28"
+  - "2026-06-10"
+  - "2026-06-13"
+  - "2026-06-16"
 ---
 
 Cuando juego Tetris, la mayor parte del tiempo estoy intentando hacer Perfect Clears, para más detalles leer [esta publicación](/blog/2026/01/06/tetris)
