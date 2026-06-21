@@ -9,18 +9,18 @@ music:
   verse: "Vinte mais vinte, mais vinte, mais sete"
 ---
 
-En la mona de este año, al DCC le faltaban representantes en Tetris. Como lo comenté en algún post (no recuerdo cuál), tenía baneada la IP de tetr.io y del tetris clásico por problemas de adicción. Tal como al inicio de Rambo II, cuando el Coronel Samuel Trautman va a buscar a Rambo a la cárcel para una misión de la más alta complejidad, el Jero fue a buscarme para dar cara por el DCC.
+En la mona de este año, al DCC le faltaban representantes en tetris. Como lo comenté en algún post (no recuerdo cuál), tenía baneada la IP de tetr.io y del tetris clásico por problemas de adicción. Tal como al inicio de Rambo II, cuando el Coronel Samuel Trautman va a buscar a Rambo a la cárcel para una misión de la más alta complejidad, el Jero fue a buscarme para dar cara por el DCC.
 
 <div class="image-medium">
 
 ![Rambo preso, por sus habilidades para matar, y por la rapidez con la que hacía el DT Cannon](./rambo.png)
 
 </div>
-<span class="image-caption">Rambo preso en la 2, el por su habilidad para matar, yo por mi destreza con el DT Cannon</span>
+<span class="image-caption">Rambo preso en la 2, él por su habilidad para matar, yo por mi destreza con el DT Cannon</span>
 
 ## La misión
 
-Ganar Tetris. Nivel de dificultad: imposible, y es que ni siquiera era el mejor del DCC ya que el Blaz también participó y él es SS. Como no tenía cuenta para jugar ranked (ya que no jugaba competitivo hace años, y en la cuenta anterior hice la solicitud de que me banearan para no jugar más) tuve que crearme una cuenta desde 0 y levelearla. Por suerte con el pasar de los años no perdí el toque y llegué rápidamente a S+, pero ahí me quedé.
+Ganar tetris. Nivel de dificultad: imposible, y es que ni siquiera era el mejor del DCC ya que el Blaz también participó y él es SS. Como no tenía cuenta para jugar ranked (ya que no jugaba competitivo hace años, y en la cuenta anterior hice la solicitud de que me banearan para no jugar más) tuve que crearme una cuenta desde 0 y levelearla. Por suerte con el pasar de los años no perdí el toque y llegué rápidamente a S+, pero ahí me quedé.
 
 ## Resultado
 
@@ -28,7 +28,7 @@ Los mejores 6 pasaban a la final que era transmitida por Twitch. Por suerte el c
 
 ## Caída desde winners
 
-En algún punto en winners me topé con el Rajón (el otro S+). No digo que le habría ganado, pero nos enfrentamos el mismo día que volví a las ranked, por lo que estaba sin ritmo de juego, lo que creo me costo bastante caro. Siento que le pude haber ganado, pero el loco es bueno, nada que decir, perdí bien.
+En algún punto en winners me topé con el Rajón (el otro S+). No digo que le habría ganado, pero nos enfrentamos el mismo día que volví a las ranked, por lo que estaba sin ritmo de juego, lo que creo me costó bastante caro. Siento que le pude haber ganado, pero el loco es bueno, nada que decir, perdí bien.
 
 ## El resto de partidas
 
