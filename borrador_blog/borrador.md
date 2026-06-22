@@ -1,44 +1,30 @@
 ---
-title: "Tetris"
-description: "En la mona"
-pubDate: "2026-06-20"
-tags: ["Sobre mí"]
+title: "Dosunismo"
+description: "El cáncer de las pollas mundialeras"
+pubDate: "2026-06-21"
+tags: ["Sobre mí", "Fútbol"]
 music:
-  title: "Six Seven"
-  author: "Laurinha Costa, Dj Cabello"
-  verse: "Vinte mais vinte, mais vinte, mais sete"
+  title: "Wavin' Flag"
+  author: "K'naan"
+  verse: "Give me freedom, give me fire"
 ---
 
-Laurinha Costa, Dj Cabello - Six Seven
+Un fantasma recorre las pollas del mundial: el fantasma del 2-1. Detras de una aparentemente infoensiva estrategia descerebrada de pronosticos deportivos se esconde una meticulosa y parasitaria conducta que, sin miedo a exagerar, creo que mata el espiritu de jugar en una polla con tus amigos, y deberia ser evaluada la opcion de una descalificacion de la competencia a los mayores reincidentes. Pena de carcel quiza en aquellos casos mas extremos.
 
-En la mona de este año, al dcc le faltaban representantes en tetris. Como lo comente en algun post (no recuerdo cual) tenia baneada la ip del tetr.io y del tetris clasico por problemas de adiccion. tal como al inicio de rambo II, cuando el Coronel Samuel Trautman va a buscar a rambo a la carcel para una mision de la mas alta complejidad, el jero fue a buscarme a mi cueva para dar cara por el dcc en tetris.
+## Las pollas
 
-*aca agrega la foto de rambo.png*
+De curioso nombre, las pollas son una forma un poco mas inonfensiva de apostar con tus amigos para un evento como el mundial, donde en vez de ir partido por partido acordando una apuesta, se acuerda un sistema de puntajes, en el que para cada partido hay que jugarsela con un marcador, y en funcion que tan cercano al resultado original sea  tu prediccion (o al menos se supone que esa es la idea) te dan un mayor puntaje. Las personas que mayor puntaje alcancen a lo largo de toda la competicion se llevan el pozo que se junta al incio de al polla donde todos pagan la tarifa de entrada, que en el caso de las dos pollas en las que estoy participando, son de 3000 y 5000 pesos.
 
-## La mision
+Al menos en mi caso, la polla hace mucho mas interesante la experiencia mundialera. Sin estar chile clasificado es mucho menor la emocion que se siente con cada partido. El sentimiento de pertenencia simplemente no esta y sobretodo en un mundial con tantos equipos random, la inocente emocion de la apuesta te hace tomar partido por un equipo, y te da tema de conversacion con tus amigos.
 
-Ganar tetris. NIvel de dificultad: imposible, y es que nisiquiera era el mejor del dcc ya que el blaz tambien participo y el es SS. Como no tenia cuenta para jugar ranked (ya que no jugaba competitivo hace años) tuve que crerme una cuenta desde 0 y levelearla. Por suerte con el pasar de los años no perdi el toque y llegue rapidamente a s+, pero ahi me quede.
+No me gustan las apuestas, jamas le he metido dinero a una casa de apuestas, pero siento que una polla de por si no hace el daño del que nace la preocupacion por las apuestas. tiene un techo lo que se puede apostar y es poca plata la que se pierde. tecnicamente, contando ambas pollas, estoy apostando menos de 80 pesos por partido, la nada misma.
 
-## Resultado
+## El dosunismo
 
-Los mejores 6 pasaban a la final que era transmitida por twitch. por suerte el camino a esto estaba medio que regalado. en la competencia habia un U, 2 SS, 2 S+ y luego el salto era hasta A. la diferencia de nivel entre el 5 y el 6 era sustancial, y como habia losers bracket, pude llegar comodamente al dia final de competencia.
+Este post nace de la necesidad de desquitarme con quiza el poroblema mas grave del siglo xxi, el dosunismo. Por como funciona el sistema de puntos que tengo en la polla con mis amigos de la u, y por como se dan los marcadores habituales de la cita planetaria (la cual enfrenta a equipos bastante menos pulidos que los clubes, por lo que en general suele involucrar mas goles), este marcador entrega bastantes garantias en multiples escenraios, por lo que algunos infelices han emperazod a poner 2-1 en todos los partidos. Lo que arruina completamente la experiencia de la polla. Porque? pq asi lo siento, no voy a defender mi posicion con argumentos.
 
-## Caida desde winners
+## Rendmineto en las pollas
 
-en algun punto en winners me tope con el rajon (el otro s+). no digo que le habria ganado, pero ujugue contra el el mismo dia que volvi a ranked. siento qque le pude haber ganado, pero el loco es bueno, nada que decir, perdi bien.
+Voy la raja. Parti como el hoyo, pero en una misma fecha colombia le gano 3 - 1 a uzbekistan y ghana le gano 1 - 0 a panama. Ambos resultados los clave, y ambos con goles en los descuentos. Ambos los grite a todo pulmon jajaja. desde ese dia he estado subiendo en la tabla de posiciones.
 
-## el resto de partidas
-
-Creo que las gane todas 5-0, no hay mucho que comentar. como dije entre el 5 y 6 klugar habia un mar de diferencia
-
-## gran final
-
-En mi primera partida me pille al thefifo. el weon es ss y realemtne pense que me iba a hacer nmierda. nada hacia presagiar que la partida estaria pitiadamente pareja, en algun momento empate la llave 6-6 y todo se decidiria en un epico game 13 (eran al mejor de 13). el sixseven era inevitable.
-
-*pon el 67.png*
-
-A pesar de que fue de mis mejores paridas, perdi igual xd. el loco era simplemente mejor que  yo, y si el no la cagaba, no tenia forma de perder, pero weno, se intento.
-
-## consecuencias
-
-Volvi a la droga y deje de publicar por CASI UN MES. na que ver. pero he vuelto, y he vuelto a bloquear la ip de tetrio no sin antes sacar unos jugosos 10 pc que agregar a los registros del blog. Volvere al modo zen, espero dure como minimo un par de semanas mas.
+Para cerrar la publicacion voy a dejar el mejor tema en la historia de los mundiales.

@@ -68,6 +68,10 @@ items:
     author: "Laurinha Costa, Dj Cabello"
     date: "2026-06-20"
     link: "/blog/2026/06/20/tetris"
+  - title: "Wavin' Flag"
+    author: "K'naan"
+    date: "2026-06-21"
+    link: "/blog/2026/06/21/dosunismo"
 ---
 
 Como diría el Rumpy: "Te vamos a ponerte un tema".
