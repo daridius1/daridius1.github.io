@@ -1,30 +1,50 @@
 ---
-title: "Dosunismo"
-description: "El cáncer de las pollas mundialeras"
-pubDate: "2026-06-21"
-tags: ["Sobre mí", "Fútbol"]
+title: "La IA, la revolucion industrial, y la conquista de america"
+description: "En busca de la gloria"
+pubDate: "2026-06-22"
+tags: ["Ideas", "IA"]
 music:
-  title: "Wavin' Flag"
-  author: "K'naan"
-  verse: "Give me freedom, give me fire"
+  title: "Conquest of Paradise"
+  author: "Vangelis"
+  verse: "In noreni per ipe (...) Ne domina"
 ---
 
-Un fantasma recorre las pollas del mundial: el fantasma del 2-1. Detras de una aparentemente infoensiva estrategia descerebrada de pronosticos deportivos se esconde una meticulosa y parasitaria conducta que, sin miedo a exagerar, creo que mata el espiritu de jugar en una polla con tus amigos, y deberia ser evaluada la opcion de una descalificacion de la competencia a los mayores reincidentes. Pena de carcel quiza en aquellos casos mas extremos.
+Partire esta publicacion por la cancion, y aunque nada tiene que ver con el origen de la idea, esta clavada para este blog. Conquest Of Paradise, de vangelis, creo va a ser parte crucial del mood con el que quemare el teclado. Pluma en llamas, nada me detiene. Sable... listo, botas... listas, botella de ron... lista, PREPARAOS PARA SURCAR LOS MARES, DONDE NO HA LLEGADO DIOS, EL PARAISO NOS ESPERA ¡CONQUISTADLO!.
 
-## Las pollas
+*agrega conquista2.jpg con una breve desripcion: daridius conquistando america*
 
-De curioso nombre, las pollas son una forma un poco mas inonfensiva de apostar con tus amigos para un evento como el mundial, donde en vez de ir partido por partido acordando una apuesta, se acuerda un sistema de puntajes, en el que para cada partido hay que jugarsela con un marcador, y en funcion que tan cercano al resultado original sea  tu prediccion (o al menos se supone que esa es la idea) te dan un mayor puntaje. Las personas que mayor puntaje alcancen a lo largo de toda la competicion se llevan el pozo que se junta al incio de al polla donde todos pagan la tarifa de entrada, que en el caso de las dos pollas en las que estoy participando, son de 3000 y 5000 pesos.
+Como de costumbre, la IA se toma la agenda de mis conversaciones, pareciera que nunca es suficiente. Aunque puertas afuera pareciera que la palabra de la ia ha llegado a todos los rincones de la computacion, la polemica sobre como se va a integrar a nuestro modelo productivo esta lejos de concluir.
 
-Al menos en mi caso, la polla hace mucho mas interesante la experiencia mundialera. Sin estar chile clasificado es mucho menor la emocion que se siente con cada partido. El sentimiento de pertenencia simplemente no esta y sobretodo en un mundial con tantos equipos random, la inocente emocion de la apuesta te hace tomar partido por un equipo, y te da tema de conversacion con tus amigos.
+## La revolucion
 
-No me gustan las apuestas, jamas le he metido dinero a una casa de apuestas, pero siento que una polla de por si no hace el daño del que nace la preocupacion por las apuestas. tiene un techo lo que se puede apostar y es poca plata la que se pierde. tecnicamente, contando ambas pollas, estoy apostando menos de 80 pesos por partido, la nada misma.
+Siendo La era de la revolucion de eric hobsbawn mi libro favorito, los otros dos titulos de esta famos trilogia sobre la historia del largo siglo XIX dejaron sin duda conceptos a los que esporadicamente le termino dando vueltas. En esta publicacion me gustaria rescatar la idea sobre algunos de los grandes ganadores de la primera revolucion industrial, sobre los que eric nos habla en La era del capital.
 
-## El dosunismo
+> Según Eric Hobsbawm, los primeros ricos de la Revolución Industrial fueron hombres de orígenes modestos que se diferenciaron de la vieja élite por su audacia para subirse al carro de la tecnología textil y jugársela por completo por la mecanización. Aprovechando que las primeras máquinas eran baratas, apostaron el todo por el todo a este nuevo sistema y reinvirtieron obsesivamente cada ganancia en expandir sus fábricas, logrando amasar fortunas gigantescas allí donde los comerciantes tradicionales no se atrevieron a arriesgar.
 
-Este post nace de la necesidad de desquitarme con quiza el poroblema mas grave del siglo xxi, el dosunismo. Por como funciona el sistema de puntos que tengo en la polla con mis amigos de la u, y por como se dan los marcadores habituales de la cita planetaria (la cual enfrenta a equipos bastante menos pulidos que los clubes, por lo que en general suele involucrar mas goles), este marcador entrega bastantes garantias en multiples escenraios, por lo que algunos infelices han emperazod a poner 2-1 en todos los partidos. Lo que arruina completamente la experiencia de la polla. Porque? pq asi lo siento, no voy a defender mi posicion con argumentos.
+*cita que este fue un resumen de chatgpt
 
-## Rendmineto en las pollas
+Le pedi a chatgpt que resumiera la idae pq igual el libro me lo lei el año del hoyo y no me acordaba de los detalles, pero lo importante es que es un gran ejemplo de estas veces en la historia en las que algo increible ocurre. Y a pesar de que todos saben que esto ocurre, son pocos los que se atreven realmente a aventurarse entre los 7 mares, y menos son los que lo hacen con un buen plan en mente.
 
-Voy la raja. Parti como el hoyo, pero en una misma fecha colombia le gano 3 - 1 a uzbekistan y ghana le gano 1 - 0 a panama. Ambos resultados los clave, y ambos con goles en los descuentos. Ambos los grite a todo pulmon jajaja. desde ese dia he estado subiendo en la tabla de posiciones.
+## La integracion de la ia en la industria
 
-Para cerrar la publicacion voy a dejar el mejor tema en la historia de los mundiales.
+Como todo buen frenezy, en muchos lados la ia ha jugado un rol mas marketero que practico. y es que sin tener el ejemplo a mano, bien sabidos son los casos en los que la intgracion de la IA ha sido algo mas del estilo "Ya chicos, gerencia quiere que hagamos alguna wea con ia, asi que metan la ia como se les cante el culo para resolver este problema que, probablemente, no necesita IA para ser resuelto". Esto ha hecho que una parte no menor de los computines tomen posturas excepticas sobre si la IA va a realmente revolucionar tanto el mundo como la gente cree.
+
+## La revolucion
+
+La IA lo va a cambiar todo, y va a revolucionar nuestro modelo productivo. no se si tanto como la maquina de vapor, pero no me parece desfachatado pensar que algo de ese orden podria llegar a suceder. Aunque la imbecilidad humana, traducida en proyectos como los que mencione, creados para saciar a generencia, tendran un impacto en el tiempo que tome la transferencia tecnologica al dia a dia de las personas, en los libros de historia aparecera la decada de los 20's como el inicio de esta revolucion, que tendra consecuencias gigantes, pero aun desconocidas.
+
+Asi y todo, debo admitir que hay dias que me siento bendecido. En algun momento, en mis primeros años en la carrera, miraba al pasado y sentia que una ola del tamaño de la llegada del internet, o de los computadores, era de proporciones tales que jamas viviria algo similar con mis propios ojos. Que tan mas rapido podria viajar la informacion? que tan mas personalizada podria ser? y sin embargo aqui estamos. Puedo ver la ola con mis ojos. Tengo corazonadas sobre a que lugares podria dejarnos. Quiero surfearla. Espero surfearla.
+
+## En el auto con el dani
+
+Aprovechando que se paletio y me paso a dejar a mi casa, nos fuimos conversando sobre esto, y entre palabras y coneptos, salio uno que me gustaria comentar. Cuando entre pasillos se empieza a hablar del descubrimiento de un nuevo continente, hay quienes son excepticos y prefieren quedarse en casa, y hay aquellos que, tal vez sin mucho que perder, deciden atravesar la inmensidad del oceano en busqueda de glorias y riquezas.
+
+A pesar de que el desarrollo de las LLM es limitado a megacorporaciones de dimensiones descomunales, su uso, al menos hasta ahora, esta al alcance de todos. Me gusta pensar en las americas como las tierras donde se puede hacer riqueza, y al final del dia, cada una de estas revoluciones tienen que ver con la capacidad de llenar el espacio de la insaciable necesidad humana. El internet no es un fin, es un medio. Nadie tiene internet por tener internet, este se ocupa con otros fines, alimentarse, compartir, divertirse, estudiar, trabajar, etc. Aquellos que conquistaron america fueron quienes se apoderaron de los mercados con estas nuevas tecnologias. En tierras virgenes de banda ancha, pobladas principalmente por kioskeros y supermercados, llego jeff bezos, cuan francisco pizarro, a sacudir los cañones de amazon y apoderarse, una mascada gigante tras otra, del mercado de las ventas. Cosas similares se pueden decir de netflix, spotify, facebook, google, paypal... la lista es enorme. Cada una caracterizada por su capacidad de usar el internet para cubrir la insaciable demanda de la sociedad capitalista en la que vivimos.
+
+Se distinguiran aquellos que sepan integrar la IA ahi donde mas puede aportar. Esta sera el cañon con el que conquistar las cuotas de mercado, donde no solo importa el como, sino que incluso mas el cuando. En estas tierras no hay espacio para todos, y los que las conquisten primero seran los vencedores.
+
+Tal como habra franciscos pizarros, habra diegos de almagros. Sin nadie sabiendo con certeza de que sera capaz la ia con el pasar de los añós, el miedo a que tu problema sea resuelto por el caso general, o que simplemente el aporte de esta nueva tecnologia a la industria no signifique gran cosa, muchos seran los que en esta aventura, volveran con las manos vacias.
+
+## El punto
+
+Ni idea. No se que quiero decir con esto. No se que es lo que trato de comunicar. Solo se que quiero conquistar america, que no hay navegante que se me compare, y que los mares se aterrorizaran con solo escuchar mi nombre. Naci en la epoca indicada. En el lugar indicado. Soy el hombre indicado. Nada me detendra.

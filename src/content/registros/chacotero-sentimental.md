@@ -72,6 +72,10 @@ items:
     author: "K'naan"
     date: "2026-06-21"
     link: "/blog/2026/06/21/dosunismo"
+  - title: "Conquest of Paradise"
+    author: "Vangelis"
+    date: "2026-06-22"
+    link: "/blog/2026/06/22/la-ia-la-revolucion-industrial-y-la-conquista-de-america"
 ---
 
 Como diría el Rumpy: "Te vamos a ponerte un tema".
