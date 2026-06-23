@@ -1,13 +1,13 @@
 ---
-title: "Auditoría de Resultados: Polla"
-description: "Reporte estructurado con los resultados, puntuaciones y estadísticas de la competición."
+title: "Dosunismo extremo"
+description: "Es real, no estoy loco"
 pubDate: "2026-06-23"
-tags: ["Ideas", "Fútbol"]
+tags: ["Sobre mí", "Fútbol"]
 ---
 
-Le pedí al fucking clanker que saque las stats de la polla con mis amigos de la U. Los numeros no mienten. Sale a la luz la siverguenzura del dosunismo extremista radical.
+Le pedí al fucking clanker que saque las stats de la polla con mis amigos de la U. Los numeros no mienten. Sale a la luz la siverguenzura del dosunismo extremista radical financiado por el deep state y al qaeda. Estadísticas calculadas hasta el Jordania - Argelia. Juan Perez soy yo btw, obviamente no metí mis datos reales a esta sucia página. Es más, use un tempmail. Todos están en mi contra. Les enseñaré, les enseñaré a toooooodos.
 
-# Reporte de Auditoría de Resultados
+## Reporte de Auditoría de Resultados
 
 Se ha consolidado la información de todos los participantes en un archivo estructurado (CSV). A continuación, se presentan **11 tablas de auditoría** extraídas de los datos oficiales.
 
