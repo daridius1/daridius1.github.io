@@ -20,7 +20,7 @@ Partiré esta publicación por la canción, y aunque nada tiene que ver con el o
 
 Como de costumbre, la IA se toma la agenda de mis conversaciones. Nunca es suficiente. Aunque puertas afuera pareciera que la palabra de la IA ha llegado a todos los rincones de la computación, la polémica sobre cómo se va a integrar a nuestro modelo productivo está lejos de concluir.
 
-## La revolución
+## Las revoluciones
 
 Siendo *La era de la revolución* de Eric Hobsbawm mi libro favorito, los otros dos títulos de esta famosa trilogía sobre la historia del largo siglo XIX dejaron sin duda conceptos a los que esporádicamente le termino dando vueltas. En esta publicación me gustaría rescatar la idea sobre algunos de los grandes ganadores de la primera revolución industrial, sobre los que Eric nos habla en *La era del capital*.
 
@@ -34,9 +34,9 @@ Le pedí a ChatGPT que resumiera la idea, porque igual el libro me lo leí el a�
 
 Como todo buen frenesí, en muchos lados la IA ha jugado un rol más marketero que práctico. Y es que, sin tener el ejemplo a mano, bien sabidos son los casos en los que la integración de la IA ha sido algo más del estilo "Ya chicos, gerencia quiere que hagamos alguna wea con IA, así que metan la IA como se les cante el culo para resolver este problema que, probablemente, no necesita IA para ser resuelto". Esto ha hecho que una parte no menor de los computines tomen posturas escépticas sobre si la IA va a realmente revolucionar tanto el mundo como la gente cree.
 
-## La revolución
+## La revolución de la IA
 
-La IA lo va a cambiar todo, y va a revolucionar nuestro modelo productivo. No sé si tanto como la máquina de vapor, pero no me parece desfachatado pensar que algo de ese orden podría llegar a suceder. Aunque la imbecilidad humana, traducida en proyectos como los que mencion (creados para saciar a gerencia), tendrán un impacto en el tiempo que tome la transferencia tecnológica llegue al día a día de las personas, en los libros de historia aparecerá la década de los 20 como el inicio de esta revolución, que tendrá consecuencias sin duda gigantes, pero por ahora desconocidas.
+La IA lo va a cambiar todo, y va a revolucionar nuestro modelo productivo. No sé si tanto como la máquina de vapor, pero no me parece desfachatado pensar que algo de ese orden podría llegar a suceder. Aunque la imbecilidad humana, traducida en proyectos como el ejemplo anterior (creados para saciar a gerencia), tendrán un impacto en el tiempo que tome la transferencia tecnológica para llegar al día a día de las personas, en los libros de historia aparecerá la década de los 20 como el inicio de esta revolución, que tendrá consecuencias sin duda gigantes, pero por ahora desconocidas.
 
 Hay días en que me siento bendecido. En algún momento, en mis primeros años en la carrera, miraba al pasado y sentía que una ola del tamaño de la llegada del internet (por ejemplo), era de proporciones tales que jamás viviría una revolución de similar magnitud. ¿Qué tan más rápido podría viajar la información? ¿Qué tan más personalizada podría ser? Y, sin embargo, aquí estamos. Puedo ver la ola con mis ojos. Al sacar la lengua se siente lo salado del agua. Tengo corazonadas sobre a qué lugares podría dejarnos. Quiero surfearla. Espero surfearla.
 
