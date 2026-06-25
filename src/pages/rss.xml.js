@@ -8,6 +8,7 @@ export async function GET(context) {
         description: 'Blog de Daridius',
         site: context.site,
         items: blog
+            .filter((post) => !post.data.hidden)
             .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
             .map((post) => ({
                 title: post.data.title,

@@ -1,6 +1,7 @@
 ---
 title: "El baile"
 description: "Just dance"
+hidden: true
 pubDate: "2026-01-20"
 tags: ["Sobre mí"]
 music:

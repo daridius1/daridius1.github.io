@@ -4,20 +4,35 @@ import Layout from "../../layouts/Layout.astro";
 import OptimizedImage from "../../components/OptimizedImage.astro";
 
 export async function getStaticPaths() {
-    const blogEntries = (await getCollection("blog")).sort(
-        (a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) =>
-            b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-    );
+    const allEntries = await getCollection("blog");
+    const visibleEntries = allEntries
+        .filter((post) => !post.data.hidden)
+        .sort(
+            (a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) =>
+                b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+        );
 
-    return blogEntries.map((entry: CollectionEntry<"blog">, index: number) => ({
+    const visiblePaths = visibleEntries.map((entry: CollectionEntry<"blog">, index: number) => ({
         params: { slug: entry.id },
         props: {
             entry,
-            prev:
-                index < blogEntries.length - 1 ? blogEntries[index + 1] : null,
-            next: index > 0 ? blogEntries[index - 1] : null,
+            prev: index < visibleEntries.length - 1 ? visibleEntries[index + 1] : null,
+            next: index > 0 ? visibleEntries[index - 1] : null,
         },
     }));
+
+    const hiddenPaths = allEntries
+        .filter((post) => post.data.hidden)
+        .map((entry: CollectionEntry<"blog">) => ({
+            params: { slug: entry.id },
+            props: {
+                entry,
+                prev: null,
+                next: null,
+            },
+        }));
+
+    return [...visiblePaths, ...hiddenPaths];
 }
 
 interface Props {

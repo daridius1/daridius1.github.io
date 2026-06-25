@@ -6,6 +6,7 @@ const blog = defineCollection({
     schema: z.object({
         title: z.string(),
         description: z.string(),
+        hidden: z.boolean().optional(),
         pubDate: z.coerce.date(),
         // Removed 'category' field. 
         // Future filtering will rely on checking if the 'tags' array contains specific keywords (e.g. 'proyectos').

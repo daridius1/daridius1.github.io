@@ -20,7 +20,7 @@ const { Content } = await render(entry);
 // Fetch related blog posts
 const allPosts = await getCollection("blog");
 const relatedPosts = allPosts
-    .filter((post) => post.data.tags?.includes(entry.data.projectTag))
+    .filter((post) => !post.data.hidden && post.data.tags?.includes(entry.data.projectTag))
     .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 import { formatDate } from "../../utils/date";

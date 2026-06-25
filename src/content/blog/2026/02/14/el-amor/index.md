@@ -1,6 +1,7 @@
 ---
 title: "El amor"
 description: "En el día del amor"
+hidden: true
 pubDate: "2026-02-14"
 tags: ["Sobre mí"]
 music:

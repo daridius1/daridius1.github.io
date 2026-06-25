@@ -1,10 +1,12 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content";
 
-const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort(
-    (a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) =>
-        b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
+const posts: CollectionEntry<"blog">[] = (await getCollection("blog"))
+    .filter((post) => !post.data.hidden)
+    .sort(
+        (a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) =>
+            b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+    );
 
 const rawTags = [...new Set(posts.flatMap((post) => post.data.tags || []))];
 const MAIN_TAGS = ["Sobre mí", "Ideas", "Proyectos", "Reviews"];
