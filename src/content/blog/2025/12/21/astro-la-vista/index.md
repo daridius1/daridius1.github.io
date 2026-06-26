@@ -15,11 +15,11 @@ El tema es que todas las cosas bacanes de Astro no sirven realmente para una pá
 
 El clanker la verdad es que se lució. Este proyecto en particular no tenía casi capas de profundidad, por lo que la mayoría de las tareas eran simplemente lanzarse al barro sin necesidad de mucho contexto previo.
 
-**Antigravity** me gustó bastante. Quemé los créditos gratis en tiempo récord de mis dos correos electrónicos de hecho, jajaja. La forma en que hace el planning (similar a la que hace Cursor, por lo que tengo entendido) es bastante mejor que la de Copilot. Además, los modelos de Google (Gemini) vuelan.
+**Antigravity** me gustó bastante. Quemé los créditos gratis en tiempo récord de mis dos correos electrónicos de hecho jaksjas. La forma en que hace el planning (similar a la que hace Cursor, por lo que tengo entendido) es bastante mejor que la de Copilot. Además, los modelos de Google (Gemini) vuelan.
 
 ## El resultado
 
-Me voy a acostar con una buena demo. Siento que este proyecto es algo que realmente podría hacerse viral, jajaja. La mayor barrera para su avance es el tema de subir tu chat de WhatsApp a una página de la que realmente no sabes qué hace. Yo, siendo muy receloso en estos temas, ni cagando lo haría, de hecho. Pero teniendo en cuenta que estos temas a casi nadie le importan y la gente vende sus datos al mejor postor, tengo fe en que esta vez la sociedad podría, equivocadamente, tomar la decisión correcta y confiar en este humilde servidor.
+Me voy a acostar con una buena demo. Siento que este proyecto es algo que realmente podría hacerse viral sjaksj. La mayor barrera para su avance es el tema de subir tu chat de WhatsApp a una página de la que realmente no sabes qué hace. Yo, siendo muy receloso en estos temas, ni cagando lo haría, de hecho. Pero teniendo en cuenta que estos temas a casi nadie le importan y la gente vende sus datos al mejor postor, tengo fe en que esta vez la sociedad podría, equivocadamente, tomar la decisión correcta y confiar en este humilde servidor.
 
 ## Feedback
 

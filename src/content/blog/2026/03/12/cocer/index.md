@@ -7,7 +7,7 @@ tags: ["Sobre mi", "Ideas"]
 
 A lo largo de mi vida me la he pasado vendiendo la pomada de que me gusta optimizar gastos por medio de la planificación, y mi constante romantización, no de la pobreza, pero de vivir en el arte de estrujar cada peso que se tenga, creo que nace de esta obsesión.
 
-El 2023 fue un año en el que particularmente estaba un poco rayado con acabar con mis microgastos, y aunque en el 90% de las cosas sigo esta filosofía, siempre almorzar en la U fue la instancia en la que "me daba mi gustito" por así decirlo; un Subway, un completo en Gorbea, unas papitas de los egipcios. Nada que uno diga "chucha qué caro", pero analizado fríamente, un gasto más que innecesario.
+El 2023 fue un año en el que particularmente estaba un poco rayado con acabar con mis microgastos, y aunque en el 90% de las cosas sigo esta filosofía, siempre almorzar en la U fue la instancia en la que "me daba mi gustito" por así decirlo: un Subway, un completo en Gorbea, unas papitas de los egipcios. Nada que uno diga "chucha qué caro", pero analizado fríamente, un gasto más que innecesario.
 
 ¿La solución? Para muchos es bastante clara, llevar comida de la casa, pero nunca me gustó hacer esa wea. A la U, tal como al colegio, me gustaba ir sin nada. Cuando pude por primera vez tener mi casillero propio en el DCC fue maravilloso, casi siempre guardaba mi computador y alguna que otra chuchería (como paletas de pingpong), pero nunca comida, a lo más alguna vez guardé copete.
 

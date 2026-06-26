@@ -25,6 +25,6 @@ Este post nace de la necesidad de desquitarme con quizá el problema más grave 
 
 ## Rendimiento en las pollas
 
-Voy la raja. Partí como el hoyo, pero en una misma fecha Colombia le ganó 3 - 1 a Uzbekistán y Ghana le ganó 1 - 0 a Panamá. Ambos resultados los clavé, y ambos con goles en los descuentos. Ambos los grité a todo pulmón jajaja. Desde ese día he estado subiendo en la tabla de posiciones.
+Voy la raja. Partí como el hoyo, pero en una misma fecha Colombia le ganó 3 - 1 a Uzbekistán y Ghana le ganó 1 - 0 a Panamá. Ambos resultados los clavé, y ambos con goles en los descuentos. Ambos los grité a todo pulmón jksjakjs. Desde ese día he estado subiendo en la tabla de posiciones.
 
 Para cerrar la publicación voy a dejar el mejor tema en la historia de los mundiales.

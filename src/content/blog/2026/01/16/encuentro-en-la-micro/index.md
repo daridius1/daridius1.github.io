@@ -13,10 +13,10 @@ La cosa es que le fui a preguntar al chofer cómo llegar al Costanera, y me dijo
 
 ## La lección
 
-Ni idea, pero con esta volada del esperanto y recientemente de aprender morse (que no lo he contado acá, pero estuve viendo unos videos) me di cuenta de que ni todo el esperanto del mundo me habría ayudado en una situación así (como si me fuera a servir en alguna otra jajaja). Por lo que, en mi exploración de las formas no tradicionales de comunicarse, puede, y solo PUEDE, que me proponga aprender lengua de señas en función, principalmente, del éxito que alcance con aprender esperanto (que aún me suena mucho más cool).
+Ni idea, pero con esta volada del esperanto y recientemente de aprender morse (que no lo he contado acá, pero estuve viendo unos videos) me di cuenta de que ni todo el esperanto del mundo me habría ayudado en una situación así (como si me fuera a servir en alguna otra jaksjaks). Por lo que, en mi exploración de las formas no tradicionales de comunicarse, puede, y solo PUEDE, que me proponga aprender lengua de señas en función, principalmente, del éxito que alcance con aprender esperanto (que aún me suena mucho más cool).
 
 ## Algo que pensé
 
 ¿Y si fuera de ese grupo de personas que aprende lengua de señas sin una situación de necesidad? Como que tuvo un familiar o un amigo sordo. ¿No habría sido este el momento por el que esperas años? Ese momento en el que se te infla el pecho, y la cosa por la que te esforzaste por tanto tiempo por fin genera frutos?
 
-Pal pico, yo creo que muchos habrían matado por estar en mis pies en ese momento y lucirse jajaja. Son de esas cosas que solo pasan en la tele. Pero bueno, hice lo mejor que pude y creo que todo salió bien, ojalá que hayan llegado sanas y salvas esas dos personas.
+Pal pico, yo creo que muchos habrían matado por estar en mis pies en ese momento y lucirse jaksjaks. Son de esas cosas que solo pasan en la tele. Pero bueno, hice lo mejor que pude y creo que todo salió bien, ojalá que hayan llegado sanas y salvas esas dos personas.

@@ -13,7 +13,7 @@ Decidí tomar la **555** para llegar al aeropuerto y realmente parecía un huaso
 
 La 555... God. This ugly bastard transportó a aproximadamente 10 pasajeros sanos y salvos desde Pajaritos a la entrada del aeropuerto. Me senté en el primer asiento del segundo piso mientras escuchaba temas ad hoc al momento como *My Way* o *Raindrops Keep Falling On My Head*.
 
-Desde la primera vez hasta ahora, todas las veces que viajé en avión me valió pico. Además, iba con amigos, entonces no tenía tiempo de reflexionar. En la breve vida de este blog me han dado más ganas de tomar fotos que en todos los últimos 25 años juntos, jajaja. Me pregunto si seguirá así.
+Desde la primera vez hasta ahora, todas las veces que viajé en avión me valió pico. Además, iba con amigos, entonces no tenía tiempo de reflexionar. En la breve vida de este blog me han dado más ganas de tomar fotos que en todos los últimos 25 años juntos jksjaksj. Me pregunto si seguirá así.
 
 ## El aeropuerto es hermoso
 
