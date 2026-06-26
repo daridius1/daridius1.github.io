@@ -106,7 +106,9 @@ import LossAnimation from "./LossAnimation.astro";
                 padding: 0.5rem 1.5rem;
                 border-radius: 100px;
                 margin-bottom: 2vh;
-                transition: opacity 0.3s, transform 0.3s;
+                transition:
+                    opacity 0.3s,
+                    transform 0.3s;
             }
 
             .turn-box.spinning {
@@ -118,7 +120,9 @@ import LossAnimation from "./LossAnimation.astro";
                 font-weight: 900;
                 line-height: 0.8;
                 margin: 1vh 0;
-                transition: opacity 0.3s, transform 0.3s;
+                transition:
+                    opacity 0.3s,
+                    transform 0.3s;
             }
 
             .accum-value.spinning {
@@ -334,6 +338,253 @@ import LossAnimation from "./LossAnimation.astro";
                     padding: 1.5rem 0.5rem;
                 }
             }
+
+            /* --- UNDO BAR --- */
+            .undo-bar {
+                flex: 0 0 auto;
+                padding: 0.5vh 4vw 1.5vh;
+                max-width: 800px;
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .btn-undo {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5rem;
+                padding: 0.8rem;
+                border-radius: 12px;
+                border: 1px solid rgba(255, 255, 255, 0.15);
+                background: rgba(255, 255, 255, 0.06);
+                color: rgba(255, 255, 255, 0.7);
+                font-family: inherit;
+                font-weight: 700;
+                font-size: 0.8rem;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                cursor: pointer;
+                transition: all 0.2s;
+            }
+
+            .btn-undo:disabled {
+                opacity: 0.25;
+                cursor: not-allowed;
+            }
+
+            .btn-undo:not(:disabled):active {
+                transform: scale(0.97);
+                background: rgba(255, 255, 255, 0.12);
+            }
+
+            /* --- QUICK MODE --- */
+            .quick-controls {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 2vh 3vw;
+                gap: 2vh;
+            }
+
+            .q-btn {
+                border: none;
+                border-radius: 16px;
+                font-family: inherit;
+                font-weight: 900;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition:
+                    transform 0.1s,
+                    filter 0.1s;
+                color: white;
+            }
+
+            .q-btn:active {
+                transform: scale(0.97);
+                filter: brightness(0.85);
+            }
+
+            .q-btn:disabled {
+                opacity: 0.3;
+                cursor: not-allowed;
+            }
+
+            .q-btn-sigue {
+                flex: 3;
+                background: rgba(255, 255, 255, 0.15);
+                border: 2px solid rgba(255, 255, 255, 0.25);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 1vh;
+            }
+
+            .q-sigue-turn {
+                font-size: min(5vw, 3vh);
+                opacity: 0.8;
+                letter-spacing: 0.1em;
+            }
+
+            .q-sigue-acc {
+                font-size: min(35vw, 25vh);
+                font-weight: 900;
+                line-height: 1;
+            }
+
+            .q-sigue-text {
+                font-size: min(6vw, 4vh);
+                opacity: 0.6;
+                letter-spacing: 0.2em;
+            }
+
+            .q-bottom-row {
+                flex: 1;
+                display: flex;
+                gap: 2vw;
+            }
+
+            .q-btn-pierde {
+                flex: 2;
+                background: rgba(0, 0, 0, 0.25);
+                border: 2px solid rgba(255, 255, 255, 0.15);
+                font-size: min(8vw, 6vh);
+            }
+
+            .q-btn-undo {
+                flex: 1;
+                background: rgba(255, 255, 255, 0.08);
+                color: rgba(255, 255, 255, 0.7);
+                border: 2px solid rgba(255, 255, 255, 0.1);
+                font-size: min(4vw, 3vh);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5vh;
+            }
+
+            /* --- SETTINGS STYLES --- */
+            .setting-row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1rem 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .setting-label {
+                font-weight: 600;
+                font-size: 0.95rem;
+            }
+
+            .setting-section {
+                padding: 1rem 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                display: flex;
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+
+            .switch {
+                position: relative;
+                display: inline-block;
+                width: 52px;
+                height: 28px;
+            }
+
+            .switch input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                inset: 0;
+                background: rgba(255, 255, 255, 0.15);
+                border-radius: 28px;
+                transition: 0.3s;
+            }
+
+            .slider::before {
+                content: "";
+                position: absolute;
+                height: 22px;
+                width: 22px;
+                left: 3px;
+                bottom: 3px;
+                background: white;
+                border-radius: 50%;
+                transition: 0.3s;
+            }
+
+            .switch input:checked + .slider {
+                background: rgba(255, 255, 255, 0.5);
+            }
+
+            .switch input:checked + .slider::before {
+                transform: translateX(24px);
+            }
+
+            .score-inputs {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0.8rem;
+            }
+
+            .score-input-group {
+                display: flex;
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+
+            .score-input-label {
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                opacity: 0.6;
+                font-weight: 700;
+            }
+
+            .score-input {
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 10px;
+                padding: 0.7rem 1rem;
+                color: white;
+                font-family: inherit;
+                font-size: 1.2rem;
+                font-weight: 700;
+                text-align: center;
+                outline: none;
+                width: 100%;
+                -moz-appearance: textfield;
+            }
+
+            .score-input::-webkit-outer-spin-button,
+            .score-input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            .score-input:focus {
+                border-color: white;
+            }
+
+            .btn-apply {
+                background: rgba(255, 255, 255, 0.15) !important;
+                color: white !important;
+                border: 1px solid rgba(255, 255, 255, 0.2) !important;
+                font-size: 0.85rem !important;
+            }
+
+            .btn-apply:active {
+                background: rgba(255, 255, 255, 0.25) !important;
+            }
         </style>
     </head>
     <body>
@@ -350,9 +601,21 @@ import LossAnimation from "./LossAnimation.astro";
                     </div>
                     <div class="header-buttons">
                         <button id="soundBtn" class="sound-btn">
-                            <svg id="soundIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-                                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                            <svg
+                                id="soundIcon"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <polygon
+                                    points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"
+                                ></polygon>
+                                <path
+                                    d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"
+                                ></path>
                             </svg>
                         </button>
                         <button id="openMenu" class="menu-btn">
@@ -386,29 +649,119 @@ import LossAnimation from "./LossAnimation.astro";
                     <div class="accum-value" id="accumulator">1</div>
                 </div>
             </main>
-            
+
             <BallAnimation />
             <LossAnimation />
 
-            <div class="controls">
+            <div class="controls" id="controlsNormal">
                 <button id="btnSigue" class="btn btn-plus">SIGUE</button>
                 <button id="btnPierde" class="btn btn-dump">PIERDE</button>
             </div>
+
+            <div class="undo-bar" id="undoBar">
+                <button id="btnUndo" class="btn-undo" disabled>
+                    <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        ><path d="M3 10h13a4 4 0 0 1 0 8H7"></path><path
+                            d="m3 10 4-4"></path><path d="m3 10 4 4"
+                        ></path></svg
+                    >
+                    DESHACER
+                </button>
+            </div>
+
+            <!-- QUICK MODE -->
+            <div id="quickControls" class="quick-controls hidden">
+                <button id="qBtnSigue" class="q-btn q-btn-sigue">
+                    <span class="q-sigue-turn" id="qSigueTurn"
+                        >TURNO DE JUGADOR 1</span
+                    >
+                    <span class="q-sigue-acc" id="qSigueAcc">1</span>
+                    <span class="q-sigue-text">SIGUE</span>
+                </button>
+                <div class="q-bottom-row">
+                    <button id="qBtnPierde" class="q-btn q-btn-pierde"
+                        >PIERDE</button
+                    >
+                    <button id="qBtnUndo" class="q-btn q-btn-undo" disabled>
+                        <svg
+                            width="22"
+                            height="22"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            ><path d="M3 10h13a4 4 0 0 1 0 8H7"></path><path
+                                d="m3 10 4-4"></path><path d="m3 10 4 4"
+                            ></path></svg
+                        >
+                        DESHACER
+                    </button>
+                </div>
+            </div>
         </section>
 
-        <!-- MODAL -->
+        <!-- SETTINGS MODAL -->
         <div id="menu-modal" class="modal-overlay hidden">
             <div class="modal-content">
-                <h3 class="modal-title">¿Volver al menú?</h3>
-                <p style="opacity: 0.7;">
-                    Se perderá el progreso de la partida actual.
-                </p>
+                <h3 class="modal-title">Configuración</h3>
+
+                <div class="setting-row">
+                    <span class="setting-label">Marcador rápido</span>
+                    <label class="switch">
+                        <input type="checkbox" id="quickModeToggle" />
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="setting-section">
+                    <span class="setting-label">Marcador manual</span>
+                    <div class="score-inputs">
+                        <div class="score-input-group">
+                            <label class="score-input-label" id="setScoreLabel1"
+                                >P1</label
+                            >
+                            <input
+                                type="number"
+                                id="setScore1"
+                                class="score-input"
+                                min="0"
+                                value="0"
+                            />
+                        </div>
+                        <div class="score-input-group">
+                            <label class="score-input-label" id="setScoreLabel2"
+                                >P2</label
+                            >
+                            <input
+                                type="number"
+                                id="setScore2"
+                                class="score-input"
+                                min="0"
+                                value="0"
+                            />
+                        </div>
+                    </div>
+                    <button id="applyScores" class="btn-modal btn-apply"
+                        >APLICAR PUNTAJES</button
+                    >
+                </div>
+
                 <div class="modal-actions">
                     <button id="confirmExit" class="btn-modal btn-confirm"
-                        >SÍ, VOLVER AL MENÚ</button
+                        >VOLVER AL MENÚ</button
                     >
                     <button id="closeMenu" class="btn-modal btn-cancel"
-                        >CANCELAR</button
+                        >CERRAR</button
                     >
                 </div>
             </div>
@@ -445,84 +798,152 @@ import LossAnimation from "./LossAnimation.astro";
         </section>
 
         <script>
-            // --- STATE ---
             const params = new URLSearchParams(window.location.search);
             const p1 = params.get("p1") || "Jugador 1";
             const p2 = params.get("p2") || "Jugador 2";
-            const startParam = params.get("start");
-            const startIndex = startParam ? parseInt(startParam) : 0;
+            const startIndex = params.get("start")
+                ? parseInt(params.get("start")!)
+                : 0;
 
-            // Estado del sonido
             let soundEnabled = localStorage.getItem("tiptap-sound") !== "false";
-            const soundBtn = document.getElementById("soundBtn") as HTMLButtonElement;
-            
-            // Sistema de audio para success y error
+            const soundBtn = document.getElementById(
+                "soundBtn",
+            ) as HTMLButtonElement;
             const successAudio = new Audio("/audio/success_bell-6776.mp3");
-            successAudio.volume = 0.8; // Volumen más alto
-            // IMPORTANTE: Desactivar 'preservesPitch' para que al cambiar playbackRate cambie también el tono
+            successAudio.volume = 0.8;
             (successAudio as any).preservesPitch = false;
             (successAudio as any).mozPreservesPitch = false;
             (successAudio as any).webkitPreservesPitch = false;
-
             const errorAudio = new Audio("/audio/error-010-206498.mp3");
             errorAudio.volume = 0.35;
-            
+
             function updateSoundButton() {
-                const soundIcon = document.getElementById("soundIcon");
-                if (soundBtn && soundIcon) {
-                    if (soundEnabled) {
-                        soundIcon.innerHTML = '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>';
-                    } else {
-                        soundIcon.innerHTML = '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line>';
-                    }
+                const si = document.getElementById("soundIcon");
+                if (soundBtn && si) {
+                    si.innerHTML = soundEnabled
+                        ? '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>'
+                        : '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line>';
                     soundBtn.classList.toggle("muted", !soundEnabled);
                 }
             }
-            
             updateSoundButton();
-            
-            if (soundBtn) {
+            if (soundBtn)
                 soundBtn.onclick = () => {
                     soundEnabled = !soundEnabled;
-                    localStorage.setItem("tiptap-sound", soundEnabled.toString());
+                    localStorage.setItem(
+                        "tiptap-sound",
+                        soundEnabled.toString(),
+                    );
                     updateSoundButton();
                 };
-            }
 
+            let quickMode = localStorage.getItem("tiptap-quick") === "true";
             const state = {
                 players: [p1, p2],
-                scores: [0, 0],
+                scores: [0, 0] as number[],
                 accumulator: 1,
                 activePlayerIndex: startIndex,
                 gameOver: false,
             };
-
+            const history: {
+                scores: number[];
+                accumulator: number;
+                activePlayerIndex: number;
+            }[] = [];
             const colors = ["#3b82f6", "#ef4444"];
             const WIN_SCORE = 30;
 
-            // --- DOM ---
+            function saveSnap() {
+                history.push({
+                    scores: [...state.scores],
+                    accumulator: state.accumulator,
+                    activePlayerIndex: state.activePlayerIndex,
+                });
+                updateUndoBtns();
+            }
+            function undo() {
+                if (!history.length) return;
+                const s = history.pop()!;
+                Object.assign(state, {
+                    scores: s.scores,
+                    accumulator: s.accumulator,
+                    activePlayerIndex: s.activePlayerIndex,
+                    gameOver: false,
+                });
+                views.winner?.classList.add("hidden");
+                views.game?.classList.remove("hidden");
+                if (soundEnabled) {
+                    successAudio.currentTime = 0;
+                    successAudio.playbackRate = 0.7;
+                    successAudio.play().catch(() => {});
+                }
+                updateUI();
+                updateUndoBtns();
+            }
+            function updateUndoBtns() {
+                const h = history.length > 0;
+                const a = document.getElementById(
+                    "btnUndo",
+                ) as HTMLButtonElement | null;
+                const b = document.getElementById(
+                    "qBtnUndo",
+                ) as HTMLButtonElement | null;
+                if (a) a.disabled = !h;
+                if (b) b.disabled = !h;
+            }
+
             const views = {
                 game: document.getElementById("game-view"),
                 winner: document.getElementById("winner-view"),
                 modal: document.getElementById("menu-modal"),
             };
-
             const els = {
-                score1Val: document.getElementById("score1Val"),
-                score2Val: document.getElementById("score2Val"),
-                score1Label: document.getElementById("score1Label"),
-                score2Label: document.getElementById("score2Label"),
-                accumulator: document.getElementById("accumulator"),
-                turnIndicator: document.getElementById("turnIndicator"),
-                btnSigue: document.getElementById("btnSigue") as HTMLButtonElement | null,
-                btnPierde: document.getElementById("btnPierde") as HTMLButtonElement | null,
+                s1: document.getElementById("score1Val"),
+                s2: document.getElementById("score2Val"),
+                l1: document.getElementById("score1Label"),
+                l2: document.getElementById("score2Label"),
+                acc: document.getElementById("accumulator"),
+                turn: document.getElementById("turnIndicator"),
+                sigue: document.getElementById(
+                    "btnSigue",
+                ) as HTMLButtonElement | null,
+                pierde: document.getElementById(
+                    "btnPierde",
+                ) as HTMLButtonElement | null,
                 openMenu: document.getElementById("openMenu"),
                 closeMenu: document.getElementById("closeMenu"),
-                confirmExit: document.getElementById("confirmExit"),
-                winnerName: document.getElementById("winner-name"),
-                playAgain: document.getElementById("playAgain"),
+                exit: document.getElementById("confirmExit"),
+                wName: document.getElementById("winner-name"),
+                again: document.getElementById("playAgain"),
                 goMenu: document.getElementById("goMenu"),
             };
+            const qEls = {
+                wrap: document.getElementById("quickControls"),
+                norm: document.getElementById("controlsNormal"),
+                uBar: document.getElementById("undoBar"),
+                main: document.querySelector("main") as HTMLElement | null,
+                sigue: document.getElementById(
+                    "qBtnSigue",
+                ) as HTMLButtonElement | null,
+                sigueTurn: document.getElementById("qSigueTurn"),
+                sigueAcc: document.getElementById("qSigueAcc"),
+                pierde: document.getElementById(
+                    "qBtnPierde",
+                ) as HTMLButtonElement | null,
+            };
+
+            function applyQuickMode() {
+                const show = (el: HTMLElement | null, v: boolean) => {
+                    if (el) el.classList.toggle("hidden", !v);
+                };
+                show(qEls.wrap, quickMode);
+                show(qEls.norm, !quickMode);
+                show(qEls.uBar, !quickMode);
+                if (qEls.main) qEls.main.classList.toggle("hidden", quickMode);
+                document.body.style.backgroundColor =
+                    colors[state.activePlayerIndex];
+                updateUI();
+            }
 
             function updateUI() {
                 if (
@@ -532,171 +953,154 @@ import LossAnimation from "./LossAnimation.astro";
                     state.gameOver = true;
                     views.game?.classList.add("hidden");
                     views.winner?.classList.remove("hidden");
-                    const winIdx = state.scores[0] >= WIN_SCORE ? 0 : 1;
-                    if (els.winnerName)
-                        els.winnerName.textContent =
-                            state.players[winIdx].toUpperCase();
-                    document.body.style.backgroundColor = colors[winIdx];
+                    const w = state.scores[0] >= WIN_SCORE ? 0 : 1;
+                    if (els.wName)
+                        els.wName.textContent = state.players[w].toUpperCase();
+                    document.body.style.backgroundColor = colors[w];
                     return;
                 }
-
-                if (els.score1Val)
-                    els.score1Val.textContent = state.scores[0].toString();
-                if (els.score2Val)
-                    els.score2Val.textContent = state.scores[1].toString();
-                if (els.score1Label)
-                    els.score1Label.textContent = state.players[0];
-                if (els.score2Label)
-                    els.score2Label.textContent = state.players[1];
-                if (els.accumulator)
-                    els.accumulator.textContent = state.accumulator.toString();
-                if (els.turnIndicator)
-                    els.turnIndicator.textContent = `Turno de ${state.players[state.activePlayerIndex]}`;
+                // Normal mode
+                if (els.s1) els.s1.textContent = state.scores[0].toString();
+                if (els.s2) els.s2.textContent = state.scores[1].toString();
+                if (els.l1) els.l1.textContent = state.players[0];
+                if (els.l2) els.l2.textContent = state.players[1];
+                if (els.acc) els.acc.textContent = state.accumulator.toString();
+                if (els.turn)
+                    els.turn.textContent = `Turno de ${state.players[state.activePlayerIndex]}`;
                 document.body.style.backgroundColor =
                     colors[state.activePlayerIndex];
+
+                // Quick mode updates
+                if (qEls.sigueTurn)
+                    qEls.sigueTurn.textContent = `Turno de ${state.players[state.activePlayerIndex]}`;
+                if (qEls.sigueAcc)
+                    qEls.sigueAcc.textContent = state.accumulator.toString();
             }
 
-            if (els.btnSigue) {
-                els.btnSigue.onclick = () => {
+            // Normal mode: SIGUE
+            if (els.sigue) {
+                els.sigue.onclick = () => {
                     if (state.gameOver) return;
-                    
-                    // Bloquear botones durante animación
-                    if (els.btnSigue) els.btnSigue.disabled = true;
-                    if (els.btnPierde) els.btnPierde.disabled = true;
-                    
-                    const currentValue = state.accumulator;
-                    const direction = state.activePlayerIndex === 0 ? "left-to-right" : "right-to-left";
-                    
-                    // Reproducir sonido de éxito con pitch proporcional al accumulator
+                    saveSnap();
+                    if (els.sigue) els.sigue.disabled = true;
+                    if (els.pierde) els.pierde.disabled = true;
+                    const cv = state.accumulator;
+                    const dir =
+                        state.activePlayerIndex === 0
+                            ? "left-to-right"
+                            : "right-to-left";
                     if (soundEnabled) {
                         successAudio.currentTime = 0;
-                        // Pitch proporcional: 1.0 base + 0.06 por cada punto del acumulador
-                        successAudio.playbackRate = Math.min(1.0 + (currentValue - 1) * 0.06, 2.0);
+                        successAudio.playbackRate = Math.min(
+                            1.0 + (cv - 1) * 0.06,
+                            2.0,
+                        );
                         successAudio.play().catch(() => {});
                     }
-                    
-                    // 1. Spin-out (salida)
-                    if (els.accumulator) els.accumulator.classList.add("spinning");
-                    if (els.turnIndicator) els.turnIndicator.classList.add("spinning");
-                    
+                    if (els.acc) els.acc.classList.add("spinning");
+                    if (els.turn) els.turn.classList.add("spinning");
                     setTimeout(() => {
-                        // Ocultar después del spin-out
-                        if (els.accumulator) els.accumulator.style.display = "none";
-                        if (els.turnIndicator) els.turnIndicator.style.display = "none";
-                        
-                        // 2. Animación de la bola
-                        (window as any).animateBall(currentValue, direction, () => {
-                            // 3. Actualizar estado y UI mientras están ocultos
+                        if (els.acc) els.acc.style.display = "none";
+                        if (els.turn) els.turn.style.display = "none";
+                        (window as any).animateBall(cv, dir, () => {
                             state.accumulator++;
-                            state.activePlayerIndex = state.activePlayerIndex === 0 ? 1 : 0;
+                            state.activePlayerIndex =
+                                state.activePlayerIndex === 0 ? 1 : 0;
                             updateUI();
-                            
-                            // 4. Resetear estado visual y mostrar
-                            if (els.accumulator) {
-                                els.accumulator.classList.remove("spinning");
-                                els.accumulator.style.opacity = "0";
-                                els.accumulator.style.transform = "rotateY(-90deg)";
-                                els.accumulator.style.display = "";
+                            if (els.acc) {
+                                els.acc.classList.remove("spinning");
+                                els.acc.style.opacity = "0";
+                                els.acc.style.transform = "rotateY(-90deg)";
+                                els.acc.style.display = "";
                             }
-                            if (els.turnIndicator) {
-                                els.turnIndicator.classList.remove("spinning");
-                                els.turnIndicator.style.opacity = "0";
-                                els.turnIndicator.style.transform = "rotateY(-90deg)";
-                                els.turnIndicator.style.display = "";
+                            if (els.turn) {
+                                els.turn.classList.remove("spinning");
+                                els.turn.style.opacity = "0";
+                                els.turn.style.transform = "rotateY(-90deg)";
+                                els.turn.style.display = "";
                             }
-                            
-                            // 5. Aplicar animación en el siguiente frame
                             requestAnimationFrame(() => {
-                                if (els.accumulator) {
-                                    els.accumulator.style.opacity = "";
-                                    els.accumulator.style.transform = "";
-                                    els.accumulator.classList.add("spinning-in");
+                                if (els.acc) {
+                                    els.acc.style.opacity = "";
+                                    els.acc.style.transform = "";
+                                    els.acc.classList.add("spinning-in");
                                 }
-                                if (els.turnIndicator) {
-                                    els.turnIndicator.style.opacity = "";
-                                    els.turnIndicator.style.transform = "";
-                                    els.turnIndicator.classList.add("spinning-in");
+                                if (els.turn) {
+                                    els.turn.style.opacity = "";
+                                    els.turn.style.transform = "";
+                                    els.turn.classList.add("spinning-in");
                                 }
-                                
-                                // 6. Limpiar clases y desbloquear botones
                                 setTimeout(() => {
-                                    if (els.accumulator) els.accumulator.classList.remove("spinning-in");
-                                    if (els.turnIndicator) els.turnIndicator.classList.remove("spinning-in");
-                                    if (els.btnSigue) els.btnSigue.disabled = false;
-                                    if (els.btnPierde) els.btnPierde.disabled = false;
+                                    if (els.acc)
+                                        els.acc.classList.remove("spinning-in");
+                                    if (els.turn)
+                                        els.turn.classList.remove(
+                                            "spinning-in",
+                                        );
+                                    if (els.sigue) els.sigue.disabled = false;
+                                    if (els.pierde) els.pierde.disabled = false;
                                 }, 400);
                             });
                         });
                     }, 400);
                 };
             }
-            if (els.btnPierde) {
-                els.btnPierde.onclick = () => {
+
+            // Normal mode: PIERDE
+            if (els.pierde) {
+                els.pierde.onclick = () => {
                     if (state.gameOver) return;
-                    
-                    // Bloquear botones durante animación
-                    if (els.btnSigue) els.btnSigue.disabled = true;
-                    if (els.btnPierde) els.btnPierde.disabled = true;
-                    
-                    const currentValue = state.accumulator;
-                    
-                    // Reproducir sonido de error
+                    saveSnap();
+                    if (els.sigue) els.sigue.disabled = true;
+                    if (els.pierde) els.pierde.disabled = true;
+                    const cv = state.accumulator;
                     if (soundEnabled) {
                         errorAudio.currentTime = 0;
                         errorAudio.play().catch(() => {});
                     }
-                    
-                    // 1. Spin-out (salida)
-                    if (els.accumulator) els.accumulator.classList.add("spinning");
-                    if (els.turnIndicator) els.turnIndicator.classList.add("spinning");
-                    
+                    if (els.acc) els.acc.classList.add("spinning");
+                    if (els.turn) els.turn.classList.add("spinning");
                     setTimeout(() => {
-                        // Ocultar después del spin-out
-                        if (els.accumulator) els.accumulator.style.display = "none";
-                        if (els.turnIndicator) els.turnIndicator.style.display = "none";
-                        
-                        // 2. Animación de pérdida
-                        (window as any).animateLoss(currentValue, () => {
-                            // 3. Actualizar estado y UI mientras están ocultos
+                        if (els.acc) els.acc.style.display = "none";
+                        if (els.turn) els.turn.style.display = "none";
+                        (window as any).animateLoss(cv, () => {
                             const opp = state.activePlayerIndex === 0 ? 1 : 0;
                             state.scores[opp] += state.accumulator;
                             state.accumulator = 1;
                             state.activePlayerIndex = opp;
                             updateUI();
-                            
-                            // 4. Resetear estado visual y mostrar
-                            if (els.accumulator) {
-                                els.accumulator.classList.remove("spinning");
-                                els.accumulator.style.opacity = "0";
-                                els.accumulator.style.transform = "rotateY(-90deg)";
-                                els.accumulator.style.display = "";
+                            if (els.acc) {
+                                els.acc.classList.remove("spinning");
+                                els.acc.style.opacity = "0";
+                                els.acc.style.transform = "rotateY(-90deg)";
+                                els.acc.style.display = "";
                             }
-                            if (els.turnIndicator) {
-                                els.turnIndicator.classList.remove("spinning");
-                                els.turnIndicator.style.opacity = "0";
-                                els.turnIndicator.style.transform = "rotateY(-90deg)";
-                                els.turnIndicator.style.display = "";
+                            if (els.turn) {
+                                els.turn.classList.remove("spinning");
+                                els.turn.style.opacity = "0";
+                                els.turn.style.transform = "rotateY(-90deg)";
+                                els.turn.style.display = "";
                             }
-                            
-                            // 5. Aplicar animación en el siguiente frame
                             requestAnimationFrame(() => {
-                                if (els.accumulator) {
-                                    els.accumulator.style.opacity = "";
-                                    els.accumulator.style.transform = "";
-                                    els.accumulator.classList.add("spinning-in");
+                                if (els.acc) {
+                                    els.acc.style.opacity = "";
+                                    els.acc.style.transform = "";
+                                    els.acc.classList.add("spinning-in");
                                 }
-                                if (els.turnIndicator) {
-                                    els.turnIndicator.style.opacity = "";
-                                    els.turnIndicator.style.transform = "";
-                                    els.turnIndicator.classList.add("spinning-in");
+                                if (els.turn) {
+                                    els.turn.style.opacity = "";
+                                    els.turn.style.transform = "";
+                                    els.turn.classList.add("spinning-in");
                                 }
-                                
-                                // 6. Limpiar clases y desbloquear botones
                                 setTimeout(() => {
-                                    if (els.accumulator) els.accumulator.classList.remove("spinning-in");
-                                    if (els.turnIndicator) els.turnIndicator.classList.remove("spinning-in");
-                                    if (els.btnSigue) els.btnSigue.disabled = false;
-                                    if (els.btnPierde) els.btnPierde.disabled = false;
+                                    if (els.acc)
+                                        els.acc.classList.remove("spinning-in");
+                                    if (els.turn)
+                                        els.turn.classList.remove(
+                                            "spinning-in",
+                                        );
+                                    if (els.sigue) els.sigue.disabled = false;
+                                    if (els.pierde) els.pierde.disabled = false;
                                 }, 400);
                             });
                         });
@@ -704,41 +1108,128 @@ import LossAnimation from "./LossAnimation.astro";
                 };
             }
 
+            // Quick mode handlers
+            if (qEls.sigue) {
+                qEls.sigue.onclick = () => {
+                    if (state.gameOver) return;
+                    saveSnap();
+                    const cv = state.accumulator;
+                    if (soundEnabled) {
+                        successAudio.currentTime = 0;
+                        successAudio.playbackRate = Math.min(
+                            1.0 + (cv - 1) * 0.06,
+                            2.0,
+                        );
+                        successAudio.play().catch(() => {});
+                    }
+                    state.accumulator++;
+                    state.activePlayerIndex =
+                        state.activePlayerIndex === 0 ? 1 : 0;
+                    updateUI();
+                };
+            }
+            if (qEls.pierde) {
+                qEls.pierde.onclick = () => {
+                    if (state.gameOver) return;
+                    saveSnap();
+                    if (soundEnabled) {
+                        errorAudio.currentTime = 0;
+                        errorAudio.play().catch(() => {});
+                    }
+                    const opp = state.activePlayerIndex === 0 ? 1 : 0;
+                    state.scores[opp] += state.accumulator;
+                    state.accumulator = 1;
+                    state.activePlayerIndex = opp;
+                    updateUI();
+                };
+            }
+
+            // Undo buttons
+            document.getElementById("btnUndo")?.addEventListener("click", undo);
+            document
+                .getElementById("qBtnUndo")
+                ?.addEventListener("click", undo);
+
+            // Settings modal
+            const quickToggle = document.getElementById(
+                "quickModeToggle",
+            ) as HTMLInputElement | null;
+            const applyScoresBtn = document.getElementById("applyScores");
+            const setS1 = document.getElementById(
+                "setScore1",
+            ) as HTMLInputElement | null;
+            const setS2 = document.getElementById(
+                "setScore2",
+            ) as HTMLInputElement | null;
+            const setSL1 = document.getElementById("setScoreLabel1");
+            const setSL2 = document.getElementById("setScoreLabel2");
+
+            if (quickToggle) {
+                quickToggle.checked = quickMode;
+                quickToggle.onchange = () => {
+                    quickMode = quickToggle.checked;
+                    localStorage.setItem("tiptap-quick", quickMode.toString());
+                    applyQuickMode();
+                };
+            }
             if (els.openMenu)
-                els.openMenu.onclick = () =>
+                els.openMenu.onclick = () => {
+                    if (setS1) setS1.value = state.scores[0].toString();
+                    if (setS2) setS2.value = state.scores[1].toString();
+                    if (setSL1) setSL1.textContent = state.players[0];
+                    if (setSL2) setSL2.textContent = state.players[1];
                     views.modal?.classList.remove("hidden");
+                };
             if (els.closeMenu)
                 els.closeMenu.onclick = () =>
                     views.modal?.classList.add("hidden");
-            if (els.confirmExit)
-                els.confirmExit.onclick = () => {
+            if (els.exit)
+                els.exit.onclick = () => {
                     window.location.href = "./";
                 };
+            if (applyScoresBtn)
+                applyScoresBtn.onclick = () => {
+                    saveSnap();
+                    state.scores[0] = Math.max(
+                        0,
+                        parseInt(setS1?.value || "0") || 0,
+                    );
+                    state.scores[1] = Math.max(
+                        0,
+                        parseInt(setS2?.value || "0") || 0,
+                    );
+                    if (soundEnabled) {
+                        successAudio.currentTime = 0;
+                        successAudio.playbackRate = 1.0;
+                        successAudio.play().catch(() => {});
+                    }
+                    updateUI();
+                    views.modal?.classList.add("hidden");
+                };
 
-            if (els.playAgain)
-                els.playAgain.onclick = () => {
+            if (els.again)
+                els.again.onclick = () => {
                     state.scores = [0, 0];
                     state.accumulator = 1;
                     state.gameOver = false;
+                    history.length = 0;
                     views.winner?.classList.add("hidden");
                     views.game?.classList.remove("hidden");
-                    updateUI();
+                    updateUndoBtns();
+                    applyQuickMode();
                 };
-
             if (els.goMenu)
                 els.goMenu.onclick = () => {
                     window.location.href = "./";
                 };
 
-            // Initial UI update
-            updateUI();
-
-            // Prevent scroll/zoom
+            applyQuickMode();
+            updateUndoBtns();
             document.addEventListener(
                 "touchmove",
                 (e) => {
-                    const target = e.target as HTMLElement;
-                    if (target && target.tagName !== "BUTTON")
+                    const t = e.target as HTMLElement;
+                    if (t && t.tagName !== "BUTTON" && t.tagName !== "INPUT")
                         e.preventDefault();
                 },
                 { passive: false },
