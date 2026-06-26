@@ -80,6 +80,10 @@ items:
     author: "Pink Floyd"
     date: "2026-06-23"
     link: "/blog/2026/06/23/auditoria-polla"
+  - title: "Mad Scientist card sounds in 12 languages"
+    author: "Hearthstone"
+    date: "2026-06-25"
+    link: "/blog/2026/06/25/los-platos"
 ---
 
 Como diría el Rumpy: "Te vamos a ponerte un tema".
