@@ -1,42 +1,62 @@
 ---
-title: "Los platos"
-description: "Perfectible"
-pubDate: "2026-06-25"
-tags: ["Ideas", "Salismo"]
-music:
-  title: "Mad Scientist card sounds in 12 languages"
-  author: "Hearthstone"
-  verse: "I'll show them! I'll show them all!"
+title: "Bluetooth"
+description: ""
+pubDate: "2026-06-29"
+tags: ["Ideas", "Delirios", "Salismo"]
 ---
 
-Mad Scientist card sounds in 12 languages -Hearthstone
+Desde hace un tiempo, sobre la ruta habitual entre mi casas y la universidad, me percate de la existencia de lugares muy puntuales donde el bluetooth de mis audifonos comenzaba a fallar. porque? seria mi nueva mision descubrir quien estaba detras de esto.
 
-A diferencia de las tazas*aca pon una referenica al post de las tazas*, la mayoria de los platos en los hogares de chile cumplen con uno de los principales principios del orden segun el salismo: son apilables. Aun asi, para alcanzar un nivel de optimizacion superior, como en la mayoria de las cosas, en necesario empezar el diseño desde cero, considerando tanto los costes de produccion (que son los que siempre se toman en cuenta) como los costes de mantenimiento, que en el caso de los platos son INFINITAMENTE mas altos.
+El primer paso fue identificar los 3 principales lugares donde el descarado ataque a mis dispositivos electronicos fue perpetrado, cruzando santa elena para llegar al metro rodrigo de araya, cruzando avenida mata para tomar el metro irarrazabal y cruzando blanco encalada para llegar a la U.
 
-## Cuanto cuesta un plato?
+*poner foto de ira, rodrgio y blanco, con una bajada que indique que lugares son*
 
-Como lo he explicado en multiples ocasiones, el costo verdadero de las cosas es la suma del costo de adquisicion mas el costo de mantencion. En el caso del plato, de entre todas las cosas que se necesitan para mantener uno, la que destaca por su alto precio es la parte de lavarlos.
+## El objetivo
 
-## Lavar los platos
+Encontrar patrones en cada uno de los 3 lugares para identificar el origen de estos ciberataques, y poder asi preparar un plan de contrataque para hacerle frente a estas fuerzas del mal.
 
-En lo personal, lavo la loza frecuentemente en mi casa. No sufro tanto haciendolo, pero es algo que definitivamente preferiria no hacer. Se vuelve mas problematico aun en invierno, cuando lavar algo tan minimo como una cuchara implica cagarse de frio las manos, y asi.
+## Fuente confiable
 
-Es facil comprobar que no soy la unica persona que preferiria no hacerlo, y es que si a nadie le importara, no apareceria en el catalogo del lider lo que promete ser la solucion a este problema. el lavavajillas.
+O ESO CREIA YO. Resulta que tanto el cruce en metro rodrigo de araya como el de blanco encalada para llegar a la U tienen una fuente cerca. En el caso de rodrigo la fuente mardoqueo y en el de blanco una fuente de agua. Las que pense eran feuntes cercanas resultaron ser fuentes serviles a satanas, ¡pero yo soy mas astuto! pronto preparare el plan para neutralizar este activo del enemigo.
 
-## El lavavajillas
+*poner foto de feutne blanco y fuente rodrigo*
 
-No es tan comun tener uno. Pero de las pocas reviews que he recopilado, pareciera ser claro que apañan bastante para lavar la loza, pero que su mantenimiento tampoco es tan facil, ocupan un espacio no menor, y ante casos de limpieza dificil (como platos muy grasosos) no terminan de ser suficientes.
+## Gigantografia electrica
 
-## El problema
+Algo no calzaba, el enemigo necesitaria una base de operaciones electronicas para operar con tal presicion sobre mi campo magnetico ¡ciego me senti al percatarme de que seimpre estuvo frente a mis ojos! tanto el cruce de irarrazabal como el de rodrigo tienen gigantografias digitales listas para interceptar las señales que me permiten escuchar los clasicos romanticos de ayer y hoy pero la amenaza fue identificada, y pronto pasara a ser no mas que escombros.
 
-Es el diseño de una solucion general para un problema que podria perfectamente no serlo. A pesar de no tener evidencia de que un lavavajillas especializado en diseños estandarizados y especificos de platos, vasos, etc. obtendria resultados sustancialmente mejores que los lavavajillas actuales (que es algo que creo firmemente en todo caso), es imposible no convencerse de que, como minimo, tendria un rendimiento igual o mejor que lo que tenemos actualmente.
+*poner gigantografias de rodrigo e ira*
 
-## Como implementar
+## Financiamiento
 
-En mi mundo ideal, generalizar los tamaños estandarizados seria lo mejor. Pero teniendo en cuenta lo imposible que seria hacerlo, me imagino paquetes de lavavajillas + platos/cubiertos/vasos/etc. Una idea que se me ocurrio y que no tengo como sustentar es la de en una caja cerrada, se puedan meter las cosas y que calcen de forma excata o casi exacta, y con eso las dejas reposando inundadas en algun quimico chernobliano que saque la grasa y luego se enjuaga en la misma wea y queda impecable.
+Aun asi, algo no calzaba. Tal equipo tecnologico requeriria financiamiento, y luego de trazar y seguir el rastro del dinero, se hizo evidente. Tanto en rodrigo como en blanco estas celulas antisalisitas se financian a partir de impresiones, en algunos casos, incluso en tres dimensiones. ¡que audacia!
 
-*agrea invento.png, y ponle en la bajadael texto: una wea asi*
+*poner poner imagenes de impresiones*
 
-## Idea vapuleada
+## Quien
 
-Masacraron mi idea en el cdi, malditos, les enseñaré, les enseñare a tooooodooooos.
+Tan solo faltaba descubrir al antagonista de esta historia. Estaba desesperado, parecia que no habian dejado rastro en niguna de sus maniobras, hasta que en el ultimo de los informes de inteligencia todo hizo sentido.
+
+*poner imagenes de egipcios ira y blanco*
+
+## Los egipcios
+
+Era que no, mi archienemigos desde aquel dia que intente devolver unas papas que qeudaron muy saladas. Habia pasado mucho tiempo desde la ultmia operacion de la que me entere y que conspiraba contra mi persona. Por un momento pense que se habian desbandado, y cuando mas baja  tuve la guardia. pam. me dan un golpe del que recuperarse sera muyu dificil. interrumpir mi musica en el coro de paisaje de franco simone significo una perdida de billones para la cupula del estado salista. los egipcios y sus secuaces lo volvieron a hacer. pero esto no quedara asi.
+
+## La nave nodriza
+
+Gracias a estos nuevos descubrmientos, y luego de correr algoritmos de busqueda intensiva en supercomputadoras de billones de dolares, logre dar con el cuartel general de este grupo insurgente. Y es que se esconden ni mas ni menos que en la embajada egipcia!
+
+*foto de la embajada*
+
+Al inicio no lo quise creer. siempre tuve buena relacion con el estado egipcio, no por nada era mi main en el civilization V. hasta que la pista que con la que confirme la traicion salio a la luz. Quede desolado, y es que a solo unos pocos pasos de la embajada se encontraba ni mas ni menos que:
+
+*foto de fuente_embajada, es una fuente mardoqueo, ponlo en la descripcion*
+
+## El plan
+
+Para lograr acabar con esa artimaña lo primero sera tomarme las pastillas. luego, me autocomplacere para lograr pensar con mayor claridad. Y finalmentem, lobotomizare mis pensamientos consumiendo el opio del pueblo, un partido del mundial (alemania vs paraguay).
+
+## En la polla
+
+partidazo. puse que ganaba alemania 3 - 1. necesito estos puntos para seguir soñando. deseenme suerte.

@@ -76,14 +76,14 @@ items:
     author: "Vangelis"
     date: "2026-06-22"
     link: "/blog/2026/06/22/la-ia-la-revolucion-industrial-y-la-conquista-de-america"
-  - title: "Money"
-    author: "Pink Floyd"
-    date: "2026-06-23"
-    link: "/blog/2026/06/23/auditoria-polla"
   - title: "Mad Scientist card sounds in 12 languages"
     author: "Hearthstone"
     date: "2026-06-25"
     link: "/blog/2026/06/25/los-platos"
+  - title: "Paisaje"
+    author: "Franco Simone"
+    date: "2026-06-29"
+    link: "/blog/2026/06/29/bluetooth"
 ---
 
 Como diría el Rumpy: "Te vamos a ponerte un tema".
