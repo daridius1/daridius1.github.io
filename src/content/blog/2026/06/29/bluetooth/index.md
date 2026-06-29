@@ -6,7 +6,7 @@ tags: ["Ideas", "Delirios", "Salismo"]
 music:
   title: "Paisaje"
   author: "Franco Simone"
-  verse: "No, no me puedo contener, mi vida es un paisaje..."
+  verse: "Jamás la lógica del mundo nos ha dirigido"
 ---
 
 Desde hace un tiempo, sobre la ruta habitual entre mi casa y la universidad, me percaté de la existencia de lugares muy puntuales donde el Bluetooth de mis audífonos comenzaba a fallar. ¿Por qué? Sería mi nueva misión descubrir quién estaba detrás de esto.
