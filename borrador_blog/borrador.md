@@ -1,62 +1,54 @@
 ---
-title: "Bluetooth"
-description: ""
-pubDate: "2026-06-29"
-tags: ["Ideas", "Delirios", "Salismo"]
+title: "Uber"
+description: "Las combinadas"
+pubDate: "2026-06-30"
+tags: ["Ideas", "Salismo"]
 ---
 
-Desde hace un tiempo, sobre la ruta habitual entre mi casas y la universidad, me percate de la existencia de lugares muy puntuales donde el bluetooth de mis audifonos comenzaba a fallar. porque? seria mi nueva mision descubrir quien estaba detras de esto.
+El otro día me encontraba en el cumpleaños de un gran amigo, y planeando la salida llegó el momento más importante de toda la noche: el momento de decidir cómo volvería a casa.
 
-El primer paso fue identificar los 3 principales lugares donde el descarado ataque a mis dispositivos electronicos fue perpetrado, cruzando santa elena para llegar al metro rodrigo de araya, cruzando avenida mata para tomar el metro irarrazabal y cruzando blanco encalada para llegar a la U.
+## Los carretes
 
-*poner foto de ira, rodrgio y blanco, con una bajada que indique que lugares son*
+Con el pasar de los años, y a medida que el contexto socioeconómico de las personas con las que me rodeaba fue cambiando, junto con esto cambió la forma de carretear. Pareciera casi que...
 
-## El objetivo
+> "No es la conciencia la que determina la vida, sino la vida la que determina la conciencia."
+> un viejo que mató a 500 millones de personas, o algo así
 
-Encontrar patrones en cada uno de los 3 lugares para identificar el origen de estos ciberataques, y poder asi preparar un plan de contrataque para hacerle frente a estas fuerzas del mal.
+Bueno, el punto es que, como mis amigos empezaron a manejar más plata, cambiaron los hábitos de carretear, entre ellos el de quedarse en la casa del carrete hasta el día siguiente para no pagar el Uber. En la mayoría (por no decir la totalidad) de los carretes (juntas), a los que fui durante el liceo me devolvía en metro a mi casa. ¿Por qué? Obviamente era por la plata. En el 90% de esos carretes dormía en el suelo, en una silla o en algún otro lugar denigrante que terminaba en un dolor de espalda o algo así, pero hasta que no se conoce la comodidad, nada de esto es realmente problema.
 
-## Fuente confiable
+Y como tal, esta frontera de lo que toleras en tu día a día y lo que no se va corriendo a medida que tienes más dinero que te permita vivir una vida más cómoda. A los mismos que hace 10 años vi tirados en un suelo de baldosas, tapándose con un diario en la tercera noche más fría del año, hoy día mirarían casi que con risa la sola idea de quedarse a dormir en un colchón inflable en vez de pedirse un Uber.
 
-O ESO CREIA YO. Resulta que tanto el cruce en metro rodrigo de araya como el de blanco encalada para llegar a la U tienen una fuente cerca. En el caso de rodrigo la fuente mardoqueo y en el de blanco una fuente de agua. Las que pense eran feuntes cercanas resultaron ser fuentes serviles a satanas, ¡pero yo soy mas astuto! pronto preparare el plan para neutralizar este activo del enemigo.
+## ¿Dónde se detiene?
 
-*poner foto de feutne blanco y fuente rodrigo*
+¿No es acaso una trampa? ¿Cuándo se supone que nos conformamos? ¿Es un proceso natural del desarrollo personal o es una artimaña de nuestro simio interno, que busca comodidad como un fin y no como un medio? Si nuestras metas de vida se basan en comodidades y no en otra cosa, ¿cuándo se está suficientemente cómodo? ¿Qué tan preparados como personas nos deja tanta comodidad? Bueno, eso da por sí solo para un megapost, pero volvamos a Uber.
 
-## Gigantografia electrica
+## El viaje de vuelta
 
-Algo no calzaba, el enemigo necesitaria una base de operaciones electronicas para operar con tal presicion sobre mi campo magnetico ¡ciego me senti al percatarme de que seimpre estuvo frente a mis ojos! tanto el cruce de irarrazabal como el de rodrigo tienen gigantografias digitales listas para interceptar las señales que me permiten escuchar los clasicos romanticos de ayer y hoy pero la amenaza fue identificada, y pronto pasara a ser no mas que escombros.
+Basta: nada de lo que he hablado hasta ahora es relevante para el post. ¡Focus! Como varios de mis amigos ya trabajan y yo no, me ha tocado sentir desde la vereda de la pobreza el salto social que implica esto del Uber. Tampoco me puedo hacer el weon, a mí también ya me da paja quedarme en una casa y no dormir en mi rica camita, pero es una decisión mucho más difícil que para mis amigos asalariados.
 
-*poner gigantografias de rodrigo e ira*
 
-## Financiamiento
+¿Qué se puede hacer entonces? Durante la transición y en mis tiempos de mayor pobreza, adquirí el no adecuado hábito de irme en micro a la casa. Aunque no lo hice muchas veces, no fue necesario hacerlo tantas veces para darse cuenta de que era una mala idea (por temas de seguridad), por lo que la otra opción fue la única que iba quedando, la de combinar el Uber.
 
-Aun asi, algo no calzaba. Tal equipo tecnologico requeriria financiamiento, y luego de trazar y seguir el rastro del dinero, se hizo evidente. Tanto en rodrigo como en blanco estas celulas antisalisitas se financian a partir de impresiones, en algunos casos, incluso en tres dimensiones. ¡que audacia!
+## El óptimo social
 
-*poner poner imagenes de impresiones*
+Sin duda un problema interesante. Es, casi que por donde uno lo mire, siempre la mejor opción. Entre que probablemente una carrera más larga tenga más probabilidad de ser tomada, que sale más barato, que te vas acompañado, que se emite menos CO₂ o cuánta wea, son pocos los contras de compartir un Uber. Sin embargo, el problema de cómo compartirlo no es tan directo.
 
-## Quien
+Este sábado pasado ocurrió que entre 3 de los que quedábamos hacíamos una línea casi recta para llegar a casa, pero a la primera parada le salía más barato pedirlo solo (según la forma de dividir la cuenta que siempre usamos, que es dividirla en partes iguales). Luego de un rato, el precio bajó un poco y lo que le salía pedirlo solo se equiparó al costo dividido, por lo que aperró y se sumó igual (además que este amigo es terrible crack). Pero la pregunta obvia termina siendo: ¿cuál sería la forma justa de dividirse el Uber?
 
-Tan solo faltaba descubrir al antagonista de esta historia. Estaba desesperado, parecia que no habian dejado rastro en niguna de sus maniobras, hasta que en el ultimo de los informes de inteligencia todo hizo sentido.
+La economía sonríe cuando un Uber es compartido. Al final el tema del dinero y cuánta tontera se habla entre aquellos que se creen mejor que el resto se puede reducir a un problema de asignación de recursos (entendiendo como recursos algo así como... todo). Y si sonríe, es nuestro deber incentivarlo lo más posible. En mi post sobre el transporte público formulo un poco más la idea de cómo se vería mi mundo ideal en este aspecto, pero por ahora solo tenemos Uber, y al menos a corto plazo, debemos concentrar nuestros esfuerzos en aquello que ya tenemos.
 
-*poner imagenes de egipcios ira y blanco*
+## Plan para dividir el Uber justamente
 
-## Los egipcios
+Definimos la función $uber(x)$, donde $x$ es una lista de personas, como el costo del Uber que deja a todas las personas de la lista en su casa.
 
-Era que no, mi archienemigos desde aquel dia que intente devolver unas papas que qeudaron muy saladas. Habia pasado mucho tiempo desde la ultmia operacion de la que me entere y que conspiraba contra mi persona. Por un momento pense que se habian desbandado, y cuando mas baja  tuve la guardia. pam. me dan un golpe del que recuperarse sera muyu dificil. interrumpir mi musica en el coro de paisaje de franco simone significo una perdida de billones para la cupula del estado salista. los egipcios y sus secuaces lo volvieron a hacer. pero esto no quedara asi.
+Si una lista $A$ representa a las personas que comparten el viaje, y $A_i$ representa a la $i$-ésima persona de esa lista, entonces lo que debe pagar cada una se puede escribir como:
 
-## La nave nodriza
+$$
+p(A_i)
+=
+\frac{uber([A_i])}{\sum_{x=1}^{n} uber([A_x])}\cdot uber(A)
+$$
 
-Gracias a estos nuevos descubrmientos, y luego de correr algoritmos de busqueda intensiva en supercomputadoras de billones de dolares, logre dar con el cuartel general de este grupo insurgente. Y es que se esconden ni mas ni menos que en la embajada egipcia!
+En palabras, cada persona paga una fracción del total proporcional a lo que le costaría ir sola.
 
-*foto de la embajada*
-
-Al inicio no lo quise creer. siempre tuve buena relacion con el estado egipcio, no por nada era mi main en el civilization V. hasta que la pista que con la que confirme la traicion salio a la luz. Quede desolado, y es que a solo unos pocos pasos de la embajada se encontraba ni mas ni menos que:
-
-*foto de fuente_embajada, es una fuente mardoqueo, ponlo en la descripcion*
-
-## El plan
-
-Para lograr acabar con esa artimaña lo primero sera tomarme las pastillas. luego, me autocomplacere para lograr pensar con mayor claridad. Y finalmentem, lobotomizare mis pensamientos consumiendo el opio del pueblo, un partido del mundial (alemania vs paraguay).
-
-## En la polla
-
-partidazo. puse que ganaba alemania 3 - 1. necesito estos puntos para seguir soñando. deseenme suerte.
+Ya hice la [app](/aplicaciones/uber) y la empezaré a usar cuando me dé la perso pa sacarla. Idealmente la usaré cuando su uso signifique que yo pago más plata y no al revés, pa que no parezca que quiero implementar esta wea de cagado jajaja

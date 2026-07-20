@@ -2,7 +2,7 @@
 title: "Bluetooth"
 description: "Bajo fuego enemigo"
 pubDate: "2026-06-29"
-tags: ["Ideas", "Delirios", "Salismo"]
+tags: ["Ideas", "Delirios"]
 music:
   title: "Paisaje"
   author: "Franco Simone"

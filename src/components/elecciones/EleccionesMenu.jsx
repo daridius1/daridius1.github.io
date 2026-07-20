@@ -52,6 +52,12 @@ export default function EleccionesMenu({
                 </button>
                 {/* National Title Section (Simplified) */}
                 <div className="p-6 bg-slate-900 border-b border-slate-700">
+                    <a
+                        href="/aplicaciones"
+                        className="text-[10px] font-bold uppercase tracking-widest text-white/40 hover:text-white transition-colors flex items-center gap-1.5 mb-2"
+                    >
+                        ← Volver a aplicaciones
+                    </a>
                     <h1 className="text-xl font-black tracking-tight text-white flex items-center gap-2">
                         Calculadora Electoral
                     </h1>

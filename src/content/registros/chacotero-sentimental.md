@@ -84,6 +84,10 @@ items:
     author: "Franco Simone"
     date: "2026-06-29"
     link: "/blog/2026/06/29/bluetooth"
+  - title: "We've Only Just Begun"
+    author: "Carpenters"
+    date: "2026-06-30"
+    link: "/blog/2026/06/30/uber-combinadas"
 ---
 
 Como diría el Rumpy: "Te vamos a ponerte un tema".
