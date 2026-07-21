@@ -29,6 +29,6 @@ Luego de 2 intentos fallidos, me dispuse a sacar de mi caja de herramientas mi q
 
 ¿Habrá quedado en 3 el contador total de prompts? 2 más para corregir detalles, pero cifra récord de todos modos.
 
-## Testeo
+## Testeo en producción
 
-En producción, a capela como dicen los lolos. Si lees esto y no funcionan los comentarios házmelo saber. AI slop has no limits.
+A capela como dicen los lolos. Si lees esto y no funcionan los comentarios házmelo saber. AI slop has no limits.
