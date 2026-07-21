@@ -1,5 +1,5 @@
 ---
-title: "Beauchefconfesionesbot: vida, pasión y muerte"
+title: "Vida, pasión y muerte del bot"
 description: "Hasta la vista, baby"
 pubDate: "2026-07-20"
 tags: ["Proyectos", "Bot Confesiones"]
