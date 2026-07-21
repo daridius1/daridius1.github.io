@@ -1,6 +1,6 @@
 ---
-title: "Vida, pasión y muerte del bot"
-description: "Skynet si hubiese sido detenida a tiempo"
+title: "Beauchefconfesionesbot: vida, pasión y muerte"
+description: "Hasta la vista, baby"
 pubDate: "2026-07-20"
 tags: ["Proyectos", "Bot Confesiones"]
 ---
