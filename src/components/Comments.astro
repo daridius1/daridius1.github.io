@@ -62,6 +62,7 @@ const { slug } = Astro.props;
                 id="captcha_answer"
                 name="captcha_answer"
                 class="captcha-input"
+                placeholder="Respuesta"
                 required
                 autocomplete="off"
             />
@@ -471,8 +472,9 @@ const { slug } = Astro.props;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 1rem;
-        padding: 0.65rem 1rem;
+        flex-wrap: wrap;
+        gap: 0.75rem 1rem;
+        padding: 0.75rem 1rem;
         background: rgba(255, 255, 255, 0.02);
         border: 1px dashed rgba(255, 255, 255, 0.2);
         border-radius: 8px;
@@ -481,16 +483,21 @@ const { slug } = Astro.props;
     .captcha-box {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        flex-wrap: wrap;
+        gap: 0.4rem 0.5rem;
         font-size: 0.88rem;
+        min-width: 0;
     }
 
     .captcha-icon {
         color: rgba(255, 255, 255, 0.4);
+        flex-shrink: 0;
     }
 
     .captcha-label {
         color: rgba(255, 255, 255, 0.5);
+        white-space: nowrap;
+        flex-shrink: 0;
     }
 
     .captcha-question {
@@ -500,14 +507,16 @@ const { slug } = Astro.props;
         padding: 0.2rem 0.6rem;
         border-radius: 4px;
         letter-spacing: 0.03em;
+        white-space: nowrap;
     }
 
     .captcha-input {
-        width: 80px;
+        width: 110px;
+        flex-shrink: 0;
         background: rgba(255, 255, 255, 0.05);
         border: 1px solid rgba(255, 255, 255, 0.25);
         border-radius: 6px;
-        padding: 0.4rem 0.6rem;
+        padding: 0.45rem 0.75rem;
         color: #ffffff;
         font-weight: 600;
         text-align: center;
@@ -693,5 +702,39 @@ const { slug } = Astro.props;
     .reply-card {
         background: rgba(255, 255, 255, 0.015);
         border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    @media (max-width: 600px) {
+        .comment-form {
+            padding: 1rem;
+            gap: 1rem;
+        }
+
+        .captcha-row {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0.65rem;
+            padding: 0.75rem;
+        }
+
+        .captcha-box {
+            justify-content: flex-start;
+        }
+
+        .captcha-input {
+            width: 100%;
+            height: 38px;
+            font-size: 0.95rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 0.75rem;
+        }
+
+        .comment-replies {
+            margin-left: 0.75rem;
+            padding-left: 0.6rem;
+        }
     }
 </style>
