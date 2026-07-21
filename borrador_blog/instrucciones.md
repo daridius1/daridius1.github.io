@@ -6,5 +6,5 @@
 4. Debes priorizar mantener el espiritu y los terminos que utilizo, que en ocasiones seran informales pero asi se deben mantener, por ejemplo, es esperable que un "pq" lo transformes en un "porque", o un "klo" en un "culiao", pero no un "es un ctm" a "es un tonto", o "el loco weon" a "el loco tonto".
 5. El contenido de borrador deberia seguir el template de template.md.
 6. Al hacer las respectivas modificaciones, crea el archivo siguiendo la estructura de carpetas de, como por ejemplo, src/content/blog/2026/01/15/vuelve-la-tne-a-mi-vida/index.md
-7. en src/content/registros/chacotero-sentimental.md hay un registro de las canciones relacionadas a un blog, cuando un blog tenga cancion, agregala al registro.
+7. en src/content/registros/chacotero-sentimental.md hay un registro de las canciones relacionadas a un blog; cuando un blog tenga canción especificada, agrégala al registro. Si el borrador no especifica una canción, no es necesario inventar ni agregar una.
 8. en este directorio de borrador puede que haya fotos o cosas asi que aparezcan en el blog, debes moverlas a la carpeta donde se guarde el blog y añadirla donde indique el blog mismo.
