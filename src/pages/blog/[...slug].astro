@@ -2,7 +2,7 @@
 import { getCollection, render, type CollectionEntry } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import OptimizedImage from "../../components/OptimizedImage.astro";
-import "artalk/dist/Artalk.css";
+import Comments from "../../components/Comments.astro";
 
 export async function getStaticPaths() {
     const allEntries = await getCollection("blog");
@@ -178,32 +178,7 @@ const { Content } = await render(entry);
             )
         }
 
-        <section class="comments-section">
-            <div id="Comments"></div>
-        </section>
-
-        <script>
-            import Artalk from "artalk";
-
-            function initArtalk() {
-                const container = document.getElementById("Comments");
-                if (!container || container.dataset.artalkInited) return;
-                container.dataset.artalkInited = "true";
-
-                Artalk.init({
-                    el: "#Comments",
-                    pageKey: window.location.pathname,
-                    pageTitle: document.title,
-                    server: "https://comentarios.daridius.cl",
-                    site: "daridius.cl",
-                    darkMode: true,
-                    locale: "es",
-                });
-            }
-
-            document.addEventListener("DOMContentLoaded", initArtalk);
-            document.addEventListener("astro:page-load", initArtalk);
-        </script>
+        <Comments slug={entry.id} />
 
         <nav class="post-nav">
             <div class="nav-wrapper">
@@ -511,24 +486,6 @@ const { Content } = await render(entry);
             align-items: flex-start;
             gap: 0.25rem;
         }
-    }
-
-    .comments-section {
-        margin-top: 5rem;
-        padding-top: 3rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .artalk {
-        --at-color-bg: transparent;
-        --at-color-bg-grey: rgba(255, 255, 255, 0.03);
-        --at-color-bg-translation: rgba(255, 255, 255, 0.05);
-        --at-color-font: rgba(255, 255, 255, 0.85);
-        --at-color-font-light: rgba(255, 255, 255, 0.4);
-        --at-color-border: rgba(255, 255, 255, 0.08);
-        --at-color-main: #fff;
-        --at-color-sub: rgba(255, 255, 255, 0.6);
-        --at-color-meta: rgba(255, 255, 255, 0.4);
     }
 
     .post-nav {
