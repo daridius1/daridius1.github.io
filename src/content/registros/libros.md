@@ -12,5 +12,9 @@ items:
     author: "Vladimir Lenin"
     date: "2026-01-16"
     link: "/blog/2026/01/19/el-estado-y-la-revolucion"
+  - title: "Teoría del mundo multipolar"
+    author: "Alexander Dugin"
+    date: "2026-02-23"
+    link: "/blog/2026/02/23/teoria-del-mundo-multipolar"
 ---
 

@@ -35,4 +35,4 @@ Durante sus más de 6 meses de funcionamiento continuo (de diciembre de 2025 a j
 
 ## Cierre
 
-En julio de 2026, tras el término del semestre, el bot dormido por el bien de la humanidad. El cierre se dio tras una reflexión sobre la responsabilidad y los límites éticos de la moderación automática en temas personales y políticos de la facultad, sumado al cambio en la plataforma de Meta for Developers que deprecó las API keys utilizadas e introdujo bloqueo regional en Chile.
+En julio de 2026, tras el término del semestre, el bot fue dormido por el bien de la humanidad. El cierre se dio tras una reflexión sobre la responsabilidad y los límites éticos de la moderación automática en temas personales y políticos de la facultad, sumado al cambio en la plataforma de Meta for Developers que deprecó las API keys utilizadas e introdujo bloqueo regional en Chile.

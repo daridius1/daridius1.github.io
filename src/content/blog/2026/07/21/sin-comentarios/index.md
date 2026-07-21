@@ -19,7 +19,7 @@ Ya caché que si quería tener algo a la altura de un blog tan pulento como el m
 
 Así que levanté esta shiet a fierro pelao. Y cuando vi la caja de comentarios, cambiarla fue obviamente lo primero que se me ocurrió. Era horrible, ¿y por alguna razón te pedía correo y página web? ¿xD? Bueno. Había que cambiar el diseño, así que me serví un juguito y...
 
-## Gemini resuelve todos mis problemas!
+## Gemini, quiero que resuelvas todos mis problemas, no cometas errores
 
 Strike 1... strike 2... strike 3, ¡estás fuera! Si tres prompts no pueden arreglar un problema tan simple de diseño no es problema de la IA, es problema del programa. Pensé que como era self-hosteable sería fácil de personalizar, pero parece que nada más alejado de la realidad.
 
