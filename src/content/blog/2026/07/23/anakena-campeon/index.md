@@ -106,27 +106,6 @@ La pasión y el sentimiento no se toca
 Y el día que la pasión muera  
 Espero morir con ella  
 
-El coliseo ruge
-El árbitro mechón no cobra mal sacado
-Sobrepeso diagnostican al árbitro
-Alopecia en los peores casos
-Y desde la ebria acusan infidelidad
-
-No queda más que beber las penas
-En su defecto, las alegrías
-Pero rapidito, vayamos desocupando la cancha
-Que el coloso está listo
-Para dibujar su nuevo cuadro
-Componer su siguiente rapsodia
-Otras serán las retratadas
-Otros las figuras literarias
-
-Cosas cambian
-Cosas quedan
-La pasión y el sentimiento no se tocan
-Y el día que la pasión muera
-Espero morir con ella
-
 ## El camino
 
 ### 2022
