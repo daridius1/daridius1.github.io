@@ -244,12 +244,18 @@ const { Content } = await render(entry);
         font-size: 0.9rem;
         opacity: 0.5;
         margin-bottom: 1.5rem;
+        gap: 1rem;
     }
 
     .tags {
         display: flex;
         gap: 0.75rem;
         align-items: center;
+        /* limit the whole tags container so it doesn't overflow the post header */
+        max-width: 70%;
+        flex: 1 1 70%;
+        min-width: 0; /* allow flex children to shrink */
+        flex-wrap: wrap;
     }
 
     .tag-link {
@@ -263,6 +269,11 @@ const { Content } = await render(entry);
         display: flex;
         align-items: center;
         gap: 0.75rem;
+    }
+
+    /* Ensure individual tags don't force the row to grow excessively */
+    .tag-link {
+        white-space: nowrap;
     }
 
     .tag-link:not(:last-child)::after {
@@ -485,6 +496,16 @@ const { Content } = await render(entry);
             flex-direction: column;
             align-items: flex-start;
             gap: 0.25rem;
+        }
+        /* On small screens stack meta elements to avoid overflow */
+        .meta {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+        .tags {
+            max-width: 100%;
+            flex: none;
         }
     }
 
