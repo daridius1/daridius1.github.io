@@ -1,0 +1,279 @@
+---
+import FaceCropStudio from "../../../components/apps/FaceCropStudio";
+import "../../../styles/global.css";
+---
+
+<!doctype html>
+<html lang="es" class="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FaceCut Studio — Recorte Facial y Remoción de Fondo con IA</title>
+        <meta
+            name="description"
+            content="Herramienta inteligente para detección de rostros, encuadre de avatares y eliminación de fondos con transparencia 100% en tu navegador."
+        />
+        <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233b82f6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><circle cx='12' cy='10' r='3'/><path d='M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662'/></svg>" />
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+            :root {
+                --app-bg: #07090e;
+                --app-surface: #0e121b;
+                --app-border: rgba(255, 255, 255, 0.08);
+                --app-accent: #3b82f6;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body,
+            html {
+                margin: 0;
+                padding: 0;
+                min-height: 100dvh;
+                background-color: var(--app-bg);
+                color: #f1f5f9;
+                font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                overflow-x: hidden;
+            }
+
+            /* Ambient App Background */
+            .app-ambient {
+                position: fixed;
+                inset: 0;
+                z-index: -1;
+                pointer-events: none;
+                background: 
+                    radial-gradient(circle at 50% -10%, rgba(59, 130, 246, 0.15), transparent 50%),
+                    radial-gradient(circle at 10% 40%, rgba(139, 92, 246, 0.08), transparent 40%),
+                    radial-gradient(circle at 90% 80%, rgba(16, 185, 129, 0.06), transparent 45%),
+                    #07090e;
+            }
+
+            .app-grid-lines {
+                position: fixed;
+                inset: 0;
+                z-index: -1;
+                pointer-events: none;
+                background-image: 
+                    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+                background-size: 48px 48px;
+                mask-image: radial-gradient(ellipse at center, black, transparent 80%);
+            }
+
+            /* App Shell Header */
+            .app-navbar {
+                height: 64px;
+                border-bottom: 1px solid var(--app-border);
+                background: rgba(7, 9, 14, 0.8);
+                backdrop-filter: blur(16px);
+                position: sticky;
+                top: 0;
+                z-index: 100;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 2rem;
+            }
+
+            .brand-group {
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                text-decoration: none;
+                color: inherit;
+            }
+
+            .brand-icon {
+                width: 34px;
+                height: 34px;
+                border-radius: 10px;
+                background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 0 20px rgba(59, 130, 246, 0.35);
+                color: #ffffff;
+            }
+
+            .brand-name {
+                font-size: 1.15rem;
+                font-weight: 800;
+                letter-spacing: -0.03em;
+                background: linear-gradient(to right, #ffffff, #94a3b8);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .brand-badge {
+                font-size: 0.65rem;
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+                font-weight: 700;
+                background: rgba(59, 130, 246, 0.15);
+                border: 1px solid rgba(59, 130, 246, 0.3);
+                color: #93c5fd;
+                padding: 0.15rem 0.45rem;
+                border-radius: 6px;
+            }
+
+            .nav-actions {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .privacy-pill {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                font-size: 0.78rem;
+                font-weight: 600;
+                color: rgba(255, 255, 255, 0.7);
+                background: rgba(255, 255, 255, 0.04);
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                padding: 0.35rem 0.85rem;
+                border-radius: 9999px;
+            }
+
+            .privacy-dot {
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: #10b981;
+                box-shadow: 0 0 8px #10b981;
+            }
+
+            /* Main Stage */
+            .app-main {
+                width: 100%;
+                max-width: 1160px;
+                margin: 0 auto;
+                padding: 2.5rem 1.5rem 5rem;
+            }
+
+            /* Hero Intro */
+            .app-hero {
+                text-align: center;
+                margin-bottom: 2.5rem;
+            }
+
+            .app-title {
+                font-size: clamp(2rem, 5vw, 3.25rem);
+                font-weight: 800;
+                letter-spacing: -0.04em;
+                line-height: 1.15;
+                margin: 0 0 0.75rem 0;
+                color: #ffffff;
+            }
+
+            .app-title span {
+                background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .app-subtitle {
+                font-size: 1.05rem;
+                color: rgba(255, 255, 255, 0.6);
+                max-width: 620px;
+                margin: 0 auto;
+                line-height: 1.5;
+            }
+
+            /* App Footer */
+            .app-footer {
+                border-top: 1px solid var(--app-border);
+                padding: 1.5rem 2rem;
+                text-align: center;
+                font-size: 0.8rem;
+                color: rgba(255, 255, 255, 0.4);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1.5rem;
+                flex-wrap: wrap;
+            }
+
+            .footer-item {
+                display: flex;
+                align-items: center;
+                gap: 0.4rem;
+            }
+
+            @media (max-width: 640px) {
+                .app-navbar {
+                    padding: 0 1rem;
+                }
+                .privacy-pill {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="app-ambient"></div>
+        <div class="app-grid-lines"></div>
+
+        <!-- Standalone App Navigation Bar -->
+        <header class="app-navbar">
+            <div class="brand-group">
+                <div class="brand-icon">
+                    <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path d="M12 2v20M2 12h20" />
+                        <circle cx="12" cy="12" r="7" />
+                        <circle cx="12" cy="12" r="3" />
+                    </svg>
+                </div>
+                <span class="brand-name">FaceCut Studio</span>
+                <span class="brand-badge">IA</span>
+            </div>
+
+            <div class="nav-actions">
+                <div class="privacy-pill">
+                    <span class="privacy-dot"></span>
+                    <span>100% en tu navegador (Sin servidor)</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Standalone Application Workspace -->
+        <main class="app-main">
+            <div class="app-hero">
+                <h1 class="app-title">
+                    Retratos y Avatares con <span>Encuadre IA</span>
+                </h1>
+                <p class="app-subtitle">
+                    Detección facial inteligente, normalización con margen proporcional y remoción instantánea de fondo. Procesado localmente con aceleración por hardware.
+                </p>
+            </div>
+
+            <FaceCropStudio client:load />
+        </main>
+
+        <!-- Standalone Footer -->
+        <footer class="app-footer">
+            <div class="footer-item">
+                <span>🔒 Procesamiento 100% privado en tu dispositivo</span>
+            </div>
+            <div class="footer-item">
+                <span>⚡ Acelerado con WebAssembly y WebGL</span>
+            </div>
+            <div class="footer-item">
+                <span>📦 Exportación en PNG transparente o WebP</span>
+            </div>
+        </footer>
+    </body>
+</html>

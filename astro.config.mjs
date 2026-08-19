@@ -24,10 +24,6 @@ export default defineConfig({
     plugins: [tailwindcss()],
     optimizeDeps: {
       include: [
-        'react',
-        'react-dom',
-        'react/jsx-runtime',
-        'react/jsx-dev-runtime',
         'matter-js',
         'poly-decomp'
       ]
