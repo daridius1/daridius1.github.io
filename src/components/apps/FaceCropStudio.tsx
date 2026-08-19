@@ -1,14 +1,19 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 
-type ProcessingStep = "idle" | "loading-models" | "processing" | "done" | "error";
+type ProcessingStep = "idle" | "processing" | "done" | "error";
+
+interface FaceData {
+    centerX: number;
+    centerY: number;
+    baseDim: number;
+}
 
 export default function FaceCropStudio() {
     const [step, setStep] = useState<ProcessingStep>("idle");
-    const [statusMessage, setStatusMessage] = useState("");
+    const [isProcessing, setIsProcessing] = useState(false);
     const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
     // Image state
-    const [originalImage, setOriginalImage] = useState<HTMLImageElement | null>(null);
     const [originalImageSrc, setOriginalImageSrc] = useState<string | null>(null);
     const [resultDataUrl, setResultDataUrl] = useState<string | null>(null);
 
@@ -21,14 +26,21 @@ export default function FaceCropStudio() {
     const [isDragging, setIsDragging] = useState(false);
     const fileInputRef = useRef<HTMLInputElement>(null);
 
-    // AI refs
+    // AI & Canvas refs
     const visionRefs = useRef<{
         visionModule: any;
         faceDetector: any;
         imageSegmenter: any;
     }>({ visionModule: null, faceDetector: null, imageSegmenter: null });
 
+    // Cache pre-segmented canvas & face coordinates for 60 FPS instant slider rendering
+    const preSegmentedCanvasRef = useRef<HTMLCanvasElement | null>(null);
+    const faceDataRef = useRef<FaceData | null>(null);
     const resultCanvasRef = useRef<HTMLCanvasElement | null>(null);
+    const latestControlsRef = useRef({ zoom: 2.3, h: 0.0, v: 0.0 });
+
+    // Keep latest controls in sync
+    latestControlsRef.current = { zoom, h: horizontalOffset, v: verticalOffset };
 
     // ──────────── Model Loading ────────────
 
@@ -39,11 +51,11 @@ export default function FaceCropStudio() {
                 const buf = await res.arrayBuffer();
                 if (buf.byteLength > 1000) return new Uint8Array(buf);
             }
-        } catch (e) {
-            console.warn(`Local fetch failed for ${localUrl}`, e);
+        } catch {
+            // silent fallback
         }
         const cdnRes = await fetch(cdnUrl);
-        if (!cdnRes.ok) throw new Error(`Cannot download model from ${cdnUrl}`);
+        if (!cdnRes.ok) throw new Error(`Error descargando modelo`);
         return new Uint8Array(await cdnRes.arrayBuffer());
     };
 
@@ -51,9 +63,6 @@ export default function FaceCropStudio() {
         if (visionRefs.current.faceDetector && visionRefs.current.imageSegmenter) {
             return visionRefs.current;
         }
-
-        setStep("loading-models");
-        setStatusMessage("Cargando modelos de IA...");
 
         const dynamicImport = (url: string) => {
             const fn = new Function("u", "return import(u)");
@@ -83,11 +92,10 @@ export default function FaceCropStudio() {
                     "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.22/wasm",
                 );
             } catch (e: any) {
-                throw new Error(`Error WASM: ${e?.message || e}`);
+                throw new Error(`Error al inicializar IA: ${e?.message || e}`);
             }
         }
 
-        setStatusMessage("Descargando modelos neuronales...");
         const [faceBuf, segBuf] = await Promise.all([
             fetchModelBuffer(
                 "/mediapipe/models/blaze_face_short_range.tflite",
@@ -114,12 +122,10 @@ export default function FaceCropStudio() {
         });
 
         try {
-            setStatusMessage("Inicializando GPU...");
             const inst = await initTasks("GPU");
             visionRefs.current.faceDetector = inst.faceDetector;
             visionRefs.current.imageSegmenter = inst.imageSegmenter;
         } catch {
-            setStatusMessage("Inicializando CPU...");
             const inst = await initTasks("CPU");
             visionRefs.current.faceDetector = inst.faceDetector;
             visionRefs.current.imageSegmenter = inst.imageSegmenter;
@@ -128,33 +134,96 @@ export default function FaceCropStudio() {
         return visionRefs.current;
     };
 
-    // ──────────── Processing Pipeline ────────────
+    // ──────────── Instant 60 FPS Crop Renderer ────────────
 
-    const processImage = useCallback(
-        async (img: HTMLImageElement, zoomVal?: number, hOffVal?: number, vOffVal?: number) => {
-            const z = zoomVal ?? zoom;
-            const hOff = hOffVal ?? horizontalOffset;
-            const vOff = vOffVal ?? verticalOffset;
+    const renderCropInstant = useCallback(
+        (zVal?: number, hVal?: number, vVal?: number) => {
+            const segCanvas = preSegmentedCanvasRef.current;
+            const face = faceDataRef.current;
+            if (!segCanvas || !face) return;
+
+            const z = zVal ?? latestControlsRef.current.zoom;
+            const h = hVal ?? latestControlsRef.current.h;
+            const v = vVal ?? latestControlsRef.current.v;
             const res = 512;
 
+            let finalCanvas = resultCanvasRef.current;
+            if (!finalCanvas) {
+                finalCanvas = document.createElement("canvas");
+                finalCanvas.width = res;
+                finalCanvas.height = res;
+                resultCanvasRef.current = finalCanvas;
+            }
+
+            const ctx = finalCanvas.getContext("2d")!;
+            ctx.clearRect(0, 0, res, res);
+            ctx.imageSmoothingEnabled = true;
+            ctx.imageSmoothingQuality = "high";
+
+            const cropSize = face.baseDim * z;
+            const cropTop = face.centerY - cropSize * 0.42 - (v * cropSize);
+            const cropLeft = face.centerX - cropSize * 0.5 + (h * cropSize);
+
+            ctx.drawImage(
+                segCanvas,
+                cropLeft,
+                cropTop,
+                cropSize,
+                cropSize,
+                0,
+                0,
+                res,
+                res,
+            );
+
+            // Fast DataURL update
+            setResultDataUrl(finalCanvas.toDataURL("image/png"));
+        },
+        [],
+    );
+
+    // ──────────── One-Time Image Processing Pipeline ────────────
+
+    const processNewImage = useCallback(
+        async (img: HTMLImageElement) => {
             setErrorMessage(null);
+            setIsProcessing(true);
+            setStep("processing");
 
             try {
                 const { faceDetector, imageSegmenter } = await loadModels();
 
-                setStep("processing");
-                setStatusMessage("Detectando rostro...");
+                // Prepare normalized work canvas (max dimension 1024 for sharp detail & fast AI inference)
+                let w = img.naturalWidth || img.width;
+                let h = img.naturalHeight || img.height;
+                const MAX_DIM = 1024;
+                if (w > MAX_DIM || h > MAX_DIM) {
+                    if (w > h) {
+                        h = Math.round((h * MAX_DIM) / w);
+                        w = MAX_DIM;
+                    } else {
+                        w = Math.round((w * MAX_DIM) / h);
+                        h = MAX_DIM;
+                    }
+                }
 
-                const result = faceDetector.detect(img);
+                const workCanvas = document.createElement("canvas");
+                workCanvas.width = w;
+                workCanvas.height = h;
+                const workCtx = workCanvas.getContext("2d", { willReadFrequently: true })!;
+                workCtx.drawImage(img, 0, 0, w, h);
+
+                // 1. Detect Face
+                const result = faceDetector.detect(workCanvas);
                 const detections = result.detections || [];
 
                 if (detections.length === 0) {
+                    setIsProcessing(false);
                     setStep("error");
                     setErrorMessage("No se detectó un rostro. Intenta con otra imagen.");
                     return;
                 }
 
-                // Find largest face
                 let maxArea = -1;
                 let bestFace: any = detections[0].boundingBox;
                 for (const det of detections) {
@@ -166,27 +235,15 @@ export default function FaceCropStudio() {
                     }
                 }
 
-                const faceCenterX = (bestFace.originX || 0) + (bestFace.width || 0) / 2;
-                const faceCenterY = (bestFace.originY || 0) + (bestFace.height || 0) / 2;
-                const baseDim = Math.max(bestFace.width || 100, bestFace.height || 100);
+                const faceData: FaceData = {
+                    centerX: (bestFace.originX || 0) + (bestFace.width || 0) / 2,
+                    centerY: (bestFace.originY || 0) + (bestFace.height || 0) / 2,
+                    baseDim: Math.max(bestFace.width || 100, bestFace.height || 100),
+                };
+                faceDataRef.current = faceData;
 
-                const cropSize = baseDim * z;
-                const cropTop = faceCenterY - cropSize * 0.42 - (vOff * cropSize);
-                const cropLeft = faceCenterX - cropSize * 0.5 + (hOff * cropSize);
-
-                setStatusMessage("Recortando y segmentando...");
-
-                // Crop
-                const cropCanvas = document.createElement("canvas");
-                cropCanvas.width = res;
-                cropCanvas.height = res;
-                const cropCtx = cropCanvas.getContext("2d", { willReadFrequently: true })!;
-                cropCtx.imageSmoothingEnabled = true;
-                cropCtx.imageSmoothingQuality = "high";
-                cropCtx.drawImage(img, cropLeft, cropTop, cropSize, cropSize, 0, 0, res, res);
-
-                // Segment
-                const segResult = imageSegmenter.segment(cropCanvas);
+                // 2. Selfie Segmentation on the full work image
+                const segResult = imageSegmenter.segment(workCanvas);
                 const mask = segResult.confidenceMasks?.[0];
                 if (!mask) throw new Error("Error en segmentación.");
 
@@ -194,6 +251,7 @@ export default function FaceCropStudio() {
                 const maskH = mask.height;
                 const floats = mask.getAsFloat32Array();
 
+                // Create mask canvas
                 const maskCanvas = document.createElement("canvas");
                 maskCanvas.width = maskW;
                 maskCanvas.height = maskH;
@@ -214,46 +272,42 @@ export default function FaceCropStudio() {
                 }
                 maskCtx.putImageData(maskData, 0, 0);
 
-                // Feather
+                // Smooth feather mask
                 const smoothCanvas = document.createElement("canvas");
-                smoothCanvas.width = res;
-                smoothCanvas.height = res;
+                smoothCanvas.width = w;
+                smoothCanvas.height = h;
                 const sCtx = smoothCanvas.getContext("2d")!;
                 sCtx.imageSmoothingEnabled = true;
                 sCtx.imageSmoothingQuality = "high";
                 sCtx.filter = "blur(2px)";
-                sCtx.drawImage(maskCanvas, 0, 0, res, res);
+                sCtx.drawImage(maskCanvas, 0, 0, w, h);
 
-                // Final composite
-                const finalCanvas = document.createElement("canvas");
-                finalCanvas.width = res;
-                finalCanvas.height = res;
-                const fCtx = finalCanvas.getContext("2d", { willReadFrequently: true })!;
-                fCtx.drawImage(cropCanvas, 0, 0);
-                fCtx.globalCompositeOperation = "destination-in";
-                fCtx.drawImage(smoothCanvas, 0, 0);
+                // Generate full pre-segmented transparent canvas
+                const preSegCanvas = document.createElement("canvas");
+                preSegCanvas.width = w;
+                preSegCanvas.height = h;
+                const preCtx = preSegCanvas.getContext("2d", { willReadFrequently: true })!;
+                preCtx.drawImage(workCanvas, 0, 0);
+                preCtx.globalCompositeOperation = "destination-in";
+                preCtx.drawImage(smoothCanvas, 0, 0);
 
-                resultCanvasRef.current = finalCanvas;
+                // Cache for fast slider manipulations
+                preSegmentedCanvasRef.current = preSegCanvas;
 
-                finalCanvas.toBlob(
-                    (blob) => {
-                        if (blob) {
-                            setResultDataUrl(URL.createObjectURL(blob));
-                        }
-                    },
-                    "image/png",
-                    1.0,
-                );
+                // Render first crop with latest slider values
+                const current = latestControlsRef.current;
+                renderCropInstant(current.zoom, current.h, current.v);
 
+                setIsProcessing(false);
                 setStep("done");
-                setStatusMessage("¡Listo!");
             } catch (err: any) {
                 console.error("Processing error:", err);
+                setIsProcessing(false);
                 setStep("error");
                 setErrorMessage(err.message || "Error procesando la imagen.");
             }
         },
-        [zoom, horizontalOffset, verticalOffset],
+        [renderCropInstant],
     );
 
     // ──────────── Handlers ────────────
@@ -263,6 +317,16 @@ export default function FaceCropStudio() {
             setErrorMessage("Selecciona un archivo de imagen (JPG, PNG, WebP).");
             return;
         }
+
+        // Reset previous render state
+        preSegmentedCanvasRef.current = null;
+        faceDataRef.current = null;
+        setResultDataUrl(null);
+        setZoom(2.3);
+        setHorizontalOffset(0.0);
+        setVerticalOffset(0.0);
+        latestControlsRef.current = { zoom: 2.3, h: 0.0, v: 0.0 };
+
         const reader = new FileReader();
         reader.onload = (e) => {
             const src = e.target?.result as string;
@@ -270,11 +334,7 @@ export default function FaceCropStudio() {
             const img = new Image();
             img.crossOrigin = "anonymous";
             img.onload = () => {
-                setOriginalImage(img);
-                setZoom(2.3);
-                setHorizontalOffset(0.0);
-                setVerticalOffset(0.0);
-                processImage(img, 2.3, 0.0, 0.0);
+                processNewImage(img);
             };
             img.src = src;
         };
@@ -305,13 +365,19 @@ export default function FaceCropStudio() {
         };
         window.addEventListener("paste", onPaste);
         return () => window.removeEventListener("paste", onPaste);
-    }, [processImage]);
+    }, []);
 
+    // Instant 60 FPS slider change handler
     const handleSliderChange = (newZoom: number, newH: number, newV: number) => {
         setZoom(newZoom);
         setHorizontalOffset(newH);
         setVerticalOffset(newV);
-        if (originalImage) processImage(originalImage, newZoom, newH, newV);
+        latestControlsRef.current = { zoom: newZoom, h: newH, v: newV };
+
+        // Realtime instant redraw
+        if (preSegmentedCanvasRef.current && faceDataRef.current) {
+            renderCropInstant(newZoom, newH, newV);
+        }
     };
 
     const handleDownload = () => {
@@ -323,14 +389,17 @@ export default function FaceCropStudio() {
     };
 
     const handleReset = () => {
+        preSegmentedCanvasRef.current = null;
+        faceDataRef.current = null;
         setStep("idle");
-        setOriginalImage(null);
+        setIsProcessing(false);
         setOriginalImageSrc(null);
         setResultDataUrl(null);
         setErrorMessage(null);
         setZoom(2.3);
         setHorizontalOffset(0.0);
         setVerticalOffset(0.0);
+        latestControlsRef.current = { zoom: 2.3, h: 0.0, v: 0.0 };
     };
 
     // ──────────── RENDER ────────────
@@ -375,28 +444,15 @@ export default function FaceCropStudio() {
         );
     }
 
-    // Loading / Processing
-    if (step === "loading-models" || step === "processing") {
-        return (
-            <div className="fcs-root">
-                <style>{styles}</style>
-                <div className="fcs-loading">
-                    <div className="fcs-spinner" />
-                    <p>{statusMessage}</p>
-                </div>
-            </div>
-        );
-    }
-
-    // Error
-    if (step === "error") {
+    // Error Screen
+    if (step === "error" && !isProcessing && !resultDataUrl) {
         return (
             <div className="fcs-root">
                 <style>{styles}</style>
                 <div className="fcs-error-screen">
                     <div className="fcs-error-icon">⚠️</div>
                     <p>{errorMessage}</p>
-                    <button className="fcs-btn" onClick={handleReset}>
+                    <button className="fcs-btn fcs-btn-primary" onClick={handleReset}>
                         Intentar con otra foto
                     </button>
                 </div>
@@ -404,7 +460,7 @@ export default function FaceCropStudio() {
         );
     }
 
-    // Result screen — circular previews + controls
+    // Main Interactive Workspace (Always responsive sliders & live circular preview)
     return (
         <div className="fcs-root">
             <style>{styles}</style>
@@ -425,21 +481,35 @@ export default function FaceCropStudio() {
 
                     <div className="fcs-preview-col">
                         <p className="fcs-preview-label">Tu resultado</p>
-                        <div className="fcs-circle-frame">
-                            {resultDataUrl ? (
+                        <div className="fcs-circle-frame fcs-result-frame">
+                            {/* Result Image */}
+                            {resultDataUrl && (
                                 <img
                                     src={resultDataUrl}
                                     alt="Resultado"
-                                    className="fcs-circle-img"
+                                    className={`fcs-circle-img ${isProcessing ? "fcs-dimmed" : ""}`}
                                 />
-                            ) : (
-                                <div className="fcs-circle-placeholder">...</div>
+                            )}
+
+                            {/* Loading State Overlay */}
+                            {isProcessing && (
+                                <div className="fcs-circle-loading-overlay">
+                                    <div className="fcs-spinner" />
+                                    <span className="fcs-loading-text">Cargando...</span>
+                                </div>
+                            )}
+
+                            {/* Empty placeholder */}
+                            {!resultDataUrl && !isProcessing && (
+                                <div className="fcs-circle-placeholder">
+                                    <span>👤</span>
+                                </div>
                             )}
                         </div>
                     </div>
                 </div>
 
-                {/* Controls — zoom, horizontal and vertical */}
+                {/* Controls — Always interactive, 60fps instant redraw */}
                 <div className="fcs-controls">
                     <div className="fcs-control-row">
                         <label>🔍 Zoom</label>
@@ -450,7 +520,11 @@ export default function FaceCropStudio() {
                             step="0.05"
                             value={zoom}
                             onChange={(e) =>
-                                handleSliderChange(parseFloat(e.target.value), horizontalOffset, verticalOffset)
+                                handleSliderChange(
+                                    parseFloat(e.target.value),
+                                    horizontalOffset,
+                                    verticalOffset,
+                                )
                             }
                         />
                         <span className="fcs-control-value">{zoom.toFixed(1)}×</span>
@@ -465,7 +539,11 @@ export default function FaceCropStudio() {
                             step="0.01"
                             value={horizontalOffset}
                             onChange={(e) =>
-                                handleSliderChange(zoom, parseFloat(e.target.value), verticalOffset)
+                                handleSliderChange(
+                                    zoom,
+                                    parseFloat(e.target.value),
+                                    verticalOffset,
+                                )
                             }
                         />
                         <span className="fcs-control-value">
@@ -483,7 +561,11 @@ export default function FaceCropStudio() {
                             step="0.01"
                             value={verticalOffset}
                             onChange={(e) =>
-                                handleSliderChange(zoom, horizontalOffset, parseFloat(e.target.value))
+                                handleSliderChange(
+                                    zoom,
+                                    horizontalOffset,
+                                    parseFloat(e.target.value),
+                                )
                             }
                         />
                         <span className="fcs-control-value">
@@ -495,7 +577,11 @@ export default function FaceCropStudio() {
 
                 {/* Action buttons */}
                 <div className="fcs-actions">
-                    <button className="fcs-btn fcs-btn-primary" onClick={handleDownload}>
+                    <button
+                        className="fcs-btn fcs-btn-primary"
+                        onClick={handleDownload}
+                        disabled={isProcessing || !resultDataUrl}
+                    >
                         📥 Descargar PNG
                     </button>
                     <button className="fcs-btn fcs-btn-ghost" onClick={handleReset}>
@@ -579,29 +665,6 @@ const styles = `
     margin: 0;
 }
 
-/* Loading */
-.fcs-loading {
-    text-align: center;
-    padding: 4rem 1rem;
-}
-.fcs-loading p {
-    margin-top: 1.5rem;
-    font-size: 0.95rem;
-    color: rgba(148, 163, 184, 0.9);
-}
-.fcs-spinner {
-    width: 44px;
-    height: 44px;
-    border: 3px solid rgba(96, 165, 250, 0.2);
-    border-top-color: #60a5fa;
-    border-radius: 50%;
-    margin: 0 auto;
-    animation: fcs-spin 0.8s linear infinite;
-}
-@keyframes fcs-spin {
-    to { transform: rotate(360deg); }
-}
-
 /* Error screen */
 .fcs-error-screen {
     text-align: center;
@@ -648,6 +711,7 @@ const styles = `
     margin: 0;
 }
 .fcs-circle-frame {
+    position: relative;
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -668,15 +732,50 @@ const styles = `
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: opacity 0.2s ease;
 }
+.fcs-circle-img.fcs-dimmed {
+    opacity: 0.3;
+}
+
+/* Loading overlay inside circle */
+.fcs-circle-loading-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+.fcs-loading-text {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #93c5fd;
+    letter-spacing: 0.02em;
+}
+.fcs-spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid rgba(96, 165, 250, 0.2);
+    border-top-color: #60a5fa;
+    border-radius: 50%;
+    animation: fcs-spin 0.8s linear infinite;
+}
+@keyframes fcs-spin {
+    to { transform: rotate(360deg); }
+}
+
 .fcs-circle-placeholder {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgba(148, 163, 184, 0.4);
-    font-size: 1.5rem;
+    color: rgba(148, 163, 184, 0.3);
+    font-size: 3rem;
 }
 
 /* Controls */
@@ -712,11 +811,12 @@ const styles = `
     border-radius: 3px;
     outline: none;
     cursor: pointer;
+    touch-action: none;
 }
 .fcs-control-row input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 18px;
-    height: 18px;
+    width: 22px;
+    height: 22px;
     background: #60a5fa;
     border-radius: 50%;
     cursor: pointer;
@@ -724,11 +824,11 @@ const styles = `
     transition: transform 0.15s ease;
 }
 .fcs-control-row input[type="range"]::-webkit-slider-thumb:hover {
-    transform: scale(1.2);
+    transform: scale(1.15);
 }
 .fcs-control-row input[type="range"]::-moz-range-thumb {
-    width: 18px;
-    height: 18px;
+    width: 22px;
+    height: 22px;
     background: #60a5fa;
     border: none;
     border-radius: 50%;
@@ -760,12 +860,17 @@ const styles = `
     transition: all 0.2s ease;
     font-family: inherit;
 }
+.fcs-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none !important;
+}
 .fcs-btn-primary {
     background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
     color: #fff;
     box-shadow: 0 4px 16px rgba(59, 130, 246, 0.25);
 }
-.fcs-btn-primary:hover {
+.fcs-btn-primary:not(:disabled):hover {
     transform: translateY(-1px);
     box-shadow: 0 6px 24px rgba(59, 130, 246, 0.35);
 }
