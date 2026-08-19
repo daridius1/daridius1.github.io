@@ -10,7 +10,6 @@ interface FaceData {
 
 export default function FaceCropStudio() {
     const [step, setStep] = useState<ProcessingStep>("idle");
-    const [isProcessing, setIsProcessing] = useState(false);
     const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
     // Image state
@@ -187,7 +186,6 @@ export default function FaceCropStudio() {
     const processNewImage = useCallback(
         async (img: HTMLImageElement) => {
             setErrorMessage(null);
-            setIsProcessing(true);
             setStep("processing");
 
             try {
@@ -218,7 +216,6 @@ export default function FaceCropStudio() {
                 const detections = result.detections || [];
 
                 if (detections.length === 0) {
-                    setIsProcessing(false);
                     setStep("error");
                     setErrorMessage("No se detectó un rostro. Intenta con otra imagen.");
                     return;
@@ -298,11 +295,9 @@ export default function FaceCropStudio() {
                 const current = latestControlsRef.current;
                 renderCropInstant(current.zoom, current.h, current.v);
 
-                setIsProcessing(false);
                 setStep("done");
             } catch (err: any) {
                 console.error("Processing error:", err);
-                setIsProcessing(false);
                 setStep("error");
                 setErrorMessage(err.message || "Error procesando la imagen.");
             }
@@ -392,7 +387,6 @@ export default function FaceCropStudio() {
         preSegmentedCanvasRef.current = null;
         faceDataRef.current = null;
         setStep("idle");
-        setIsProcessing(false);
         setOriginalImageSrc(null);
         setResultDataUrl(null);
         setErrorMessage(null);
@@ -404,7 +398,7 @@ export default function FaceCropStudio() {
 
     // ──────────── RENDER ────────────
 
-    // Upload screen
+    // 1. Upload View (Initial State)
     if (!originalImageSrc || step === "idle") {
         return (
             <div className="fcs-root">
@@ -444,8 +438,26 @@ export default function FaceCropStudio() {
         );
     }
 
-    // Error Screen
-    if (step === "error" && !isProcessing && !resultDataUrl) {
+    // 2. Dedicated Loading Screen (Clear indicator with progress bar)
+    if (step === "processing") {
+        return (
+            <div className="fcs-root">
+                <style>{styles}</style>
+                <div className="fcs-loading-screen">
+                    <div className="fcs-loading-icon-wrap">
+                        <div className="fcs-spinner-large" />
+                    </div>
+                    <h3 className="fcs-loading-title">Cargando...</h3>
+                    <div className="fcs-progress-bar-wrap">
+                        <div className="fcs-progress-bar-fill" />
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+    // 3. Error Screen
+    if (step === "error") {
         return (
             <div className="fcs-root">
                 <style>{styles}</style>
@@ -460,7 +472,7 @@ export default function FaceCropStudio() {
         );
     }
 
-    // Main Interactive Workspace (Always responsive sliders & live circular preview)
+    // 4. Result Workspace (Shown ONLY when processing has finished)
     return (
         <div className="fcs-root">
             <style>{styles}</style>
@@ -482,25 +494,13 @@ export default function FaceCropStudio() {
                     <div className="fcs-preview-col">
                         <p className="fcs-preview-label">Tu resultado</p>
                         <div className="fcs-circle-frame fcs-result-frame">
-                            {/* Result Image */}
-                            {resultDataUrl && (
+                            {resultDataUrl ? (
                                 <img
                                     src={resultDataUrl}
                                     alt="Resultado"
-                                    className={`fcs-circle-img ${isProcessing ? "fcs-dimmed" : ""}`}
+                                    className="fcs-circle-img"
                                 />
-                            )}
-
-                            {/* Loading State Overlay */}
-                            {isProcessing && (
-                                <div className="fcs-circle-loading-overlay">
-                                    <div className="fcs-spinner" />
-                                    <span className="fcs-loading-text">Cargando...</span>
-                                </div>
-                            )}
-
-                            {/* Empty placeholder */}
-                            {!resultDataUrl && !isProcessing && (
+                            ) : (
                                 <div className="fcs-circle-placeholder">
                                     <span>👤</span>
                                 </div>
@@ -509,7 +509,7 @@ export default function FaceCropStudio() {
                     </div>
                 </div>
 
-                {/* Controls — Always interactive, 60fps instant redraw */}
+                {/* Controls — Instant 60fps adjustments */}
                 <div className="fcs-controls">
                     <div className="fcs-control-row">
                         <label>🔍 Zoom</label>
@@ -580,7 +580,7 @@ export default function FaceCropStudio() {
                     <button
                         className="fcs-btn fcs-btn-primary"
                         onClick={handleDownload}
-                        disabled={isProcessing || !resultDataUrl}
+                        disabled={!resultDataUrl}
                     >
                         📥 Descargar PNG
                     </button>
@@ -665,6 +665,83 @@ const styles = `
     margin: 0;
 }
 
+/* Dedicated Loading Screen */
+.fcs-loading-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1.5rem;
+    text-align: center;
+    background: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-radius: 16px;
+    gap: 1.5rem;
+}
+.fcs-loading-icon-wrap {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fcs-spinner-large {
+    width: 54px;
+    height: 54px;
+    border: 3px solid rgba(96, 165, 250, 0.15);
+    border-top-color: #60a5fa;
+    border-right-color: #818cf8;
+    border-radius: 50%;
+    animation: fcs-spin 0.85s cubic-bezier(0.55, 0.15, 0.45, 0.85) infinite;
+}
+.fcs-loading-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #f1f5f9;
+    margin: 0;
+    letter-spacing: 0.01em;
+}
+.fcs-progress-bar-wrap {
+    width: 100%;
+    max-width: 260px;
+    height: 5px;
+    background: rgba(148, 163, 184, 0.15);
+    border-radius: 999px;
+    overflow: hidden;
+    position: relative;
+}
+.fcs-progress-bar-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 40%;
+    background: linear-gradient(90deg, #3b82f6, #818cf8, #3b82f6);
+    background-size: 200% 100%;
+    border-radius: 999px;
+    animation: fcs-progress-indeterminate 1.4s ease-in-out infinite;
+}
+@keyframes fcs-progress-indeterminate {
+    0% {
+        left: -40%;
+        width: 40%;
+    }
+    50% {
+        left: 30%;
+        width: 60%;
+    }
+    100% {
+        left: 100%;
+        width: 40%;
+    }
+}
+
+@keyframes fcs-spin {
+    to { transform: rotate(360deg); }
+}
+
 /* Error screen */
 .fcs-error-screen {
     text-align: center;
@@ -732,40 +809,6 @@ const styles = `
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: opacity 0.2s ease;
-}
-.fcs-circle-img.fcs-dimmed {
-    opacity: 0.3;
-}
-
-/* Loading overlay inside circle */
-.fcs-circle-loading-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(15, 23, 42, 0.75);
-    backdrop-filter: blur(4px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-}
-.fcs-loading-text {
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: #93c5fd;
-    letter-spacing: 0.02em;
-}
-.fcs-spinner {
-    width: 36px;
-    height: 36px;
-    border: 3px solid rgba(96, 165, 250, 0.2);
-    border-top-color: #60a5fa;
-    border-radius: 50%;
-    animation: fcs-spin 0.8s linear infinite;
-}
-@keyframes fcs-spin {
-    to { transform: rotate(360deg); }
 }
 
 .fcs-circle-placeholder {

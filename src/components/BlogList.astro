@@ -21,11 +21,12 @@ const formatDateShort = (date: Date) =>
 ---
 
 <div class="blog-container-layout">
-    <div class="filters-header">
+    <header class="blog-header">
+        <h1>Bitácora</h1>
         <button id="open-filters-btn" class="open-filters-btn">
             <svg
-                width="18"
-                height="18"
+                width="16"
+                height="16"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -35,17 +36,17 @@ const formatDateShort = (date: Date) =>
             >
                 <path d="M3 6h18M7 12h10M10 18h4"></path>
             </svg>
-            Filtros
+            <span>Filtros</span>
         </button>
+    </header>
 
-        <div
-            id="selected-wrapper"
-            class="selected-wrapper"
-            style="display: none;"
-        >
-            <span class="filter-subtitle">Seleccionados</span>
-            <div id="selected-container" class="selected-container"></div>
-        </div>
+    <div
+        id="selected-wrapper"
+        class="selected-wrapper"
+        style="display: none;"
+    >
+        <span class="filter-subtitle">Seleccionados</span>
+        <div id="selected-container" class="selected-container"></div>
     </div>
 
     <div id="filters-modal" class="filters-modal" style="display: none;">
@@ -314,36 +315,40 @@ const formatDateShort = (date: Date) =>
     .blog-container-layout {
         display: flex;
         flex-direction: column;
-        gap: 3rem;
+        gap: 1.25rem;
     }
 
-    .filters-header {
+    .blog-header {
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
         gap: 1.5rem;
+        margin-bottom: 0;
     }
 
     .open-filters-btn {
-        display: flex;
+        display: inline-flex;
         align-items: center;
         justify-content: center;
-        gap: 0.75rem;
-        padding: 1.25rem 1.5rem;
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        border-radius: 12px;
-        color: rgba(255, 255, 255, 0.8);
-        font-size: 0.95rem;
-        font-weight: 600;
+        gap: 0.5rem;
+        padding: 0.6rem 1.15rem;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.9rem;
+        font-weight: 500;
         cursor: pointer;
         transition: all 0.2s ease;
-        width: 100%;
+        width: auto;
+        white-space: nowrap;
     }
 
     .open-filters-btn:hover {
-        background: rgba(255, 255, 255, 0.05);
-        border-color: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(255, 255, 255, 0.2);
         color: #fff;
+        transform: translateY(-1px);
     }
 
     .filters-modal {
@@ -586,7 +591,7 @@ const formatDateShort = (date: Date) =>
         display: grid;
         grid-template-columns: 180px 1fr;
         gap: 3rem;
-        padding: 2.5rem 1rem;
+        padding: 1.75rem 1rem;
         margin-left: -1rem;
         margin-right: -1rem;
         text-decoration: none;
