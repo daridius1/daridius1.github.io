@@ -3,6 +3,8 @@
 # Script para hacer deploy automático del blog
 # Hace add, commit, push y npm run deploy
 
+set -euo pipefail
+
 # Colores para el output
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
@@ -16,8 +18,12 @@ git add .
 
 # Git commit con mensaje genérico
 FECHA=$(date +"%Y-%m-%d %H:%M")
-echo -e "${GREEN}💾 Commiteando cambios...${NC}"
-git commit -m "Update blog - $FECHA"
+if git diff --cached --quiet; then
+  echo -e "${BLUE}ℹ️  No hay cambios nuevos para commitear.${NC}"
+else
+  echo -e "${GREEN}💾 Commiteando cambios...${NC}"
+  git commit -m "Update blog - $FECHA"
+fi
 
 # Git push
 echo -e "${GREEN}⬆️  Pusheando a GitHub...${NC}"
